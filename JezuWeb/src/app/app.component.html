@@ -1,21 +1,29 @@
-<nav class="navbar" role="navigation" 
-  aria-label="main navigation" style="background-color: black;">
+<nav class="navbar has-shadow is-dark">
   <div class="navbar-brand" >
     <a class="navbar-item" href="">
-      <img src="../assets/logo.png" alt="" width="50px" heigh="50px">
+      <img src="../assets/logo.png" alt="" max-heigh="50px">
+    </a>
+
+    <a class="navbar-burger" id="jezuNavbarBurger" (click)="activeMenu($event)">
+      <span></span>
+      <span></span>
+      <span></span>
     </a>
   </div>
 
   <div id="jezuWebNavBar" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="">Inicio</a>
-      <a class="navbar-item" href="">Trabajos</a>
+      <a class="navbar-item" routerLink="/home" >Inicio</a>
+      <a class="navbar-item" routerLink="/works" >Trabajos</a>
     </div>
 
-    <div class="navbar-end" style="background-color:white;">
-      <a class="navbar-item" href="">
-        <img src="../assets/GitHub-Mark/PNG/GitHub-Mark-64px.png" alt="">
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://github.com/Jezusito16">
+        <img src="../assets/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png" alt="" 
+        max-height="50px">
       </a>
     </div>
   </div>  
 </nav>
+
+<router-outlet></router-outlet>
