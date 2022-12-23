@@ -5,8 +5,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ReactDOM from 'react-dom/client';
 import User from './classes/User.js';
+import AboutMe from './components/AboutMe.js';
 import Banner from './components/Banner.js';
 import Technology from "./components/Technology.js";
+
 
 import "./index.css";
 
@@ -18,10 +20,11 @@ function body() {
     <div>
       <Navbar bg='dark' expand="lg" variant='dark' className='custom-navbar'>
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand className="mr-100" href="#home">React-Bootstrap</Navbar.Brand>
+          <span className='w-100'></span>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="m-">
+            <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
             </Nav>
@@ -31,9 +34,12 @@ function body() {
 
       <div className='main'>
         <Banner user={user}/>
-        <Container>
-        <Technology level="2"/>
-        </Container>
+        <AboutMe text="aaaaa"/>
+        <div>
+          <Container>
+            <Technology/>
+          </Container>
+        </div>
       </div>
 
       <Navbar bg='dark' expand="lg" variant='dark' className='custom-navbar navbar-fixed-bottom'>

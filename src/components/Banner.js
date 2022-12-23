@@ -9,7 +9,7 @@ function Banner(params) {
             <div class="hero-image">
                 <div class="hero-text">
                     <Avatar user={params.user}/>
-                    <h1>Soy {params.user.name}  {params.user.surname}</h1>
+                    <h1>{params.user.name}  {params.user.surname}</h1>
                     <h3>Licenciado en Ingenieria Informática</h3>
                 </div>
             </div>
