@@ -16,3 +16,7 @@
     transform: translate(-50%, -50%);
     color: white;
 }
+
+.Banner h3 {
+    color: #c5c5c5;
+}

@@ -13,15 +13,21 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
-  let user = new User('Jesús', 'Márquez Delgado', 'https://avatars.githubusercontent.com/u/33559839?s=400&u=27ac4daecfe8a93e221135353da375f1fd8b06d2&v=4')
+  function randomNumberInRange() { return Math.random() * (4 - 1 + 1) + 1; }
+  let user = new User(
+    'Jesús', 
+    'Márquez Delgado', 
+    'https://avatars.githubusercontent.com/u/33559839?s=400&u=27ac4daecfe8a93e221135353da375f1fd8b06d2&v=4',
+    'Licenciado en Ingeniería Informática'
+  )
   return  (
     <div>
       <Navbar bg='dark' expand="lg" variant='dark' className='custom-navbar'>
         <Container>
           <Navbar.Brand className="mr-100" href="#home">React-Bootstrap</Navbar.Brand>
-          <span className='w-100'></span>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <span className='w-100'></span>
             <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
@@ -32,30 +38,39 @@ function App() {
 
       <div className='main'>
         <Banner user={user}/>
-        <section className='aboutMe'>
+        <section className='aboutMe py-5'>
           <Container>
-            <div className='text-section'>
-              <h5><Line/>SOBRE MÍ</h5>
-              <h4>QUIEN SOY YO</h4>
-              Joven ingeniero informático, especializado en tecnologías de la información, 
-              con un gran interés en el desarrollo software. 
-              Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.            
-            </div>
-            <div className='skills-section'>
-              <div className='grid rounded'>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
-                <Technology name="JavaScript" level="2.5"/>
+            <h5><Line/>SOBRE MÍ</h5>
+            <h4>QUIÉN SOY YO</h4>
+            <div className='aboutMe-section'>
+              <div className='text-section'>  
+                Joven ingeniero informático, especializado en tecnologías de la información, 
+                con un gran interés en el desarrollo software. 
+                Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.            
               </div>
+              <div className='technologies-section'>
+                <div className='grid rounded'>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                  <Technology name="JavaScript" level={randomNumberInRange()}/>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+        <section className='skills py-5'>
+          <Container>
+            <h5><Line/>MIS HABILIDADES</h5>
+            <h4>QUÉ PUEDO HACER</h4>
+            <div>
             </div>
           </Container>
         </section>
