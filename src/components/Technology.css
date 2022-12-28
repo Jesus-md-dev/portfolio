@@ -1,3 +1,15 @@
-.Technology input {
-    
+.Technology {
+    width: min-content;
+}
+
+.Technology .text {
+    width: 100%;
+}
+
+.Technology .empty-icons {
+    color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.Technology .filled-icons {
+    color: #c88e54 !important;
 }

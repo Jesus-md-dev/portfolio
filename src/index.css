@@ -33,3 +33,46 @@ body {
 .navbar  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.aboutMe {
+    background-color: #282A29;
+    padding: 1rem;
+}
+
+.aboutMe .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.aboutMe .text-section, .aboutMe .skills-section {
+    margin: auto 0.5rem;
+}
+
+.aboutMe .text-section {
+    padding: 3rem;
+}
+
+.aboutMe .skills-section .grid {
+    background-color: #2c2e2d;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.aboutMe .skills-section .Technology{
+    margin: 1rem auto !important;  
+}
+
+@media (max-width: 1024px) {
+    .aboutMe .container {
+        display: block; 
+    }
+
+    .aboutMe .text-section {
+        padding: 0;
+    }
+    
+    .aboutMe .skills-section .grid {
+        margin: 1rem auto 0 auto;
+    }
+}

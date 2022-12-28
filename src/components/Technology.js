@@ -1,21 +1,20 @@
+import { Rating } from 'react-simple-star-rating';
 import "./Technology.css";
-
 
 function Technology(params) {
     return (
-        <div className="Technology">
-            text
-            <div 
-                class="Stars" 
-                style={{
-                    marginLeft: '4rem',
-                    fontSize: '20px',
-                    padding: '20px',
-                    backgroundColor: 'salmon',
-                    color: 'white',
-                    --rating: 2.3,
-                }}
-            ></div>
+        <div className="Technology m-3">
+            <h5 className="text m-0">
+                <strong>{params.name}</strong>
+            </h5>
+            <div className='rating'>
+                <Rating 
+                    size="20"
+                    readonly='true' 
+                    allowFraction='true'
+                    initialValue={params.level ? params.level : 0}
+                />
+            </div>
         </div>
     )
 }

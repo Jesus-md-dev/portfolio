@@ -5,16 +5,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ReactDOM from 'react-dom/client';
 import User from './classes/User.js';
-import AboutMe from './components/AboutMe.js';
 import Banner from './components/Banner.js';
+import Line from "./components/Line.js";
 import Technology from "./components/Technology.js";
-
-
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-function body() {
+function App() {
   let user = new User('Jesús', 'Márquez Delgado', 'https://avatars.githubusercontent.com/u/33559839?s=400&u=27ac4daecfe8a93e221135353da375f1fd8b06d2&v=4')
   return  (
     <div>
@@ -34,12 +32,33 @@ function body() {
 
       <div className='main'>
         <Banner user={user}/>
-        <AboutMe text="aaaaa"/>
-        <div>
+        <section className='aboutMe'>
           <Container>
-            <Technology/>
+            <div className='text-section'>
+              <h5><Line/>SOBRE MÍ</h5>
+              <h4>QUIEN SOY YO</h4>
+              Joven ingeniero informático, especializado en tecnologías de la información, 
+              con un gran interés en el desarrollo software. 
+              Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.            
+            </div>
+            <div className='skills-section'>
+              <div className='grid rounded'>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+                <Technology name="JavaScript" level="2.5"/>
+              </div>
+            </div>
           </Container>
-        </div>
+        </section>
       </div>
 
       <Navbar bg='dark' expand="lg" variant='dark' className='custom-navbar navbar-fixed-bottom'>
@@ -51,4 +70,4 @@ function body() {
   );
 }
 
-root.render(body())
+root.render(App())
