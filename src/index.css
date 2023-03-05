@@ -23,7 +23,7 @@ body {
 }
 
 .custom-navbar .navbar-brand {
-    color: #a18a66;
+    color: rgb(201, 128, 60);
 }
 
 .custom-navbar .nav-link {
@@ -67,7 +67,23 @@ body {
     margin: 1rem auto !important;  
 }
 
+button {
+    border-color: transparent;
+    background: rgba(201,128,60,1);
+    /* background: linear-gradient(101deg, rgba(184,152,117,1) 0%, rgba(201,128,60,1) 50%); */
+    color: white;
+}
 
+.footer svg {
+    fill: rgb(201, 128, 60);
+    margin: 0.5em;
+    width: 2em;
+    height: 2em;
+}
+
+.footer span {
+    margin-left: 1em;
+}
 
 @media (max-width: 1024px) {
     .aboutMe .container .aboutMe-section{

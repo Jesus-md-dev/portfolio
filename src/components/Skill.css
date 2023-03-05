@@ -1,0 +1,15 @@
+.Skill {
+    width: min-content;
+}
+
+.Skill .text {
+    width: 100%;
+}
+
+.Skill .empty-icons {
+    color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.Skill .filled-icons {
+    color: #c88e54 !important;
+}
