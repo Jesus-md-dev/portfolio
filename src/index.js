@@ -8,6 +8,7 @@ import { ReactComponent as GitHubLogo } from "./assets/svg/github.svg";
 import { ReactComponent as LinkedinLogo } from "./assets/svg/linkledin.svg";
 import User from './classes/User.js';
 import Banner from './components/Banner.js';
+import Iconlink from "./components/Iconlink.js";
 import Line from "./components/Line.js";
 import Skill from "./components/Skill.js";
 import Technology from "./components/Technology.js";
@@ -17,6 +18,26 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
+  const technologies = [
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+  ];
+
+  const skills = [
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+    { name: 'JavaScript', svg: <GitHubLogo />, text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur tristique erat iaculis euismod nostra dapibus pulvinar' },
+  ];
   function randomNumberInRange() { return Math.random() * (4 - 1 + 1) + 1; }
   let user = new User(
     'Jesús', 
@@ -60,17 +81,9 @@ function App() {
               </div>
               <div className="technologies-section">
                 <div className="grid rounded">
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
-                  <Technology name="JavaScript" level={randomNumberInRange()} />
+                  {technologies.map((technology) => 
+                    <Technology name={technology.name} level={randomNumberInRange()} />
+                  )}
                 </div>
               </div>
             </div>
@@ -93,19 +106,11 @@ function App() {
               MIS HABILIDADES
             </h5>
             <h4>QUÉ PUEDO HACER</h4>
-            <div className="technologies-section">
-              <div className="grid rounded">
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
-                <Skill name="JavaScript" level={randomNumberInRange()} />
+            <div className="skills-section container">
+              <div className="row justify-content-center">
+                {skills.map((skill) =>
+                  <Skill class="col-md-4" name={skill.name} svg={skill.svg} text={skill.text} />
+                )}
               </div>
             </div>
           </Container>
@@ -119,15 +124,8 @@ function App() {
         className="custom-navbar navbar-fixed-bottom footer bg-dark"
       >
         <div className="text-center w-100">
-          <a href="https://github.com/Jezusito" target="_blank">
-            <GitHubLogo />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/"
-            target="_blank"
-          >
-            <LinkedinLogo />
-          </a>
+          <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" />
+          <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" />
         </div>
         <div>
           <span>© 2022 Jesús Márquez Delgado. All Rights Reserved</span>

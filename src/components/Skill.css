@@ -1,15 +1,11 @@
 .Skill {
     width: min-content;
+    background-color: #282A29;
+    text-align: center;
 }
 
-.Skill .text {
-    width: 100%;
-}
-
-.Skill .empty-icons {
-    color: rgba(255, 255, 255, 0.1) !important;
-}
-
-.Skill .filled-icons {
-    color: #c88e54 !important;
+.Skill svg {
+    fill: rgb(201, 128, 60);
+    width: 2.5em;
+    height: 2.5em;
 }
