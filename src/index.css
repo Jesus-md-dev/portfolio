@@ -1,12 +1,28 @@
-h1, h2, h3, h4, h5, h6 {
-    color: white;
+/* width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  border-radius: 10px;
 }
 
-.main {
-    margin: auto;
-    align-items: center;
-    color: #c5c5c5;
-    height: 100%;
+/* background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #1e2225;
+}
+
+/* color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(165, 80, 0);
+  border-radius: 10px;
+}
+
+/* color on hover of the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(126, 59, 0)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
 }
 
 .Avatar {
@@ -14,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+    color: #c5c5c5;
     background-color: #2C2E2D;
 }
 

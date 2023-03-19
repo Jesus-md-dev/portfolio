@@ -6,8 +6,8 @@ import "./Banner.css";
 function Banner(params) {
     return (
         <div className="Banner">
-            <div class="hero-image">
-                <div class="hero-text">
+            <div className="hero-image">
+                <div className="hero-text">
                     <Avatar user={params.user}/>
                     <h1>{params.user.name}  {params.user.surname}</h1>
                     <h3>{params.user.degree}</h3>
