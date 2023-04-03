@@ -37,21 +37,29 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div>
+      <div className="main-body">
         <BrowserRouter>
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path="webs" element={<Webs />} />
-                <Route path="vrar" element={<Vrar />} />
-                <Route path="unity" element={<Unity />} />
-                <Route path="*" element={<Home />} />
-            </Routes>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="webs" element={<Webs />} />
+            <Route path="vrar" element={<Vrar />} />
+            <Route path="unity" element={<Unity />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
         </BrowserRouter>
       </div>
-      <div bg="dark" expand="lg" variant="dark" className="custom-navbar footer bg-dark py-1">
+      <div
+        bg="dark"
+        expand="lg"
+        variant="dark"
+        className="custom-navbar footer bg-dark py-1"
+      >
         <div className="text-center w-100">
           <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" />
-          <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" />
+          <Iconlink
+            svg={<LinkedinLogo />}
+            href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/"
+          />
         </div>
         <div>
           <span>© 2022 Jesús Márquez Delgado. All Rights Reserved</span>

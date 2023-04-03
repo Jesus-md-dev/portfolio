@@ -34,6 +34,14 @@ body {
     background-color: #2C2E2D;
 }
 
+.main-body {
+    min-height: 89.7vh;
+}
+
+.title {
+    background: radial-gradient(#35363b, #151517);
+}
+
 .custom-navbar {
     background-color: #161618;
     color: white !important;
