@@ -13,6 +13,7 @@ import Home from "./pages/Home.js";
 import Unity from "./pages/Unity.js";
 import Vrar from "./pages/Vrar.js";
 import Webs from "./pages/Webs.js";
+import Ana from "./pages/Ana.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,6 +45,7 @@ function App() {
             <Route path="webs" element={<Webs />} />
             <Route path="vrar" element={<Vrar />} />
             <Route path="unity" element={<Unity />} />
+            <Route path="QW5hIGN1bXBsZWHDsW9z" element={<Ana />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </BrowserRouter>

@@ -35,7 +35,7 @@ body {
 }
 
 .main-body {
-    min-height: 89.7vh;
+    min-height: 86vh;
 }
 
 .title {
@@ -43,6 +43,7 @@ body {
 }
 
 .custom-navbar {
+    height: 7vh;
     background-color: #161618;
     color: white !important;
 }
@@ -69,8 +70,8 @@ body {
 }
 
 .aboutMe .container .aboutMe-section{
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .aboutMe .text-section, .aboutMe .technologies-section {
@@ -89,7 +90,7 @@ body {
 }
 
 .aboutMe .technologies-section .Technology{
-    margin: 1rem auto !important;  
+    margin: 1rem auto !important;
 }
 
 button {
@@ -111,13 +112,13 @@ button {
 
 @media (max-width: 1024px) {
     .aboutMe .container .aboutMe-section{
-        display: block; 
+        display: block;
     }
 
     .aboutMe .text-section {
         padding: 0;
     }
-    
+
     .aboutMe .technologies-section .grid {
         margin: 1rem auto 0 auto;
     }
