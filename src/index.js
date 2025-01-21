@@ -10,10 +10,10 @@ import { ReactComponent as LinkedinLogo } from "./assets/svg/linkledin.svg";
 import Iconlink from "./components/Iconlink.js";
 import "./index.css";
 import Home from "./pages/Home.js";
+import QW5h from "./pages/QW5h.js";
 import Unity from "./pages/Unity.js";
 import Vrar from "./pages/Vrar.js";
 import Webs from "./pages/Webs.js";
-import Ana from "./pages/Ana.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -45,7 +45,7 @@ function App() {
             <Route path="webs" element={<Webs />} />
             <Route path="vrar" element={<Vrar />} />
             <Route path="unity" element={<Unity />} />
-            <Route path="QW5hIGN1bXBsZWHDsW9z" element={<Ana />} />
+            <Route path="QW5hIGN1bXBsZWHDsW9z" element={<QW5h/>} />
             <Route path="*" element={<Home />} />
           </Routes>
         </BrowserRouter>
