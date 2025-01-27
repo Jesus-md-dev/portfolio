@@ -82,7 +82,7 @@ class QW5h extends React.Component {
                                                 </div>
                                                 <div className="w-100">
                                                     <div className="msg5 message message-img sent">
-                                                        <img className="rounded" src={collage}/>
+                                                        <img className="rounded" src={collage} alt="collage"/>
                                                     </div>
                                                 </div>
                                                 <div className="w-100">
@@ -92,7 +92,7 @@ class QW5h extends React.Component {
                                                 </div>
                                                 <div className="w-100">
                                                     <div className="msg7 message message-img sent">
-                                                        <img className="rounded" src={cumpleanos}/>
+                                                        <img className="rounded" src={cumpleanos} alt="cumpleaños"/>
                                                     </div>
                                                 </div>
                                                 <div className="w-100">
@@ -107,7 +107,7 @@ class QW5h extends React.Component {
                                                 </div>
                                                 <div className="w-100">
                                                     <div className="msg10 message message-img sent">
-                                                        <img className="rounded" src={hug}/>
+                                                        <img className="rounded" src={hug} alt="hug_gif"/>
                                                     </div>
                                                 </div>
                                                 <div className="w-100">
@@ -122,7 +122,7 @@ class QW5h extends React.Component {
                                                 </div>
                                                 <div className="w-100">
                                                     <div className="msg13 message message-text sent container">
-                                                    <iframe className="rounded responsive-iframe"
+                                                    <iframe title="hanna montana" className="rounded responsive-iframe"
                                                         src="https://www.youtube.com/embed/uVjRe8QXFHY">
                                                     </iframe>
                                                     </div>

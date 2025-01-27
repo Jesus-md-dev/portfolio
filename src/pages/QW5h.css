@@ -262,7 +262,7 @@ input:hover {
   max-width: 40rem;
   flex-flow: column;
 }
-/*
+
 .msg2 {
   animation-delay: 4s;
 }
@@ -317,7 +317,7 @@ input:hover {
 
 .msg13 {
   animation-delay: 60s;
-} */
+}
 
 .responsive-iframe {
   position: absolute;
