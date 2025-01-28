@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { ReactComponent as GitHubLogo } from "./assets/svg/github.svg";
 import { ReactComponent as LinkedinLogo } from "./assets/svg/linkledin.svg";
 import Iconlink from "./components/Iconlink.js";
@@ -39,7 +39,7 @@ function App() {
         </Container>
       </Navbar>
       <div className="main-body">
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route index element={<Home />} />
             <Route path="webs" element={<Webs />} />
@@ -48,7 +48,7 @@ function App() {
             <Route path="QW5hIGN1bXBsZWHDsW9z" element={<QW5h/>} />
             <Route path="*" element={<Home />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
       <div
         bg="dark"
