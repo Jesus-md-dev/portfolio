@@ -1,10 +1,9 @@
-import "./Avatar.css";
-
 function Avatar(params) {
     return (
-        <div className="Avatar">
-            <img src={params.user.avatarUrl} alt={params.user.name + " " + params.user.surname}/>
-        </div>
+        <img className="rounded-full w-1/2 max-w-80 shadow-xl"
+            src={params.user.avatarUrl}
+            alt={params.user.name + " " + params.user.surname}
+        />
     )
 }
 

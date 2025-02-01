@@ -68,7 +68,6 @@ button {
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -117,7 +116,7 @@ button {
 .input:focus,
 input:hover {
   outline: none;
-  border-color: rgba(129, 140, 248);
+  border-color: #818cf8;
   background-color: #fff;
   box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
 }
@@ -139,7 +138,7 @@ input:hover {
   mix-blend-mode: multiply;
   overflow: hidden;
 
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px #00000080;
   padding: 2px 4px 6px;
   margin: -2px -4px -6px;
 }

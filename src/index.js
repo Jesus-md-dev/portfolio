@@ -1,61 +1,34 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ReactComponent as GitHubLogo } from "./assets/svg/github.svg";
 import { ReactComponent as LinkedinLogo } from "./assets/svg/linkledin.svg";
 import Iconlink from "./components/Iconlink.js";
 import "./index.css";
 import Home from "./pages/Home.js";
-import QW5h from "./pages/QW5h.js";
-import Unity from "./pages/Unity.js";
-import Vrar from "./pages/Vrar.js";
-import Webs from "./pages/Webs.js";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffffff',
+    },
+    secondary: {
+      main: '#a18a66',
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
+
+
   return (
+    <ThemeProvider theme={theme}>
     <div>
-      <Navbar bg="dark" expand="lg" variant="dark" className="custom-navbar">
-        <Container>
-          <Navbar.Brand className="mr-100" href="/">
-            React-Bootstrap
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <span className="w-100"></span>
-            <Nav>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="webs">Webs</Nav.Link>
-              <Nav.Link href="vrar">VR/AR</Nav.Link>
-              <Nav.Link href="unity">Unity</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
       <div className="main-body">
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="webs" element={<Webs />} />
-            <Route path="vrar" element={<Vrar />} />
-            <Route path="unity" element={<Unity />} />
-            <Route path="QW5hIGN1bXBsZWHDsW9z" element={<QW5h/>} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </BrowserRouter>
+        <Home />
       </div>
-      <div
-        bg="dark"
-        expand="lg"
-        variant="dark"
-        className="custom-navbar footer bg-dark py-1"
-      >
+      <div className="custom-navbar footer bg-dark py-1">
         <div className="text-center w-100">
           <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" />
           <Iconlink
@@ -68,6 +41,7 @@ function App() {
         </div>
       </div>
     </div>
+    </ThemeProvider>
   );
 }
 

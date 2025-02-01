@@ -3,7 +3,6 @@ import VideoText from "../components/VideoText.js";
 function Vrar() {
   return (
     <div>
-      <h1 className="text-center w-100 py-4 title">VR/AR</h1>
       <VideoText
         url="https://drive.google.com/file/d/1PSreohUvJH2kMpxs-rqZPNBlgJWSTDvI/preview"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam

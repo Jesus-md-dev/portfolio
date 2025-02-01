@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* width and height of the scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -12,114 +16,55 @@
 
 /* color of the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(165, 80, 0);
+  background: #a18a66;
   border-radius: 10px;
 }
 
 /* color on hover of the scrollbar handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(126, 59, 0)
+  background: #69522d
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background-color: #2C2E2D;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-.Avatar {
-    margin: 1rem auto;
+h1 {
+  @apply font-bold text-2xl;
 }
-
-body {
-    color: #c5c5c5;
-    background-color: #2C2E2D;
+h2 {
+  @apply font-bold text-xl;
 }
-
-.main-body {
-    min-height: 86vh;
-}
-
-.title {
-    background: radial-gradient(#35363b, #151517);
-}
-
-.custom-navbar {
-    height: 7vh;
-    background-color: #161618;
-    color: white !important;
-}
-
-.custom-navbar .navbar-brand {
-    color: rgb(201, 128, 60);
-}
-
-.custom-navbar .nav-link {
-    color: white !important;
-}
-
-.custom-navbar .active {
-    color: wheat !important;
-}
-
-.navbar  {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.aboutMe {
-    background-color: #282A29;
-    padding: 1rem;
-}
-
-.aboutMe .container .aboutMe-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.aboutMe .text-section, .aboutMe .technologies-section {
-    margin: auto 0.5rem;
-}
-
-.aboutMe .text-section {
-    padding: 3rem;
-}
-
-.aboutMe .technologies-section .grid {
-    background-color: #2C2E2D;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.aboutMe .technologies-section .Technology{
-    margin: 1rem auto !important;
+h3 {
+  @apply text-lg;
 }
 
 button {
     border-color: transparent;
-    background: rgba(201,128,60,1);
+    background: #a18a66;
     color: white;
 }
 
-.footer svg {
-    fill: rgb(201, 128, 60);
-    margin: 0.5em;
-    width: 2em;
-    height: 2em;
+svg {
+    fill: #a18a66;
 }
 
-.footer span {
-    margin-left: 1em;
+.Tab, .Tab svg {
+  color: #a18a66 !important;
+  fill: #a18a66 !important;
 }
 
-@media (max-width: 1024px) {
-    .aboutMe .container .aboutMe-section{
-        display: block;
-    }
+.Mui-selected, .Mui-selected svg {
+  color: white !important;
+  fill: white !important;
+}
 
-    .aboutMe .text-section {
-        padding: 0;
-    }
-
-    .aboutMe .technologies-section .grid {
-        margin: 1rem auto 0 auto;
-    }
+.flex-col {
+  flex-flow: column;
 }

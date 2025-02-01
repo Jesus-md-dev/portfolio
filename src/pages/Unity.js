@@ -3,7 +3,6 @@ import VideoText from "../components/VideoText.js";
 function Unity() {
   return (
     <div>
-      <h1 className="text-center w-100 py-4 title">Unity</h1>
         <VideoText
           url="https://drive.google.com/file/d/1uJO97MILhwSrINa7VmN4fcaUPMe-hcmu/preview"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
