@@ -34,14 +34,14 @@ function CV() {
   return (
     <div>
         <div className="technologies-section">
-            <div className="grid rounded">
+            <div className="content-width grid rounded">
                 {technologies.map((technology, index) =>
                 <Technology key={technology.name + '-' + index} name={technology.name} level={randomNumberInRange()} />
                 )}
             </div>
         </div>
         <section className="skills py-5">
-          <div>
+          <div className="content-width">
             <h5>
               <Line />
               MIS HABILIDADES

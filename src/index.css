@@ -26,9 +26,9 @@
 }
 
 html {
+  @apply bg-zinc-800;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    background-color: #2C2E2D;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,4 +67,27 @@ svg {
 
 .flex-col {
   flex-flow: column;
+}
+
+.flex-col-rev {
+  flex-flow: column-reverse;
+}
+
+.flex-row {
+  flex-flow: row;
+}
+
+.flex-row-rev {
+  flex-flow: row-reverse;
+}
+
+.content-width {
+  @apply lg:w-full w-11/12 mx-auto py-4;
+  max-width: 58.438rem;
+}
+
+.footer svg {
+  @apply mx-4;
+  width: 2.5em;
+  height: 2.5em;
 }

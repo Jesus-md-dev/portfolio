@@ -1,6 +1,6 @@
 import VideoText from "../components/VideoText.js";
 
-function Unity() {
+function Games() {
   return (
     <div>
         <VideoText
@@ -81,4 +81,4 @@ function Unity() {
   );
 };
 
-export default Unity;
+export default Games;

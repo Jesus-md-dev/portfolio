@@ -10,7 +10,7 @@ import User from '../classes/User.js';
 import Banner from '../components/Banner.js';
 import Line from "../components/Line.js";
 import CV from "../pages/CV.js";
-import Unity from "../pages/Unity.js";
+import Games from "../pages/Games.js";
 import Vrar from "../pages/Vrar.js";
 import Webs from "../pages/Webs.js";
 import "./Home.css";
@@ -23,7 +23,7 @@ function Home() {
         case 'webs':
           return <Webs/>;
         case 'games':
-          return <Unity/>;
+          return <Games/>;
         case 'arvr':
           return <Vrar/>;
         default:
@@ -47,7 +47,7 @@ function Home() {
     return (
       <div>
         <Banner user={user} />
-        <section className="aboutMe py-5">
+        <section className="content-width aboutMe py-5">
           <div>
             <h5>
               <Line />
@@ -59,34 +59,37 @@ function Home() {
                  con experiencia en el desarrollo web y un gran interés en el desarrollo software.
                  Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.
               </div>
-              <Tabs
-                value={selectedTab}
-                onChange={handleChange}
-                aria-label="icon position tabs example"
-                variant='fullWidth'
-                centered
-              >
-                <Tab className='Tab' icon={<LinkIcon />} iconPosition="start" label="CV" value="cv"/>
-                <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs"/>
-                <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games"/>
-                <Tab className='Tab' icon={
-                  <SvgIcon>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                    >
-                      <VrIcon/>
-                    </svg>
-                  </SvgIcon>
-                } iconPosition="start" label="AR/VR" value="arvr"/>
-              </Tabs>
-              {renderSwitch(selectedTab)}
             </div>
           </div>
         </section>
+        <section className='flex flex-col items-center'>
+          <Tabs
+              value={selectedTab}
+              onChange={handleChange}
+              aria-label="icon position tabs example"
+              variant='fullWidth'
+              centered
+              className='content-width'
+          >
+            <Tab className='Tab' icon={<LinkIcon />} iconPosition="start" label="CV" value="cv"/>
+            <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs"/>
+            <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games"/>
+            <Tab className='Tab' icon={
+              <SvgIcon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                >
+                  <VrIcon/>
+                </svg>
+              </SvgIcon>
+            } iconPosition="start" label="AR/VR" value="arvr"/>
+          </Tabs>
+        </section>
+        {renderSwitch(selectedTab)}
       </div>
     )
 }

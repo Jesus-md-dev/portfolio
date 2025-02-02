@@ -1,39 +1,30 @@
-import VideoPlayer from "./VideoPlayer";
 import "./VideoText.css";
 
 function VideoText(params) {
-    if (params.invert) {
-        return (
-          <div className="darkBackground py-5">
-            <div className="container">
-              <div className="row ">
-                <div className="container col-md-6">
-                  <p>{params.text}</p>
-                </div>
-                <div className="col-md-6 d-flex align-items-center justify-content-center">
-                  <VideoPlayer url={params.url} />
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-    }
-    else {
-        return (
-          <div className="py-5">
-            <div className="container">
-              <div className="row ">
-                <div className=" col-md-6 d-flex align-items-center justify-content-center">
-                  <VideoPlayer url={params.url} />
-                </div>
-                <div className="col-md-6">
-                  <p>{params.text}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-    }
+
+  let videoTextContent = params.invert ?
+    "lg:flex-row-reverse" :
+    "lg:flex-row"
+
+  let videoText = params.invert ? "bg-zinc-900" : ""
+
+  return (
+    <div className={"flex items-center justify-center " + videoText}>
+      <div className={"content-width w-full flex flex-col items-center " + videoTextContent}>
+        <div className="lg:w-1/2 w-full m-5">
+          <iframe
+            className="w-full aspect-video"
+            src={params.url}
+            title="Google Drive Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+        <div className="lg:w-1/2 m-5">
+          <p>{params.text}</p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default VideoText;
