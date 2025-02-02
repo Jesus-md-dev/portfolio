@@ -1,12 +1,12 @@
+import ArticleIcon from '@mui/icons-material/Article';
 import GamepadIcon from '@mui/icons-material/Gamepad';
-import LinkIcon from '@mui/icons-material/Link';
 import WebIcon from '@mui/icons-material/Web';
 import SvgIcon from '@mui/material/SvgIcon';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import React, { useState } from 'react';
-import { ReactComponent as VrIcon } from "../assets/svg/vr.svg";
 import AboutMe from "../assets/images/aboutme.jpg";
+import { ReactComponent as VrIcon } from "../assets/svg/vr.svg";
 import User from '../classes/User.js';
 import Banner from '../components/Banner.js';
 import ImageText from '../components/ImageText.js';
@@ -73,7 +73,7 @@ function Home() {
               centered
               className='content-width'
           >
-            <Tab className='Tab' icon={<LinkIcon />} iconPosition="start" label="CV" value="cv"/>
+            <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label="CV" value="cv"/>
             <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs"/>
             <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games"/>
             <Tab className='Tab' icon={
