@@ -1,12 +1,10 @@
-import "./VideoText.css";
-
 function VideoText(params) {
 
   let videoTextContent = params.invert ?
     "lg:flex-row-reverse" :
     "lg:flex-row"
 
-  let videoText = params.invert ? "bg-zinc-900" : ""
+  let videoText = params.dark ? "bg-zinc-900" : ""
 
   return (
     <div className={"flex items-center justify-center " + videoText}>
@@ -15,8 +13,7 @@ function VideoText(params) {
           <iframe
             className="w-full aspect-video"
             src={params.url}
-            title="Google Drive Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            title="Youtube Video"
           ></iframe>
         </div>
         <div className="lg:w-1/2 m-5">

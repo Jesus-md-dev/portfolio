@@ -6,9 +6,10 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import React, { useState } from 'react';
 import { ReactComponent as VrIcon } from "../assets/svg/vr.svg";
+import AboutMe from "../assets/images/aboutme.jpg";
 import User from '../classes/User.js';
 import Banner from '../components/Banner.js';
-import Line from "../components/Line.js";
+import ImageText from '../components/ImageText.js';
 import CV from "../pages/CV.js";
 import Games from "../pages/Games.js";
 import Vrar from "../pages/Vrar.js";
@@ -49,15 +50,16 @@ function Home() {
         <Banner user={user} />
         <section className="content-width aboutMe py-5">
           <div>
-            <h5>
-              <Line />
-              SOBRE MÍ
-            </h5>
             <div className="aboutMe-section">
               <div className="text-section">
-                Ingeniero informático, especializado en tecnologías de la información,
-                 con experiencia en el desarrollo web y un gran interés en el desarrollo software.
-                 Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.
+                <ImageText
+                  src={AboutMe}
+                  alt="Computer science picture"
+                  text="Ingeniero informático, especializado en tecnologías de la información,
+                    con experiencia en el desarrollo web y un gran interés en el desarrollo software.
+                    Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional."
+                />
+
               </div>
             </div>
           </div>

@@ -3,8 +3,8 @@ import VideoText from "../components/VideoText.js";
 function Games() {
   return (
     <div>
-        <VideoText
-          url="https://drive.google.com/file/d/1uJO97MILhwSrINa7VmN4fcaUPMe-hcmu/preview"
+      <VideoText
+          url="https://www.youtube.com/embed/NsuEjiRypPo"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -18,9 +18,9 @@ function Games() {
               tellus imperdiet tincidunt ut id odio."
         />
         <VideoText
-          url="https://drive.google.com/file/d/1PezPS8fA9bjx8KwkPCY_65r37vMiS_SP/preview"
+          url="https://www.youtube.com/embed/wG-2kG7awZo"
           invert={true}
-          color="dark"
+          dark={true}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -34,7 +34,7 @@ function Games() {
               tellus imperdiet tincidunt ut id odio."
         />
         <VideoText
-          url="https://drive.google.com/file/d/1P_eDCGl0MSLTrr6xUAQaLHCp-6bP1JIV/preview"
+          url="https://www.youtube.com/embed/7Ij2qMfMZoE"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -48,9 +48,9 @@ function Games() {
               tellus imperdiet tincidunt ut id odio."
         />
         <VideoText
-          url="https://drive.google.com/file/d/1PQFCVmJ3EmTQBY4ZHw3n9lJONP_9iSaN/preview"
+          url="https://www.youtube.com/embed/CpbWe8kSolI"
           invert={true}
-          color="dark"
+          dark={true}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -64,7 +64,7 @@ function Games() {
               tellus imperdiet tincidunt ut id odio."
         />
         <VideoText
-          url="https://drive.google.com/file/d/1PS79iq8ckHThHleG79Wfel6VNy6u2OW8/preview"
+          url="https://www.youtube.com/embed/kuh39heT7jA"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin

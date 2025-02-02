@@ -4,7 +4,7 @@ function Vrar() {
   return (
     <div>
       <VideoText
-        url="https://drive.google.com/file/d/1PSreohUvJH2kMpxs-rqZPNBlgJWSTDvI/preview"
+        url="https://www.youtube.com/embed/jIragOxu9tA"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -18,9 +18,9 @@ function Vrar() {
               tellus imperdiet tincidunt ut id odio."
       />
       <VideoText
-        url=" https://drive.google.com/file/d/1PKDzo-oRB1i-7VU3ekYKdgnmHRR4VVnx/preview"
+        url="https://www.youtube.com/embed/CMsBWdokYGc"
         invert={true}
-        color="dark"
+        dark="dark"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -34,7 +34,7 @@ function Vrar() {
               tellus imperdiet tincidunt ut id odio."
       />
       <VideoText
-        url="https://drive.google.com/file/d/1PkG6dXcFTLWpXRpF-tLmKuzqRdYcxFEL/preview"
+        url="https://www.youtube.com/embed/Jvo3VOHDayM"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
