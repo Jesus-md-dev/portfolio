@@ -11,9 +11,3 @@
 .aboutMe .technologies-section .Technology {
     margin: 1rem auto !important;
 }
-
-button {
-    border-color: transparent;
-    background: #a18a66;
-    color: white;
-}

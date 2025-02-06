@@ -22,7 +22,7 @@
 
 /* color on hover of the scrollbar handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: #69522d
+  background: #96794b
 }
 
 html {
@@ -65,9 +65,14 @@ h6 {
 }
 
 button {
+  @apply font-bold;
   border-color: transparent;
   background: #a18a66;
   color: white;
+}
+
+button:hover {
+  background: #96794b;
 }
 
 svg {
