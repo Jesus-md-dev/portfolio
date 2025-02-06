@@ -50,26 +50,28 @@ function CV() {
             <span className="flex items-center">
               <h2>
                 <Line />
-                Conocimientos
+                Tecnologías
               </h2>
             </span>
             <div>
               <div>
                 <lu>
-                  <li>Nivel alto de PHP, Laravel, Symfony y Drupal</li>
-                  <li>Nivel alto en diseño web: React, Angular, Bootstrap y Tailwind</li>
-                  <li>Nivel alto en desarrollo web con Python y Django</li>
-                  <li>Nivel alto en Java</li>
-                  <li>Nivel alto en JavaScript</li>
-                  <li>Nivel alto en manejo de base de datos MYSQL y MongoDB</li>
+                  <li>Nivel alto de <b>PHP, Laravel, Symfony y Drupal</b></li>
+                  <li>Nivel alto en diseño web: <b>React, Angular, Bootstrap y Tailwind</b></li>
+                  <li>Nivel alto en <b>desarrollo web con Django</b></li>
+                  <li>Nivel alto en <b>Python</b></li>
+                  <li>Nivel alto en <b>Java</b></li>
+                  <li>Nivel alto en <b>JavaScript</b></li>
+                  <li>Nivel alto en manejo de base de datos <b>MYSQL y MongoDB</b></li>
                 </lu>
                 <br />
                 <lu>
-                  <li>Nivel medio en C/C++ y C#</li>
-                  <li>Nivel medio en Unity</li>
-                  <li>Nivel medio en desarrollo RV/RA en Unity</li>
-                  <li>Nivel medio en manejo de servidores Apache</li>
-                  <li>Nivel medio en manejo de AWS</li>
+                  <li>Nivel medio en <b>C/C++ y C#</b></li>
+                  <li>Nivel medio en <b>Unity</b></li>
+                  <li>Nivel medio en desarrollo <b>RV/RA</b> en Unity</li>
+                  <li>Nivel medio en <b>Godot</b></li>
+                  <li>Nivel medio en manejo de servidores <b>Apache</b></li>
+                  <li>Nivel medio en manejo de <b>AWS</b></li>
                 </lu>
               </div>
             </div>

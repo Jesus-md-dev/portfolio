@@ -11,7 +11,7 @@ function VideoText(params) {
       <div className={"content-width w-full flex flex-col items-center " + videoTextContent}>
         <div className="lg:w-1/2 w-full my-5">
           <iframe
-            className="w-full aspect-video"
+            className="w-full aspect-video rounded-xl"
             src={params.url}
             title="Youtube Video"
           ></iframe>

@@ -24,7 +24,7 @@ function ImageText(params) {
         </div>
         <div className="lg:w-1/2 w-full m-5">
           <img
-            className="w-full aspect-video object-cover"
+            className="w-full aspect-video object-cover rounded-xl"
             src={params.src}
             alt={params.alt}
             title="Youtube Video"
