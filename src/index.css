@@ -71,10 +71,6 @@ button {
   color: white;
 }
 
-button:hover {
-  background: #96794b;
-}
-
 svg {
   fill: #a18a66;
 }

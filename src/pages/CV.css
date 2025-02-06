@@ -6,3 +6,7 @@ svg {
 .contact-info svg{
     margin-right: .5rem;
 }
+
+.cv-container button:hover {
+  background: #96794b;
+}

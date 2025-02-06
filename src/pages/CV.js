@@ -13,7 +13,7 @@ function CV() {
   }
 
   return (
-    <div>
+    <div className='cv-container'>
       <div className={"flex items-center justify-center lg:flex-row"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
           <div className="lg:w-1/2 my-5">
