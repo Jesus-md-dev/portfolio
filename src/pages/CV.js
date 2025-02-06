@@ -44,7 +44,7 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row bg-zinc-900"}>
+      <div className={"flex items-center justify-center lg:flex-row bg-neutral-700"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
           <div className="lg:w-1/2 my-5">
             <span className="flex items-center">
@@ -100,7 +100,7 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row bg-zinc-900"}>
+      <div className={"flex items-center justify-center lg:flex-row bg-neutral-700"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
           <div className="lg:w-1/2 my-5">
             <span className="flex items-center">

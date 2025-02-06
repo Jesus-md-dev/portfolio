@@ -4,7 +4,7 @@ function VideoText(params) {
     "lg:flex-row-reverse" :
     "lg:flex-row"
 
-  let videoText = params.dark ? "bg-zinc-900" : ""
+  let videoText = params.dark ? "bg-neutral-700" : ""
 
   return (
     <div className={"flex items-center justify-center " + videoText}>

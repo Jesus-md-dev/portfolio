@@ -28,7 +28,7 @@ function App() {
         <div className="main-body">
           <Home />
         </div>
-        <div className="bg-zinc-900 mt-6">
+        <div className="bg-neutral-700 mt-6">
           <div className="content-width footer">
             <div className="flex flex-row justify-center mb-3">
               <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" target="_blank" rel="noopener noreferrer"/>
