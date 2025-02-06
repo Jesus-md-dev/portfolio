@@ -9,7 +9,7 @@ function VideoText(params) {
   return (
     <div className={"flex items-center justify-center " + videoText}>
       <div className={"content-width w-full flex flex-col items-center " + videoTextContent}>
-        <div className="lg:w-1/2 w-full m-5">
+        <div className="lg:w-1/2 w-full my-5">
           <iframe
             className="w-full aspect-video"
             src={params.url}

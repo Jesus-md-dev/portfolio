@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* width and height of the scrollbar */
 ::-webkit-scrollbar {
@@ -27,40 +27,61 @@
 
 html {
   @apply bg-zinc-800;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
 }
 
 h1 {
   @apply font-bold text-2xl;
 }
+
 h2 {
   @apply font-bold text-xl;
 }
+
 h3 {
-  @apply text-lg;
+  @apply font-bold text-lg;
+}
+
+h4 {
+  @apply font-bold text-base;
+}
+
+h5 {
+  @apply font-bold text-sm;
+}
+
+h6 {
+  @apply font-bold text-xs;
 }
 
 button {
-    border-color: transparent;
-    background: #a18a66;
-    color: white;
+  border-color: transparent;
+  background: #a18a66;
+  color: white;
 }
 
 svg {
-    fill: #a18a66;
+  fill: #a18a66;
 }
 
-.Tab, .Tab svg {
+.Tab,
+.Tab svg {
   color: #a18a66 !important;
   fill: #a18a66 !important;
 }
 
-.Mui-selected, .Mui-selected svg {
+.Mui-selected,
+.Mui-selected svg {
   color: white !important;
   fill: white !important;
 }
@@ -90,4 +111,12 @@ svg {
   @apply mx-4;
   width: 2.5em;
   height: 2.5em;
+}
+
+li::marker {
+  color: #a18a66;
+}
+
+a:hover {
+  color: #a18a66;
 }

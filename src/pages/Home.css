@@ -1,5 +1,5 @@
 .aboutMe {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .aboutMe .technologies-section .grid {
@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.aboutMe .technologies-section .Technology{
+.aboutMe .technologies-section .Technology {
     margin: 1rem auto !important;
 }
 

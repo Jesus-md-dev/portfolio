@@ -8,9 +8,9 @@ function Technology(params) {
                 <strong>{params.name}</strong>
             </h5>
             <div className='rating'>
-                <Rating 
+                <Rating
                     size="20"
-                    readonly='true' 
+                    readonly='true'
                     allowFraction='true'
                     initialValue={params.level ? params.level : 0}
                 />

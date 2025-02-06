@@ -11,11 +11,15 @@ function ImageText(params) {
   return (
     <div className={"flex items-center justify-center " + imageText}>
       <div className={"content-width w-full flex flex-col items-center " + imageTextContent}>
-        <div className="lg:w-1/2 m-5">
-          <h5>
-            <Line />
-            SOBRE MÍ
-          </h5>
+        <div className="lg:w-1/2 my-5">
+          {params.title &&
+            <span className="flex items-center">
+              <h2>
+                <Line />
+                {params.title}
+              </h2>
+            </span>
+          }
           <p>{params.text}</p>
         </div>
         <div className="lg:w-1/2 w-full m-5">

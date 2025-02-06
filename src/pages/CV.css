@@ -1,0 +1,8 @@
+svg {
+    color: #a18a66 !important;
+    fill: #a18a66 !important;
+}
+
+.contact-info svg{
+    margin-right: .5rem;
+}
