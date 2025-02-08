@@ -1,38 +1,16 @@
-import Line from "../components/Line.js";
+import TwoColumns from "./TwoColumns.js";
 
-function ImageText(params) {
-
-  let imageTextContent = params.invert ?
-    "lg:flex-row-reverse" :
-    "lg:flex-row"
-
-  let imageText = params.dark ? "bg-neutral-700" : ""
-
+function VideoText(params) {
   return (
-    <div className={"flex items-center justify-center " + imageText}>
-      <div className={"content-width w-full flex flex-col items-center " + imageTextContent}>
-        <div className="lg:w-1/2 my-5">
-          {params.title &&
-            <span className="flex items-center">
-              <h2>
-                <Line />
-                {params.title}
-              </h2>
-            </span>
-          }
-          <p>{params.text}</p>
-        </div>
-        <div className="lg:w-1/2 w-full m-5">
-          <img
-            className="w-full aspect-video object-cover rounded-xl"
-            src={params.src}
-            alt={params.alt}
-            title="Youtube Video"
-          />
-        </div>
-      </div>
-    </div>
+    <TwoColumns
+      src={params.src}
+      invert={params.invert}
+      title={params.title}
+      text={params.text}
+      alt={params.alt}
+      type="image"
+    />
   )
 }
 
-export default ImageText;
+export default VideoText;

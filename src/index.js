@@ -24,15 +24,15 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div className='dark-mode'>
         <div className="main-body">
           <Home />
         </div>
-        <div className="bg-neutral-700 mt-6">
+        <div className="footer mt-6">
           <div className="content-width footer">
             <div className="flex flex-row justify-center mb-3">
-              <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" target="_blank" rel="noopener noreferrer"/>
-              <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer"/>
+              <Iconlink svg={<GitHubLogo />} href="https://github.com/Jezusito" target="_blank" rel="noopener noreferrer" />
+              <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
             </div>
             <div>
               <span>© 2022 Jesús Márquez Delgado. All Rights Reserved</span>

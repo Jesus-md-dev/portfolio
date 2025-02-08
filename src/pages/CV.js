@@ -16,7 +16,7 @@ function CV() {
     <div className='cv-container'>
       <div className={"flex items-center justify-center lg:flex-row"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
-          <div className="lg:w-1/2 my-5">
+          <div>
             <span className="flex items-center">
               <h2>
                 <Line />
@@ -32,21 +32,21 @@ function CV() {
                   , Desarrollador Web
                 </h3>
                 <h4>Marzo 2022 - Actualidad</h4>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Site building en Drupal</li>
                   <li>Desarrollo en Drupal Backend PHP</li>
                   <li>Diseño en Drupal con React, Twig y Tailwind</li>
                   <li>Definición de tareás a partir de peticiones delcliente</li>
                   <li>Comunicación en Inglés con equipo multicultural</li>
-                </lu>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row bg-neutral-700"}>
+      <div className={"flex items-center justify-center lg:flex-row "}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
-          <div className="lg:w-1/2 my-5">
+          <div>
             <span className="flex items-center">
               <h2>
                 <Line />
@@ -55,7 +55,7 @@ function CV() {
             </span>
             <div>
               <div>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Nivel alto de <b>PHP, Laravel, Symfony y Drupal</b></li>
                   <li>Nivel alto en diseño web: <b>React, Angular, Bootstrap y Tailwind</b></li>
                   <li>Nivel alto en <b>desarrollo web con Django</b></li>
@@ -63,16 +63,16 @@ function CV() {
                   <li>Nivel alto en <b>Java</b></li>
                   <li>Nivel alto en <b>JavaScript</b></li>
                   <li>Nivel alto en manejo de base de datos <b>MYSQL y MongoDB</b></li>
-                </lu>
+                </ul>
                 <br />
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Nivel medio en <b>C/C++ y C#</b></li>
                   <li>Nivel medio en <b>Unity</b></li>
                   <li>Nivel medio en desarrollo <b>RV/RA</b> en Unity</li>
                   <li>Nivel medio en <b>Godot</b></li>
                   <li>Nivel medio en manejo de servidores <b>Apache</b></li>
                   <li>Nivel medio en manejo de <b>AWS</b></li>
-                </lu>
+                </ul>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ function CV() {
       </div>
       <div className={"flex items-center justify-center lg:flex-row"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
-          <div className="lg:w-1/2 my-5">
+          <div>
             <span className="flex items-center">
               <h2>
                 <Line />
@@ -89,22 +89,22 @@ function CV() {
             </span>
             <div>
               <div>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Trabajo en equipo</li>
                   <li>Autonomía </li>
                   <li>Liderazgo</li>
                   <li>Capacidad para la resolución de problemas</li>
                   <li>Aprendizaje rápido</li>
                   <li>Autodidacta</li>
-                </lu>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row bg-neutral-700"}>
+      <div className={"flex items-center justify-center lg:flex-row "}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
-          <div className="lg:w-1/2 my-5">
+          <div>
             <span className="flex items-center">
               <h2>
                 <Line />
@@ -114,25 +114,25 @@ function CV() {
             <div>
               <div>
                 <h3>Grado en Ingeniería Informática</h3>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Universidad de Cádiz | 2017 - 2022</li>
-                </lu>
+                </ul>
                 <h3>English B2 First Certificate</h3>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Cambridge | Junio 2022</li>
-                </lu>
+                </ul>
                 <h3>Drupal 10 Developer Certificate</h3>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Acquia | Diciembre 2024</li>
-                </lu>
+                </ul>
                 <h3>CISCO - CCNP</h3>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Universidad de Cádiz | Mayo 2021</li>
-                </lu>
+                </ul>
                 <h3>CISCO - CCNA</h3>
-                <lu>
+                <ul className="list-disc list-inside">
                   <li>Universidad de Cádiz | Octubre 2019</li>
-                </lu>
+                </ul>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ function CV() {
       </div>
       <div className={"flex items-center justify-center lg:flex-row"}>
         <div className={"content-width w-full flex flex-col lg:flex-row"}>
-          <div className="lg:w-1/2 my-5">
+          <div>
             <span className="flex items-center">
               <h2>
                 <Line />
@@ -171,15 +171,14 @@ function CV() {
         </div>
       </div>
       <div className={"flex items-center justify-center lg:flex-row"}>
-        <a
-          className="m-4"
+
+        <button
           onClick={handleDownloadCV}
           href="https://drive.google.com/uc?export=download&id=12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt"
+          className="my-5 rounded px-3 py-1"
         >
-          <button className="my-5 rounded px-3 py-1">
-            DESCARGAR CV
-          </button>
-        </a>
+          DESCARGAR CV
+        </button>
       </div>
     </div>
   );

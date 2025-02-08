@@ -11,11 +11,7 @@ function Vrar() {
               volutpat risus et risus ullamcorper mollis. Praesent at nibh id
               quam consectetur fringilla. Pellentesque habitant morbi tristique
               senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam. Nullam mattis
-              ultricies lectus, non vehicula nibh vulputate quis. Fusce pharetra
-              enim in ipsum efficitur, a eleifend justo viverra. Donec bibendum
-              arcu leo, sit amet feugiat quam vulputate id. Donec in augue eget
-              tellus imperdiet tincidunt ut id odio."
+              velit vel risus dapibus sagittis sed in quam."
       />
       <VideoText
         url="https://www.youtube.com/embed/CMsBWdokYGc"
@@ -27,11 +23,7 @@ function Vrar() {
               volutpat risus et risus ullamcorper mollis. Praesent at nibh id
               quam consectetur fringilla. Pellentesque habitant morbi tristique
               senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam. Nullam mattis
-              ultricies lectus, non vehicula nibh vulputate quis. Fusce pharetra
-              enim in ipsum efficitur, a eleifend justo viverra. Donec bibendum
-              arcu leo, sit amet feugiat quam vulputate id. Donec in augue eget
-              tellus imperdiet tincidunt ut id odio."
+              velit vel risus dapibus sagittis sed in quam."
       />
       <VideoText
         url="https://www.youtube.com/embed/Jvo3VOHDayM"
@@ -41,11 +33,7 @@ function Vrar() {
               volutpat risus et risus ullamcorper mollis. Praesent at nibh id
               quam consectetur fringilla. Pellentesque habitant morbi tristique
               senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam. Nullam mattis
-              ultricies lectus, non vehicula nibh vulputate quis. Fusce pharetra
-              enim in ipsum efficitur, a eleifend justo viverra. Donec bibendum
-              arcu leo, sit amet feugiat quam vulputate id. Donec in augue eget
-              tellus imperdiet tincidunt ut id odio."
+              velit vel risus dapibus sagittis sed in quam."
       />
     </div>
   );

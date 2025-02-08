@@ -47,7 +47,7 @@ function Home() {
 
   return (
     <div>
-      <Banner className='bg-neutral-700' user={user} />
+      <Banner className='' user={user} />
       <section className="content-width aboutMe py-5">
         <div>
           <div className="aboutMe-section">
@@ -64,7 +64,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className='flex flex-col items-center bg-neutral-700'>
+      <section className='flex flex-col items-center tabs-container'>
         <Tabs
           value={selectedTab}
           onChange={handleChange}
