@@ -1,5 +1,5 @@
-import AboutMe from "../assets/images/aboutme.jpg";
 import ImageText from "../components/ImageText";
+import AboutMe from "../files/images/aboutme.jpg";
 
 
 function Webs() {

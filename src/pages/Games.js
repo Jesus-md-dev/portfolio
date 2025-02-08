@@ -44,7 +44,7 @@ function Games() {
         text={
           <span>
             Videojuego movil desarrollado en Unity, en el que el jugador controla un cubo que se mueve de automaticamente, variando la dirección de movimiento con un toque en la pantalla.
-            <br/>
+            <br />
             El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.
           </span>
         }

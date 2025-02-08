@@ -1,8 +1,8 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
-import { ReactComponent as GitHubLogo } from "./assets/svg/github.svg";
-import { ReactComponent as LinkedinLogo } from "./assets/svg/linkledin.svg";
 import Iconlink from "./components/Iconlink.js";
+import { ReactComponent as GitHubLogo } from "./files/svg/github.svg";
+import { ReactComponent as LinkedinLogo } from "./files/svg/linkledin.svg";
 import "./index.css";
 import Home from "./pages/Home.js";
 

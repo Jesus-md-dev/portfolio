@@ -1,10 +1,10 @@
 
 import React from "react";
-import collage from '../assets/images/collage.jpg';
-import cumpleanos from '../assets/images/cumpleanos.jpg';
-import cyrus from '../assets/images/cyrus.gif';
-import girasol from '../assets/images/girasol.gif';
-import hug from '../assets/images/hug.gif';
+import collage from '../files/images/collage.jpg';
+import cumpleanos from '../files/images/cumpleanos.jpg';
+import cyrus from '../files/images/cyrus.gif';
+import girasol from '../files/images/girasol.gif';
+import hug from '../files/images/hug.gif';
 import "./QW5h.css";
 
 class QW5h extends React.Component {
