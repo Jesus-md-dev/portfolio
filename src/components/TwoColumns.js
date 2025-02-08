@@ -63,6 +63,7 @@ class TwoColumns extends React.Component {
                     <div className="w-full aspect-video">
                       <img
                         className="object-cover rounded-xl w-full h-full"
+                        alt={this.props.alt}
                         src={"https://i.ytimg.com/vi/" + videoID + "/maxresdefault.jpg"}
                       />
                     </div>
