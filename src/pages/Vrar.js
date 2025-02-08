@@ -5,6 +5,7 @@ function Vrar() {
     <div>
       <VideoText
         url="https://www.youtube.com/embed/jIragOxu9tA"
+        title="Title"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -16,7 +17,7 @@ function Vrar() {
       <VideoText
         url="https://www.youtube.com/embed/CMsBWdokYGc"
         invert={true}
-        dark="dark"
+        title="Title"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
@@ -27,6 +28,7 @@ function Vrar() {
       />
       <VideoText
         url="https://www.youtube.com/embed/Jvo3VOHDayM"
+        title="Title"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
               lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin

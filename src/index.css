@@ -80,6 +80,10 @@ button {
   max-width: 50rem;
 }
 
+.games-page a {
+  @apply font-bold underline;
+}
+
 .footer svg {
   @apply mx-4;
   width: 2.5em;

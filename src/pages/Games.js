@@ -2,62 +2,52 @@ import VideoText from "../components/VideoText.js";
 
 function Games() {
   return (
-    <div>
+    <div className="games-page">
       <VideoText
         url="https://www.youtube.com/embed/NsuEjiRypPo"
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-              lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-              volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-              quam consectetur fringilla. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam."
+        title="Survival Zombie"
+        text={
+          <span>
+            Videojuego de de disparos en primera persona, desarrollado en equipo junto con{" "}
+            <a href="https://www.linkedin.com/in/jesus-perinan-davila/">
+              Jesús Periñán Dávila
+            </a>. Este proyecto se desarrolló en Unity, durante el proceso, se modeló el mapa, se programó la IA de los zombies y las diferentes mecanicas del juego (Botiquines, oleadas, diferentes zombies)
+          </span>
+        }
       />
       <VideoText
         url="https://www.youtube.com/embed/wG-2kG7awZo"
         invert={true}
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-              lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-              volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-              quam consectetur fringilla. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam."
+        title="Shooter de oleadas"
+        text={
+          <span>
+            Proyecto de disparos con vista cenital, desarrollado para aprender sobre juegos de oleadas en Unity.
+            <br /> La idea era crear un juego en el que el jugador tuviera que sobrevivir a oleadas de enemigos de forma infinita, con lo cual se pondria a prueba la generación de enemigos constante y la dificultad progresiva.
+          </span>
+        }
       />
       <VideoText
         url="https://www.youtube.com/embed/7Ij2qMfMZoE"
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-              lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-              volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-              quam consectetur fringilla. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam."
+        title="Space Ball"
+        text={
+          <span>
+            Videojuego de plataformas en 3D para moviles, desarrollado en Unity.
+            En este proyecto se modeló el mapa, se programó la mecánica de salto mediante plataformas, se crearon los diferentes niveles y se implementó un sistema de puntuación.
+          </span>
+        }
       />
       <VideoText
         url="https://www.youtube.com/embed/CpbWe8kSolI"
         invert={true}
         dark={true}
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-              lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-              volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-              quam consectetur fringilla. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam."
-      />
-      <VideoText
-        url="https://www.youtube.com/embed/kuh39heT7jA"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-              lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-              volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-              quam consectetur fringilla. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Donec eget
-              velit vel risus dapibus sagittis sed in quam."
+        title="Cubo ZigZag"
+        text={
+          <span>
+            Videojuego movil desarrollado en Unity, en el que el jugador controla un cubo que se mueve de automaticamente, variando la dirección de movimiento con un toque en la pantalla.
+            <br/>
+            El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.
+          </span>
+        }
       />
     </div>
   );

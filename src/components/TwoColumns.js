@@ -47,7 +47,7 @@ class TwoColumns extends React.Component {
               </span>
             </div>
           }
-          <div className={"w-full flex flex-col items-center " + this.twoColumnsContent}>
+          <div className={"w-full flex flex-col items-center lg:mt-5 " + this.twoColumnsContent}>
             <div className="lg:w-1/2 w-full">
               {this.props.type === "image" &&
                 <img
@@ -80,7 +80,7 @@ class TwoColumns extends React.Component {
               }
             </div>
             <div className="lg:w-1/2 mx-5 lg:mt-0 mt-5">
-              <p className="lg:pt-2 pt-0">{this.props.text}</p>
+              <p>{this.props.text}</p>
             </div>
           </div>
         </div>
