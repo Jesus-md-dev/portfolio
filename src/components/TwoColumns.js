@@ -53,7 +53,7 @@ class TwoColumns extends React.Component {
                 <img
                   className="w-full aspect-video object-cover rounded-xl"
                   src={this.props.src}
-                  alt={this.props.alt}
+                  alt={this.props.alt ?? "Site image"}
                   title="Youtube Video"
                 />
               }
@@ -63,7 +63,7 @@ class TwoColumns extends React.Component {
                     <div className="w-full aspect-video">
                       <img
                         className="object-cover rounded-xl w-full h-full"
-                        alt={this.props.alt}
+                        alt={this.props.alt ?? "Youtube Video Thumbnail"}
                         src={"https://i.ytimg.com/vi/" + videoID + "/maxresdefault.jpg"}
                       />
                     </div>
@@ -71,7 +71,7 @@ class TwoColumns extends React.Component {
                   <iframe
                     className={"w-full aspect-video rounded-xl " + this.iframeClass}
                     src={"https://www.youtube.com/embed/" + videoID}
-                    title={this.props.alt}
+                    title={this.props.alt ?? "Youtube Video"}
                     onLoad={this.hideSpinner}
                     lazy="true"
                   ></iframe>
