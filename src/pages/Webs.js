@@ -28,7 +28,7 @@ function Webs() {
         title="Mi CV web"
         text={
           <span>
-            Web personal en la que muestro mi Curriculum Vitae y algunos de los proyectos en los que he trabajado.
+            Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado.
             La web está hecha con <a target="_blank" rel="noopener noreferrer" href="https://react.dev/">React</a> como librería utilizada para el front-end, <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">Tailwind CSS</a> y la librería de componentes <a target="_blank" rel="noopener noreferrer" href="https://mui.com/">MUI</a>.
           </span>
         }

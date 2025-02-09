@@ -36,8 +36,8 @@ function CV() {
                   <li>Site building en Drupal</li>
                   <li>Desarrollo en Drupal Backend PHP</li>
                   <li>Diseño en Drupal con React, Twig y Tailwind</li>
-                  <li>Definición de tareás a partir de peticiones delcliente</li>
-                  <li>Comunicación en Inglés con equipo multicultural</li>
+                  <li>Definición de tareas a partir de peticiones del cliente</li>
+                  <li>Comunicación en inglés con equipo multicultural</li>
                 </ul>
               </div>
             </div>
@@ -62,7 +62,7 @@ function CV() {
                   <li>Nivel alto en <b>Python</b></li>
                   <li>Nivel alto en <b>Java</b></li>
                   <li>Nivel alto en <b>JavaScript</b></li>
-                  <li>Nivel alto en manejo de base de datos <b>MYSQL y MongoDB</b></li>
+                  <li>Nivel alto en manejo de bases de datos <b>MySQL y MongoDB</b></li>
                 </ul>
                 <br />
                 <ul className="list-disc list-inside">
@@ -91,7 +91,7 @@ function CV() {
               <div>
                 <ul className="list-disc list-inside">
                   <li>Trabajo en equipo</li>
-                  <li>Autonomía </li>
+                  <li>Autonomía</li>
                   <li>Liderazgo</li>
                   <li>Capacidad para la resolución de problemas</li>
                   <li>Aprendizaje rápido</li>
@@ -108,7 +108,7 @@ function CV() {
             <span className="flex items-center">
               <h2>
                 <Line />
-                Datos Academicos
+                Datos Académicos
               </h2>
             </span>
             <div>
@@ -164,7 +164,7 @@ function CV() {
                 <GitHubIcon /> <a href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer">Jesus-md-dev | GitHub</a>
               </div>
               <div>
-                <LinkedInIcon /><a href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer">Jesús Márquez Delgado | Linkedin</a>
+                <LinkedInIcon /><a href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer">Jesús Márquez Delgado | LinkedIn</a>
               </div>
             </div>
           </div>

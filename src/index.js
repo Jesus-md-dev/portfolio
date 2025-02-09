@@ -35,7 +35,7 @@ function App() {
               <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
             </div>
             <div>
-              <span>© 2022 Jesús Márquez Delgado. All Rights Reserved</span>
+              <span>© 2025 Jesús Márquez Delgado. Todos los derechos reservados</span>
             </div>
           </div>
         </div>

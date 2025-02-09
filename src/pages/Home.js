@@ -58,7 +58,7 @@ function Home() {
                 alt="Computer science picture"
                 title="SOBRE MÍ"
                 text="Ingeniero informático, especializado en tecnologías de la información,
-                    con experiencia en el desarrollo web y un gran interés en el desarrollo software.
+                    con experiencia en el desarrollo web y un gran interés en el desarrollo de software.
                     Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional."
               />
             </div>

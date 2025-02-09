@@ -11,7 +11,7 @@ function Games() {
             Videojuego de disparos en primera persona, desarrollado en equipo junto con{" "}
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jesus-perinan-davila/">
               Jesús Periñán Dávila
-            </a>. Este proyecto se desarrolló en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>, durante el proceso, se modeló el mapa, se programó la IA de los zombies y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombies).
+            </a>. Este proyecto se desarrolló en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>, durante el proceso, se modeló el mapa, se programó la IA de los zombis y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombis).
           </span>
         }
       />
