@@ -53,6 +53,7 @@ class TwoColumns extends React.Component {
                   src={this.props.src}
                   alt={this.props.alt ?? "Site image"}
                   title="Youtube Video"
+                  loading="lazy"
                 />
               }
               {this.props.type === "video" &&
@@ -63,6 +64,7 @@ class TwoColumns extends React.Component {
                         className="object-cover rounded-xl h-full"
                         alt={this.props.alt ?? "Youtube Video Thumbnail"}
                         src={"https://i.ytimg.com/vi/" + videoID + "/maxresdefault.jpg"}
+                        loading="lazy"
                       />
                     </div>
                   ) : null}
@@ -71,7 +73,7 @@ class TwoColumns extends React.Component {
                     src={"https://www.youtube.com/embed/" + videoID}
                     title={this.props.alt ?? "Youtube Video"}
                     onLoad={this.hideSpinner}
-                    lazy="true"
+                    loading="lazy"
                   ></iframe>
                 </span>
 
