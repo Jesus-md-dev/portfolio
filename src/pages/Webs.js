@@ -1,46 +1,37 @@
 import ImageText from "../components/ImageText";
-import AboutMe from "../files/images/aboutme.jpg";
-
+import xprojects from "../files/images/1xprojects-with-logo.png";
+import jmcvweb from "../files/images/jm-cv-web.png";
 
 function Webs() {
   return (
-    <div>
+    <div className="webs-page">
       <ImageText
-        src={AboutMe}
+        src={xprojects}
         alt="Computer science picture"
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-            lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-            volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-            quam consectetur fringilla. Pellentesque habitant morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas. Donec eget
-            velit vel risus dapibus sagittis sed in quam."
+        title={
+          <span>
+            Webs en <a target="_blank" rel="noopener noreferrer" href="https://www.1xinternet.de/en">1xINTERNET</a>
+          </span>
+        }
+        text={
+          <span>
+            Actualmente, en mi trabajo como desarrollador web en <a target="_blank" rel="noopener noreferrer" href="https://www.1xinternet.de/en">1xINTERNET</a>, he tenido la oportunidad de trabajar en diferentes proyectos, tanto en la parte del front-end como en el back-end.
+            Principalmente, he trabajado con <a target="_blank" rel="noopener noreferrer" href="https://new.drupal.org/">Drupal</a> dedicándome al back-end y al site building, pero también he tenido la oportunidad de trabajar como front-end utilizando <a target="_blank" rel="noopener noreferrer" href="https://react.dev/">React</a> y <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">Tailwind CSS</a>.
+            Las webs en las que he trabajado son <a target="_blank" rel="noopener noreferrer" href="https://www.circor.com/">Circor</a>, <a target="_blank" rel="noopener noreferrer" href="https://pumps.circor.com/">Pumps</a>, <a target="_blank" rel="noopener noreferrer" href="https://www.maggi.de/">Maggi</a> y <a target="_blank" rel="noopener noreferrer" href="https://www.thomy.de/">Thomy</a>.
+          </span>
+        }
       />
       <ImageText
-        src={AboutMe}
+        src={jmcvweb}
         invert={true}
         alt="Computer science picture"
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-            lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-            volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-            quam consectetur fringilla. Pellentesque habitant morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas. Donec eget
-            velit vel risus dapibus sagittis sed in quam."
-      />
-      <ImageText
-        src={AboutMe}
-        alt="Computer science picture"
-        title="Title"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            sit amet hendrerit odio, a luctus urna. Duis ut luctus est, sed
-            lobortis nisi. Sed sed orci ut nulla consectetur interdum. Proin
-            volutpat risus et risus ullamcorper mollis. Praesent at nibh id
-            quam consectetur fringilla. Pellentesque habitant morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas. Donec eget
-            velit vel risus dapibus sagittis sed in quam."
+        title="Mi CV web"
+        text={
+          <span>
+            Web personal en la que muestro mi Curriculum Vitae y algunos de los proyectos en los que he trabajado.
+            La web está hecha con <a target="_blank" rel="noopener noreferrer" href="https://react.dev/">React</a> como librería utilizada para el front-end, <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">Tailwind CSS</a> y la librería de componentes <a target="_blank" rel="noopener noreferrer" href="https://mui.com/">MUI</a>.
+          </span>
+        }
       />
     </div>
   );

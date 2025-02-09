@@ -22,7 +22,7 @@
 
 /* color on hover of the scrollbar handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: #96794b
+  background: #96794b;
 }
 
 html {
@@ -80,14 +80,18 @@ button {
   max-width: 50rem;
 }
 
-.games-page a {
+.games-page a,
+.vrar-page a,
+.webs-page a {
   @apply font-bold underline;
 }
 
 .footer svg {
-  @apply mx-4;
-  width: 2.5em;
-  height: 2.5em;
+  @apply mx-4 w-10 h-10;
+}
+
+.footer svg:hover {
+  fill: #96794b
 }
 
 .dark-mode {

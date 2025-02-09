@@ -5,7 +5,6 @@ class TwoColumns extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
       loading: true
     };
@@ -15,7 +14,6 @@ class TwoColumns extends React.Component {
       "lg:flex-row"
 
     this.twoColumns = this.props.dark ? "" : ""
-    this.iframeClass = "hidden";
   }
 
   getYouTubeVideoID(url) {
@@ -58,11 +56,11 @@ class TwoColumns extends React.Component {
                 />
               }
               {this.props.type === "video" &&
-                <span>
+                <span className="aspect-video w-auto relative">
                   {this.state.loading ? (
-                    <div className="w-full aspect-video">
+                    <div className="fit-content absolute">
                       <img
-                        className="object-cover rounded-xl w-full h-full"
+                        className="object-cover rounded-xl h-full"
                         alt={this.props.alt ?? "Youtube Video Thumbnail"}
                         src={"https://i.ytimg.com/vi/" + videoID + "/maxresdefault.jpg"}
                       />

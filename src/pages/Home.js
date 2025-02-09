@@ -9,6 +9,7 @@ import Banner from '../components/Banner.js';
 import ImageText from '../components/ImageText.js';
 import User from '../components/User.js';
 import AboutMe from "../files/images/aboutme.jpg";
+import Logo from "../files/images/JM-logo.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import CV from "../pages/CV.js";
 import Games from "../pages/Games.js";
@@ -35,7 +36,7 @@ function Home() {
   let user = new User(
     'Jesús',
     'Márquez Delgado',
-    'https://upload.wikimedia.org/wikipedia/commons/b/b5/Windows_10_Default_Profile_Picture.svg',
+    { Logo },
     'Ingeniero Informático'
   )
 
