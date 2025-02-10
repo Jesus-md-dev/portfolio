@@ -22,7 +22,7 @@ class TwoColumns extends React.Component {
     return match ? match[1] : null;
   }
 
-  hideSpinner = () => {
+  hideThumbnail = () => {
     this.setState({
       loading: false
     });
@@ -72,7 +72,7 @@ class TwoColumns extends React.Component {
                     className={"w-full aspect-video rounded-xl " + this.iframeClass}
                     src={"https://www.youtube.com/embed/" + videoID}
                     title={this.props.alt ?? "Youtube Video"}
-                    onLoad={this.hideSpinner}
+                    onLoad={this.hideThumbnail}
                     loading="lazy"
                   ></iframe>
                 </span>
