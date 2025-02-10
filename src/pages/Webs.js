@@ -1,6 +1,6 @@
 import ImageText from "../components/ImageText";
-import xprojects from "../files/images/1xprojects-with-logo.png";
-import jmcvweb from "../files/images/jm-cv-web.png";
+import xprojects from "../files/images/1xprojects-with-logo-transformed.png";
+import jmcvweb from "../files/images/jm-cv-web-transformed.png";
 
 function Webs() {
   return (

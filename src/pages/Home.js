@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 import Banner from '../components/Banner.js';
 import ImageText from '../components/ImageText.js';
 import User from '../components/User.js';
-import AboutMe from "../files/images/aboutme.jpg";
+import AboutMe from "../files/images/aboutme-transformed.jpeg";
 import Logo from "../files/images/JM-logo.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import CV from "../pages/CV.js";
