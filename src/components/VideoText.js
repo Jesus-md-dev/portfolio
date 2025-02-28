@@ -1,16 +1,25 @@
-import TwoColumns from "./TwoColumns.js";
+import PropTypes from 'prop-types';
+import React from 'react';
+import TwoColumns from "./TwoColumns";
 
-function VideoText(params) {
+function VideoText({ url, invert, title, text }) {
   return (
     <TwoColumns
-      src={params.url}
-      invert={params.invert}
-      title={params.title}
-      text={params.text}
+      src={url}
+      invert={invert}
+      title={title}
+      text={text}
       alt="Youtube Video"
       type="video"
     />
-  )
+  );
 }
+
+VideoText.propTypes = {
+  url: PropTypes.string.isRequired,
+  invert: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default VideoText;

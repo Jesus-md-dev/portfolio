@@ -1,19 +1,30 @@
+import PropTypes from 'prop-types';
+import React from 'react';
 import Avatar from "../components/Avatar.js";
 
-function Banner(params) {
+function Banner({ className, user }) {
     return (
-        <div className={"py-10 " + params.className}>
+        <div className={`py-10 ${className}`}>
             <div>
                 <div className="flex flex-col justify-center items-center">
-                    <Avatar user={params.user} />
+                    <Avatar user={user} />
                     <div className="text-center mt-3">
-                        <h1>{params.user.name}  {params.user.surname}</h1>
-                        <h3>{params.user.degree}</h3>
+                        <h1>{user.name} {user.surname}</h1>
+                        <h3>{user.degree}</h3>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
+Banner.propTypes = {
+    className: PropTypes.string,
+    user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        surname: PropTypes.string.isRequired,
+        degree: PropTypes.string.isRequired
+    }).isRequired
+};
 
 export default Banner;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from "react";
 import Line from "./Line.js";
 
@@ -88,5 +89,15 @@ class TwoColumns extends React.Component {
     )
   }
 }
+
+TwoColumns.propTypes = {
+  src: PropTypes.string.isRequired,
+  invert: PropTypes.bool,
+  title: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  type: PropTypes.oneOf(['image', 'video']).isRequired,
+  dark: PropTypes.bool
+};
 
 export default TwoColumns;

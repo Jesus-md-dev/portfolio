@@ -1,16 +1,26 @@
-import TwoColumns from "./TwoColumns.js";
+import PropTypes from 'prop-types';
+import React from 'react';
+import TwoColumns from "./TwoColumns";
 
-function VideoText(params) {
+function ImageText({ src, invert, title, text, alt }) {
   return (
     <TwoColumns
-      src={params.src}
-      invert={params.invert}
-      title={params.title}
-      text={params.text}
-      alt={params.alt}
+      src={src}
+      invert={invert}
+      title={title}
+      text={text}
+      alt={alt}
       type="image"
     />
-  )
+  );
 }
 
-export default VideoText;
+ImageText.propTypes = {
+  src: PropTypes.string.isRequired,
+  invert: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+};
+
+export default ImageText;

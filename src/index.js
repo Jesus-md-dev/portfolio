@@ -20,8 +20,6 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
-
-
   return (
     <ThemeProvider theme={theme}>
       <div className='dark-mode'>
@@ -44,4 +42,4 @@ function App() {
   );
 }
 
-root.render(App())
+root.render(<App />);

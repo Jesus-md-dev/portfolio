@@ -8,14 +8,14 @@ import Line from "../components/Line.js";
 import "./CV.css";
 
 function CV() {
-  function handleDownloadCV() {
+  const handleDownloadCV = () => {
     window.open("https://drive.google.com/file/d/12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt/view?usp=sharing", '_blank').focus();
-  }
+  };
 
   return (
     <div className='cv-container'>
-      <div className={"flex items-center justify-center lg:flex-row"}>
-        <div className={"content-width w-full flex flex-col lg:flex-row"}>
+      <div className="flex items-center justify-center lg:flex-row">
+        <div className="content-width w-full flex flex-col lg:flex-row">
           <div>
             <span className="flex items-center">
               <h2>
@@ -44,8 +44,8 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row "}>
-        <div className={"content-width w-full flex flex-col lg:flex-row"}>
+      <div className="flex items-center justify-center lg:flex-row">
+        <div className="content-width w-full flex flex-col lg:flex-row">
           <div>
             <span className="flex items-center">
               <h2>
@@ -78,8 +78,8 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row"}>
-        <div className={"content-width w-full flex flex-col lg:flex-row"}>
+      <div className="flex items-center justify-center lg:flex-row">
+        <div className="content-width w-full flex flex-col lg:flex-row">
           <div>
             <span className="flex items-center">
               <h2>
@@ -102,8 +102,8 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row "}>
-        <div className={"content-width w-full flex flex-col lg:flex-row"}>
+      <div className="flex items-center justify-center lg:flex-row">
+        <div className="content-width w-full flex flex-col lg:flex-row">
           <div>
             <span className="flex items-center">
               <h2>
@@ -138,8 +138,8 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row"}>
-        <div className={"content-width w-full flex flex-col lg:flex-row"}>
+      <div className="flex items-center justify-center lg:flex-row">
+        <div className="content-width w-full flex flex-col lg:flex-row">
           <div>
             <span className="flex items-center">
               <h2>
@@ -170,8 +170,7 @@ function CV() {
           </div>
         </div>
       </div>
-      <div className={"flex items-center justify-center lg:flex-row"}>
-
+      <div className="flex items-center justify-center lg:flex-row">
         <button
           onClick={handleDownloadCV}
           href="https://drive.google.com/uc?export=download&id=12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt"

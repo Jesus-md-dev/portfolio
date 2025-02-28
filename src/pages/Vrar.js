@@ -1,9 +1,11 @@
+import React from 'react';
 import VideoText from "../components/VideoText.js";
 
 function Vrar() {
   return (
     <div className="vrar-page">
       <VideoText
+        key="monster-war"
         url="https://www.youtube.com/embed/jIragOxu9tA"
         title="Monster War (RA)"
         text={
@@ -18,6 +20,7 @@ function Vrar() {
         }
       />
       <VideoText
+        key="space-survival"
         url="https://www.youtube.com/embed/CMsBWdokYGc"
         invert={true}
         title="Space Survival (RV)"
@@ -30,6 +33,7 @@ function Vrar() {
         }
       />
       <VideoText
+        key="quimicefa"
         url="https://www.youtube.com/embed/Jvo3VOHDayM"
         title="Quimicefa (RA)"
         text={

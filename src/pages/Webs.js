@@ -1,3 +1,4 @@
+import React from 'react';
 import ImageText from "../components/ImageText";
 import xprojects from "../files/images/1xprojects-with-logo-transformed.png";
 import jmcvweb from "../files/images/jm-cv-web-transformed.png";
@@ -35,6 +36,6 @@ function Webs() {
       />
     </div>
   );
-};
+}
 
 export default Webs;
