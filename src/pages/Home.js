@@ -9,7 +9,7 @@ import Banner from '../components/Banner';
 import ImageText from '../components/ImageText';
 import User from '../components/User';
 import AboutMe from "../files/images/aboutme-transformed.jpeg";
-import Logo from "../files/images/JM-logo.png";
+import Logo from "../files/images/fotocv.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import CV from "../pages/CV";
 import Games from "../pages/Games";
