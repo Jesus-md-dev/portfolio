@@ -9,7 +9,7 @@ function Games() {
     <div className="games-page">
       <VideoText
         url="https://www.youtube.com/embed/NsuEjiRypPo"
-        title="Survival Zombie"
+        title={t('survivalZombieTitle')}
         text={
           <>
             {t('survivalZombieText')}
@@ -38,7 +38,7 @@ function Games() {
       />
       <VideoText
         url="https://www.youtube.com/embed/7Ij2qMfMZoE"
-        title="Space Ball"
+        title={t('spaceBallTitle')}
         text={
           <>
             {t('spaceBallText')}

@@ -8,13 +8,48 @@ const Footer = React.memo(() => {
   const { t } = useLanguage();
   
   return (
-    <footer className="footer mt-6">
-      <div className="content-width footer">
-        <div className="flex flex-row justify-center mb-3">
-          <Iconlink svg={<GitHubLogo />} href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer" />
-          <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
+    <footer className="modern-footer">
+      <div className="footer-glow"></div>
+      <div className="footer-content">
+        <div className="footer-section">
+          <div className="footer-title">
+            <span className="footer-highlight">Jesús Márquez</span>
+          </div>
+          <div className="footer-subtitle">{t('footerSubtitle')}</div>
         </div>
-        <div>
+        
+        <div className="footer-section">
+          <div className="footer-links">
+            <div className="social-links">
+              <Iconlink 
+                svg={<GitHubLogo />} 
+                href="https://github.com/Jesus-md-dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="modern-social-link"
+              />
+              <Iconlink 
+                svg={<LinkedinLogo />} 
+                href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="modern-social-link"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div className="footer-section">
+          <div className="footer-contact">
+            <div className="contact-item">
+              <span>{t('footerLocationSpain')}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <div className="footer-copyright">
           <span>{t('allRightsReserved')}</span>
         </div>
       </div>

@@ -2,6 +2,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
 import ErrorBoundary from "./components/ErrorBoundary.js";
 import Footer from "./components/Footer.js";
+import LanguageToggle from "./components/LanguageToggle.js";
+import ThemeToggle from "./components/ThemeToggle.js";
 import { ThemeProvider as CustomThemeProvider, useTheme } from "./contexts/ThemeContext.js";
 import { LanguageProvider } from "./i18n/LanguageContext.js";
 import "./index.css";
@@ -26,6 +28,12 @@ function AppContent() {
   return (
     <ThemeProvider theme={muiTheme}>
       <div>
+        {/* Fixed position toggle buttons at top right */}
+        <div className="fixed top-4 right-4 z-50 flex gap-3">
+          <ThemeToggle />
+          <LanguageToggle />
+        </div>
+        
         <div className="main-body" id="main-content">
           <Home />
         </div>

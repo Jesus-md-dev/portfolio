@@ -10,7 +10,7 @@ function Vrar() {
       <VideoText
         key="monster-war"
         url="https://www.youtube.com/embed/jIragOxu9tA"
-        title="Monster War (RA)"
+        title={t('monsterWarTitle')}
         text={
           <span>
             {t('monsterWarText')}
@@ -28,7 +28,7 @@ function Vrar() {
         key="space-survival"
         url="https://www.youtube.com/embed/CMsBWdokYGc"
         invert={true}
-        title="Space Survival (RV)"
+        title={t('spaceSurvivalTitle')}
         text={
           <span>
             {t('spaceSurvivalText')}
@@ -41,7 +41,7 @@ function Vrar() {
       <VideoText
         key="quimicefa"
         url="https://www.youtube.com/embed/Jvo3VOHDayM"
-        title="Quimicefa (RA)"
+        title={t('quimicefaTitle')}
         text={
           <span>
             {t('quimicefaText')}

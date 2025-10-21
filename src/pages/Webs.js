@@ -11,7 +11,7 @@ function Webs() {
     <div className="webs-page">
       <ImageText
         src={xprojects}
-        alt="1xINTERNET projects showcase"
+        alt={t('projectsShowcase')}
         title={
           <span>
             {t('websAt1xinternet')} <a target="_blank" rel="noopener noreferrer" href="https://www.1xinternet.de/en">1xINTERNET</a>
@@ -43,7 +43,7 @@ function Webs() {
       <ImageText
         src={jmcvweb}
         invert={true}
-        alt="Personal CV website screenshot"
+        alt={t('personalWebsiteScreenshot')}
         title={t('personalCVWeb')}
         text={
           <span>

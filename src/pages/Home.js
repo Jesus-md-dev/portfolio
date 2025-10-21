@@ -6,10 +6,8 @@ import SvgIcon from '@mui/material/SvgIcon';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
-import ImageText from '../components/ImageText';
 import User from '../components/User';
 import { useLanguage } from '../i18n/LanguageContext.js';
-import AboutMe from "../files/images/aboutme-transformed.jpeg";
 import Logo from "../files/images/fotocvfondo.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import "./Home.css";
@@ -70,51 +68,46 @@ const Home = () => {
   }, []);
 
   const user = useMemo(() => new User(
-    'Jesús',
-    'Márquez Delgado',
+    t('name').split(' ')[0], // 'Jesús'
+    t('name').split(' ').slice(1).join(' '), // 'Márquez Delgado'
     { Logo },
-    'Ingeniero Informático'
-  ), []);
+    t('title') // 'Ingeniero Informático' / 'Computer Engineer'
+  ), [t]);
 
   return (
-    <main>
+    <main className="modern-portfolio">
+      {/* New Banner Header - Full Width */}
       <Banner user={user} />
-      <section className="content-width aboutMe py-5" aria-labelledby="about-me-title">
-        <h2 id="about-me-title" className="sr-only">{t('aboutMe')}</h2>
-        <div className="aboutMe-section">
-          <div className="text-section">
-            <ImageText
-              src={AboutMe}
-              alt="Computer science workspace with laptop and code"
-              title={t('aboutMe')}
-              text={t('aboutMeText')}
-            />
-          </div>
-        </div>
-      </section>
-      <nav className='flex flex-col items-center tabs-container' role="navigation" aria-label={t('portfolioSections')}>
+
+      {/* Enhanced Navigation */}
+      <nav className='navigation-section' role="navigation" aria-label={t('portfolioSections')}>
+        <div className="nav-glow"></div>
         <h2 className="sr-only">{t('portfolioSections')}</h2>
         <Tabs
           value={selectedTab}
           onChange={handleChange}
-          aria-label="Portfolio navigation tabs"
+          aria-label={t('portfolioNavigationTabs')}
           variant='fullWidth'
           centered
-          className='content-width'
+          className='modern-tabs content-width'
         >
-          <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label={t('cv')} value="cv" aria-controls="cv-panel" />
-          <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label={t('webs')} value="webs" aria-controls="webs-panel" />
-          <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label={t('games')} value="games" aria-controls="games-panel" />
-          <Tab className='Tab' icon={
+          <Tab className='modern-tab' icon={<ArticleIcon />} iconPosition="start" label={t('cv')} value="cv" aria-controls="cv-panel" />
+          <Tab className='modern-tab' icon={<WebIcon />} iconPosition="start" label={t('webs')} value="webs" aria-controls="webs-panel" />
+          <Tab className='modern-tab' icon={<GamepadIcon />} iconPosition="start" label={t('games')} value="games" aria-controls="games-panel" />
+          <Tab className='modern-tab' icon={
             <SvgIcon>
               <VrIcon />
             </SvgIcon>
           } iconPosition="start" label={t('arvr')} value="arvr" aria-controls="arvr-panel" />
         </Tabs>
       </nav>
-      <section role="tabpanel" aria-label={`${selectedTab} content`} id={`${selectedTab}-panel`}>
+
+      {/* Content Section */}
+      <section className="content-section" role="tabpanel" aria-label={`${selectedTab} content`} id={`${selectedTab}-panel`}>
         <h2 className="sr-only">{t(selectedTab)} {t('portfolioSections')}</h2>
-        {renderSwitch(selectedTab)}
+        <div className="content-container">
+          {renderSwitch(selectedTab)}
+        </div>
       </section>
     </main>
   );

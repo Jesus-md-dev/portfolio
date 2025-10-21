@@ -141,10 +141,10 @@ function CV() {
                 <AccessTimeIcon /> {t('availability')}
               </div>
               <div>
-                <GitHubIcon /> <a href={config.social.github} target="_blank" rel="noopener noreferrer">Jesus-md-dev | GitHub</a>
+                <GitHubIcon /> <a href={config.social.github} target="_blank" rel="noopener noreferrer">{t('githubLink')}</a>
               </div>
               <div>
-                <LinkedInIcon /><a href={config.social.linkedin} target="_blank" rel="noopener noreferrer">Jesús Márquez Delgado | LinkedIn</a>
+                <LinkedInIcon /><a href={config.social.linkedin} target="_blank" rel="noopener noreferrer">{t('linkedinLink')}</a>
               </div>
             </div>
           </div>

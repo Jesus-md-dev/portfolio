@@ -43,7 +43,8 @@ export const translations = {
       "Nivel medio en desarrollo RV/RA en Unity",
       "Nivel medio en Godot",
       "Nivel medio en manejo de servidores Apache",
-      "Nivel medio en manejo de AWS"
+      "Nivel medio en manejo de AWS",
+      "Nivel medio en manejo de Netlify"
     ],
     
     skills: "Habilidades",
@@ -90,9 +91,13 @@ export const translations = {
     
     personalCVWeb: "Mi CV web",
     personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
+    projectsShowcase: "Muestra de proyectos de 1xINTERNET",
+    personalWebsiteScreenshot: "Captura de pantalla del sitio web CV personal",
     
     // Games section
+    survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Shooter de oleadas",
+    spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "Cubo ZigZag",
     survivalZombieText: "Videojuego de disparos en primera persona, desarrollado en equipo junto con Jesús Periñán Dávila. Este proyecto se desarrolló en Unity, durante el proceso, se modeló el mapa, se programó la IA de los zombis y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombis).",
     
@@ -103,6 +108,9 @@ export const translations = {
     zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
     
     // VR/AR section
+    monsterWarTitle: "Monster War (RA)",
+    spaceSurvivalTitle: "Space Survival (RV)",
+    quimicefaTitle: "Quimicefa (RA)",
     monsterWarText: "Videojuego móvil de realidad aumentada, desarrollado en Unity junto con Jesús Periñán Dávila. La jugabilidad consiste en enfrentarse a enemigos que aparecen en el entorno con los diferentes personajes que se pueden seleccionar. El videojuego requiere de la utilización de una carta, la cual el juego reconoce como nuestro personaje y esta debe ser colocada junto a los enemigos para poder comenzar un combate.",
     
     spaceSurvivalText: "Videojuego de realidad virtual, desarrollado en Unity. La jugabilidad consiste en destruir las naves alienígenas que se van acercando hacia la nave antes de que colisionen contra el jugador. El sistema de apuntado consiste en mantener la mirada fija en la nave que se quiere destruir durante un tiempo determinado, tras lo cual se dispara automáticamente.",
@@ -111,6 +119,9 @@ export const translations = {
     
     // Footer
     allRightsReserved: "© 2025 Jesús Márquez Delgado. Todos los derechos reservados",
+    footerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
+    footerLocationSpain: "📍 Cádiz, España",
+    availableForProjects: "🌐 Disponible para proyectos",
     
     // Error Boundary
     errorTitle: "Oops! Algo salió mal",
@@ -123,7 +134,23 @@ export const translations = {
     
     // Accessibility
     loading: "Cargando",
-    portfolioSections: "Secciones del portafolio"
+    portfolioSections: "Secciones del portafolio",
+    portfolioNavigationTabs: "Pestañas de navegación del portafolio",
+    
+    // Enlaces sociales
+    githubLink: "Jesus-md-dev | GitHub", 
+    linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    
+    // Banner
+    developerPortfolio: "Portafolio de Desarrollador",
+    bannerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
+    bannerDescription: "Creando experiencias web modernas, juegos inmersivos y aplicaciones AR/VR con tecnologías de vanguardia",
+    webDevelopmentTitle: "🌐 Desarrollo Web",
+    gameDevelopmentTitle: "🎮 Desarrollo de Juegos",
+    technologiesTitle: "🔧 Tecnologías",
+    contactEmail: "Email de contacto",
+    locationSpain: "Cádiz, España",
+    githubProfile: "Perfil de GitHub",
   },
   
   en: {
@@ -170,7 +197,8 @@ export const translations = {
       "Medium level in VR/AR development in Unity",
       "Medium level in Godot",
       "Medium level in Apache server management",
-      "Medium level in AWS management"
+      "Medium level in AWS management",
+      "Medium level in Netlify management"
     ],
     
     skills: "Skills",
@@ -217,9 +245,13 @@ export const translations = {
     
     personalCVWeb: "My CV website",
     personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
+    projectsShowcase: "1xINTERNET projects showcase",
+    personalWebsiteScreenshot: "Personal CV website screenshot",
     
     // Games section
+    survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Wave Shooter",
+    spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "ZigZag Cube",
     survivalZombieText: "First-person shooter video game, developed as a team with Jesús Periñán Dávila. This project was developed in Unity, during the process, the map was modeled, zombie AI was programmed and different game mechanics (first aid kits, waves, different zombies) were implemented.",
     
@@ -230,6 +262,9 @@ export const translations = {
     zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
     
     // VR/AR section
+    monsterWarTitle: "Monster War (AR)",
+    spaceSurvivalTitle: "Space Survival (VR)",
+    quimicefaTitle: "Quimicefa (AR)",
     monsterWarText: "Augmented reality mobile video game, developed in Unity with Jesús Periñán Dávila. The gameplay consists of facing enemies that appear in the environment with different characters that can be selected. The video game requires the use of a card, which the game recognizes as our character and must be placed next to enemies to start combat.",
     
     spaceSurvivalText: "Virtual reality video game, developed in Unity. The gameplay consists of destroying alien ships that approach the ship before they collide with the player. The aiming system consists of keeping your gaze fixed on the ship you want to destroy for a certain time, after which it automatically fires.",
@@ -238,6 +273,9 @@ export const translations = {
     
     // Footer
     allRightsReserved: "© 2025 Jesús Márquez Delgado. All rights reserved",
+    footerSubtitle: "Computer Engineer & Full-Stack Developer",
+    footerLocationSpain: "📍 Cádiz, Spain",
+    availableForProjects: "🌐 Available for projects",
     
     // Error Boundary
     errorTitle: "Oops! Something went wrong",
@@ -250,6 +288,22 @@ export const translations = {
     
     // Accessibility
     loading: "Loading",
-    portfolioSections: "Portfolio sections"
+    portfolioSections: "Portfolio sections",
+    portfolioNavigationTabs: "Portfolio navigation tabs",
+    
+    // Social Links
+    githubLink: "Jesus-md-dev | GitHub",
+    linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    
+    // Banner
+    developerPortfolio: "Developer Portfolio",
+    bannerSubtitle: "Computer Engineer & Full-Stack Developer",
+    bannerDescription: "Crafting modern web experiences, immersive games, and AR/VR applications with cutting-edge technologies",
+    webDevelopmentTitle: "🌐 Web Development",
+    gameDevelopmentTitle: "🎮 Game Development",
+    technologiesTitle: "🔧 Technologies",
+    contactEmail: "Contact Email",
+    locationSpain: "Cádiz, Spain",
+    githubProfile: "GitHub Profile",
   }
 };

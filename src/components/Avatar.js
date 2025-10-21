@@ -4,7 +4,7 @@ import React from 'react';
 function Avatar({ user }) {
     const { avatarUrl, name, surname } = user;
     return (
-        <img className="rounded-full w-1/2 max-w-80 shadow-xl"
+        <img className="banner-avatar"
             src={avatarUrl ? avatarUrl.Logo : ''}
             alt={`${name} ${surname}`}
         />
