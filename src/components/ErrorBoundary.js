@@ -28,23 +28,34 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
+      // Get current language from localStorage or default to Spanish
+      const currentLang = localStorage.getItem('preferredLanguage') || 'es';
+      const isSpanish = currentLang === 'es';
+      
       // Custom fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-neutral-800 text-white">
           <div className="text-center p-8 max-w-md">
-            <h2 className="text-2xl font-bold mb-4">Oops! Algo salió mal</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              {isSpanish ? 'Oops! Algo salió mal' : 'Oops! Something went wrong'}
+            </h2>
             <p className="mb-6 text-gray-300">
-              Ha ocurrido un error inesperado. Por favor, recarga la página para continuar.
+              {isSpanish 
+                ? 'Ha ocurrido un error inesperado. Por favor, recarga la página para continuar.'
+                : 'An unexpected error has occurred. Please reload the page to continue.'
+              }
             </p>
             <button
               onClick={this.handleReload}
               className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition-colors"
             >
-              Recargar página
+              {isSpanish ? 'Recargar página' : 'Reload page'}
             </button>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-red-400">Detalles del error (desarrollo)</summary>
+                <summary className="cursor-pointer text-red-400">
+                  {isSpanish ? 'Detalles del error (desarrollo)' : 'Error details (development)'}
+                </summary>
                 <pre className="mt-2 text-xs bg-black p-2 rounded overflow-auto">
                   {this.state.error && this.state.error.toString()}
                   <br />

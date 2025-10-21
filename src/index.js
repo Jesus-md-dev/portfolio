@@ -1,46 +1,48 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
 import ErrorBoundary from "./components/ErrorBoundary.js";
-import Iconlink from "./components/Iconlink.js";
-import { ReactComponent as GitHubLogo } from "./files/svg/github.svg";
-import { ReactComponent as LinkedinLogo } from "./files/svg/linkledin.svg";
+import Footer from "./components/Footer.js";
+import { ThemeProvider as CustomThemeProvider, useTheme } from "./contexts/ThemeContext.js";
+import { LanguageProvider } from "./i18n/LanguageContext.js";
 import "./index.css";
 import Home from "./pages/Home.js";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#ffffff',
-    },
-    secondary: {
-      main: '#a18a66',
-    },
-  },
-});
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function AppContent() {
+  const { colors } = useTheme();
+  
+  const muiTheme = createTheme({
+    palette: {
+      primary: {
+        main: colors.primary,
+      },
+      secondary: {
+        main: colors.accent,
+      },
+    },
+  });
+
+  return (
+    <ThemeProvider theme={muiTheme}>
+      <div>
+        <div className="main-body">
+          <Home />
+        </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+}
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider theme={theme}>
-        <div className='dark-mode'>
-          <div className="main-body">
-            <Home />
-          </div>
-          <footer className="footer mt-6">
-            <div className="content-width footer">
-              <div className="flex flex-row justify-center mb-3">
-                <Iconlink svg={<GitHubLogo />} href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer" />
-                <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
-              </div>
-              <div>
-                <span>© 2025 Jesús Márquez Delgado. Todos los derechos reservados</span>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </ThemeProvider>
+      <CustomThemeProvider>
+        <LanguageProvider>
+          <AppContent />
+        </LanguageProvider>
+      </CustomThemeProvider>
     </ErrorBoundary>
   );
 }

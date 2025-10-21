@@ -1,7 +1,10 @@
 import React from 'react';
 import VideoText from "../components/VideoText.js";
+import { useLanguage } from "../i18n/LanguageContext.js";
 
 function Vrar() {
+  const { t } = useLanguage();
+  
   return (
     <div className="vrar-page">
       <VideoText
@@ -10,12 +13,14 @@ function Vrar() {
         title="Monster War (RA)"
         text={
           <span>
-            Videojuego móvil de realidad aumentada, desarrollado en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a> junto con{" "}
+            {t('monsterWarText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            {' '}
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jesus-perinan-davila/">
               Jesús Periñán Dávila
-            </a>. La jugabilidad consiste en enfrentarse a enemigos que aparecen en el entorno con los diferentes personajes que se pueden seleccionar.
-            <br />
-            El videojuego requiere de la utilización de una carta, la cual el juego reconoce como nuestro personaje y esta debe ser colocada junto a los enemigos para poder comenzar un combate.
+            </a>
+            .
           </span>
         }
       />
@@ -26,9 +31,10 @@ function Vrar() {
         title="Space Survival (RV)"
         text={
           <span>
-            Videojuego de realidad virtual, desarrollado en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>.
-            La jugabilidad consiste en destruir las naves alienígenas que se van acercando hacia la nave antes de que colisionen contra el jugador.
-            El sistema de apuntado consiste en mantener la mirada fija en la nave que se quiere destruir durante un tiempo determinado, tras lo cual se dispara automáticamente.
+            {t('spaceSurvivalText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </span>
         }
       />
@@ -38,10 +44,10 @@ function Vrar() {
         title="Quimicefa (RA)"
         text={
           <span>
-            Videojuego móvil de realidad aumentada, desarrollado en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>.
-            La jugabilidad consiste en resolver problemas de química mediante la utilización de la cámara del dispositivo móvil.
-            El juego utiliza cuatro diferentes cartas, las cuales serán reconocidas como diferentes elementos químicos y la tarea a entregar.
-            Se deberá entregar el compuesto requerido, uniendo cartas y acercándolas a la tarea.
+            {t('quimicefaText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </span>
         }
       />

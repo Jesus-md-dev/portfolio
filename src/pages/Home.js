@@ -8,6 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
 import ImageText from '../components/ImageText';
 import User from '../components/User';
+import { useLanguage } from '../i18n/LanguageContext.js';
 import AboutMe from "../files/images/aboutme-transformed.jpeg";
 import Logo from "../files/images/fotocvfondo.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
@@ -21,6 +22,7 @@ const Webs = lazy(() => import("../pages/Webs"));
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState('cv');
+  const { t } = useLanguage();
 
   const handleChange = useCallback((event, newSelectedTab) => {
     setSelectedTab(newSelectedTab);
@@ -83,10 +85,8 @@ const Home = () => {
             <ImageText
               src={AboutMe}
               alt="Computer science workspace with laptop and code"
-              title="SOBRE MÍ"
-              text="Ingeniero informático, especializado en tecnologías de la información,
-                    con experiencia en el desarrollo web y un gran interés en el desarrollo de software.
-                    Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional."
+              title={t('aboutMe')}
+              text={t('aboutMeText')}
             />
           </div>
         </div>
@@ -100,14 +100,14 @@ const Home = () => {
           centered
           className='content-width'
         >
-          <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label="CV" value="cv" aria-controls="cv-panel" />
-          <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs" aria-controls="webs-panel" />
-          <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games" aria-controls="games-panel" />
+          <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label={t('cv')} value="cv" aria-controls="cv-panel" />
+          <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label={t('webs')} value="webs" aria-controls="webs-panel" />
+          <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label={t('games')} value="games" aria-controls="games-panel" />
           <Tab className='Tab' icon={
             <SvgIcon>
               <VrIcon />
             </SvgIcon>
-          } iconPosition="start" label="AR/VR" value="arvr" aria-controls="arvr-panel" />
+          } iconPosition="start" label={t('arvr')} value="arvr" aria-controls="arvr-panel" />
         </Tabs>
       </section>
       <section role="tabpanel" aria-label={`${selectedTab} content`}>

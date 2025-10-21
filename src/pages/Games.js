@@ -1,7 +1,10 @@
 import React from 'react';
 import VideoText from "../components/VideoText.js";
+import { useLanguage } from "../i18n/LanguageContext.js";
 
 function Games() {
+  const { t } = useLanguage();
+  
   return (
     <div className="games-page">
       <VideoText
@@ -9,10 +12,14 @@ function Games() {
         title="Survival Zombie"
         text={
           <>
-            Videojuego de disparos en primera persona, desarrollado en equipo junto con{" "}
+            {t('survivalZombieText')}
+            {' '}
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jesus-perinan-davila/">
               Jesús Periñán Dávila
-            </a>. Este proyecto se desarrolló en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>, durante el proceso, se modeló el mapa, se programó la IA de los zombis y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombis).
+            </a>
+            {'. '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </>
         }
       />
@@ -22,8 +29,10 @@ function Games() {
         title="Shooter de oleadas"
         text={
           <>
-            Proyecto de disparos con vista cenital, desarrollado para aprender sobre juegos de oleadas en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>.
-            <br /> La idea era crear un juego en el que el jugador tuviera que sobrevivir a oleadas de enemigos de forma infinita, con lo cual se pondría a prueba la generación de enemigos constante y la dificultad progresiva.
+            {t('waveShooterText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </>
         }
       />
@@ -32,8 +41,10 @@ function Games() {
         title="Space Ball"
         text={
           <>
-            Videojuego de plataformas en 3D para móviles, desarrollado en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>.
-            En este proyecto se modeló el mapa, se programó la mecánica de salto mediante plataformas, se crearon los diferentes niveles y se implementó un sistema de puntuación.
+            {t('spaceBallText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </>
         }
       />
@@ -44,9 +55,10 @@ function Games() {
         title="Cubo ZigZag"
         text={
           <>
-            Videojuego móvil desarrollado en <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla.
-            <br />
-            El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.
+            {t('zigzagCubeText')}
+            {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://unity.com/">Unity</a>
+            .
           </>
         }
       />

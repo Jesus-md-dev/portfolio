@@ -2,27 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width and height of the scrollbar */
+/* CSS Variables for theming */
+:root {
+  --primary-color: #a18a66;
+  --primary-hover: #96794b;
+  --secondary-color: #ffffff;
+  --background: #1f2937;
+  --background-secondary: #111827;
+  --surface: #374151;
+  --text: #ffffff;
+  --text-secondary: #d1d5db;
+  --border: rgba(161, 138, 102, 0.3);
+  --scrollbar: #1e2225;
+  --scrollbar-thumb: #a18a66;
+  --accent: #f59e0b;
+}
+
+/* Dynamic scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 10px;
   border-radius: 10px;
 }
 
-/* background of the scrollbar track */
 ::-webkit-scrollbar-track {
-  background: #1e2225;
+  background: var(--scrollbar);
 }
 
-/* color of the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: #a18a66;
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 
-/* color on hover of the scrollbar handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: #96794b;
+  background: var(--primary-hover);
 }
 
 html {
@@ -99,40 +112,55 @@ img {
 }
 
 .footer svg:hover {
-  fill: #96794b;
+  fill: var(--primary-hover);
 }
 
+/* DARK THEME */
 .dark-mode {
-  @apply bg-neutral-800 text-white;
+  --primary-color: #a18a66;
+  --primary-hover: #96794b;
+  --secondary-color: #ffffff;
+  --background: #1f2937;
+  --background-secondary: #111827;
+  --surface: #374151;
+  --text: #ffffff;
+  --text-secondary: #d1d5db;
+  --border: rgba(161, 138, 102, 0.3);
+  --scrollbar: #1e2225;
+  --scrollbar-thumb: #a18a66;
+  --accent: #f59e0b;
+  
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .dark-mode svg,
 .dark-mode li::marker,
 .dark-mode a:hover,
 .dark-mode .line {
-  fill: #a18a66;
-  color: #a18a66;
-  border-color: #a18a66;
+  fill: var(--primary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .dark-mode button {
-  background-color: #a18a66;
+  color: var(--background);
 }
 
 .dark-mode button:hover {
-  background-color: #96794b;
+  background-color: var(--primary-hover);
 }
 
 .dark-mode .Tab,
 .dark-mode .Tab svg {
-  color: #a18a66 !important;
-  fill: #a18a66 !important;
+  color: var(--primary-color) !important;
+  fill: var(--primary-color) !important;
 }
 
 .dark-mode .Mui-selected,
 .dark-mode .Mui-selected svg {
-  color: white !important;
-  fill: white !important;
+  color: var(--text) !important;
+  fill: var(--text) !important;
 }
 
 .dark-mode .MuiTabs-root button {
@@ -141,9 +169,143 @@ img {
 
 .dark-mode .footer,
 .dark-mode .tabs-container {
-  @apply bg-neutral-900 shadow-lg;
+  background-color: var(--background-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+.dark-mode .MuiIconButton-root {
+  color: var(--primary-color);
+}
+
+.dark-mode .MuiIconButton-root:hover {
+  color: var(--primary-hover);
+}
+
+.dark-mode .MuiTooltip-tooltip {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.dark-mode .MuiTooltip-arrow {
+  color: var(--surface);
+}
+
+/* LIGHT THEME */
 .light-mode {
-  @apply bg-neutral-100 text-black;
+  --primary-color: #0f766e;
+  --primary-hover: #0d5c55;
+  --secondary-color: #1f2937;
+  --background: #f9fafb;
+  --background-secondary: #ffffff;
+  --surface: #f3f4f6;
+  --text: #111827;
+  --text-secondary: #4b5563;
+  --border: rgba(15, 118, 110, 0.2);
+  --scrollbar: #e5e7eb;
+  --scrollbar-thumb: #0f766e;
+  --accent: #14b8a6;
+  
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.light-mode svg,
+.light-mode li::marker,
+.light-mode a:hover,
+.light-mode .line {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.light-mode button {
+  color: var(--background-secondary);
+}
+
+.light-mode button:hover {
+  background-color: var(--primary-hover);
+}
+
+.light-mode .Tab,
+.light-mode .Tab svg {
+  color: var(--primary-color) !important;
+  fill: var(--primary-color) !important;
+}
+
+.light-mode .Mui-selected,
+.light-mode .Mui-selected svg {
+  color: var(--text) !important;
+  fill: var(--text) !important;
+  background-color: var(--surface) !important;
+}
+
+.light-mode .MuiTabs-root button {
+  background-color: transparent;
+}
+
+.light-mode .footer,
+.light-mode .tabs-container {
+  background-color: var(--background-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid var(--border);
+}
+
+.light-mode .MuiIconButton-root {
+  color: var(--primary-color);
+}
+
+.light-mode .MuiIconButton-root:hover {
+  color: var(--primary-hover);
+}
+
+.light-mode .MuiTooltip-tooltip {
+  background-color: var(--text);
+  color: var(--background);
+  border: 1px solid var(--border);
+}
+
+.light-mode .MuiTooltip-arrow {
+  color: var(--text);
+}
+
+/* Light mode specific overrides */
+.light-mode img {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.light-mode .games-page a,
+.light-mode .vrar-page a,
+.light-mode .webs-page a {
+  color: var(--primary-color);
+  text-decoration-color: var(--primary-color);
+}
+
+.light-mode .games-page a:hover,
+.light-mode .vrar-page a:hover,
+.light-mode .webs-page a:hover {
+  color: var(--primary-hover);
+  text-decoration-color: var(--primary-hover);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure proper contrast for form elements */
+.light-mode input,
+.light-mode textarea,
+.light-mode select {
+  background-color: var(--background-secondary);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
 }

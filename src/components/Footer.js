@@ -1,0 +1,27 @@
+import React from 'react';
+import { useLanguage } from '../i18n/LanguageContext.js';
+import Iconlink from "./Iconlink.js";
+import { ReactComponent as GitHubLogo } from "../files/svg/github.svg";
+import { ReactComponent as LinkedinLogo } from "../files/svg/linkledin.svg";
+
+const Footer = React.memo(() => {
+  const { t } = useLanguage();
+  
+  return (
+    <footer className="footer mt-6">
+      <div className="content-width footer">
+        <div className="flex flex-row justify-center mb-3">
+          <Iconlink svg={<GitHubLogo />} href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer" />
+          <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
+        </div>
+        <div>
+          <span>{t('allRightsReserved')}</span>
+        </div>
+      </div>
+    </footer>
+  );
+});
+
+Footer.displayName = 'Footer';
+
+export default Footer;
