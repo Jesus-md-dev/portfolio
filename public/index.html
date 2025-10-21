@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#a18a66" />
+    
+    <!-- PWA optimization meta tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Jesús Márquez CV" />
+    <meta name="msapplication-TileColor" content="#a18a66" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Curriculum Vitae de Jesús Márquez Delgado - Ingeniero Informático especializado en desarrollo web, con experiencia en React, PHP, Drupal y tecnologías modernas." />
@@ -39,7 +47,19 @@
     <meta name="msapplication-TileColor" content="#a18a66" />
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/logo512.png" color="#a18a66" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Resource hints for better loading performance -->
+    <meta name="resource-type" content="document" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">

@@ -7,8 +7,12 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
 import User from '../components/User';
+import useLCPMonitor from '../hooks/useLCPMonitor';
 import { useLanguage } from '../i18n/LanguageContext.js';
 import Logo from "../files/images/fotocvfondo.webp";
+import LogoSm from "../files/images/fotocvfondo-sm.webp";
+import LogoMd from "../files/images/fotocvfondo-md.webp";
+import LogoLg from "../files/images/fotocvfondo-lg.webp";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import "./Home.css";
 
@@ -21,6 +25,9 @@ const Webs = lazy(() => import("../pages/Webs"));
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState('cv');
   const { t } = useLanguage();
+  
+  // Monitor LCP performance improvements
+  useLCPMonitor();
 
   const handleChange = useCallback((event, newSelectedTab) => {
     setSelectedTab(newSelectedTab);
@@ -70,7 +77,7 @@ const Home = () => {
   const user = useMemo(() => new User(
     t('name').split(' ')[0], // 'Jesús'
     t('name').split(' ').slice(1).join(' '), // 'Márquez Delgado'
-    { Logo },
+    { Logo, LogoSm, LogoMd, LogoLg },
     t('title') // 'Ingeniero Informático' / 'Computer Engineer'
   ), [t]);
 

@@ -2,7 +2,14 @@ import React from 'react';
 import ImageText from "../components/ImageText";
 import { useLanguage } from "../i18n/LanguageContext.js";
 import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
+import xprojectsSm from "../files/images/1xprojects-with-logo-transformed-sm.webp";
+import xprojectsMd from "../files/images/1xprojects-with-logo-transformed-md.webp";
+import xprojectsLg from "../files/images/1xprojects-with-logo-transformed-lg.webp";
 import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
+import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
+import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
+import jmcvwebLg from "../files/images/jm-cv-web-transformed-lg.webp";
+import jmcvwebXl from "../files/images/jm-cv-web-transformed-xl.webp";
 
 function Webs() {
   const { t } = useLanguage();
@@ -11,6 +18,9 @@ function Webs() {
     <div className="webs-page">
       <ImageText
         src={xprojects}
+        srcSm={xprojectsSm}
+        srcMd={xprojectsMd}
+        srcLg={xprojectsLg}
         alt={t('projectsShowcase')}
         title={
           <span>
@@ -42,6 +52,10 @@ function Webs() {
       />
       <ImageText
         src={jmcvweb}
+        srcSm={jmcvwebSm}
+        srcMd={jmcvwebMd}
+        srcLg={jmcvwebLg}
+        srcXl={jmcvwebXl}
         invert={true}
         alt={t('personalWebsiteScreenshot')}
         title={t('personalCVWeb')}

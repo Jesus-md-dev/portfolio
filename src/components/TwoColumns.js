@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useState } from "react";
 import Line from "./Line.js";
+import ResponsiveImg from "./ResponsiveImg.js";
 import { getYouTubeVideoID, getYouTubeThumbnail } from "../utils/helpers.js";
 
-const TwoColumns = ({ src, invert, title, text, alt, type, dark }) => {
+const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, type, dark }) => {
   const [loading, setLoading] = useState(true);
 
   const twoColumnsContent = invert ? "lg:flex-row-reverse" : "lg:flex-row";
@@ -31,11 +32,15 @@ const TwoColumns = ({ src, invert, title, text, alt, type, dark }) => {
         <div className={"w-full flex flex-col items-center lg:mt-5 " + twoColumnsContent}>
           <div className="lg:w-1/2 w-full">
             {type === "image" &&
-              <img
+              <ResponsiveImg
                 className="w-full aspect-video object-cover rounded-xl"
                 src={src}
+                srcSm={srcSm}
+                srcMd={srcMd}
+                srcLg={srcLg}
+                srcXl={srcXl}
                 alt={alt ?? "Site image"}
-                title="Image"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 loading="lazy"
               />
             }
@@ -74,6 +79,10 @@ const TwoColumns = ({ src, invert, title, text, alt, type, dark }) => {
 
 TwoColumns.propTypes = {
   src: PropTypes.string.isRequired,
+  srcSm: PropTypes.string,
+  srcMd: PropTypes.string,
+  srcLg: PropTypes.string,
+  srcXl: PropTypes.string,
   invert: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
