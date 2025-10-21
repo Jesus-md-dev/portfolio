@@ -1,100 +1,82 @@
 import PropTypes from 'prop-types';
-import React from "react";
+import React, { useState } from "react";
 import Line from "./Line.js";
+import { getYouTubeVideoID, getYouTubeThumbnail } from "../utils/helpers.js";
 
-class TwoColumns extends React.Component {
+const TwoColumns = ({ src, invert, title, text, alt, type, dark }) => {
+  const [loading, setLoading] = useState(true);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
-    };
+  const twoColumnsContent = invert ? "lg:flex-row-reverse" : "lg:flex-row";
+  const twoColumns = dark ? "" : "";
 
-    this.twoColumnsContent = this.props.invert ?
-      "lg:flex-row-reverse" :
-      "lg:flex-row"
-
-    this.twoColumns = this.props.dark ? "" : ""
-  }
-
-  getYouTubeVideoID(url) {
-    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-  }
-
-  hideThumbnail = () => {
-    this.setState({
-      loading: false
-    });
-    this.iframeClass = "";
+  const hideThumbnail = () => {
+    setLoading(false);
   };
 
-  render() {
-    const videoID = this.getYouTubeVideoID(this.props.src);
+  const videoID = getYouTubeVideoID(src);
 
-    return (
-      <div className={this.twoColumns}>
-        <div className={"content-width w-full flex flex-col items-center"}>
-          {this.props.title &&
-            <div className="w-full lg:mb-0 mb-5">
-              <span className="flex items-center">
-                <h2>
-                  <Line />
-                  {this.props.title}
-                </h2>
-              </span>
-            </div>
-          }
-          <div className={"w-full flex flex-col items-center lg:mt-5 " + this.twoColumnsContent}>
-            <div className="lg:w-1/2 w-full">
-              {this.props.type === "image" &&
-                <img
-                  className="w-full aspect-video object-cover rounded-xl"
-                  src={this.props.src}
-                  alt={this.props.alt ?? "Site image"}
-                  title="Youtube Video"
+  return (
+    <div className={twoColumns}>
+      <div className={"content-width w-full flex flex-col items-center"}>
+        {title &&
+          <div className="w-full lg:mb-0 mb-5">
+            <span className="flex items-center">
+              <h2>
+                <Line />
+                {title}
+              </h2>
+            </span>
+          </div>
+        }
+        <div className={"w-full flex flex-col items-center lg:mt-5 " + twoColumnsContent}>
+          <div className="lg:w-1/2 w-full">
+            {type === "image" &&
+              <img
+                className="w-full aspect-video object-cover rounded-xl"
+                src={src}
+                alt={alt ?? "Site image"}
+                title="Image"
+                loading="lazy"
+              />
+            }
+            {type === "video" &&
+              <span className="aspect-video w-auto relative">
+                {loading && (
+                  <div className="fit-content absolute">
+                    <img
+                      className="object-cover rounded-xl h-full"
+                      alt={alt ?? "Youtube Video Thumbnail"}
+                      src={getYouTubeThumbnail(videoID)}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <iframe
+                  className={`w-full aspect-video rounded-xl ${loading ? 'invisible' : ''}`}
+                  src={"https://www.youtube.com/embed/" + videoID}
+                  title={alt ?? "Youtube Video"}
+                  onLoad={hideThumbnail}
                   loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-              }
-              {this.props.type === "video" &&
-                <span className="aspect-video w-auto relative">
-                  {this.state.loading ? (
-                    <div className="fit-content absolute">
-                      <img
-                        className="object-cover rounded-xl h-full"
-                        alt={this.props.alt ?? "Youtube Video Thumbnail"}
-                        src={"https://i.ytimg.com/vi/" + videoID + "/maxresdefault.jpg"}
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : null}
-                  <iframe
-                    className={"w-full aspect-video rounded-xl " + this.iframeClass}
-                    src={"https://www.youtube.com/embed/" + videoID}
-                    title={this.props.alt ?? "Youtube Video"}
-                    onLoad={this.hideThumbnail}
-                    loading="lazy"
-                  ></iframe>
-                </span>
-
-              }
-            </div>
-            <div className="lg:w-1/2 mx-5 lg:mt-0 mt-5">
-              <p>{this.props.text}</p>
-            </div>
+              </span>
+            }
+          </div>
+          <div className="lg:w-1/2 mx-5 lg:mt-0 mt-5">
+            <p>{text}</p>
           </div>
         </div>
       </div>
-    )
-  }
-}
+    </div>
+  );
+};
 
 TwoColumns.propTypes = {
   src: PropTypes.string.isRequired,
   invert: PropTypes.bool,
-  title: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   alt: PropTypes.string,
   type: PropTypes.oneOf(['image', 'video']).isRequired,
   dark: PropTypes.bool

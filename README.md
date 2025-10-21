@@ -1,70 +1,204 @@
-# Getting Started with Create React App
+# Jesús Márquez Delgado - Curriculum Vitae
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web moderna y responsiva desarrollada con React que presenta mi CV profesional de manera interactiva.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- **Diseño Responsivo**: Optimizado para dispositivos móviles, tablets y escritorio
+- **Interfaz Moderna**: Utiliza Material-UI y Tailwind CSS para un diseño profesional
+- **Navegación por Pestañas**: Organizado en secciones (CV, Webs, Games, AR/VR)
+- **Performance Optimizada**: Lazy loading, React.memo y code splitting
+- **Accesibilidad**: Implementa estándares ARIA y navegación por teclado
+- **SEO Optimizado**: Meta tags, Open Graph y datos estructurados
+- **Error Boundaries**: Manejo robusto de errores
 
-### `npm start`
+## 🛠️ Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 18, Material-UI, Tailwind CSS
+- **Íconos**: Material-UI Icons, SVG personalizados
+- **Bundling**: Create React App
+- **Linting**: ESLint con configuración personalizada
+- **Formatting**: Prettier
+- **Deployment**: Netlify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Estructura del Proyecto
 
-### `npm test`
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── Avatar.js
+│   ├── Banner.js
+│   ├── ErrorBoundary.js
+│   ├── IconLink.js
+│   ├── ImageText.js
+│   ├── Line.js
+│   ├── TwoColumns.js
+│   ├── User.js
+│   └── VideoText.js
+├── pages/              # Páginas principales
+│   ├── CV.js
+│   ├── Games.js
+│   ├── Home.js
+│   ├── Vrar.js
+│   └── Webs.js
+├── utils/              # Funciones utilitarias
+│   └── helpers.js
+├── constants/          # Constantes de la aplicación
+│   └── theme.js
+├── config/             # Configuración de la aplicación
+│   └── index.js
+└── files/              # Assets (imágenes, SVGs)
+    ├── images/
+    └── svg/
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Instalación y Uso
 
-### `npm run build`
+### Prerrequisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clona el repositorio:
+```bash
+git clone https://github.com/Jezusito/MyWeb.git
+cd MyWeb
+```
 
-### `npm run eject`
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Configura las variables de entorno:
+```bash
+cp .env.example .env.local
+# Edita .env.local con tus valores
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Inicia el servidor de desarrollo:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+La aplicación estará disponible en `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📜 Scripts Disponibles
 
-## Learn More
+- `npm start` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm test` - Ejecuta las pruebas
+- `npm run lint` - Ejecuta ESLint
+- `npm run lint:fix` - Corrige automáticamente problemas de linting
+- `npm run format` - Formatea el código con Prettier
+- `npm run analyze` - Analiza el bundle de la aplicación
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Personalización
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Colores y Tema
 
-### Code Splitting
+Los colores principales se definen en `src/constants/theme.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+export const THEME_COLORS = {
+  PRIMARY: '#ffffff',
+  SECONDARY: '#a18a66',
+  SECONDARY_HOVER: '#96794b',
+  // ...
+};
+```
 
-### Analyzing the Bundle Size
+### Configuración
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+La configuración de la aplicación está centralizada en `src/config/index.js` y utiliza variables de entorno para facilitar el deployment.
 
-### Making a Progressive Web App
+## 📱 Características de Accesibilidad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Navegación por teclado completa
+- Etiquetas ARIA apropiadas
+- Alto contraste de colores
+- Texto alternativo para imágenes
+- Estructura semántica HTML5
 
-### Advanced Configuration
+## 🔧 Optimizaciones de Performance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Lazy Loading**: Los componentes de página se cargan bajo demanda
+- **React.memo**: Memorización de componentes para evitar re-renders innecesarios
+- **Code Splitting**: División automática del código por rutas
+- **Image Optimization**: Carga lazy de imágenes con placeholders
+- **Bundle Analysis**: Herramientas para analizar el tamaño del bundle
 
-### Deployment
+## 🌐 SEO y Meta Tags
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Meta tags optimizados para motores de búsqueda
+- Open Graph tags para redes sociales
+- Datos estructurados JSON-LD
+- Sitemap y robots.txt configurados
 
-### `npm run build` fails to minify
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El proyecto está configurado para deployment en Netlify:
+
+1. Conecta tu repositorio a Netlify
+2. Configura las variables de entorno en Netlify
+3. El deployment se ejecuta automáticamente en cada push
+
+### Variables de Entorno Requeridas
+
+```
+REACT_APP_NAME=Tu nombre
+REACT_APP_EMAIL=tu@email.com
+REACT_APP_PHONE=+34123456789
+REACT_APP_GITHUB_URL=https://github.com/tuusuario
+REACT_APP_LINKEDIN_URL=https://linkedin.com/in/tuusuario
+```
+
+## 📄 Licencia
+
+Este proyecto es personal y está disponible para fines educativos y de referencia.
+
+## 📞 Contacto
+
+- **Email**: jesusmarquezdelgado@gmail.com
+- **LinkedIn**: [Jesús Márquez Delgado](https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/)
+- **GitHub**: [Jesus-md-dev](https://github.com/Jesus-md-dev)
+
+---
+
+## 🔄 Mejoras Implementadas
+
+Este proyecto ha sido refactorizado siguiendo las mejores prácticas modernas:
+
+### ✅ Arquitectura
+- Conversión de class components a functional components
+- Implementación de hooks de React
+- Separación de responsabilidades
+
+### ✅ Performance
+- Lazy loading de componentes
+- React.memo para optimización de renders
+- Code splitting automático
+
+### ✅ Accesibilidad
+- Etiquetas ARIA completas
+- Navegación por teclado
+- Estructura semántica HTML5
+
+### ✅ SEO
+- Meta tags optimizados
+- Open Graph tags
+- Datos estructurados
+
+### ✅ Mantenibilidad
+- Configuración centralizada
+- Variables de entorno
+- Linting y formatting automático
+- Error boundaries
+
+### ✅ Calidad de Código
+- TypeScript ready (arquitectura preparada)
+- ESLint configurado
+- Prettier para formatting consistente
+- Estructura de carpetas organizada

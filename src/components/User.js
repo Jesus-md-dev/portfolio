@@ -1,8 +1,8 @@
-import React from 'react';
-
-class User extends React.Component {
+/**
+ * User data model
+ */
+class User {
     constructor(name, surname, avatarUrl, degree) {
-        super();
         this.name = name;
         this.surname = surname;
         this.avatarUrl = avatarUrl;

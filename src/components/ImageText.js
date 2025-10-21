@@ -18,8 +18,8 @@ function ImageText({ src, invert, title, text, alt }) {
 ImageText.propTypes = {
   src: PropTypes.string.isRequired,
   invert: PropTypes.bool,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   alt: PropTypes.string.isRequired
 };
 

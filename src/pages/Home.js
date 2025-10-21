@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense, useCallback, useMemo } from 'react';
 import ArticleIcon from '@mui/icons-material/Article';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import WebIcon from '@mui/icons-material/Web';
@@ -11,50 +11,78 @@ import User from '../components/User';
 import AboutMe from "../files/images/aboutme-transformed.jpeg";
 import Logo from "../files/images/fotocvfondo.png";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
-import CV from "../pages/CV";
-import Games from "../pages/Games";
-import Vrar from "../pages/Vrar";
-import Webs from "../pages/Webs";
 import "./Home.css";
+
+// Lazy load page components
+const CV = lazy(() => import("../pages/CV"));
+const Games = lazy(() => import("../pages/Games"));
+const Vrar = lazy(() => import("../pages/Vrar"));
+const Webs = lazy(() => import("../pages/Webs"));
 
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState('cv');
 
-  const handleChange = (event, newSelectedTab) => {
+  const handleChange = useCallback((event, newSelectedTab) => {
     setSelectedTab(newSelectedTab);
-  };
+  }, []);
 
-  const renderSwitch = (param) => {
+  const renderSwitch = useCallback((param) => {
+    const LoadingFallback = () => (
+      <div className="flex items-center justify-center py-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-current"></div>
+      </div>
+    );
+
     switch (param) {
       case 'cv':
-        return <CV />;
+        return (
+          <Suspense fallback={<LoadingFallback />}>
+            <CV />
+          </Suspense>
+        );
       case 'webs':
-        return <Webs />;
+        return (
+          <Suspense fallback={<LoadingFallback />}>
+            <Webs />
+          </Suspense>
+        );
       case 'games':
-        return <Games />;
+        return (
+          <Suspense fallback={<LoadingFallback />}>
+            <Games />
+          </Suspense>
+        );
       case 'arvr':
-        return <Vrar />;
+        return (
+          <Suspense fallback={<LoadingFallback />}>
+            <Vrar />
+          </Suspense>
+        );
       default:
-        return <CV />;
+        return (
+          <Suspense fallback={<LoadingFallback />}>
+            <CV />
+          </Suspense>
+        );
     }
-  };
+  }, []);
 
-  const user = new User(
+  const user = useMemo(() => new User(
     'Jesús',
     'Márquez Delgado',
     { Logo },
     'Ingeniero Informático'
-  );
+  ), []);
 
   return (
-    <div>
+    <main>
       <Banner user={user} />
-      <section className="content-width aboutMe py-5">
+      <section className="content-width aboutMe py-5" aria-labelledby="about-me-title">
         <div className="aboutMe-section">
           <div className="text-section">
             <ImageText
               src={AboutMe}
-              alt="Computer science picture"
+              alt="Computer science workspace with laptop and code"
               title="SOBRE MÍ"
               text="Ingeniero informático, especializado en tecnologías de la información,
                     con experiencia en el desarrollo web y un gran interés en el desarrollo de software.
@@ -63,27 +91,29 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='flex flex-col items-center tabs-container'>
+      <section className='flex flex-col items-center tabs-container' role="tablist" aria-label="Portfolio sections">
         <Tabs
           value={selectedTab}
           onChange={handleChange}
-          aria-label="icon position tabs example"
+          aria-label="Portfolio navigation tabs"
           variant='fullWidth'
           centered
           className='content-width'
         >
-          <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label="CV" value="cv" />
-          <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs" />
-          <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games" />
+          <Tab className='Tab' icon={<ArticleIcon />} iconPosition="start" label="CV" value="cv" aria-controls="cv-panel" />
+          <Tab className='Tab' icon={<WebIcon />} iconPosition="start" label="Webs" value="webs" aria-controls="webs-panel" />
+          <Tab className='Tab' icon={<GamepadIcon />} iconPosition="start" label="Games" value="games" aria-controls="games-panel" />
           <Tab className='Tab' icon={
             <SvgIcon>
               <VrIcon />
             </SvgIcon>
-          } iconPosition="start" label="AR/VR" value="arvr" />
+          } iconPosition="start" label="AR/VR" value="arvr" aria-controls="arvr-panel" />
         </Tabs>
       </section>
-      {renderSwitch(selectedTab)}
-    </div>
+      <section role="tabpanel" aria-label={`${selectedTab} content`}>
+        {renderSwitch(selectedTab)}
+      </section>
+    </main>
   );
 };
 

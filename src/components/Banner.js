@@ -2,21 +2,23 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Avatar from "../components/Avatar.js";
 
-function Banner({ className, user }) {
+const Banner = React.memo(({ className, user }) => {
     return (
-        <div className={`py-10 ${className}`}>
+        <header className={`py-10 ${className}`}>
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <Avatar user={user} />
                     <div className="text-center mt-3">
                         <h1>{user.name} {user.surname}</h1>
-                        <h3>{user.degree}</h3>
+                        <h3 role="doc-subtitle">{user.degree}</h3>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
-}
+});
+
+Banner.displayName = 'Banner';
 
 Banner.propTypes = {
     className: PropTypes.string,

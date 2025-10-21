@@ -18,8 +18,8 @@ function VideoText({ url, invert, title, text }) {
 VideoText.propTypes = {
   url: PropTypes.string.isRequired,
   invert: PropTypes.bool,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired
 };
 
 export default VideoText;

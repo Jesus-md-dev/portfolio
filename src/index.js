@@ -1,5 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
+import ErrorBoundary from "./components/ErrorBoundary.js";
 import Iconlink from "./components/Iconlink.js";
 import { ReactComponent as GitHubLogo } from "./files/svg/github.svg";
 import { ReactComponent as LinkedinLogo } from "./files/svg/linkledin.svg";
@@ -21,24 +22,26 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div className='dark-mode'>
-        <div className="main-body">
-          <Home />
-        </div>
-        <div className="footer mt-6">
-          <div className="content-width footer">
-            <div className="flex flex-row justify-center mb-3">
-              <Iconlink svg={<GitHubLogo />} href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer" />
-              <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
-            </div>
-            <div>
-              <span>© 2025 Jesús Márquez Delgado. Todos los derechos reservados</span>
-            </div>
+    <ErrorBoundary>
+      <ThemeProvider theme={theme}>
+        <div className='dark-mode'>
+          <div className="main-body">
+            <Home />
           </div>
+          <footer className="footer mt-6">
+            <div className="content-width footer">
+              <div className="flex flex-row justify-center mb-3">
+                <Iconlink svg={<GitHubLogo />} href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer" />
+                <Iconlink svg={<LinkedinLogo />} href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer" />
+              </div>
+              <div>
+                <span>© 2025 Jesús Márquez Delgado. Todos los derechos reservados</span>
+              </div>
+            </div>
+          </footer>
         </div>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

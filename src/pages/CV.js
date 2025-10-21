@@ -4,12 +4,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MapIcon from '@mui/icons-material/Map';
 import PhoneIcon from '@mui/icons-material/Phone';
+import config from "../config/index.js";
 import Line from "../components/Line.js";
 import "./CV.css";
 
 function CV() {
   const handleDownloadCV = () => {
-    window.open("https://drive.google.com/file/d/12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt/view?usp=sharing", '_blank').focus();
+    window.open(config.cv.downloadUrl, '_blank').focus();
   };
 
   return (
@@ -149,22 +150,22 @@ function CV() {
             </span>
             <div className='contact-info'>
               <div>
-                <PhoneIcon /> <a href="tel:+34697394198" target="_blank" rel="noopener noreferrer">+34 697 39 41 98</a>
+                <PhoneIcon /> <a href={`tel:${config.contact.phone}`} target="_blank" rel="noopener noreferrer">{config.contact.phone}</a>
               </div>
               <div>
-                <EmailIcon /> <a href="mailto:jesusmarquezdelgado@gmail.com" target="_blank" rel="noopener noreferrer">jesusmarquezdelgado@gmail.com</a>
+                <EmailIcon /> <a href={`mailto:${config.contact.email}`} target="_blank" rel="noopener noreferrer">{config.contact.email}</a>
               </div>
               <div>
-                <MapIcon /> <a href="https://www.google.es/maps/place/Chiclana+de+la+Frontera,+C%C3%A1diz" target="_blank" rel="noopener noreferrer">Chiclana de la Frontera, Cádiz</a>
+                <MapIcon /> <a href="https://www.google.es/maps/place/Chiclana+de+la+Frontera,+C%C3%A1diz" target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
               </div>
               <div>
                 <AccessTimeIcon /> Disponibilidad de 17:00 a 20:00
               </div>
               <div>
-                <GitHubIcon /> <a href="https://github.com/Jesus-md-dev" target="_blank" rel="noopener noreferrer">Jesus-md-dev | GitHub</a>
+                <GitHubIcon /> <a href={config.social.github} target="_blank" rel="noopener noreferrer">Jesus-md-dev | GitHub</a>
               </div>
               <div>
-                <LinkedInIcon /><a href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/" target="_blank" rel="noopener noreferrer">Jesús Márquez Delgado | LinkedIn</a>
+                <LinkedInIcon /><a href={config.social.linkedin} target="_blank" rel="noopener noreferrer">Jesús Márquez Delgado | LinkedIn</a>
               </div>
             </div>
           </div>
@@ -173,8 +174,8 @@ function CV() {
       <div className="flex items-center justify-center lg:flex-row">
         <button
           onClick={handleDownloadCV}
-          href="https://drive.google.com/uc?export=download&id=12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt"
           className="my-5 rounded px-3 py-1"
+          aria-label="Descargar CV en formato PDF"
         >
           DESCARGAR CV
         </button>
