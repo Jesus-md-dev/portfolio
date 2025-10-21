@@ -1,8 +1,8 @@
 import React from 'react';
 import ImageText from "../components/ImageText";
 import { useLanguage } from "../i18n/LanguageContext.js";
-import xprojects from "../files/images/1xprojects-with-logo-transformed.png";
-import jmcvweb from "../files/images/jm-cv-web-transformed.png";
+import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
+import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 
 function Webs() {
   const { t } = useLanguage();

@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
 import User from '../components/User';
 import { useLanguage } from '../i18n/LanguageContext.js';
-import Logo from "../files/images/fotocvfondo.png";
+import Logo from "../files/images/fotocvfondo.webp";
 import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
 import "./Home.css";
 
