@@ -293,6 +293,26 @@ img {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Focus indicators for accessibility */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Ensure proper contrast for form elements */
 .light-mode input,
 .light-mode textarea,
@@ -308,4 +328,114 @@ img {
   background-color: var(--surface);
   color: var(--text);
   border-color: var(--border);
+}
+
+/* Mobile-first responsive design improvements */
+@media (max-width: 640px) {
+  /* Larger touch targets for mobile */
+  .MuiIconButton-root,
+  button,
+  .Tab {
+    min-height: 48px !important;
+    min-width: 48px !important;
+  }
+  
+  /* Better spacing on mobile */
+  .content-width {
+    padding: 1rem;
+    width: 95%;
+  }
+  
+  /* Improve text readability on mobile */
+  html {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.3;
+  }
+  
+  /* Better button spacing on mobile */
+  .language-toggle,
+  .theme-toggle {
+    margin: 0.25rem;
+  }
+  
+  /* Mobile banner improvements */
+  header {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  /* Improved footer spacing */
+  .footer {
+    padding: 1rem;
+  }
+  
+  .footer svg {
+    margin: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  /* Better tab navigation on mobile */
+  .MuiTabs-root {
+    min-height: 56px;
+  }
+  
+  .MuiTab-root {
+    min-height: 56px;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet and larger mobile devices */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .content-width {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  /* Optimize for tablet touch */
+  .MuiIconButton-root,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dark-mode {
+    --border: rgba(255, 255, 255, 0.8);
+  }
+  
+  *:focus {
+    outline-width: 3px;
+    outline-style: solid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .MuiIconButton-root:hover {
+    transform: none !important;
+  }
 }

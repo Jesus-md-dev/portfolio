@@ -10,7 +10,14 @@ const Banner = React.memo(({ className, user }) => {
     
     return (
         <header className={`py-10 ${className} relative`}>
-            <div className="absolute top-4 right-4 z-10 flex gap-2">
+            {/* Mobile: Toggles above avatar, Desktop: Toggles in corner */}
+            <div className="md:hidden w-full flex justify-center mb-4">
+                <div className="flex gap-2">
+                    <ThemeToggle />
+                    <LanguageToggle />
+                </div>
+            </div>
+            <div className="hidden md:flex absolute top-4 right-4 z-10 gap-2">
                 <ThemeToggle />
                 <LanguageToggle />
             </div>

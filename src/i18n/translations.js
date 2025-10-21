@@ -116,7 +116,11 @@ export const translations = {
     errorDetails: "Detalles del error (desarrollo)",
     
     // Language
-    language: "Idioma"
+    language: "Idioma",
+    
+    // Accessibility
+    loading: "Cargando",
+    portfolioSections: "Secciones del portafolio"
   },
   
   en: {
@@ -236,6 +240,10 @@ export const translations = {
     errorDetails: "Error details (development)",
     
     // Language
-    language: "Language"
+    language: "Language",
+    
+    // Accessibility
+    loading: "Loading",
+    portfolioSections: "Portfolio sections"
   }
 };

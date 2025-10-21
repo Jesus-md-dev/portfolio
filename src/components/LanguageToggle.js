@@ -27,6 +27,8 @@ const LanguageToggle = React.memo(() => {
           color: colors.primary,
           backgroundColor: `${colors.primary}15`, // 15 = ~8% opacity
           border: `1px solid ${colors.border}`,
+          minWidth: '56px',
+          minHeight: '48px',
           '&:hover': {
             backgroundColor: `${colors.primary}25`, // 25 = ~15% opacity
             color: colors.primaryHover,
@@ -36,10 +38,19 @@ const LanguageToggle = React.memo(() => {
           '&:active': {
             backgroundColor: `${colors.primary}35`, // 35 = ~21% opacity
           },
+          '&:focus': {
+            outline: `2px solid ${colors.primary}`,
+            outlineOffset: '2px',
+          },
           margin: 0.5,
           transition: 'all 0.2s ease-in-out',
-          minWidth: '48px',
-          height: '40px',
+          height: '48px',
+          '@media (prefers-reduced-motion: reduce)': {
+            transition: 'none',
+            '&:hover': {
+              transform: 'none',
+            },
+          },
         }}
       >
         <LanguageIcon sx={{ 

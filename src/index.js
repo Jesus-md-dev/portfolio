@@ -26,7 +26,7 @@ function AppContent() {
   return (
     <ThemeProvider theme={muiTheme}>
       <div>
-        <div className="main-body">
+        <div className="main-body" id="main-content">
           <Home />
         </div>
         <Footer />

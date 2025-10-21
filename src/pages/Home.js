@@ -80,6 +80,7 @@ const Home = () => {
     <main>
       <Banner user={user} />
       <section className="content-width aboutMe py-5" aria-labelledby="about-me-title">
+        <h2 id="about-me-title" className="sr-only">{t('aboutMe')}</h2>
         <div className="aboutMe-section">
           <div className="text-section">
             <ImageText
@@ -91,7 +92,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='flex flex-col items-center tabs-container' role="tablist" aria-label="Portfolio sections">
+      <nav className='flex flex-col items-center tabs-container' role="navigation" aria-label={t('portfolioSections')}>
+        <h2 className="sr-only">{t('portfolioSections')}</h2>
         <Tabs
           value={selectedTab}
           onChange={handleChange}
@@ -109,8 +111,9 @@ const Home = () => {
             </SvgIcon>
           } iconPosition="start" label={t('arvr')} value="arvr" aria-controls="arvr-panel" />
         </Tabs>
-      </section>
-      <section role="tabpanel" aria-label={`${selectedTab} content`}>
+      </nav>
+      <section role="tabpanel" aria-label={`${selectedTab} content`} id={`${selectedTab}-panel`}>
+        <h2 className="sr-only">{t(selectedTab)} {t('portfolioSections')}</h2>
         {renderSwitch(selectedTab)}
       </section>
     </main>
