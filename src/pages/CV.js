@@ -35,7 +35,7 @@ function CV() {
                   </a>
                   , {t('webDeveloper')}
                 </h3>
-                <h4>Marzo 2022 - {t('currentDate')}</h4>
+                <h4>{t('workStartDate')} - {t('currentDate')}</h4>
                 <ul className="list-disc list-inside">
                   {t('workItems').map((item, index) => (
                     <li key={index}>{item}</li>

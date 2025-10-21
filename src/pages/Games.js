@@ -26,7 +26,7 @@ function Games() {
       <VideoText
         url="https://www.youtube.com/embed/wG-2kG7awZo"
         invert={true}
-        title="Shooter de oleadas"
+        title={t('waveShooterTitle')}
         text={
           <>
             {t('waveShooterText')}
@@ -52,7 +52,7 @@ function Games() {
         url="https://www.youtube.com/embed/CpbWe8kSolI"
         invert={true}
         dark={true}
-        title="Cubo ZigZag"
+        title={t('zigzagCubeTitle')}
         text={
           <>
             {t('zigzagCubeText')}

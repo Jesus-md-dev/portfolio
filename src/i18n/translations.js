@@ -17,6 +17,7 @@ export const translations = {
     // CV Section
     workExperience: "Experiencia Laboral",
     webDeveloper: "Desarrollador Web",
+    workStartDate: "Marzo 2022",
     currentDate: "Actualidad",
     workItems: [
       "Site building en Drupal",
@@ -91,6 +92,8 @@ export const translations = {
     personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
     
     // Games section
+    waveShooterTitle: "Shooter de oleadas",
+    zigzagCubeTitle: "Cubo ZigZag",
     survivalZombieText: "Videojuego de disparos en primera persona, desarrollado en equipo junto con Jesús Periñán Dávila. Este proyecto se desarrolló en Unity, durante el proceso, se modeló el mapa, se programó la IA de los zombis y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombis).",
     
     waveShooterText: "Proyecto de disparos con vista cenital, desarrollado para aprender sobre juegos de oleadas en Unity. La idea era crear un juego en el que el jugador tuviera que sobrevivir a oleadas de enemigos de forma infinita, con lo cual se pondría a prueba la generación de enemigos constante y la dificultad progresiva.",
@@ -141,6 +144,7 @@ export const translations = {
     // CV Section
     workExperience: "Work Experience",
     webDeveloper: "Web Developer",
+    workStartDate: "March 2022",
     currentDate: "Present",
     workItems: [
       "Site building in Drupal",
@@ -215,6 +219,8 @@ export const translations = {
     personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
     
     // Games section
+    waveShooterTitle: "Wave Shooter",
+    zigzagCubeTitle: "ZigZag Cube",
     survivalZombieText: "First-person shooter video game, developed as a team with Jesús Periñán Dávila. This project was developed in Unity, during the process, the map was modeled, zombie AI was programmed and different game mechanics (first aid kits, waves, different zombies) were implemented.",
     
     waveShooterText: "Top-down shooter project, developed to learn about wave games in Unity. The idea was to create a game where the player had to survive infinite waves of enemies, which would test constant enemy generation and progressive difficulty.",
