@@ -12,7 +12,14 @@
   --surface: #374151;
   --text: #ffffff;
   --text-secondary: #d1d5db;
+  --text-white: #ffffff;
   --border: rgba(161, 138, 102, 0.3);
+  --primary-bg-light: rgba(161, 138, 102, 0.2);
+  --primary-bg-medium: rgba(161, 138, 102, 0.3);
+  --primary-bg-ultra-light: rgba(161, 138, 102, 0.1);
+  --card-background: rgba(55, 65, 81, 0.3);
+  --card-background-medium: rgba(55, 65, 81, 0.6);
+  --card-background-strong: rgba(55, 65, 81, 0.8);
   --scrollbar: #1e2225;
   --scrollbar-thumb: #a18a66;
   --accent: #f59e0b;
@@ -132,6 +139,8 @@ img {
   padding: 12px 24px;
   font-weight: 500;
   transition: all 0.3s ease;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 /* Hero Section */
@@ -337,7 +346,7 @@ img {
 
 .banner-floating-icon {
   position: absolute;
-  opacity: 0.15;
+  opacity: 0.5;
   animation: bannerFloat 8s ease-in-out infinite;
   font-size: 3rem;
   top: var(--top, 50%);
@@ -472,13 +481,14 @@ img {
 }
 
 .banner-skill-category {
-  background: rgba(55, 65, 81, 0.8);
+  background: var(--card-background-strong);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(161, 138, 102, 0.5);
+  border: 2px solid var(--border);
   border-radius: 20px;
   padding: 20px;
   min-width: 200px;
   text-align: center;
+  transition: none;
 }
 
 .banner-skill-category h3 {
@@ -496,13 +506,39 @@ img {
 }
 
 .banner-skill-tag {
-  background: rgba(161, 138, 102, 0.2);
+  background: var(--primary-bg-light);
   border: 1px solid var(--primary-color);
-  color: var(--text-primary);
+  color: var(--text-white) !important;
   padding: 4px 8px;
   border-radius: 12px;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.banner-skill-tag:hover {
+  background: var(--primary-bg-medium) !important;
+  color: var(--text-white) !important;
+  transform: scale(1.05);
+  text-decoration: none;
+  border-radius: 12px;
+  outline: none;
+  box-shadow: none;
+}
+
+.banner-skill-tag:active,
+.banner-skill-tag:focus,
+.banner-skill-tag:visited {
+  color: var(--text-white) !important;
+  text-decoration: none;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: none;
+  background: var(--primary-bg-light) !important;
 }
 
 /* Stats section from thumbnail */
@@ -822,8 +858,9 @@ img {
 .navigation-section {
   position: relative;
   background: var(--background-secondary);
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: visible;
 }
 
 .nav-glow {
@@ -840,22 +877,29 @@ img {
 .modern-tabs {
   display: flex;
   justify-content: center;
+  overflow: visible;
+  padding: 0.5rem 0;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .modern-tab {
-  background: rgba(55, 65, 81, 0.3) !important;
+  background: var(--card-background) !important;
   margin: 0 0.5rem !important;
   border-radius: 1rem !important;
-  border: 1px solid rgba(161, 138, 102, 0.3) !important;
+  border: 1px solid var(--border) !important;
   color: var(--primary-color) !important;
   transition: all 0.3s ease !important;
   backdrop-filter: blur(10px) !important;
   min-height: 60px !important;
+  min-width: 120px !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 .modern-tab:hover {
   background: rgba(161, 138, 102, 0.2) !important;
-  transform: translateY(-2px) !important;
 }
 
 .modern-tab.Mui-selected {
@@ -917,6 +961,11 @@ img {
     font-size: 1.5rem;
   }
   
+  .navigation-section {
+    padding: 2rem 0 1rem 0;
+    overflow: visible;
+  }
+  
   .tabs-container {
     margin: 1rem;
     padding: 0;
@@ -931,8 +980,10 @@ img {
   .MuiTab-root {
     font-size: 0.875rem;
     padding: 0.5rem 0.75rem;
-    min-width: auto;
+    min-width: 100px;
     white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
   }
   
   .MuiTabs-scrollButtons {
@@ -1155,7 +1206,14 @@ img {
   --surface: #374151;
   --text: #ffffff;
   --text-secondary: #d1d5db;
+  --text-white: #ffffff;
   --border: rgba(161, 138, 102, 0.3);
+  --primary-bg-light: rgba(161, 138, 102, 0.2);
+  --primary-bg-medium: rgba(161, 138, 102, 0.3);
+  --primary-bg-ultra-light: rgba(161, 138, 102, 0.1);
+  --card-background: rgba(55, 65, 81, 0.3);
+  --card-background-medium: rgba(55, 65, 81, 0.6);
+  --card-background-strong: rgba(55, 65, 81, 0.8);
   --scrollbar: #1e2225;
   --scrollbar-thumb: #a18a66;
   --accent: #f59e0b;
@@ -1166,11 +1224,15 @@ img {
 
 .dark-mode svg,
 .dark-mode li::marker,
-.dark-mode a:hover,
+.dark-mode a:not(.banner-skill-tag),
 .dark-mode .line {
   fill: var(--primary-color);
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+.dark-mode a:not(.banner-skill-tag):hover {
+  color: var(--primary-hover);
 }
 
 .dark-mode button {
@@ -1223,18 +1285,25 @@ img {
 
 /* LIGHT THEME */
 .light-mode {
-  --primary-color: #0f766e;
-  --primary-hover: #0d5c55;
+  --primary-color: #8b6914;
+  --primary-hover: #713f12;
   --secondary-color: #1f2937;
-  --background: #f9fafb;
-  --background-secondary: #ffffff;
-  --surface: #f3f4f6;
-  --text: #111827;
-  --text-secondary: #4b5563;
-  --border: rgba(15, 118, 110, 0.2);
-  --scrollbar: #e5e7eb;
-  --scrollbar-thumb: #0f766e;
-  --accent: #14b8a6;
+  --background: #fafaf9;
+  --background-secondary: #f5f5f4;
+  --surface: #e7e5e4;
+  --text: #1c1917;
+  --text-secondary: #44403c;
+  --text-white: #ffffff;
+  --border: rgba(139, 105, 20, 0.3);
+  --primary-bg-light: rgba(139, 105, 20, 0.1);
+  --primary-bg-medium: rgba(139, 105, 20, 0.2);
+  --primary-bg-ultra-light: rgba(139, 105, 20, 0.05);
+  --card-background: rgba(255, 255, 255, 0.9);
+  --card-background-medium: rgba(245, 245, 244, 0.8);
+  --card-background-strong: rgba(231, 229, 228, 0.9);
+  --scrollbar: #e7e5e4;
+  --scrollbar-thumb: #8b6914;
+  --accent: #ea580c;
   
   background-color: var(--background);
   color: var(--text);
@@ -1242,6 +1311,80 @@ img {
 
 .light-mode .hero-section {
   background: linear-gradient(135deg, var(--background) 0%, var(--background-secondary) 25%, var(--surface) 50%, var(--background-secondary) 75%, var(--background) 100%);
+}
+
+.light-mode .banner-header {
+  background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 20%, #e7e5e4 40%, #d6d3d1 60%, #f5f5f4 80%, #fafaf9 100%);
+}
+
+.light-mode .banner-grid-overlay {
+  background-image: 
+    linear-gradient(rgba(139, 105, 20, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 105, 20, 0.08) 1px, transparent 1px);
+}
+
+.light-mode .banner-glow-effect {
+  background: radial-gradient(circle, rgba(139, 105, 20, 0.12) 0%, transparent 70%);
+}
+
+.light-mode .banner-name {
+  color: var(--text);
+  text-shadow: 0 2px 4px rgba(139, 105, 20, 0.1);
+}
+
+.light-mode .banner-subtitle {
+  color: var(--primary-color);
+}
+
+.light-mode .banner-description {
+  color: var(--text-secondary);
+}
+
+.light-mode .banner-contact-info {
+  backdrop-filter: blur(10px);
+}
+
+.light-mode .navigation-section {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 15px rgba(139, 105, 20, 0.1);
+}
+
+.light-mode .modern-tab {
+  background: var(--card-background) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 2px 8px rgba(139, 105, 20, 0.1);
+}
+
+.light-mode .modern-tab:hover {
+  background: var(--card-background-medium) !important;
+  box-shadow: 0 4px 12px rgba(139, 105, 20, 0.15);
+}
+
+.light-mode .banner-skill-category {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 12px rgba(139, 105, 20, 0.1);
+  color: var(--text);
+}
+
+.light-mode .banner-skill-category h3 {
+  color: var(--primary-color);
+}
+
+.light-mode .banner-skill-tag {
+  color: var(--text) !important;
+}
+
+.light-mode .banner-skill-tag:hover,
+.light-mode .banner-skill-tag:active,
+.light-mode .banner-skill-tag:focus,
+.light-mode .banner-skill-tag:visited {
+  color: var(--text) !important;
+}
+
+.light-mode .banner-skills-section {
+  background: transparent;
 }
 
 .light-mode .hero-grid-overlay {
@@ -1256,11 +1399,15 @@ img {
 
 .light-mode svg,
 .light-mode li::marker,
-.light-mode a:hover,
+.light-mode a:not(.banner-skill-tag),
 .light-mode .line {
   fill: var(--primary-color);
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+.light-mode a:not(.banner-skill-tag):hover {
+  color: var(--primary-hover);
 }
 
 .light-mode button {
@@ -1334,7 +1481,7 @@ img {
 
 /* Smooth transitions for theme switching */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Focus indicators for accessibility */

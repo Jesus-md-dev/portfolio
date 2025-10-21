@@ -142,7 +142,6 @@ export const translations = {
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
     
     // Banner
-    developerPortfolio: "Portafolio de Desarrollador",
     bannerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
     bannerDescription: "Creando experiencias web modernas, juegos inmersivos y aplicaciones AR/VR con tecnologías de vanguardia",
     webDevelopmentTitle: "🌐 Desarrollo Web",
@@ -296,7 +295,6 @@ export const translations = {
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
     
     // Banner
-    developerPortfolio: "Developer Portfolio",
     bannerSubtitle: "Computer Engineer & Full-Stack Developer",
     bannerDescription: "Crafting modern web experiences, immersive games, and AR/VR applications with cutting-edge technologies",
     webDevelopmentTitle: "🌐 Web Development",

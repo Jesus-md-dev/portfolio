@@ -38,7 +38,6 @@ const Banner = React.memo(({ className, user }) => {
                     
                     {/* Right side - Text content */}
                     <div className="banner-text-section">
-                        <div className="banner-portfolio-label">{t('developerPortfolio')}</div>
                         <h1 className="banner-name">JESÚS MÁRQUEZ</h1>
                         <h2 className="banner-subtitle">{t('bannerSubtitle')}</h2>
                         <p className="banner-description">
@@ -50,30 +49,30 @@ const Banner = React.memo(({ className, user }) => {
                             <div className="banner-skill-category">
                                 <h3>{t('webDevelopmentTitle')}</h3>
                                 <div className="banner-skill-items">
-                                    <span className="banner-skill-tag">React</span>
-                                    <span className="banner-skill-tag">Drupal</span>
-                                    <span className="banner-skill-tag">PHP</span>
-                                    <span className="banner-skill-tag">JavaScript</span>
-                                    <span className="banner-skill-tag">Python</span>
+                                    <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">React</a>
+                                    <a href="https://www.drupal.org/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Drupal</a>
+                                    <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">PHP</a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">JavaScript</a>
+                                    <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Python</a>
                                 </div>
                             </div>
                             <div className="banner-skill-category">
                                 <h3>{t('gameDevelopmentTitle')}</h3>
                                 <div className="banner-skill-items">
-                                    <span className="banner-skill-tag">Unity</span>
-                                    <span className="banner-skill-tag">C#</span>
-                                    <span className="banner-skill-tag">AR/VR</span>
-                                    <span className="banner-skill-tag">Godot</span>
+                                    <a href="https://unity.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Unity</a>
+                                    <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">C#</a>
+                                    <a href="https://en.wikipedia.org/wiki/Virtual_reality" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">AR/VR</a>
+                                    <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Godot</a>
                                 </div>
                             </div>
                             <div className="banner-skill-category">
                                 <h3>{t('technologiesTitle')}</h3>
                                 <div className="banner-skill-items">
-                                    <span className="banner-skill-tag">AWS</span>
-                                    <span className="banner-skill-tag">Netlify</span>
-                                    <span className="banner-skill-tag">MySQL</span>
-                                    <span className="banner-skill-tag">Tailwind</span>
-                                    <span className="banner-skill-tag">Django</span>
+                                    <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">AWS</a>
+                                    <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Netlify</a>
+                                    <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">MySQL</a>
+                                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Tailwind</a>
+                                    <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer" className="banner-skill-tag">Django</a>
                                 </div>
                             </div>
                         </div>
