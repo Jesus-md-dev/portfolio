@@ -1239,6 +1239,11 @@ img {
   color: var(--background);
 }
 
+.dark-mode .download-cv-button {
+  background-color: var(--primary-hover);
+  border: 1px solid var(--primary-hover) !important;
+}
+
 .dark-mode button:hover {
   background-color: var(--primary-hover);
 }
@@ -1412,6 +1417,11 @@ img {
 
 .light-mode button {
   color: var(--background-secondary);
+}
+
+.light-mode .download-cv-button {
+  background-color: var(--primary-hover);
+  border: 1px solid var(--primary-hover) !important;
 }
 
 .light-mode button:hover {
