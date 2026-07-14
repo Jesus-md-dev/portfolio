@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 *.pdf
+!/public/cv-jesus-marquez-delgado-*.pdf
 
 # IDE files
 .vscode/

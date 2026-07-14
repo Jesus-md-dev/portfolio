@@ -10,10 +10,11 @@ import { useLanguage } from "../i18n/LanguageContext.js";
 import "./CV.css";
 
 function CV() {
-  const { t } = useLanguage();
-  
+  const { t, currentLanguage } = useLanguage();
+
   const handleDownloadCV = () => {
-    window.open(config.cv.downloadUrl, '_blank').focus();
+    const url = config.cv.downloadUrl[currentLanguage] || config.cv.downloadUrl.es;
+    window.open(url, '_blank').focus();
   };
 
   return (

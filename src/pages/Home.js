@@ -1,4 +1,5 @@
-import React, { useState, lazy, Suspense, useCallback, useMemo } from 'react';
+import React, { lazy, Suspense, useCallback, useMemo } from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import ArticleIcon from '@mui/icons-material/Article';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import WebIcon from '@mui/icons-material/Web';
@@ -6,6 +7,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
+import PageMeta from '../components/PageMeta';
 import User from '../components/User';
 import useLCPMonitor from '../hooks/useLCPMonitor';
 import { useLanguage } from '../i18n/LanguageContext.js';
@@ -22,57 +24,37 @@ const Games = lazy(() => import("../pages/Games"));
 const Vrar = lazy(() => import("../pages/Vrar"));
 const Webs = lazy(() => import("../pages/Webs"));
 
+const SECTION_META_KEYS = {
+  cv: { title: 'metaTitleCv', description: 'metaDescriptionCv' },
+  webs: { title: 'metaTitleWebs', description: 'metaDescriptionWebs' },
+  games: { title: 'metaTitleGames', description: 'metaDescriptionGames' },
+  arvr: { title: 'metaTitleArvr', description: 'metaDescriptionArvr' },
+};
+
+const sectionFromPath = (pathname) => {
+  const path = pathname.replace(/^\//, '');
+  return SECTION_META_KEYS[path] ? path : 'cv';
+};
+
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center py-8">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-current"></div>
+  </div>
+);
+
 const Home = () => {
-  const [selectedTab, setSelectedTab] = useState('cv');
   const { t } = useLanguage();
-  
+  const location = useLocation();
+  const navigate = useNavigate();
+
   // Monitor LCP performance improvements
   useLCPMonitor();
 
+  const selectedTab = sectionFromPath(location.pathname);
+
   const handleChange = useCallback((event, newSelectedTab) => {
-    setSelectedTab(newSelectedTab);
-  }, []);
-
-  const renderSwitch = useCallback((param) => {
-    const LoadingFallback = () => (
-      <div className="flex items-center justify-center py-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-current"></div>
-      </div>
-    );
-
-    switch (param) {
-      case 'cv':
-        return (
-          <Suspense fallback={<LoadingFallback />}>
-            <CV />
-          </Suspense>
-        );
-      case 'webs':
-        return (
-          <Suspense fallback={<LoadingFallback />}>
-            <Webs />
-          </Suspense>
-        );
-      case 'games':
-        return (
-          <Suspense fallback={<LoadingFallback />}>
-            <Games />
-          </Suspense>
-        );
-      case 'arvr':
-        return (
-          <Suspense fallback={<LoadingFallback />}>
-            <Vrar />
-          </Suspense>
-        );
-      default:
-        return (
-          <Suspense fallback={<LoadingFallback />}>
-            <CV />
-          </Suspense>
-        );
-    }
-  }, []);
+    navigate(newSelectedTab === 'cv' ? '/' : `/${newSelectedTab}`);
+  }, [navigate]);
 
   const user = useMemo(() => new User(
     t('name').split(' ')[0], // 'Jesús'
@@ -83,6 +65,8 @@ const Home = () => {
 
   return (
     <main className="modern-portfolio">
+      <PageMeta title={t(SECTION_META_KEYS[selectedTab].title)} description={t(SECTION_META_KEYS[selectedTab].description)} />
+
       {/* New Banner Header - Full Width */}
       <Banner user={user} />
 
@@ -113,7 +97,14 @@ const Home = () => {
       <section className="content-section" role="tabpanel" aria-label={`${selectedTab} content`} id={`${selectedTab}-panel`}>
         <h2 className="sr-only">{t(selectedTab)} {t('portfolioSections')}</h2>
         <div className="content-container">
-          {renderSwitch(selectedTab)}
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/webs" element={<Webs />} />
+              <Route path="/games" element={<Games />} />
+              <Route path="/arvr" element={<Vrar />} />
+              <Route path="*" element={<CV />} />
+            </Routes>
+          </Suspense>
         </div>
       </section>
     </main>

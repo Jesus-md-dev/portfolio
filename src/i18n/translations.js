@@ -136,7 +136,17 @@ export const translations = {
     loading: "Cargando",
     portfolioSections: "Secciones del portafolio",
     portfolioNavigationTabs: "Pestañas de navegación del portafolio",
-    
+
+    // SEO - Page titles and meta descriptions per section
+    metaTitleCv: "Jesús Márquez Delgado - Ingeniero Informático | CV",
+    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Ingeniero Informático especializado en React, PHP y Drupal. Experiencia laboral, tecnologías, habilidades y formación.",
+    metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
+    metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
+    metaTitleGames: "Proyectos de videojuegos | Jesús Márquez Delgado",
+    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Ingeniero Informático.",
+    metaTitleArvr: "Proyectos de Realidad Aumentada y Virtual | Jesús Márquez Delgado",
+    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Ingeniero Informático.",
+
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
@@ -289,7 +299,17 @@ export const translations = {
     loading: "Loading",
     portfolioSections: "Portfolio sections",
     portfolioNavigationTabs: "Portfolio navigation tabs",
-    
+
+    // SEO - Page titles and meta descriptions per section
+    metaTitleCv: "Jesús Márquez Delgado - Computer Engineer | CV",
+    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Computer Engineer specialized in React, PHP and Drupal. Work experience, technologies, skills and education.",
+    metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
+    metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
+    metaTitleGames: "Game development projects | Jesús Márquez Delgado",
+    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Computer Engineer.",
+    metaTitleArvr: "Augmented and Virtual Reality projects | Jesús Márquez Delgado",
+    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Computer Engineer.",
+
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",

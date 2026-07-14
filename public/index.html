@@ -20,27 +20,24 @@
     <meta name="author" content="Jesús Márquez Delgado" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jesusmarquezdelgado.netlify.app" />
-    
-    <!-- Alternate language versions -->
-    <link rel="alternate" hreflang="es" href="https://jesusmarquezdelgado.netlify.app" />
-    <link rel="alternate" hreflang="en" href="https://jesusmarquezdelgado.netlify.app" />
-    <link rel="alternate" hreflang="x-default" href="https://jesusmarquezdelgado.netlify.app" />
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Jesús Márquez Delgado - Curriculum Vitae" />
     <meta property="og:description" content="Ingeniero Informático especializado en desarrollo web con experiencia en React, PHP, Drupal y tecnologías modernas." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jesusmarquezdelgado.netlify.app" />
-    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Jesús Márquez Delgado - CV" />
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jesús Márquez Delgado - Curriculum Vitae" />
     <meta name="twitter:description" content="Ingeniero Informático especializado en desarrollo web con experiencia en React, PHP, Drupal y tecnologías modernas." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.webp" />
     
     <!-- Additional Meta Tags -->
     <meta name="application-name" content="Jesús Márquez Delgado - CV" />
@@ -65,17 +62,44 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jesús Márquez Delgado",
-      "jobTitle": "Ingeniero Informático",
-      "description": "Desarrollador web especializado en tecnologías modernas",
-      "url": "https://jesusmarquezdelgado.netlify.app",
-      "sameAs": [
-        "https://github.com/Jesus-md-dev",
-        "https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/"
-      ],
-      "knowsAbout": ["React", "PHP", "Drupal", "JavaScript", "Web Development", "Frontend", "Backend"],
-      "alumniOf": "Universidad de Cádiz"
+      "@type": "ProfilePage",
+      "dateCreated": "2023-03-05",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Jesús Márquez Delgado",
+        "jobTitle": "Ingeniero Informático",
+        "description": "Desarrollador web especializado en tecnologías modernas",
+        "url": "https://jesusmarquezdelgado.netlify.app",
+        "image": "https://jesusmarquezdelgado.netlify.app/og-image.webp",
+        "email": "mailto:jesusmarquezdelgado@gmail.com",
+        "telephone": "+34697394198",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chiclana de la Frontera",
+          "addressRegion": "Cádiz",
+          "addressCountry": "ES"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "professional",
+          "email": "jesusmarquezdelgado@gmail.com",
+          "telephone": "+34697394198"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "1xINTERNET",
+          "url": "https://www.1xinternet.de/"
+        },
+        "sameAs": [
+          "https://github.com/Jesus-md-dev",
+          "https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/"
+        ],
+        "knowsAbout": ["React", "PHP", "Drupal", "JavaScript", "Web Development", "Frontend", "Backend"],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad de Cádiz"
+        }
+      }
     }
     </script>
     

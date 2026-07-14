@@ -1,5 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import ErrorBoundary from "./components/ErrorBoundary.js";
 import Footer from "./components/Footer.js";
 import LanguageToggle from "./components/LanguageToggle.js";
@@ -48,7 +49,9 @@ function App() {
     <ErrorBoundary>
       <CustomThemeProvider>
         <LanguageProvider>
-          <AppContent />
+          <BrowserRouter>
+            <AppContent />
+          </BrowserRouter>
         </LanguageProvider>
       </CustomThemeProvider>
     </ErrorBoundary>

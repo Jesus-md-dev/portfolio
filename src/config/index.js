@@ -19,7 +19,10 @@ const config = {
     linkedin: process.env.REACT_APP_LINKEDIN_URL || 'https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/',
   },
   cv: {
-    downloadUrl: process.env.REACT_APP_CV_URL || 'https://drive.google.com/file/d/12n6WRc3-FtLW9Hjlc1ZFb3LkMWSVKqCt/view?usp=sharing',
+    downloadUrl: {
+      es: process.env.REACT_APP_CV_URL_ES || '/cv-jesus-marquez-delgado-es.pdf',
+      en: process.env.REACT_APP_CV_URL_EN || '/cv-jesus-marquez-delgado-en.pdf',
+    },
   },
   analytics: {
     googleAnalyticsId: process.env.REACT_APP_GOOGLE_ANALYTICS_ID,
