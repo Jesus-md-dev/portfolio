@@ -1,12 +1,12 @@
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MapIcon from '@mui/icons-material/Map';
 import PhoneIcon from '@mui/icons-material/Phone';
+import WorkIcon from '@mui/icons-material/Work';
 import config from "../config/index.js";
-import Line from "../components/Line.js";
-import { useLanguage } from "../i18n/LanguageContext.js";
+import Line from "../components/Line.jsx";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import "./CV.css";
 
 function CV() {
@@ -58,15 +58,17 @@ function CV() {
             </span>
             <div>
               <div>
+                <h4>{t('techCoreLabel')}</h4>
                 <ul className="list-disc list-inside">
                   {t('techHighLevel').map((item, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
                 <br />
+                <h4>{t('techOtherLabel')}</h4>
                 <ul className="list-disc list-inside">
                   {t('techMediumLevel').map((item, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -139,7 +141,7 @@ function CV() {
                 <MapIcon /> <a href="https://www.google.es/maps/place/Chiclana+de+la+Frontera,+C%C3%A1diz" target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
               </div>
               <div>
-                <AccessTimeIcon /> {t('availability')}
+                <WorkIcon /> {t('availability')}
               </div>
               <div>
                 <GitHubIcon /> <a href={config.social.github} target="_blank" rel="noopener noreferrer">{t('githubLink')}</a>

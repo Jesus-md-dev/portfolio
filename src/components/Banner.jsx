@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Avatar from "../components/Avatar.js";
-import { useLanguage } from "../i18n/LanguageContext.js";
+import Avatar from "../components/Avatar.jsx";
+import config from "../config/index.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 const Banner = React.memo(({ className, user }) => {
-    const { t } = useLanguage();
+    const { t, currentLanguage } = useLanguage();
+    const cvUrl = config.cv.downloadUrl[currentLanguage] || config.cv.downloadUrl.es;
     
     return (
         <header className={`banner-header ${className}`}>
@@ -43,7 +46,28 @@ const Banner = React.memo(({ className, user }) => {
                         <p className="banner-description">
                             {t('bannerDescription')}
                         </p>
-                        
+
+                        {/* Primary calls to action */}
+                        <div className="banner-cta-row">
+                            <a
+                                href={`mailto:${config.contact.email}`}
+                                className="banner-cta-button"
+                                aria-label={t('contactEmail')}
+                            >
+                                <EmailIcon fontSize="small" />
+                                {t('bannerCtaContact')}
+                            </a>
+                            <a
+                                href={cvUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="banner-cta-button banner-cta-secondary"
+                                aria-label={t('downloadCV')}
+                            >
+                                {t('downloadCV')}
+                            </a>
+                        </div>
+
                         {/* Skills section from thumbnail */}
                         <div className="banner-skills-section">
                             <div className="banner-skill-category">

@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageText from "../components/ImageText";
-import { useLanguage } from "../i18n/LanguageContext.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
 import xprojectsSm from "../files/images/1xprojects-with-logo-transformed-sm.webp";
 import xprojectsMd from "../files/images/1xprojects-with-logo-transformed-md.webp";

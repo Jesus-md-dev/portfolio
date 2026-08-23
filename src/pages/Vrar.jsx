@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoText from "../components/VideoText.js";
-import { useLanguage } from "../i18n/LanguageContext.js";
+import VideoText from "../components/VideoText.jsx";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 function Vrar() {
   const { t } = useLanguage();

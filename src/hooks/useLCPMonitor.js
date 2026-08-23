@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export const useLCPMonitor = () => {
   useEffect(() => {
     // Only run in production or when performance monitoring is needed
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();

@@ -1,8 +1,8 @@
 import React from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
 import { IconButton, Tooltip } from '@mui/material';
-import { useLanguage } from '../i18n/LanguageContext.js';
-import { useTheme } from '../contexts/ThemeContext.js';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
+import { useTheme } from '../contexts/ThemeContext.jsx';
 
 const LanguageToggle = React.memo(() => {
   const { currentLanguage, toggleLanguage, t } = useLanguage();

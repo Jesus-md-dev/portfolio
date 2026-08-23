@@ -2,8 +2,8 @@ import React from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { IconButton, Tooltip } from '@mui/material';
-import { useTheme } from '../contexts/ThemeContext.js';
-import { useLanguage } from '../i18n/LanguageContext.js';
+import { useTheme } from '../contexts/ThemeContext.jsx';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 const ThemeToggle = React.memo(() => {
   const { currentTheme, toggleTheme, colors } = useTheme();

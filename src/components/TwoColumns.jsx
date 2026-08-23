@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from "react";
-import Line from "./Line.js";
-import ResponsiveImg from "./ResponsiveImg.js";
+import Line from "./Line.jsx";
+import ResponsiveImg from "./ResponsiveImg.jsx";
 import { getYouTubeVideoID, getYouTubeThumbnail } from "../utils/helpers.js";
 
 const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, type, dark }) => {

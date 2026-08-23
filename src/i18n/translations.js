@@ -12,39 +12,39 @@ export const translations = {
     
     // About section
     aboutMe: "SOBRE MÍ",
-    aboutMeText: "Ingeniero informático, especializado en tecnologías de la información, con experiencia en el desarrollo web y un gran interés en el desarrollo de software. Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional.",
-    
+    aboutMeText: "Ingeniero informático especializado en desarrollo web enterprise con Drupal, PHP y React. En 1xINTERNET construyo y mantengo sitios corporativos multiidioma para marcas internacionales como Circor, Maggi y Thomy, coordinándome en inglés con un equipo distribuido. Fuera del trabajo desarrollo videojuegos y experiencias de realidad aumentada/virtual en Unity, y disfruto aplicando tecnologías nuevas a proyectos reales.",
+
     // CV Section
     workExperience: "Experiencia Laboral",
     webDeveloper: "Desarrollador Web",
     workStartDate: "Marzo 2022",
     currentDate: "Actualidad",
     workItems: [
-      "Site building en Drupal",
-      "Desarrollo en Drupal Backend PHP",
-      "Diseño en Drupal con React, Twig y Tailwind",
-      "Definición de tareas a partir de peticiones del cliente",
-      "Comunicación en inglés con equipo multicultural"
+      "Site building y desarrollo backend en Drupal para sitios corporativos multiidioma de marcas internacionales como Circor, Maggi y Thomy",
+      "Desarrollo frontend con React, Twig y Tailwind CSS integrado en temas Drupal",
+      "Traducción de peticiones de cliente en tareas técnicas planificadas y estimadas",
+      "Comunicación diaria en inglés con un equipo de desarrollo multicultural y distribuido",
+      "Uso de Claude (Claude Code) para acelerar el desarrollo y la resolución de problemas",
+      "Mantenimiento y evolución continua de sitios en producción"
     ],
-    
+
     technologies: "Tecnologías",
+    techCoreLabel: "Stack principal",
     techHighLevel: [
-      "Nivel alto de PHP, Laravel, Symfony y Drupal",
-      "Nivel alto en diseño web: React, Angular, Bootstrap y Tailwind",
-      "Nivel alto en desarrollo web con Django",
-      "Nivel alto en Python",
-      "Nivel alto en Java",
-      "Nivel alto en JavaScript",
-      "Nivel alto en manejo de bases de datos MySQL y MongoDB"
+      "Drupal (backend, site building y theming)",
+      "PHP",
+      "React y JavaScript",
+      "Tailwind CSS"
     ],
+    techOtherLabel: "Otras tecnologías y herramientas",
     techMediumLevel: [
-      "Nivel medio en C/C++ y C#",
-      "Nivel medio en Unity",
-      "Nivel medio en desarrollo RV/RA en Unity",
-      "Nivel medio en Godot",
-      "Nivel medio en manejo de servidores Apache",
-      "Nivel medio en manejo de AWS",
-      "Nivel medio en manejo de Netlify"
+      "Desarrollo asistido por IA: Claude Code, GitHub Copilot",
+      "Laravel, Symfony, Angular, Bootstrap y Django",
+      "Python y Java",
+      "MySQL y MongoDB",
+      "C/C++ y C#",
+      "Unity y Godot, incluyendo desarrollo RV/RA",
+      "AWS, Netlify y Apache"
     ],
     
     skills: "Habilidades",
@@ -82,7 +82,7 @@ export const translations = {
     ],
     
     contact: "Contacto",
-    availability: "Disponibilidad de 17:00 a 20:00",
+    availability: "Empleado en 1xINTERNET — abierto a nuevas oportunidades",
     downloadCV: "DESCARGAR CV",
     
     // Webs section
@@ -152,8 +152,9 @@ export const translations = {
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
     
     // Banner
-    bannerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
-    bannerDescription: "Creando experiencias web modernas, juegos inmersivos y aplicaciones AR/VR con tecnologías de vanguardia",
+    bannerSubtitle: "Ingeniero Informático · Drupal, PHP & React",
+    bannerDescription: "Construyendo sitios web enterprise para marcas internacionales — y desarrollando videojuegos y experiencias AR/VR en Unity por pasión",
+    bannerCtaContact: "Contáctame",
     webDevelopmentTitle: "🌐 Desarrollo Web",
     gameDevelopmentTitle: "🎮 Desarrollo de Juegos",
     technologiesTitle: "🔧 Tecnologías",
@@ -175,39 +176,39 @@ export const translations = {
     
     // About section
     aboutMe: "ABOUT ME",
-    aboutMeText: "Computer engineer specialized in information technologies, with experience in web development and a great interest in software development. With the ability to learn and apply my knowledge to the professional field.",
-    
+    aboutMeText: "Computer engineer specialized in enterprise web development with Drupal, PHP and React. At 1xINTERNET I build and maintain multilingual corporate sites for international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Outside of work I develop games and AR/VR experiences in Unity, and enjoy applying new technologies to real projects.",
+
     // CV Section
     workExperience: "Work Experience",
     webDeveloper: "Web Developer",
     workStartDate: "March 2022",
     currentDate: "Present",
     workItems: [
-      "Site building in Drupal",
-      "Drupal Backend PHP development",
-      "Design in Drupal with React, Twig and Tailwind",
-      "Task definition based on client requests",
-      "English communication with multicultural team"
+      "Drupal site building and backend development for multilingual corporate sites of international brands such as Circor, Maggi and Thomy",
+      "Frontend development with React, Twig and Tailwind CSS integrated into Drupal themes",
+      "Translating client requests into planned, estimated technical tasks",
+      "Daily English communication with a multicultural, distributed development team",
+      "Using Claude (Claude Code) to speed up development and problem-solving",
+      "Ongoing maintenance and evolution of production sites"
     ],
-    
+
     technologies: "Technologies",
+    techCoreLabel: "Core stack",
     techHighLevel: [
-      "High level in PHP, Laravel, Symfony and Drupal",
-      "High level in web design: React, Angular, Bootstrap and Tailwind",
-      "High level in web development with Django",
-      "High level in Python",
-      "High level in Java",
-      "High level in JavaScript",
-      "High level in database management MySQL and MongoDB"
+      "Drupal (backend, site building and theming)",
+      "PHP",
+      "React and JavaScript",
+      "Tailwind CSS"
     ],
+    techOtherLabel: "Other technologies and tools",
     techMediumLevel: [
-      "Medium level in C/C++ and C#",
-      "Medium level in Unity",
-      "Medium level in VR/AR development in Unity",
-      "Medium level in Godot",
-      "Medium level in Apache server management",
-      "Medium level in AWS management",
-      "Medium level in Netlify management"
+      "AI-assisted development: Claude Code, GitHub Copilot",
+      "Laravel, Symfony, Angular, Bootstrap and Django",
+      "Python and Java",
+      "MySQL and MongoDB",
+      "C/C++ and C#",
+      "Unity and Godot, including VR/AR development",
+      "AWS, Netlify and Apache"
     ],
     
     skills: "Skills",
@@ -245,7 +246,7 @@ export const translations = {
     ],
     
     contact: "Contact",
-    availability: "Availability from 5:00 PM to 8:00 PM",
+    availability: "Employed at 1xINTERNET — open to new opportunities",
     downloadCV: "DOWNLOAD CV",
     
     // Webs section
@@ -315,8 +316,9 @@ export const translations = {
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
     
     // Banner
-    bannerSubtitle: "Computer Engineer & Full-Stack Developer",
-    bannerDescription: "Crafting modern web experiences, immersive games, and AR/VR applications with cutting-edge technologies",
+    bannerSubtitle: "Computer Engineer · Drupal, PHP & React",
+    bannerDescription: "Building enterprise websites for international brands — and crafting games and AR/VR experiences in Unity on the side",
+    bannerCtaContact: "Contact me",
     webDevelopmentTitle: "🌐 Web Development",
     gameDevelopmentTitle: "🎮 Game Development",
     technologiesTitle: "🔧 Technologies",

@@ -51,7 +51,7 @@ class ErrorBoundary extends React.Component {
             >
               {isSpanish ? 'Recargar página' : 'Reload page'}
             </button>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {import.meta.env.DEV && this.state.error && (
               <details className="mt-4 text-left">
                 <summary className="cursor-pointer text-red-400">
                   {isSpanish ? 'Detalles del error (desarrollo)' : 'Error details (development)'}

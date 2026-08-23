@@ -1,8 +1,8 @@
 import React from 'react';
-import { useLanguage } from '../i18n/LanguageContext.js';
-import Iconlink from "./Iconlink.js";
-import { ReactComponent as GitHubLogo } from "../files/svg/github.svg";
-import { ReactComponent as LinkedinLogo } from "../files/svg/linkledin.svg";
+import { useLanguage } from '../i18n/LanguageContext.jsx';
+import Iconlink from "./Iconlink.jsx";
+import GitHubLogo from "../files/svg/github.svg?react";
+import LinkedinLogo from "../files/svg/linkledin.svg?react";
 
 const Footer = React.memo(() => {
   const { t } = useLanguage();

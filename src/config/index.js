@@ -5,31 +5,31 @@
 
 const config = {
   app: {
-    name: process.env.REACT_APP_NAME || 'Jesús Márquez Delgado - Curriculum Vitae',
-    description: process.env.REACT_APP_DESCRIPTION || 'Curriculum Vitae de Jesús Márquez Delgado',
-    url: process.env.REACT_APP_URL || 'https://jesusmarquezdelgado.netlify.app',
+    name: import.meta.env.VITE_NAME || 'Jesús Márquez Delgado - Curriculum Vitae',
+    description: import.meta.env.VITE_DESCRIPTION || 'Curriculum Vitae de Jesús Márquez Delgado',
+    url: import.meta.env.VITE_URL || 'https://jesusmarquezdelgado.netlify.app',
   },
   contact: {
-    email: process.env.REACT_APP_EMAIL || 'jesusmarquezdelgado@gmail.com',
-    phone: process.env.REACT_APP_PHONE || '+34697394198',
-    location: process.env.REACT_APP_LOCATION || 'Chiclana de la Frontera, Cádiz',
+    email: import.meta.env.VITE_EMAIL || 'jesusmarquezdelgado@gmail.com',
+    phone: import.meta.env.VITE_PHONE || '+34697394198',
+    location: import.meta.env.VITE_LOCATION || 'Chiclana de la Frontera, Cádiz',
   },
   social: {
-    github: process.env.REACT_APP_GITHUB_URL || 'https://github.com/Jesus-md-dev',
-    linkedin: process.env.REACT_APP_LINKEDIN_URL || 'https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/',
+    github: import.meta.env.VITE_GITHUB_URL || 'https://github.com/Jesus-md-dev',
+    linkedin: import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/',
   },
   cv: {
     downloadUrl: {
-      es: process.env.REACT_APP_CV_URL_ES || '/cv-jesus-marquez-delgado-es.pdf',
-      en: process.env.REACT_APP_CV_URL_EN || '/cv-jesus-marquez-delgado-en.pdf',
+      es: import.meta.env.VITE_CV_URL_ES || '/cv-jesus-marquez-delgado-es.pdf',
+      en: import.meta.env.VITE_CV_URL_EN || '/cv-jesus-marquez-delgado-en.pdf',
     },
   },
   analytics: {
-    googleAnalyticsId: process.env.REACT_APP_GOOGLE_ANALYTICS_ID,
-    hotjarId: process.env.REACT_APP_HOTJAR_ID,
+    googleAnalyticsId: import.meta.env.VITE_GOOGLE_ANALYTICS_ID,
+    hotjarId: import.meta.env.VITE_HOTJAR_ID,
   },
-  isDevelopment: process.env.NODE_ENV === 'development',
-  isProduction: process.env.NODE_ENV === 'production',
+  isDevelopment: import.meta.env.DEV,
+  isProduction: import.meta.env.PROD,
 };
 
 export default config;

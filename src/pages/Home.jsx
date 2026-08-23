@@ -10,12 +10,12 @@ import Banner from '../components/Banner';
 import PageMeta from '../components/PageMeta';
 import User from '../components/User';
 import useLCPMonitor from '../hooks/useLCPMonitor';
-import { useLanguage } from '../i18n/LanguageContext.js';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 import Logo from "../files/images/fotocvfondo.webp";
 import LogoSm from "../files/images/fotocvfondo-sm.webp";
 import LogoMd from "../files/images/fotocvfondo-md.webp";
 import LogoLg from "../files/images/fotocvfondo-lg.webp";
-import { ReactComponent as VrIcon } from "../files/svg/vr.svg";
+import VrIcon from "../files/svg/vr.svg?react";
 import "./Home.css";
 
 // Lazy load page components

@@ -1,14 +1,14 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import ErrorBoundary from "./components/ErrorBoundary.js";
-import Footer from "./components/Footer.js";
-import LanguageToggle from "./components/LanguageToggle.js";
-import ThemeToggle from "./components/ThemeToggle.js";
-import { ThemeProvider as CustomThemeProvider, useTheme } from "./contexts/ThemeContext.js";
-import { LanguageProvider } from "./i18n/LanguageContext.js";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import Footer from "./components/Footer.jsx";
+import LanguageToggle from "./components/LanguageToggle.jsx";
+import ThemeToggle from "./components/ThemeToggle.jsx";
+import { ThemeProvider as CustomThemeProvider, useTheme } from "./contexts/ThemeContext.jsx";
+import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import "./index.css";
-import Home from "./pages/Home.js";
+import Home from "./pages/Home.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -63,7 +63,7 @@ root.render(<App />);
 // Register service worker for PWA functionality
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })
       .then((registration) => {
         // eslint-disable-next-line no-console
         console.log('SW registered: ', registration);
