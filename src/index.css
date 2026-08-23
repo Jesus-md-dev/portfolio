@@ -652,6 +652,7 @@ img {
     min-height: 100vh;
     padding: 2rem 1rem;
     margin: 0;
+    flex-direction: column;
   }
   
   .banner-main-content {
@@ -713,8 +714,9 @@ img {
   }
   
   .banner-contact-info {
+    position: static;
+    margin-top: 2rem;
     font-size: 1rem;
-    bottom: 20px;
     padding: 0 1rem;
   }
   
