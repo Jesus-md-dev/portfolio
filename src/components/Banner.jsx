@@ -66,6 +66,16 @@ const Banner = React.memo(({ className, user }) => {
                             >
                                 {t('downloadCV')}
                             </a>
+                            <a
+                                href={config.social.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="banner-cta-button banner-cta-secondary"
+                                aria-label={t('githubProfile')}
+                            >
+                                <GitHubIcon fontSize="small" />
+                                {t('bannerCtaGithub')}
+                            </a>
                         </div>
 
                         {/* Skills section from thumbnail */}

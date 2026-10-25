@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jesusmarquezdelgado.netlify.app/</loc>
+    <loc>https://jzmarquez.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jesusmarquezdelgado.netlify.app/webs</loc>
+    <loc>https://jzmarquez.com/webs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jesusmarquezdelgado.netlify.app/games</loc>
+    <loc>https://jzmarquez.com/games</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jesusmarquezdelgado.netlify.app/arvr</loc>
+    <loc>https://jzmarquez.com/arvr</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
