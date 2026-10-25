@@ -1,5 +1,6 @@
 import React from 'react';
-import ImageText from "../components/ImageText";
+import Line from "../components/Line";
+import ProjectCard, { ProjectGrid, ProjectImage } from "../components/ProjectCard.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
 import xprojectsSm from "../files/images/1xprojects-with-logo-transformed-sm.webp";
@@ -11,67 +12,64 @@ import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
 import jmcvwebLg from "../files/images/jm-cv-web-transformed-lg.webp";
 import jmcvwebXl from "../files/images/jm-cv-web-transformed-xl.webp";
 
+// The client sites built at 1xINTERNET, one button each.
+const CLIENT_SITES = [
+  { name: 'Circor', href: 'https://www.circor.com/' },
+  { name: 'Pumps', href: 'https://pumps.circor.com/' },
+  { name: 'Maggi', href: 'https://www.maggi.de/' },
+  { name: 'Thomy', href: 'https://www.thomy.de/' },
+];
+
 function Webs() {
   const { t } = useLanguage();
-  
+
   return (
-    <div className="webs-page">
-      <ImageText
-        src={xprojects}
-        srcSm={xprojectsSm}
-        srcMd={xprojectsMd}
-        srcLg={xprojectsLg}
-        alt={t('projectsShowcase')}
-        title={
-          <span>
-            {t('websAt1xinternet')} <a target="_blank" rel="noopener noreferrer" href="https://www.1xinternet.de/en">1xINTERNET</a>
-          </span>
-        }
-        text={
-          <span>
-            {t('websAt1xinternetText')}
-            {' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://www.1xinternet.de/en">1xINTERNET</a>
-            {', '}
-            <a target="_blank" rel="noopener noreferrer" href="https://new.drupal.org/">Drupal</a>
-            {', '}
-            <a target="_blank" rel="noopener noreferrer" href="https://react.dev/">React</a>
-            {' y '}
-            <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">Tailwind CSS</a>
-            {'. Las webs: '}
-            <a target="_blank" rel="noopener noreferrer" href="https://www.circor.com/">Circor</a>
-            {', '}
-            <a target="_blank" rel="noopener noreferrer" href="https://pumps.circor.com/">Pumps</a>
-            {', '}
-            <a target="_blank" rel="noopener noreferrer" href="https://www.maggi.de/">Maggi</a>
-            {' y '}
-            <a target="_blank" rel="noopener noreferrer" href="https://www.thomy.de/">Thomy</a>
-            .
-          </span>
-        }
-      />
-      <ImageText
-        src={jmcvweb}
-        srcSm={jmcvwebSm}
-        srcMd={jmcvwebMd}
-        srcLg={jmcvwebLg}
-        srcXl={jmcvwebXl}
-        invert={true}
-        alt={t('personalWebsiteScreenshot')}
-        title={t('personalCVWeb')}
-        text={
-          <span>
-            {t('personalCVWebText')}
-            {' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://react.dev/">React</a>
-            {', '}
-            <a target="_blank" rel="noopener noreferrer" href="https://tailwindcss.com/">Tailwind CSS</a>
-            {' y '}
-            <a target="_blank" rel="noopener noreferrer" href="https://mui.com/">MUI</a>
-            .
-          </span>
-        }
-      />
+    <div className="webs-page content-width">
+      <h2>
+        <Line />
+        {t('webs')}
+      </h2>
+
+      <ProjectGrid>
+        <ProjectCard
+          name={t('websAt1xinternet')}
+          media={
+            <ProjectImage
+              image={{ src: xprojects, srcSm: xprojectsSm, srcMd: xprojectsMd, srcLg: xprojectsLg }}
+              alt={t('projectsShowcase')}
+            />
+          }
+          text={t('websAt1xinternetText')}
+          stack={['Drupal', 'PHP', 'React', 'Tailwind CSS']}
+          stackLabel={t('projectsStack')}
+          links={CLIENT_SITES.map(({ name, href }) => ({
+            href,
+            label: name,
+            type: 'live',
+            ariaLabel: `${t('projectsLive')}: ${name}`,
+          }))}
+        />
+        <ProjectCard
+          name={t('personalCVWeb')}
+          media={
+            <ProjectImage
+              image={{ src: jmcvweb, srcSm: jmcvwebSm, srcMd: jmcvwebMd, srcLg: jmcvwebLg, srcXl: jmcvwebXl }}
+              alt={t('personalWebsiteScreenshot')}
+            />
+          }
+          text={t('personalCVWebText')}
+          stack={['React', 'Vite', 'Tailwind CSS', 'MUI', 'Netlify']}
+          stackLabel={t('projectsStack')}
+          links={[
+            {
+              href: 'https://github.com/Jesus-md-dev/portfolio',
+              label: t('projectsCode'),
+              type: 'code',
+              ariaLabel: `${t('projectsCode')}: ${t('personalCVWeb')} (GitHub)`,
+            },
+          ]}
+        />
+      </ProjectGrid>
     </div>
   );
 }

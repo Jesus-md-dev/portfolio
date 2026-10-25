@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Line from "../components/Line";
-import ResponsiveImg from "../components/ResponsiveImg";
+import ProjectCard, { ProjectGrid, ProjectImage } from "../components/ProjectCard.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import config from "../config/index.js";
 import bahiaLectora from "../files/images/bahia-lectora.webp";
@@ -92,15 +90,7 @@ const PROJECTS = [
 
 function ProjectMedia({ project, alt }) {
   if (project.image) {
-    return (
-      <ResponsiveImg
-        className="project-media w-full aspect-video object-cover object-top"
-        {...project.image}
-        alt={alt}
-        sizes="(max-width: 1024px) 92vw, 400px"
-        loading="lazy"
-      />
-    );
+    return <ProjectImage image={project.image} alt={alt} />;
   }
 
   const { Icon, gradient } = project.placeholder;
@@ -131,46 +121,22 @@ function Projects() {
         <a href={config.social.labProjects} target="_blank" rel="noopener noreferrer">{t('projectsLabLink')}</a>
       </p>
 
-      <ul className="projects-grid">
+      <ProjectGrid>
         {PROJECTS.map((project) => (
-          <li key={project.id} className="project-card">
-            <ProjectMedia project={project} alt={`${t('projectsScreenshotOf')} ${project.name}`} />
-            <div className="project-body">
-              <h3 className="project-name">{project.name}</h3>
-              <p className="project-text">{t(project.textKey)}</p>
-              <ul className="project-stack" aria-label={t('projectsStack')}>
-                {project.stack.map((tech) => (
-                  <li key={tech} className="project-chip">{tech}</li>
-                ))}
-              </ul>
-              <div className="project-actions">
-                <a
-                  className="project-button"
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${t('projectsCode')}: ${project.name} (GitHub)`}
-                >
-                  <GitHubIcon fontSize="small" />
-                  {t('projectsCode')}
-                </a>
-                {project.live && (
-                  <a
-                    className="project-button project-button-outline"
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${t('projectsLive')}: ${project.name}`}
-                  >
-                    <OpenInNewIcon fontSize="small" />
-                    {t('projectsLive')}
-                  </a>
-                )}
-              </div>
-            </div>
-          </li>
+          <ProjectCard
+            key={project.id}
+            name={project.name}
+            media={<ProjectMedia project={project} alt={`${t('projectsScreenshotOf')} ${project.name}`} />}
+            text={t(project.textKey)}
+            stack={project.stack}
+            stackLabel={t('projectsStack')}
+            links={[
+              { href: project.repo, label: t('projectsCode'), type: 'code', ariaLabel: `${t('projectsCode')}: ${project.name} (GitHub)` },
+              ...(project.live ? [{ href: project.live, label: t('projectsLive'), type: 'live', ariaLabel: `${t('projectsLive')}: ${project.name}` }] : []),
+            ]}
+          />
         ))}
-      </ul>
+      </ProjectGrid>
     </div>
   );
 }

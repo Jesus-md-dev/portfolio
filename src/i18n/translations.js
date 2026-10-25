@@ -64,7 +64,6 @@ export const translations = {
     queTePinchoScreenshotAlt: "Menú principal de ¡Que te pincho! con las opciones de partida local y online",
     playInBrowser: "Jugar en el navegador",
     playVideo: "Reproducir vídeo",
-    viewCode: "Ver código en GitHub",
     universityProject: "Proyecto universitario",
 
     // VR/AR section
@@ -188,7 +187,6 @@ export const translations = {
     queTePinchoScreenshotAlt: "¡Que te pincho! main menu with the local and online game options",
     playInBrowser: "Play in the browser",
     playVideo: "Play video",
-    viewCode: "View code on GitHub",
     universityProject: "University project",
 
     // VR/AR section
