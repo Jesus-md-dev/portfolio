@@ -16,7 +16,7 @@ export const translations = {
 
     // Project cards that come from the old Webs page
     websAt1xinternet: "Webs en 1xINTERNET",
-    websAt1xinternetText: "Como desarrollador web en 1xINTERNET trabajo tanto en el back-end como en el front-end. Sobre todo desarrollo con Drupal (back-end y site building), y también he hecho front-end con React y Tailwind CSS. He trabajado en las webs de Circor, Pumps, Maggi y Thomy.",
+    websAt1xinternetText: "Como desarrollador full-stack en 1xINTERNET trabajo con Drupal 10/11 y PHP (módulos custom, migraciones, JSON:API, Search API con Solr) y en el front-end con React, Twig y Tailwind CSS. He trabajado en las webs de Circor, Pumps, Maggi y Thomy.",
     
     personalCVWebText: "Mi web personal, con mi currículum y algunos de los proyectos en los que he trabajado. Está hecha con React, Tailwind CSS y la librería de componentes MUI.",
     projectsShowcase: "Muestra de proyectos de 1xINTERNET",
@@ -49,7 +49,7 @@ export const translations = {
     projectZomboidStatusText: "Página de estado en directo de un servidor de Project Zomboid: jugadores conectados vía RCON desde una Netlify Function y explorador de mods.",
     projectHeartopiaText: "Aplicación de escritorio para Windows que convierte partituras de Heartopia en las teclas de piano que hay que pulsar.",
     metaTitleProjects: "Proyectos - Webs, apps, videojuegos y XR | Jesús Márquez Delgado",
-    metaDescriptionProjects: "Proyectos de Jesús Márquez Delgado: webs y apps con React, React Native, Node.js y Angular, webs con Drupal para 1xINTERNET, y videojuegos y proyectos de realidad aumentada y virtual con Godot y Unity.",
+    metaDescriptionProjects: "Proyectos de Jesús Márquez Delgado: webs Drupal para 1xINTERNET, apps con React, React Native, Node.js y Angular, y videojuegos y realidad aumentada y virtual con Godot y Unity.",
     
     // Game and XR project cards
     survivalZombieTitle: "Survival Zombie",
@@ -82,9 +82,9 @@ export const translations = {
     
     // Footer
     allRightsReserved: "Jesús Márquez Delgado. Todos los derechos reservados",
-    footerSubtitle: "Desarrollador Web · Drupal, PHP y React",
+    footerSubtitle: "Desarrollador Web Full-Stack · Drupal, PHP y React",
     footerLocationSpain: "📍 Cádiz, España",
-    availableForProjects: "🌐 Abierto a nuevas oportunidades",
+    availableForProjects: "🌐 Abierto a puestos en remoto (España o UE)",
     
     // Error Boundary
     errorTitle: "Oops! Algo salió mal",
@@ -101,8 +101,8 @@ export const translations = {
     portfolioNavigationTabs: "Pestañas de navegación del portafolio",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Desarrollador Web | CV",
-    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Desarrollador Web especializado en Drupal, PHP y React. Experiencia laboral, tecnologías, habilidades y formación.",
+    metaTitleCv: "Jesús Márquez Delgado - Desarrollador Drupal, PHP y React | CV",
+    metaDescriptionCv: "CV de Jesús Márquez Delgado, desarrollador web full-stack con más de 4 años en Drupal 10/11, PHP, Symfony y React. Acquia Certified Drupal 10 Developer. Remoto desde Cádiz.",
 
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
@@ -110,13 +110,13 @@ export const translations = {
     labLink: "Laboratorio público | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Desarrollador Web · Drupal, PHP y React",
-    bannerDescription: "Construyendo sitios web enterprise para marcas internacionales — y desarrollando videojuegos y experiencias AR/VR en Unity por pasión",
+    bannerSubtitle: "Desarrollador Full-Stack · Drupal, PHP y React",
+    bannerDescription: "Más de 4 años creando webs enterprise con Drupal y React para marcas internacionales — y apps, herramientas con IA y videojuegos por pasión",
     bannerCtaContact: "Contáctame",
     bannerCtaGithub: "Ver GitHub",
     webDevelopmentTitle: "🌐 Desarrollo Web",
     gameDevelopmentTitle: "🎮 Desarrollo de Juegos",
-    technologiesTitle: "🔧 Tecnologías",
+    technologiesTitle: "🔧 Herramientas",
     contactEmail: "Email de contacto",
     locationSpain: "Cádiz, España",
     githubProfile: "Perfil de GitHub",
@@ -139,7 +139,7 @@ export const translations = {
 
     // Project cards that come from the old Webs page
     websAt1xinternet: "Websites at 1xINTERNET",
-    websAt1xinternetText: "As a web developer at 1xINTERNET I work on both the back end and the front end. Most of my work is in Drupal (back end and site building), and I have also built front ends with React and Tailwind CSS. I have worked on the Circor, Pumps, Maggi and Thomy websites.",
+    websAt1xinternetText: "As a full-stack developer at 1xINTERNET I work with Drupal 10/11 and PHP (custom modules, migrations, JSON:API, Search API with Solr) and on the front end with React, Twig and Tailwind CSS. I have worked on the Circor, Pumps, Maggi and Thomy websites.",
     
     personalCVWebText: "My personal website, with my CV and some of the projects I have worked on. Built with React, Tailwind CSS and the MUI component library.",
     projectsShowcase: "1xINTERNET projects showcase",
@@ -172,7 +172,7 @@ export const translations = {
     projectZomboidStatusText: "Live status page for a Project Zomboid server: players online via RCON from a Netlify Function, plus a mods browser.",
     projectHeartopiaText: "Windows desktop app that converts Heartopia music sheets into the piano keys to press.",
     metaTitleProjects: "Projects - Websites, apps, games and XR | Jesús Márquez Delgado",
-    metaDescriptionProjects: "Projects by Jesús Márquez Delgado: websites and apps built with React, React Native, Node.js and Angular, Drupal websites for 1xINTERNET, and games and augmented and virtual reality projects made with Godot and Unity.",
+    metaDescriptionProjects: "Projects by Jesús Márquez Delgado: Drupal websites for 1xINTERNET, apps built with React, React Native, Node.js and Angular, and games and AR/VR made with Godot and Unity.",
     
     // Game and XR project cards
     survivalZombieTitle: "Survival Zombie",
@@ -205,9 +205,9 @@ export const translations = {
     
     // Footer
     allRightsReserved: "Jesús Márquez Delgado. All rights reserved",
-    footerSubtitle: "Web Developer · Drupal, PHP & React",
+    footerSubtitle: "Full-Stack Web Developer · Drupal, PHP & React",
     footerLocationSpain: "📍 Cádiz, Spain",
-    availableForProjects: "🌐 Open to new opportunities",
+    availableForProjects: "🌐 Open to remote roles (Spain or EU)",
     
     // Error Boundary
     errorTitle: "Oops! Something went wrong",
@@ -224,8 +224,8 @@ export const translations = {
     portfolioNavigationTabs: "Portfolio navigation tabs",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Web Developer | CV",
-    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Web Developer specialized in Drupal, PHP and React. Work experience, technologies, skills and education.",
+    metaTitleCv: "Jesús Márquez Delgado - Drupal, PHP & React Developer | CV",
+    metaDescriptionCv: "CV of Jesús Márquez Delgado, full-stack web developer with 4+ years in Drupal 10/11, PHP, Symfony and React. Acquia Certified Drupal 10 Developer. Remote from Spain.",
 
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
@@ -233,13 +233,13 @@ export const translations = {
     labLink: "Public lab | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Web Developer · Drupal, PHP & React",
-    bannerDescription: "Building enterprise websites for international brands — and crafting games and AR/VR experiences in Unity on the side",
+    bannerSubtitle: "Full-Stack Web Developer · Drupal, PHP & React",
+    bannerDescription: "4+ years building enterprise Drupal and React websites for international brands — plus apps, AI tooling and games on the side",
     bannerCtaContact: "Contact me",
     bannerCtaGithub: "View GitHub",
     webDevelopmentTitle: "🌐 Web Development",
     gameDevelopmentTitle: "🎮 Game Development",
-    technologiesTitle: "🔧 Technologies",
+    technologiesTitle: "🔧 Tooling",
     contactEmail: "Contact Email",
     locationSpain: "Cádiz, Spain",
     githubProfile: "GitHub Profile",

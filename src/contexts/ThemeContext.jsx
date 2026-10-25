@@ -29,6 +29,11 @@ const themeReducer = (state, action) => {
 
 // Browser preference detection
 const getBrowserTheme = () => {
+  if (typeof window === 'undefined') {
+    // Prerendering (scripts/prerender.mjs): an inline script in index.html sets
+    // the body class before the app loads.
+    return 'light';
+  }
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     return 'dark';
   }
@@ -37,6 +42,7 @@ const getBrowserTheme = () => {
 
 // Get stored theme or browser preference
 const getInitialTheme = () => {
+  if (typeof window === 'undefined') return getBrowserTheme();
   const storedTheme = localStorage.getItem('preferredTheme');
   if (storedTheme && THEMES[storedTheme]) {
     return storedTheme;

@@ -99,9 +99,12 @@ function CV() {
 
       <Section title={cv.headings.projects}>
         {cv.projects.map((project) => (
-          <div key={project.url} className="cv-project">
+          <div key={project.name} className="cv-project">
             <h3>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+              {/* Private projects have no link. */}
+              {project.url
+                ? <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                : project.name}
             </h3>
             <p>{project.description}</p>
             <p className="cv-muted">{project.stack}</p>

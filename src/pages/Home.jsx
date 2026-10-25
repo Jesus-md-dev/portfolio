@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { lazy, Suspense, useCallback, useMemo } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -9,6 +10,7 @@ import PageMeta from '../components/PageMeta';
 import User from '../components/User';
 import useLCPMonitor from '../hooks/useLCPMonitor';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
+import { localizedPath, stripLanguage } from '../i18n/routes.js';
 import Logo from "../files/images/fotocvfondo.webp";
 import LogoSm from "../files/images/fotocvfondo-sm.webp";
 import Logo400 from "../files/images/fotocvfondo-400.webp";
@@ -17,9 +19,18 @@ import LogoMd from "../files/images/fotocvfondo-md.webp";
 import LogoLg from "../files/images/fotocvfondo-lg.webp";
 import "./Home.css";
 
-// Lazy load page components
-const CV = lazy(() => import("../pages/CV"));
-const Projects = lazy(() => import("../pages/Projects"));
+// Lazy load page components. src/index.jsx and src/entry-server.jsx load the
+// current section first (preloadSection), so the first render doesn't suspend
+// and the prerendered HTML is replaced without a loading spinner in between.
+const PAGE_LOADERS = {
+  cv: () => import("../pages/CV"),
+  projects: () => import("../pages/Projects"),
+};
+const LAZY_PAGES = {
+  cv: lazy(PAGE_LOADERS.cv),
+  projects: lazy(PAGE_LOADERS.projects),
+};
+const loadedPages = {};
 
 const SECTION_META_KEYS = {
   cv: { title: 'metaTitleCv', description: 'metaDescriptionCv' },
@@ -27,8 +38,24 @@ const SECTION_META_KEYS = {
 };
 
 const sectionFromPath = (pathname) => {
-  const path = pathname.replace(/^\//, '');
+  const path = stripLanguage(pathname).replace(/^\//, '');
   return SECTION_META_KEYS[path] ? path : 'cv';
+};
+
+const sectionPath = (section) => (section === 'cv' ? '/' : `/${section}`);
+
+export const preloadSection = async (pathname) => {
+  const section = sectionFromPath(pathname);
+  loadedPages[section] = (await PAGE_LOADERS[section]()).default;
+};
+
+const SectionPage = ({ section }) => {
+  const Page = loadedPages[section] || LAZY_PAGES[section];
+  return <Page />;
+};
+
+SectionPage.propTypes = {
+  section: PropTypes.oneOf(Object.keys(PAGE_LOADERS)).isRequired,
 };
 
 const LoadingFallback = () => (
@@ -38,7 +65,7 @@ const LoadingFallback = () => (
 );
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -48,8 +75,8 @@ const Home = () => {
   const selectedTab = sectionFromPath(location.pathname);
 
   const handleChange = useCallback((event, newSelectedTab) => {
-    navigate(newSelectedTab === 'cv' ? '/' : `/${newSelectedTab}`);
-  }, [navigate]);
+    navigate(localizedPath(currentLanguage, sectionPath(newSelectedTab)));
+  }, [navigate, currentLanguage]);
 
   const user = useMemo(() => new User(
     t('name').split(' ')[0], // 'Jesús'
@@ -63,7 +90,7 @@ const Home = () => {
       <PageMeta
         title={t(SECTION_META_KEYS[selectedTab].title)}
         description={t(SECTION_META_KEYS[selectedTab].description)}
-        path={selectedTab === 'cv' ? '/' : `/${selectedTab}`}
+        path={localizedPath(currentLanguage, sectionPath(selectedTab))}
       />
 
       {/* New Banner Header - Full Width */}
@@ -92,12 +119,11 @@ const Home = () => {
         <div className="content-container">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
-              <Route path="/projects" element={<Projects />} />
               {/* Webs, Games & XR and AR/VR are filters of Projects now; public/_redirects sends them there with a 301. */}
               <Route path="/webs" element={<Navigate to="/projects?type=web" replace />} />
               <Route path="/games" element={<Navigate to="/projects?type=games" replace />} />
               <Route path="/arvr" element={<Navigate to="/projects?type=xr" replace />} />
-              <Route path="*" element={<CV />} />
+              <Route path="*" element={<SectionPage section={selectedTab} />} />
             </Routes>
           </Suspense>
         </div>

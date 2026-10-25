@@ -12,10 +12,10 @@ My personal CV and portfolio site, live at **[jzmarquez.com](https://jzmarquez.c
 
 ## Features
 
-- **Bilingual (EN/ES)** with a language toggle and a translation layer in `src/i18n/`.
+- **Bilingual (EN/ES)** with its own URLs: Spanish at `/` and `/projects`, English at `/en` and `/en/projects`. The toggle switches between them, and returning or English-browser visitors land on English.
 - **Light and dark themes** through a theme context.
 - **Sections as real routes** (CV and Projects; /webs, /games and /arvr redirect to filtered views of Projects) with React Router, so each one has its own URL, title and meta description.
-- **SEO**: per-page metadata, Open Graph image, sitemap and robots.txt.
+- **SEO**: every page is prerendered to static HTML at build time (`src/entry-server.jsx` + `scripts/prerender.mjs`), so crawlers, link previews, ATS and AI tools that don't run JavaScript read the full CV. Each page has its own title, description, canonical URL, hreflang links and schema.org `ProfilePage`/`Person` JSON-LD built from the CV data, plus a sitemap with language alternates and an `/llms.txt` summary for AI agents.
 - **Performance**: lazy-loaded pages, responsive WebP images in several sizes, image preloading and an LCP monitor hook.
 - **Accessibility**: ARIA labels and keyboard-navigable tabs.
 - **Downloadable CV** in PDF, in both languages. The /cv page and the PDFs share one source, `src/data/cv.{en,es}.json`; `npm run cv:pdf` fills `cv/cv.template.html` with it and prints both PDFs with headless Chrome.
