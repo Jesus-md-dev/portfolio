@@ -14,83 +14,9 @@ export const translations = {
     aboutMe: "SOBRE MÍ",
     aboutMeText: "Ingeniero informático especializado en desarrollo web enterprise con Drupal, PHP y React. En 1xINTERNET construyo y mantengo sitios corporativos multiidioma para marcas internacionales como Circor, Maggi y Thomy, coordinándome en inglés con un equipo distribuido. Fuera del trabajo desarrollo videojuegos y experiencias de realidad aumentada/virtual en Unity, y disfruto aplicando tecnologías nuevas a proyectos reales.",
 
-    // CV Section
-    workExperience: "Experiencia Laboral",
-    webDeveloper: "Desarrollador Web",
-    workStartDate: "Marzo 2022",
-    currentDate: "Actualidad",
-    workItems: [
-      "Site building y desarrollo backend en Drupal (PHP) para sitios corporativos multiidioma de marcas como Circor, Maggi y Thomy",
-      "Desarrollo frontend con React, Twig y Tailwind CSS integrado en temas Drupal",
-      "Traducción de peticiones de cliente en tareas técnicas planificadas y estimadas",
-      "Comunicación diaria en inglés con un equipo multicultural y distribuido",
-      "Mantenimiento y evolución continua de sitios en producción",
-      "Desarrollo asistido por IA con Claude Code para acelerar la entrega y la resolución de problemas"
-    ],
-
-    technologies: "Conocimientos técnicos",
-    techGroups: [
-      { label: "Principal", items: "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
-      { label: "También", items: "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
-      { label: "Datos e infraestructura", items: "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
-      { label: "Videojuegos y XR", items: "Godot · Unity, incluido desarrollo RV/RA" }
-    ],
-
-    skills: "Habilidades",
-    strengthsLine: "Trabajo en equipo · Autonomía · Resolución de problemas · Aprendizaje rápido y autodidacta",
-
-    academicData: "Formación",
-    education: [
-      {
-        title: "Grado en Ingeniería Informática",
-        details: "Universidad de Cádiz · 2017 – 2022"
-      }
-    ],
-
-    contact: "Contacto",
-    availability: "Empleado en 1xINTERNET — abierto a nuevas oportunidades",
+    // CV content lives in src/data/cv.{en,es}.json (shared with the PDF CV).
     downloadCV: "DESCARGAR CV",
-    workCompanyDescription: "Agencia Drupal que desarrolla webs enterprise para marcas internacionales",
-    certificationsTitle: "Certificaciones",
-    certifications: [
-      { title: "Acquia Certified Drupal 10 Developer", details: "Acquia · Diciembre 2024" },
-      { title: "Cambridge B2 First (inglés)", details: "Cambridge · Junio 2022" },
-      { title: "Cisco CCNP", details: "Universidad de Cádiz · Mayo 2021" },
-      { title: "Cisco CCNA", details: "Universidad de Cádiz · Octubre 2019" }
-    ],
-    languagesTitle: "Idiomas",
-    languagesList: [
-      { name: "Español", level: "Nativo" },
-      { name: "Inglés", level: "B2 · idioma de trabajo diario" }
-    ],
-    selectedProjects: "Proyectos destacados",
-    projectsList: [
-      {
-        name: "Pandeconomy",
-        url: "https://github.com/Jesus-md-dev/pandeconomy",
-        description: "App Android de finanzas personales con gastos recurrentes, gráficas y widgets de pantalla de inicio en cinco idiomas; CI con ESLint, TypeScript y Jest.",
-        stack: "React Native · TypeScript · MMKV · GitHub Actions"
-      },
-      {
-        name: "Videoclub Local",
-        url: "https://github.com/Jesus-md-dev/videoclub-local",
-        description: "Videoteca autoalojada para la red doméstica con interfaz de videoclub retro, carátulas generadas automáticamente y cliente para Android TV.",
-        stack: "Node.js · Express · React · Vite · ffmpeg · Android"
-      },
-      {
-        name: "Bahía Lectora",
-        url: "https://github.com/Jesus-md-dev/bahia-lectora",
-        description: "Web de un club de lectura cuyos datos salen de Google Sheets y la API de Google Books al compilar.",
-        stack: "React · Vite · Tailwind CSS · Google APIs · Netlify"
-      },
-      {
-        name: "Gestor de Gastos (TFG)",
-        url: "https://github.com/Jesus-md-dev/project-expenses-manager",
-        description: "Trabajo de fin de grado: app full-stack para gestionar presupuestos de proyectos compartidos, con notificaciones por e-mail.",
-        stack: "Angular · TypeScript · Django REST · MySQL"
-      }
-    ],
-    
+
     // Webs section
     websAt1xinternet: "Webs en 1xINTERNET",
     websAt1xinternetText: "Actualmente, en mi trabajo como desarrollador web en 1xINTERNET, he tenido la oportunidad de trabajar en diferentes proyectos, tanto en la parte del front-end como en el back-end. Principalmente, he trabajado con Drupal dedicándome al back-end y al site building, pero también he tenido la oportunidad de trabajar como front-end utilizando React y Tailwind CSS. Las webs en las que he trabajado son Circor, Pumps, Maggi y Thomy.",
@@ -211,83 +137,9 @@ export const translations = {
     aboutMe: "ABOUT ME",
     aboutMeText: "Computer engineer specialized in enterprise web development with Drupal, PHP and React. At 1xINTERNET I build and maintain multilingual corporate sites for international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Outside of work I develop games and AR/VR experiences in Unity, and enjoy applying new technologies to real projects.",
 
-    // CV Section
-    workExperience: "Work Experience",
-    webDeveloper: "Web Developer",
-    workStartDate: "March 2022",
-    currentDate: "Present",
-    workItems: [
-      "Drupal site building and backend development (PHP) for multilingual corporate sites of brands such as Circor, Maggi and Thomy",
-      "Front-end development with React, Twig and Tailwind CSS integrated into Drupal themes",
-      "Turning client requests into planned, estimated technical tasks",
-      "Daily communication in English with a multicultural, distributed team",
-      "Ongoing maintenance and evolution of production sites",
-      "AI-assisted development with Claude Code to speed up delivery and problem solving"
-    ],
-
-    technologies: "Technical Skills",
-    techGroups: [
-      { label: "Core", items: "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
-      { label: "Also", items: "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
-      { label: "Data & infrastructure", items: "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
-      { label: "Games & XR", items: "Godot · Unity, including VR/AR development" }
-    ],
-
-    skills: "Strengths",
-    strengthsLine: "Teamwork · Autonomy · Problem solving · Fast, self-taught learner",
-
-    academicData: "Education",
-    education: [
-      {
-        title: "BSc in Computer Engineering",
-        details: "University of Cádiz · 2017 – 2022"
-      }
-    ],
-
-    contact: "Contact",
-    availability: "Employed at 1xINTERNET — open to new opportunities",
+    // CV content lives in src/data/cv.{en,es}.json (shared with the PDF CV).
     downloadCV: "DOWNLOAD CV",
-    workCompanyDescription: "Drupal agency building enterprise websites for international brands",
-    certificationsTitle: "Certifications",
-    certifications: [
-      { title: "Acquia Certified Drupal 10 Developer", details: "Acquia · December 2024" },
-      { title: "Cambridge B2 First (English)", details: "Cambridge · June 2022" },
-      { title: "Cisco CCNP", details: "University of Cádiz · May 2021" },
-      { title: "Cisco CCNA", details: "University of Cádiz · October 2019" }
-    ],
-    languagesTitle: "Languages",
-    languagesList: [
-      { name: "Spanish", level: "Native" },
-      { name: "English", level: "B2 · daily working language" }
-    ],
-    selectedProjects: "Selected Projects",
-    projectsList: [
-      {
-        name: "Pandeconomy",
-        url: "https://github.com/Jesus-md-dev/pandeconomy",
-        description: "Personal finance Android app with recurring expenses, charts and home-screen widgets in five languages; CI with ESLint, TypeScript and Jest.",
-        stack: "React Native · TypeScript · MMKV · GitHub Actions"
-      },
-      {
-        name: "Videoclub Local",
-        url: "https://github.com/Jesus-md-dev/videoclub-local",
-        description: "Self-hosted video library for the home network with a retro video-store UI, auto-generated covers and an Android TV client.",
-        stack: "Node.js · Express · React · Vite · ffmpeg · Android"
-      },
-      {
-        name: "Bahía Lectora",
-        url: "https://github.com/Jesus-md-dev/bahia-lectora",
-        description: "Book club website whose data comes from Google Sheets and the Google Books API at build time.",
-        stack: "React · Vite · Tailwind CSS · Google APIs · Netlify"
-      },
-      {
-        name: "Project Expenses Manager",
-        url: "https://github.com/Jesus-md-dev/project-expenses-manager",
-        description: "Final degree project: full-stack app to manage shared project budgets, with e-mail notifications.",
-        stack: "Angular · TypeScript · Django REST · MySQL"
-      }
-    ],
-    
+
     // Webs section
     websAt1xinternet: "Webs at 1xINTERNET",
     websAt1xinternetText: "Currently, in my job as a web developer at 1xINTERNET, I have had the opportunity to work on different projects, both on the front-end and back-end. I have mainly worked with Drupal focusing on back-end and site building, but I have also had the opportunity to work as a front-end developer using React and Tailwind CSS. The websites I have worked on are Circor, Pumps, Maggi and Thomy.",

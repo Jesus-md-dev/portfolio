@@ -1,0 +1,100 @@
+{
+  "role": "Web Developer · Drupal, PHP & React",
+  "summary": "Computer engineer specialised in enterprise web development with Drupal, PHP and React. At 1xINTERNET I build and maintain multilingual corporate sites for international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Outside work I build full-stack and mobile side projects and games.",
+  "headings": {
+    "experience": "Work Experience",
+    "skills": "Technical Skills",
+    "projects": "Selected Projects",
+    "education": "Education",
+    "certifications": "Certifications",
+    "languages": "Languages",
+    "strengths": "Strengths",
+    "contact": "Contact"
+  },
+  "pdfHeadings": {
+    "experience": "Experience",
+    "skills": "Technical skills",
+    "projects": "Selected projects",
+    "education": "Education",
+    "certifications": "Certifications",
+    "languages": "Languages",
+    "strengths": "Strengths",
+    "contact": "Contact"
+  },
+  "contact": {
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "portfolio": "Portfolio",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "location": "Cádiz, Spain",
+    "availability": "Employed at 1xINTERNET — open to new opportunities"
+  },
+  "experience": [
+    {
+      "role": "Web Developer",
+      "company": "1xINTERNET",
+      "url": "https://www.1xinternet.de/",
+      "start": "March 2022",
+      "end": "Present",
+      "description": "Drupal agency building enterprise websites for international brands",
+      "highlights": [
+        "Drupal site building and backend development (PHP) for multilingual corporate sites of brands such as Circor, Maggi and Thomy",
+        "Front-end development with React, Twig and Tailwind CSS integrated into Drupal themes",
+        "Turning client requests into planned, estimated technical tasks",
+        "Daily communication in English with a multicultural, distributed team",
+        "Ongoing maintenance and evolution of production sites",
+        "AI-assisted development with Claude Code to speed up delivery and problem solving"
+      ]
+    }
+  ],
+  "skillGroups": [
+    { "label": "Core", "items": "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
+    { "label": "Also", "items": "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
+    { "label": "Data & infrastructure", "items": "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
+    { "label": "Games & XR", "items": "Godot · Unity, including VR/AR development" }
+  ],
+  "projects": [
+    {
+      "name": "Pandeconomy",
+      "url": "https://github.com/Jesus-md-dev/pandeconomy",
+      "description": "Personal finance Android app with recurring expenses, charts and home-screen widgets in five languages; CI with ESLint, TypeScript and Jest.",
+      "stack": "React Native · TypeScript · MMKV · GitHub Actions"
+    },
+    {
+      "name": "Videoclub Local",
+      "url": "https://github.com/Jesus-md-dev/videoclub-local",
+      "description": "Self-hosted video library for the home network with a retro video-store UI, auto-generated covers and an Android TV client.",
+      "stack": "Node.js · Express · React · Vite · ffmpeg · Android"
+    },
+    {
+      "name": "Bahía Lectora",
+      "url": "https://github.com/Jesus-md-dev/bahia-lectora",
+      "description": "Book club website whose data comes from Google Sheets and the Google Books API at build time.",
+      "stack": "React · Vite · Tailwind CSS · Google APIs · Netlify"
+    },
+    {
+      "name": "Project Expenses Manager",
+      "url": "https://github.com/Jesus-md-dev/project-expenses-manager",
+      "description": "Final degree project: full-stack app to manage shared project budgets, with e-mail notifications.",
+      "stack": "Angular · TypeScript · Django REST · MySQL"
+    }
+  ],
+  "education": [
+    { "title": "BSc in Computer Engineering", "details": "University of Cádiz · 2017 – 2022" }
+  ],
+  "certifications": [
+    { "title": "Acquia Certified Drupal 10 Developer", "details": "Acquia · December 2024" },
+    { "title": "Cambridge B2 First (English)", "details": "Cambridge · June 2022" },
+    { "title": "Cisco CCNP", "details": "University of Cádiz · May 2021" },
+    { "title": "Cisco CCNA", "details": "University of Cádiz · October 2019" }
+  ],
+  "languages": [
+    { "name": "Spanish", "level": "Native" },
+    { "name": "English", "level": "B2 · daily working language" }
+  ],
+  "strengths": "Teamwork · Autonomy · Problem solving · Fast, self-taught learner"
+}

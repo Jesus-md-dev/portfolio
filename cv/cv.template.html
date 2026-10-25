@@ -1,0 +1,142 @@
+<!doctype html>
+<!--
+  Template for the PDF CV. scripts/build-cv-pdf.mjs fills it from
+  src/data/cv.{en,es}.json and src/data/contact.json (the same data as the
+  /cv page) and prints it with headless Chrome: npm run cv:pdf.
+  {{key}} inserts an escaped value; {{#list}}...{{/list}} repeats for each item.
+-->
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<title>{{name}} — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1f2328;
+    --muted: #57606a;
+    --accent: #8a6d3b;
+    --side: #f4efe9;
+    --rule: #d8cfc4;
+  }
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.1pt;
+    line-height: 1.38;
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  aside { background: var(--side); padding: 13mm 7.5mm 10mm; }
+  main { padding: 12mm 11mm 8mm 10mm; }
+
+  .photo { display: block; width: 36mm; height: 36mm; border-radius: 50%; object-fit: cover;
+           margin: 0 auto 6mm; border: 1mm solid #fff; }
+  h1 { font-size: 23pt; font-weight: 700; letter-spacing: 0.3px; line-height: 1.1; }
+  .role { font-size: 11.5pt; color: var(--accent); font-weight: 500; margin-top: 2mm; }
+  .summary { margin-top: 4mm; color: var(--muted); }
+
+  h2 { font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+       color: var(--accent); border-bottom: 0.3mm solid var(--rule); padding-bottom: 1.2mm;
+       margin: 5.6mm 0 2.6mm; }
+  aside h2:first-of-type { margin-top: 0; }
+
+  .contact li { list-style: none; margin-bottom: 1.6mm; word-break: break-word; }
+  .contact .label { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); }
+
+  .entry { margin-bottom: 2.6mm; }
+  .entry strong { display: block; font-weight: 600; }
+  .entry span { color: var(--muted); font-size: 8.6pt; }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job-title { font-size: 10.5pt; font-weight: 600; }
+  .job-date { color: var(--muted); font-size: 8.6pt; white-space: nowrap; }
+  .job-sub { color: var(--muted); font-size: 8.6pt; margin-bottom: 1.6mm; }
+  ul.bullets { padding-left: 4.2mm; }
+  ul.bullets li { margin-bottom: 1.1mm; }
+
+  .skills p { margin-bottom: 1.7mm; }
+  .skills b { font-weight: 600; }
+
+  .project { margin-bottom: 2.2mm; }
+  .project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .project .name { font-weight: 600; }
+  .project .link { color: var(--accent); font-size: 8.2pt; white-space: nowrap; }
+  .project .stack { color: var(--muted); font-size: 8.4pt; }
+</style>
+</head>
+<body>
+<aside>
+  <img class="photo" src="foto.webp" alt="{{name}}">
+
+  <h2>{{pdfHeadings.contact}}</h2>
+  <ul class="contact">
+    <li><span class="label">{{contact.labels.email}}</span><a href="mailto:{{email}}">{{email}}</a></li>
+    <li><span class="label">{{contact.labels.phone}}</span><a href="tel:{{phone}}">{{phoneDisplay}}</a></li>
+    <li><span class="label">{{contact.labels.location}}</span>{{contact.location}}</li>
+    <li><span class="label">{{contact.labels.portfolio}}</span><a href="{{website}}">{{websiteText}}</a></li>
+    <li><span class="label">{{contact.labels.github}}</span><a href="{{github}}">{{githubText}}</a></li>
+    <li><span class="label">{{contact.labels.linkedin}}</span><a href="{{linkedin}}">{{linkedinText}}</a></li>
+  </ul>
+
+  <h2>{{pdfHeadings.education}}</h2>
+  {{#education}}
+  <div class="entry"><strong>{{title}}</strong><span>{{details}}</span></div>
+  {{/education}}
+
+  <h2>{{pdfHeadings.certifications}}</h2>
+  {{#certifications}}
+  <div class="entry"><strong>{{title}}</strong><span>{{details}}</span></div>
+  {{/certifications}}
+
+  <h2>{{pdfHeadings.languages}}</h2>
+  {{#languages}}
+  <div class="entry"><strong>{{name}}</strong><span>{{level}}</span></div>
+  {{/languages}}
+
+  <h2>{{pdfHeadings.strengths}}</h2>
+  <p>{{strengths}}</p>
+</aside>
+
+<main>
+  <h1>{{name}}</h1>
+  <div class="role">{{role}}</div>
+  <p class="summary">{{summary}}</p>
+
+  <h2>{{pdfHeadings.experience}}</h2>
+  {{#experience}}
+  <div class="job-head">
+    <div class="job-title">{{role}} — {{company}}</div>
+    <div class="job-date">{{start}} – {{end}}</div>
+  </div>
+  <div class="job-sub">{{description}}</div>
+  <ul class="bullets">
+    {{#bullets}}
+    <li>{{.}}</li>
+    {{/bullets}}
+  </ul>
+  {{/experience}}
+
+  <h2>{{pdfHeadings.skills}}</h2>
+  <div class="skills">
+    {{#skillGroups}}
+    <p><b>{{label}}:</b> {{items}}</p>
+    {{/skillGroups}}
+  </div>
+
+  <h2>{{pdfHeadings.projects}}</h2>
+  {{#projects}}
+  <div class="project">
+    <div class="project-head"><span class="name">{{name}}</span><a class="link" href="{{url}}">{{linkText}}</a></div>
+    <div>{{description}} <span class="stack">{{stack}}</span></div>
+  </div>
+  {{/projects}}
+</main>
+</body>
+</html>

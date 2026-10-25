@@ -60,3 +60,6 @@ node_modules/
 
 # Prettier cache
 .prettiercache
+
+# Filled CV template while npm run cv:pdf runs
+cv/.cv-*.tmp.html
