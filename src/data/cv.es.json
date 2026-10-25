@@ -1,6 +1,6 @@
 {
-  "role": "Desarrollador Web · Drupal, PHP y React",
-  "summary": "Ingeniero informático especializado en desarrollo web enterprise con Drupal, PHP y React. En 1xINTERNET construyo y mantengo sitios corporativos multiidioma para marcas internacionales como Circor, Maggi y Thomy, coordinándome en inglés con un equipo distribuido. Fuera del trabajo desarrollo proyectos full-stack, apps móviles y videojuegos.",
+  "role": "Desarrollador Web Full-Stack · Drupal, PHP y React",
+  "summary": "Ingeniero informático con más de 4 años de experiencia en desarrollo web enterprise con Drupal 10/11, PHP y React. En 1xINTERNET desarrollo módulos a medida, integraciones por API y frontends en React para sitios corporativos multiidioma de marcas internacionales como Circor, Maggi y Thomy, en inglés con un equipo distribuido. Acquia Certified Drupal 10 Developer.",
   "headings": {
     "experience": "Experiencia Laboral",
     "skills": "Conocimientos técnicos",
@@ -31,7 +31,7 @@
       "linkedin": "LinkedIn"
     },
     "location": "Cádiz, España",
-    "availability": "Empleado en 1xINTERNET — abierto a nuevas oportunidades"
+    "availability": "Empleado en 1xINTERNET — abierto a puestos en remoto (España o UE)"
   },
   "experience": [
     {
@@ -42,20 +42,24 @@
       "end": "Actualidad",
       "description": "Agencia Drupal que desarrolla webs enterprise para marcas internacionales",
       "highlights": [
-        "Site building y desarrollo backend en Drupal (PHP) para sitios corporativos multiidioma de marcas como Circor, Maggi y Thomy",
-        "Desarrollo frontend con React, Twig y Tailwind CSS integrado en temas Drupal",
-        "Traducción de peticiones de cliente en tareas técnicas planificadas y estimadas",
-        "Comunicación diaria en inglés con un equipo multicultural y distribuido",
-        "Mantenimiento y evolución continua de sitios en producción",
-        "Desarrollo asistido por IA con Claude Code para acelerar la entrega y la resolución de problemas"
+        "Backend en Drupal 10/11 y PHP: módulos custom, servicios, plugins y hooks para sitios multiidioma de Circor, Maggi y Thomy",
+        "Migraciones con Migrate API y actualizaciones de Drupal con Composer",
+        "Integraciones por API (JSON:API, REST) y frontend con React, Twig y Tailwind CSS, desacoplado o integrado en temas Drupal",
+        "Buscadores con Search API y Apache Solr; accesibilidad (WCAG) y SEO técnico con Core Web Vitals",
+        "PHPUnit, PHPStan y PHPCS en pipelines de CI, y code review de merge requests en GitLab",
+        "Scrum y Kanban con Jira: convierto peticiones de cliente en tareas técnicas estimadas, en inglés con un equipo distribuido",
+        "Desarrollo asistido por IA con Claude Code y servidores MCP"
       ]
     }
   ],
   "skillGroups": [
-    { "label": "Principal", "items": "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
-    { "label": "También", "items": "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
-    { "label": "Datos e infraestructura", "items": "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
-    { "label": "Videojuegos y XR", "items": "Godot · Unity, incluido desarrollo RV/RA" }
+    { "label": "Principal", "items": "PHP · Drupal 10/11 (módulos custom, Migrate API, JSON:API, Search API, theming con Twig) · React · TypeScript · JavaScript · Tailwind CSS" },
+    { "label": "Backend y APIs", "items": "Symfony · Laravel · Composer · REST APIs · Node.js · Express · Python · Django REST Framework" },
+    { "label": "Frontend y móvil", "items": "Angular · React Native · Vite · HTML5 · CSS3 · Accesibilidad (WCAG) · SEO técnico y Core Web Vitals" },
+    { "label": "Calidad y DevOps", "items": "PHPUnit · PHPStan · PHPCS · Jest · ESLint · GitLab CI · GitHub Actions · Docker · DDEV · Git" },
+    { "label": "Datos y cloud", "items": "MySQL · MongoDB · Apache Solr · AWS · Netlify Functions · Apache" },
+    { "label": "IA aplicada", "items": "Claude Code · Servidores MCP · Búsqueda BM25 · LLMs" },
+    { "label": "Otros", "items": "Java · C/C++ · C# · Unity y Godot (videojuegos y RV/RA)" }
   ],
   "projects": [
     {
@@ -65,22 +69,9 @@
       "stack": "React Native · TypeScript · MMKV · GitHub Actions"
     },
     {
-      "name": "Videoclub Local",
-      "url": "https://github.com/Jesus-md-dev/videoclub-local",
-      "description": "Videoteca autoalojada para la red doméstica con interfaz de videoclub retro, carátulas generadas automáticamente y cliente para Android TV.",
-      "stack": "Node.js · Express · React · Vite · ffmpeg · Android"
-    },
-    {
-      "name": "Bahía Lectora",
-      "url": "https://github.com/Jesus-md-dev/bahia-lectora",
-      "description": "Web de un club de lectura cuyos datos salen de Google Sheets y la API de Google Books al compilar.",
-      "stack": "React · Vite · Tailwind CSS · Google APIs · Netlify"
-    },
-    {
-      "name": "Gestor de Gastos (TFG)",
-      "url": "https://github.com/Jesus-md-dev/project-expenses-manager",
-      "description": "Trabajo de fin de grado: app full-stack para gestionar presupuestos de proyectos compartidos, con notificaciones por e-mail.",
-      "stack": "Angular · TypeScript · Django REST · MySQL"
+      "name": "Issues Index (herramienta interna)",
+      "description": "Base de conocimiento de unas 7.600 incidencias de 60 proyectos, con búsqueda BM25F y un servidor MCP con el que los agentes de IA consultan cómo se resolvieron antes.",
+      "stack": "Python · MCP · GitHub Actions"
     }
   ],
   "education": [

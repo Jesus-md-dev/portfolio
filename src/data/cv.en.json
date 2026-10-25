@@ -1,6 +1,6 @@
 {
-  "role": "Web Developer · Drupal, PHP & React",
-  "summary": "Computer engineer specialised in enterprise web development with Drupal, PHP and React. At 1xINTERNET I build and maintain multilingual corporate sites for international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Outside work I build full-stack and mobile side projects and games.",
+  "role": "Full-Stack Web Developer · Drupal, PHP & React",
+  "summary": "Computer engineer with 4+ years of experience in enterprise web development with Drupal 10/11, PHP and React. At 1xINTERNET I build custom modules, API integrations and React front ends for multilingual corporate sites of international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Acquia Certified Drupal 10 Developer.",
   "headings": {
     "experience": "Work Experience",
     "skills": "Technical Skills",
@@ -31,7 +31,7 @@
       "linkedin": "LinkedIn"
     },
     "location": "Cádiz, Spain",
-    "availability": "Employed at 1xINTERNET — open to new opportunities"
+    "availability": "Employed at 1xINTERNET — open to remote roles (Spain or EU)"
   },
   "experience": [
     {
@@ -42,20 +42,24 @@
       "end": "Present",
       "description": "Drupal agency building enterprise websites for international brands",
       "highlights": [
-        "Drupal site building and backend development (PHP) for multilingual corporate sites of brands such as Circor, Maggi and Thomy",
-        "Front-end development with React, Twig and Tailwind CSS integrated into Drupal themes",
-        "Turning client requests into planned, estimated technical tasks",
-        "Daily communication in English with a multicultural, distributed team",
-        "Ongoing maintenance and evolution of production sites",
-        "AI-assisted development with Claude Code to speed up delivery and problem solving"
+        "Drupal 10/11 and PHP back end: custom modules, services, plugins and hooks for the multilingual sites of Circor, Maggi and Thomy",
+        "Migrations with the Migrate API and Drupal upgrades with Composer",
+        "API integrations (JSON:API, REST) and front-end work with React, Twig and Tailwind CSS, decoupled or inside Drupal themes",
+        "Site search with Search API and Apache Solr; accessibility (WCAG) and technical SEO with Core Web Vitals",
+        "PHPUnit, PHPStan and PHPCS in CI pipelines, and code review of merge requests in GitLab",
+        "Scrum and Kanban with Jira: turning client requests into estimated technical tasks, in English with a distributed team",
+        "AI-assisted development with Claude Code and MCP servers"
       ]
     }
   ],
   "skillGroups": [
-    { "label": "Core", "items": "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
-    { "label": "Also", "items": "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
-    { "label": "Data & infrastructure", "items": "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
-    { "label": "Games & XR", "items": "Godot · Unity, including VR/AR development" }
+    { "label": "Core", "items": "PHP · Drupal 10/11 (custom modules, Migrate API, JSON:API, Search API, Twig theming) · React · TypeScript · JavaScript · Tailwind CSS" },
+    { "label": "Back end & APIs", "items": "Symfony · Laravel · Composer · REST APIs · Node.js · Express · Python · Django REST Framework" },
+    { "label": "Front end & mobile", "items": "Angular · React Native · Vite · HTML5 · CSS3 · Accessibility (WCAG) · Technical SEO & Core Web Vitals" },
+    { "label": "Quality & DevOps", "items": "PHPUnit · PHPStan · PHPCS · Jest · ESLint · GitLab CI · GitHub Actions · Docker · DDEV · Git" },
+    { "label": "Data & cloud", "items": "MySQL · MongoDB · Apache Solr · AWS · Netlify Functions · Apache" },
+    { "label": "Applied AI", "items": "Claude Code · MCP servers · BM25 search · LLMs" },
+    { "label": "Other", "items": "Java · C/C++ · C# · Unity and Godot (games and VR/AR)" }
   ],
   "projects": [
     {
@@ -65,22 +69,9 @@
       "stack": "React Native · TypeScript · MMKV · GitHub Actions"
     },
     {
-      "name": "Videoclub Local",
-      "url": "https://github.com/Jesus-md-dev/videoclub-local",
-      "description": "Self-hosted video library for the home network with a retro video-store UI, auto-generated covers and an Android TV client.",
-      "stack": "Node.js · Express · React · Vite · ffmpeg · Android"
-    },
-    {
-      "name": "Bahía Lectora",
-      "url": "https://github.com/Jesus-md-dev/bahia-lectora",
-      "description": "Book club website whose data comes from Google Sheets and the Google Books API at build time.",
-      "stack": "React · Vite · Tailwind CSS · Google APIs · Netlify"
-    },
-    {
-      "name": "Project Expenses Manager",
-      "url": "https://github.com/Jesus-md-dev/project-expenses-manager",
-      "description": "Final degree project: full-stack app to manage shared project budgets, with e-mail notifications.",
-      "stack": "Angular · TypeScript · Django REST · MySQL"
+      "name": "Issues Index (internal tool)",
+      "description": "Knowledge base of about 7,600 issues from 60 projects, with BM25F search and an MCP server that lets AI agents look up how past problems were solved.",
+      "stack": "Python · MCP · GitHub Actions"
     }
   ],
   "education": [

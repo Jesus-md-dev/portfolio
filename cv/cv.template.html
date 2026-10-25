@@ -133,7 +133,7 @@
   <h2>{{pdfHeadings.projects}}</h2>
   {{#projects}}
   <div class="project">
-    <div class="project-head"><span class="name">{{name}}</span><a class="link" href="{{url}}">{{linkText}}</a></div>
+    <div class="project-head"><span class="name">{{name}}</span>{{#links}}<a class="link" href="{{href}}">{{text}}</a>{{/links}}</div>
     <div>{{description}} <span class="stack">{{stack}}</span></div>
   </div>
   {{/projects}}

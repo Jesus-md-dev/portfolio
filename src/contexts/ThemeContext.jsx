@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { THEMES } from '../constants/theme.js';
 
@@ -27,8 +27,15 @@ const themeReducer = (state, action) => {
   }
 };
 
+// The theme scripts/prerender.mjs renders with. An inline script in index.html
+// sets the visitor's theme on the body before the app loads.
+const PRERENDER_THEME = 'light';
+
 // Browser preference detection
 const getBrowserTheme = () => {
+  if (typeof window === 'undefined') {
+    return PRERENDER_THEME;
+  }
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     return 'dark';
   }
@@ -37,6 +44,7 @@ const getBrowserTheme = () => {
 
 // Get stored theme or browser preference
 const getInitialTheme = () => {
+  if (typeof window === 'undefined') return getBrowserTheme();
   const storedTheme = localStorage.getItem('preferredTheme');
   if (storedTheme && THEMES[storedTheme]) {
     return storedTheme;
@@ -45,19 +53,30 @@ const getInitialTheme = () => {
 };
 
 // Initial state
-const initialTheme = getInitialTheme();
-const initialState = {
-  currentTheme: initialTheme,
-  colors: THEMES[initialTheme].colors,
+const stateFor = (theme) => ({
+  currentTheme: theme,
+  colors: THEMES[theme].colors,
   availableThemes: Object.keys(THEMES)
-};
+});
+const initialTheme = getInitialTheme();
 
 // Theme Provider Component
-export const ThemeProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(themeReducer, initialState);
+// When hydrating prerendered HTML, the first render has to match it, so it uses
+// PRERENDER_THEME and switches to the visitor's theme right after.
+export const ThemeProvider = ({ children, hydrating = false }) => {
+  const [state, dispatch] = useReducer(themeReducer, hydrating ? PRERENDER_THEME : initialTheme, stateFor);
+  const pendingTheme = useRef(hydrating && initialTheme !== PRERENDER_THEME ? initialTheme : null);
 
   // Save theme preference to localStorage and update body class
   useEffect(() => {
+    if (pendingTheme.current) {
+      // The body already has the right class; don't save the prerender theme.
+      const theme = pendingTheme.current;
+      pendingTheme.current = null;
+      dispatch({ type: 'SET_THEME', payload: theme });
+      return;
+    }
+
     localStorage.setItem('preferredTheme', state.currentTheme);
     
     // Update body class for global styling
@@ -112,7 +131,8 @@ export const ThemeProvider = ({ children }) => {
 };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  hydrating: PropTypes.bool
 };
 
 // Custom hook to use theme context

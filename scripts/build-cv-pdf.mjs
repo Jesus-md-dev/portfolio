@@ -96,7 +96,11 @@ export function renderCvHtml(lang) {
       ...job,
       bullets: job.highlights.map((item) => (/[.!?]$/.test(item) ? item : `${item}.`)),
     })),
-    projects: cv.projects.map((project) => ({ ...project, linkText: linkText(project.url) })),
+    // Private projects have no url, so their link is an empty list.
+    projects: cv.projects.map((project) => ({
+      ...project,
+      links: project.url ? [{ href: project.url, text: linkText(project.url) }] : [],
+    })),
   };
   const template = readFileSync(join(root, 'cv', 'cv.template.html'), 'utf8')
     .replace(/\r\n/g, '\n')

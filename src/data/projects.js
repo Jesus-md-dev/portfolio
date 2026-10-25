@@ -120,7 +120,7 @@ export const PROJECTS = [
     altKey: 'projectsShowcase',
     types: ['web'],
     origin: 'work',
-    stack: ['Drupal', 'PHP', 'React', 'Tailwind CSS'],
+    stack: ['Drupal 10/11', 'PHP', 'React', 'Twig', 'Tailwind CSS', 'Solr'],
     sites: [
       { name: 'Circor', href: 'https://www.circor.com/' },
       { name: 'Pumps', href: 'https://pumps.circor.com/' },

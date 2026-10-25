@@ -15,15 +15,15 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Curriculum Vitae de Jesús Márquez Delgado - Desarrollador Web · Drupal, PHP y React. Cádiz, España. Abierto a nuevas oportunidades." />
-    <meta name="keywords" content="Jesús Márquez Delgado, Desarrollador Web, Web Developer, React, PHP, Drupal, Frontend, Backend, Curriculum Vitae, CV" />
+    <meta name="description" content="CV de Jesús Márquez Delgado, desarrollador web full-stack con más de 4 años en Drupal 10/11, PHP, Symfony y React. Acquia Certified Drupal 10 Developer. Remoto desde Cádiz." />
+    <meta name="keywords" content="Jesús Márquez Delgado, Drupal Developer, Desarrollador Drupal, PHP Developer, Full-Stack Developer, React, Symfony, TypeScript, Acquia Certified Drupal 10 Developer, Remote, CV" />
     <meta name="author" content="Jesús Márquez Delgado" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jzmarquez.com/" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Jesús Márquez Delgado - Curriculum Vitae" />
-    <meta property="og:description" content="Desarrollador Web · Drupal, PHP y React. Cádiz, España. Abierto a nuevas oportunidades." />
+    <meta property="og:description" content="Desarrollador Web Full-Stack · Drupal, PHP y React. Más de 4 años en webs enterprise. Remoto desde Cádiz, España." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jzmarquez.com/" />
     <meta property="og:image" content="https://jzmarquez.com/og-card.jpg" />
@@ -39,7 +39,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jesús Márquez Delgado - Curriculum Vitae" />
-    <meta name="twitter:description" content="Desarrollador Web · Drupal, PHP y React. Cádiz, España. Abierto a nuevas oportunidades." />
+    <meta name="twitter:description" content="Desarrollador Web Full-Stack · Drupal, PHP y React. Más de 4 años en webs enterprise. Remoto desde Cádiz, España." />
     <meta name="twitter:image" content="https://jzmarquez.com/og-card.jpg" />
     <meta name="twitter:image:alt" content="Jesús Márquez Delgado, Web Developer · Drupal, PHP &amp; React — jzmarquez.com" />
 
@@ -62,7 +62,7 @@
     <meta name="resource-type" content="document" />
     <meta http-equiv="Cache-Control" content="max-age=31536000" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: scripts/prerender.mjs replaces it with the CV data of each page. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,8 +71,8 @@
       "mainEntity": {
         "@type": "Person",
         "name": "Jesús Márquez Delgado",
-        "jobTitle": "Web Developer",
-        "description": "Desarrollador web especializado en tecnologías modernas",
+        "jobTitle": "Full-Stack Web Developer · Drupal, PHP & React",
+        "description": "Desarrollador web full-stack con más de 4 años en Drupal 10/11, PHP y React. Acquia Certified Drupal 10 Developer.",
         "url": "https://jzmarquez.com",
         "image": "https://jzmarquez.com/og-image.webp",
         "email": "mailto:jesusmarquezdelgado@gmail.com",
@@ -98,7 +98,7 @@
           "https://github.com/Jesus-md-dev",
           "https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/"
         ],
-        "knowsAbout": ["React", "PHP", "Drupal", "JavaScript", "Web Development", "Frontend", "Backend"],
+        "knowsAbout": ["Drupal", "PHP", "Symfony", "React", "TypeScript", "JavaScript", "Tailwind CSS", "Apache Solr", "Docker", "GitLab CI"],
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "Universidad de Cádiz"
@@ -110,6 +110,14 @@
     <title>Jesús Márquez Delgado - Curriculum Vitae</title>
   </head>
   <body>
+    <script>
+      // Applies the saved or system theme before the prerendered page paints;
+      // ThemeContext takes over once the app loads.
+      try {
+        var theme = localStorage.getItem('preferredTheme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.body.className = theme + '-mode';
+      } catch (e) {}
+    </script>
     <noscript>Esta aplicación requiere JavaScript para funcionar correctamente. / This application requires JavaScript to work properly.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx"></script>

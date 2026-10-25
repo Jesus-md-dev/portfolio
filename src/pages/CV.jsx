@@ -99,9 +99,12 @@ function CV() {
 
       <Section title={cv.headings.projects}>
         {cv.projects.map((project) => (
-          <div key={project.url} className="cv-project">
+          <div key={project.name} className="cv-project">
             <h3>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+              {/* Private projects have no link. */}
+              {project.url
+                ? <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                : project.name}
             </h3>
             <p>{project.description}</p>
             <p className="cv-muted">{project.stack}</p>
@@ -138,7 +141,7 @@ function CV() {
             <EmailIcon /> <a href={`mailto:${config.contact.email}`} target="_blank" rel="noopener noreferrer">{config.contact.email}</a>
           </div>
           <div>
-            <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
+            <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{cv.contact.location}</a>
           </div>
           <div>
             <WorkIcon /> {cv.contact.availability}

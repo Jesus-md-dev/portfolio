@@ -1,64 +1,57 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
-import Footer from "./components/Footer.jsx";
-import LanguageToggle from "./components/LanguageToggle.jsx";
-import ThemeToggle from "./components/ThemeToggle.jsx";
-import { ThemeProvider as CustomThemeProvider, useTheme } from "./contexts/ThemeContext.jsx";
-import { LanguageProvider } from "./i18n/LanguageContext.jsx";
-import "./index.css";
-import Home from "./pages/Home.jsx";
+import App from "./App.jsx";
+import { DEFAULT_LANGUAGE, languageFromPath, localizedPath, stripLanguage } from "./i18n/routes.js";
+import { preloadSection } from "./pages/Home.jsx";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const BOT_PATTERN = /bot|crawl|spider|slurp|lighthouse|headless/i;
 
-function AppContent() {
-  const { colors } = useTheme();
-  
-  const muiTheme = createTheme({
-    palette: {
-      primary: {
-        main: colors.primary,
-      },
-      secondary: {
-        main: colors.accent,
-      },
-    },
+// Spanish pages send visitors to English when they chose it last, or, on a
+// first visit, when the browser is in English. Crawlers are never redirected,
+// so each language keeps its own indexable URL. English pages never redirect.
+function preferredLanguagePath() {
+  const { pathname, search, hash } = window.location;
+  if (languageFromPath(pathname) !== DEFAULT_LANGUAGE) return null;
+  let stored = null;
+  try {
+    stored = localStorage.getItem('preferredLanguage');
+  } catch {
+    // Storage blocked: fall back to the browser language.
+  }
+  const browserEnglish = !BOT_PATTERN.test(navigator.userAgent)
+    && (navigator.language || '').toLowerCase().startsWith('en');
+  if (stored === 'en' || (!stored && browserEnglish)) {
+    return localizedPath('en', stripLanguage(pathname)) + search + hash;
+  }
+  return null;
+}
+
+const redirect = preferredLanguagePath();
+if (redirect) {
+  window.history.replaceState(null, '', redirect);
+}
+
+// Hydrate the prerendered HTML when it is exactly what the app renders first:
+// the page it was made for (not the index.html fallback of another path), and
+// no ?type= filter. Keeping its DOM means the LCP image is painted only once.
+// Anything else is rendered from scratch over it.
+const container = document.getElementById('root');
+const canHydrate = !redirect
+  && !window.location.search
+  && container.dataset.prerenderedPath === window.location.pathname;
+
+preloadSection(window.location.pathname)
+  .catch(() => {
+    // The lazy page loads on render instead.
+  })
+  .then(() => {
+    if (canHydrate) {
+      ReactDOM.hydrateRoot(container, <App Router={BrowserRouter} hydrating />);
+    } else {
+      ReactDOM.createRoot(container).render(<App Router={BrowserRouter} />);
+    }
   });
 
-  return (
-    <ThemeProvider theme={muiTheme}>
-      <div>
-        {/* Fixed position toggle buttons at top right */}
-        <div className="fixed top-4 right-4 z-50 flex gap-3">
-          <ThemeToggle />
-          <LanguageToggle />
-        </div>
-        
-        <div className="main-body" id="main-content">
-          <Home />
-        </div>
-        <Footer />
-      </div>
-    </ThemeProvider>
-  );
-}
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <CustomThemeProvider>
-        <LanguageProvider>
-          <BrowserRouter>
-            <AppContent />
-          </BrowserRouter>
-        </LanguageProvider>
-      </CustomThemeProvider>
-    </ErrorBoundary>
-  );
-}
-
-root.render(<App />);
 
 // Register service worker for PWA functionality
 if ('serviceWorker' in navigator) {

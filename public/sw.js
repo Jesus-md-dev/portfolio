@@ -4,6 +4,12 @@
 // so a cached asset is either correct or simply unused after the next build).
 const CACHE_NAME = 'jesus-marquez-cv-v2';
 
+// The same URL can be fetched twice at once (the prerendered HTML and then the
+// app request the same images); the second put then fails with "Entry already
+// exists", which is harmless.
+const cachePut = (request, response) =>
+  caches.open(CACHE_NAME).then((cache) => cache.put(request, response)).catch(() => {});
+
 self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
@@ -32,7 +38,7 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((response) => {
           const responseClone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+          cachePut(request, responseClone);
           return response;
         })
         .catch(() => caches.match(request).then((cached) => cached || caches.match('/')))
@@ -47,7 +53,7 @@ self.addEventListener('fetch', (event) => {
       }
       return fetch(request).then((response) => {
         const responseClone = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+        cachePut(request, responseClone);
         return response;
       });
     })
