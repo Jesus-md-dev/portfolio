@@ -1,0 +1,151 @@
+.projects-intro {
+  color: var(--text-secondary);
+  margin: 0.5rem 0 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--card-background);
+}
+
+.project-card img.project-media {
+  display: block;
+}
+
+.project-card .project-media {
+  border-bottom: 1px solid var(--border);
+}
+
+.light-mode .project-card {
+  background: var(--background-secondary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.light-mode .project-card img {
+  box-shadow: none;
+}
+
+.project-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.projects-page .project-placeholder .project-placeholder-icon {
+  font-size: 3rem;
+  fill: #ffffff;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.project-placeholder-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.project-name {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.project-text {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-chip {
+  background: var(--primary-bg-light);
+  border: 1px solid var(--primary-color);
+  color: var(--text);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.projects-page .project-actions a.project-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.projects-page .project-actions a.project-button svg {
+  fill: currentColor;
+  color: currentColor;
+}
+
+.projects-page .project-actions a.project-button:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #ffffff;
+}
+
+.projects-page .project-actions a.project-button-outline {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.projects-page .project-actions a.project-button-outline:hover {
+  background: var(--primary-bg-light);
+  color: var(--primary-color);
+}
+
+.projects-page .project-actions a.project-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

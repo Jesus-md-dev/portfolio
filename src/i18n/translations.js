@@ -93,6 +93,23 @@ export const translations = {
     personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
     projectsShowcase: "Muestra de proyectos de 1xINTERNET",
     personalWebsiteScreenshot: "Captura de pantalla del sitio web CV personal",
+
+    // Projects section
+    projects: "Proyectos",
+    projectsTitle: "Proyectos personales",
+    projectsIntro: "Proyectos que he diseñado y desarrollado por mi cuenta, de principio a fin. Todos tienen el código público en GitHub.",
+    projectsCode: "Código",
+    projectsLive: "Ver web",
+    projectsStack: "Tecnologías",
+    projectsScreenshotOf: "Captura de pantalla de",
+    projectPandeconomyText: "App Android de finanzas personales: alta rápida de gastos, categorías, gastos recurrentes, gráficas mensuales, widgets de pantalla de inicio y 5 idiomas, con CI en GitHub Actions (ESLint, tsc y Jest).",
+    projectVideoclubText: "Videoteca autoalojada para la red local con una interfaz de videoclub retro, carátulas generadas con ffmpeg y cliente para Android TV.",
+    projectBahiaLectoraText: "Web de un club de lectura que genera sus páginas en cada build a partir de Google Sheets y la API de Google Books.",
+    projectExpensesManagerText: "Trabajo Fin de Grado (Universidad de Cádiz, 2022): presupuestos de proyecto compartidos, ingresos y gastos, gráficas y notificaciones por e-mail.",
+    projectZomboidStatusText: "Página de estado en directo de un servidor de Project Zomboid: jugadores conectados vía RCON desde una Netlify Function y explorador de mods.",
+    projectHeartopiaText: "Aplicación de escritorio para Windows que convierte partituras de Heartopia en las teclas de piano que hay que pulsar.",
+    metaTitleProjects: "Proyectos personales - React, React Native, Node.js | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Proyectos personales de Jesús Márquez Delgado con código en GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status y Heartopia Piano Translator.",
     
     // Games section
     survivalZombieTitle: "Survival Zombie",
@@ -257,6 +274,23 @@ export const translations = {
     personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
     projectsShowcase: "1xINTERNET projects showcase",
     personalWebsiteScreenshot: "Personal CV website screenshot",
+
+    // Projects section
+    projects: "Projects",
+    projectsTitle: "Side projects",
+    projectsIntro: "Projects I have designed and built on my own, end to end. All of them have public source code on GitHub.",
+    projectsCode: "Code",
+    projectsLive: "Live",
+    projectsStack: "Tech stack",
+    projectsScreenshotOf: "Screenshot of",
+    projectPandeconomyText: "Personal finance Android app: quick add, categories, recurring expenses, monthly charts, home-screen widgets and 5 languages, with GitHub Actions CI (ESLint, tsc and Jest).",
+    projectVideoclubText: "Self-hosted LAN video library with a retro video-store UI, ffmpeg-generated covers and an Android TV client.",
+    projectBahiaLectoraText: "Book club website whose pages are built from Google Sheets and the Google Books API at build time.",
+    projectExpensesManagerText: "Final degree project (University of Cádiz, 2022): shared project budgets, incomes and expenses, charts and e-mail notifications.",
+    projectZomboidStatusText: "Live status page for a Project Zomboid server: players online via RCON from a Netlify Function, plus a mods browser.",
+    projectHeartopiaText: "Windows desktop app that converts Heartopia music sheets into the piano keys to press.",
+    metaTitleProjects: "Side projects - React, React Native, Node.js | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Side projects by Jesús Márquez Delgado with source code on GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status and Heartopia Piano Translator.",
     
     // Games section
     survivalZombieTitle: "Survival Zombie",
