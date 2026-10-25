@@ -130,6 +130,13 @@ export const translations = {
     
     zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
     
+    alTenedorTitle: "¡Al tenedor!",
+    alTenedorText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
+    alTenedorScreenshotAlt: "Menú principal de ¡Al tenedor! con las opciones de partida local y online",
+    playInBrowser: "Jugar en el navegador",
+    viewCode: "Ver código en GitHub",
+    universityProject: "Proyecto universitario",
+
     // VR/AR section
     monsterWarTitle: "Monster War (RA)",
     spaceSurvivalTitle: "Space Survival (RV)",
@@ -166,7 +173,7 @@ export const translations = {
     metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
     metaTitleGames: "Proyectos de videojuegos | Jesús Márquez Delgado",
-    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Desarrollador Web.",
+    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Desarrollador Web, hechos con Unity y Godot: juegos para móvil, PC y navegador.",
     metaTitleArvr: "Proyectos de Realidad Aumentada y Virtual | Jesús Márquez Delgado",
     metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Desarrollador Web.",
 
@@ -319,6 +326,13 @@ export const translations = {
     
     zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
     
+    alTenedorTitle: "¡Al tenedor!",
+    alTenedorText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
+    alTenedorScreenshotAlt: "¡Al tenedor! main menu with the local and online game options",
+    playInBrowser: "Play in the browser",
+    viewCode: "View code on GitHub",
+    universityProject: "University project",
+
     // VR/AR section
     monsterWarTitle: "Monster War (AR)",
     spaceSurvivalTitle: "Space Survival (VR)",
@@ -355,7 +369,7 @@ export const translations = {
     metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
     metaTitleGames: "Game development projects | Jesús Márquez Delgado",
-    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer.",
+    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer, made with Unity and Godot: games for mobile, PC and the browser.",
     metaTitleArvr: "Augmented and Virtual Reality projects | Jesús Márquez Delgado",
     metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Web Developer.",
 
