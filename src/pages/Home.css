@@ -11,3 +11,19 @@
 .aboutMe .technologies-section .Technology {
     margin: 1rem auto !important;
 }
+
+/* Five section tabs: stack icon above label on narrow phones so they fit */
+@media (max-width: 480px) {
+  .navigation-section .modern-tab {
+    flex-direction: column !important;
+    gap: 2px;
+    padding: 0.4rem 0.1rem !important;
+    font-size: 0.65rem !important;
+    min-height: 54px !important;
+  }
+
+  .navigation-section .modern-tab .MuiTab-icon {
+    margin: 0 !important;
+    font-size: 1.15rem;
+  }
+}

@@ -20,70 +20,76 @@ export const translations = {
     workStartDate: "Marzo 2022",
     currentDate: "Actualidad",
     workItems: [
-      "Site building y desarrollo backend en Drupal para sitios corporativos multiidioma de marcas internacionales como Circor, Maggi y Thomy",
+      "Site building y desarrollo backend en Drupal (PHP) para sitios corporativos multiidioma de marcas como Circor, Maggi y Thomy",
       "Desarrollo frontend con React, Twig y Tailwind CSS integrado en temas Drupal",
       "Traducción de peticiones de cliente en tareas técnicas planificadas y estimadas",
-      "Comunicación diaria en inglés con un equipo de desarrollo multicultural y distribuido",
-      "Uso de Claude (Claude Code) para acelerar el desarrollo y la resolución de problemas",
-      "Mantenimiento y evolución continua de sitios en producción"
+      "Comunicación diaria en inglés con un equipo multicultural y distribuido",
+      "Mantenimiento y evolución continua de sitios en producción",
+      "Desarrollo asistido por IA con Claude Code para acelerar la entrega y la resolución de problemas"
     ],
 
-    technologies: "Tecnologías",
-    techCoreLabel: "Stack principal",
-    techHighLevel: [
-      "Drupal (backend, site building y theming)",
-      "PHP",
-      "React y JavaScript",
-      "Tailwind CSS"
+    technologies: "Conocimientos técnicos",
+    techGroups: [
+      { label: "Principal", items: "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
+      { label: "También", items: "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
+      { label: "Datos e infraestructura", items: "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
+      { label: "Videojuegos y XR", items: "Godot · Unity, incluido desarrollo RV/RA" }
     ],
-    techOtherLabel: "Otras tecnologías y herramientas",
-    techMediumLevel: [
-      "Desarrollo asistido por IA: Claude Code, GitHub Copilot",
-      "Laravel, Symfony, Angular, Bootstrap y Django",
-      "Python y Java",
-      "MySQL y MongoDB",
-      "C/C++ y C#",
-      "Unity y Godot, incluyendo desarrollo RV/RA",
-      "AWS, Netlify y Apache"
-    ],
-    
+
     skills: "Habilidades",
-    skillsList: [
-      "Trabajo en equipo",
-      "Autonomía",
-      "Liderazgo",
-      "Capacidad para la resolución de problemas",
-      "Aprendizaje rápido",
-      "Autodidacta"
-    ],
-    
-    academicData: "Datos Académicos",
+    strengthsLine: "Trabajo en equipo · Autonomía · Resolución de problemas · Aprendizaje rápido y autodidacta",
+
+    academicData: "Formación",
     education: [
       {
         title: "Grado en Ingeniería Informática",
-        details: "Universidad de Cádiz | 2017 - 2022"
-      },
-      {
-        title: "English B2 First Certificate",
-        details: "Cambridge | Junio 2022"
-      },
-      {
-        title: "Drupal 10 Developer Certificate",
-        details: "Acquia | Diciembre 2024"
-      },
-      {
-        title: "CISCO - CCNP",
-        details: "Universidad de Cádiz | Mayo 2021"
-      },
-      {
-        title: "CISCO - CCNA",
-        details: "Universidad de Cádiz | Octubre 2019"
+        details: "Universidad de Cádiz · 2017 – 2022"
       }
     ],
-    
+
     contact: "Contacto",
     availability: "Empleado en 1xINTERNET — abierto a nuevas oportunidades",
     downloadCV: "DESCARGAR CV",
+    workCompanyDescription: "Agencia Drupal que desarrolla webs enterprise para marcas internacionales",
+    certificationsTitle: "Certificaciones",
+    certifications: [
+      { title: "Acquia Certified Drupal 10 Developer", details: "Acquia · Diciembre 2024" },
+      { title: "Cambridge B2 First (inglés)", details: "Cambridge · Junio 2022" },
+      { title: "Cisco CCNP", details: "Universidad de Cádiz · Mayo 2021" },
+      { title: "Cisco CCNA", details: "Universidad de Cádiz · Octubre 2019" }
+    ],
+    languagesTitle: "Idiomas",
+    languagesList: [
+      { name: "Español", level: "Nativo" },
+      { name: "Inglés", level: "B2 · idioma de trabajo diario" }
+    ],
+    selectedProjects: "Proyectos destacados",
+    projectsList: [
+      {
+        name: "Pandeconomy",
+        url: "https://github.com/Jesus-md-dev/pandeconomy",
+        description: "App Android de finanzas personales con gastos recurrentes, gráficas y widgets de pantalla de inicio en cinco idiomas; CI con ESLint, TypeScript y Jest.",
+        stack: "React Native · TypeScript · MMKV · GitHub Actions"
+      },
+      {
+        name: "Videoclub Local",
+        url: "https://github.com/Jesus-md-dev/videoclub-local",
+        description: "Videoteca autoalojada para la red doméstica con interfaz de videoclub retro, carátulas generadas automáticamente y cliente para Android TV.",
+        stack: "Node.js · Express · React · Vite · ffmpeg · Android"
+      },
+      {
+        name: "Bahía Lectora",
+        url: "https://github.com/Jesus-md-dev/bahia-lectora",
+        description: "Web de un club de lectura cuyos datos salen de Google Sheets y la API de Google Books al compilar.",
+        stack: "React · Vite · Tailwind CSS · Google APIs · Netlify"
+      },
+      {
+        name: "Gestor de Gastos (TFG)",
+        url: "https://github.com/Jesus-md-dev/project-expenses-manager",
+        description: "Trabajo de fin de grado: app full-stack para gestionar presupuestos de proyectos compartidos, con notificaciones por e-mail.",
+        stack: "Angular · TypeScript · Django REST · MySQL"
+      }
+    ],
     
     // Webs section
     websAt1xinternet: "Webs en 1xINTERNET",
@@ -93,6 +99,24 @@ export const translations = {
     personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
     projectsShowcase: "Muestra de proyectos de 1xINTERNET",
     personalWebsiteScreenshot: "Captura de pantalla del sitio web CV personal",
+
+    // Projects section
+    projects: "Proyectos",
+    projectsTitle: "Proyectos personales",
+    projectsIntro: "Proyectos que he diseñado y desarrollado por mi cuenta, de principio a fin. Todos tienen el código público en GitHub.",
+    projectsLabLink: "Más experimentos en mi laboratorio público →",
+    projectsCode: "Código",
+    projectsLive: "Ver web",
+    projectsStack: "Tecnologías",
+    projectsScreenshotOf: "Captura de pantalla de",
+    projectPandeconomyText: "App Android de finanzas personales: alta rápida de gastos, categorías, gastos recurrentes, gráficas mensuales, widgets de pantalla de inicio y 5 idiomas, con CI en GitHub Actions (ESLint, tsc y Jest).",
+    projectVideoclubText: "Videoteca autoalojada para la red local con una interfaz de videoclub retro, carátulas generadas con ffmpeg y cliente para Android TV.",
+    projectBahiaLectoraText: "Web de un club de lectura que genera sus páginas en cada build a partir de Google Sheets y la API de Google Books.",
+    projectExpensesManagerText: "Trabajo Fin de Grado (Universidad de Cádiz, 2022): presupuestos de proyecto compartidos, ingresos y gastos, gráficas y notificaciones por e-mail.",
+    projectZomboidStatusText: "Página de estado en directo de un servidor de Project Zomboid: jugadores conectados vía RCON desde una Netlify Function y explorador de mods.",
+    projectHeartopiaText: "Aplicación de escritorio para Windows que convierte partituras de Heartopia en las teclas de piano que hay que pulsar.",
+    metaTitleProjects: "Proyectos personales - React, React Native, Node.js | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Proyectos personales de Jesús Márquez Delgado con código en GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status y Heartopia Piano Translator.",
     
     // Games section
     survivalZombieTitle: "Survival Zombie",
@@ -107,6 +131,13 @@ export const translations = {
     
     zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
     
+    alTenedorTitle: "¡Al tenedor!",
+    alTenedorText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
+    alTenedorScreenshotAlt: "Menú principal de ¡Al tenedor! con las opciones de partida local y online",
+    playInBrowser: "Jugar en el navegador",
+    viewCode: "Ver código en GitHub",
+    universityProject: "Proyecto universitario",
+
     // VR/AR section
     monsterWarTitle: "Monster War (RA)",
     spaceSurvivalTitle: "Space Survival (RV)",
@@ -118,10 +149,10 @@ export const translations = {
     quimicefaText: "Videojuego móvil de realidad aumentada, desarrollado en Unity. La jugabilidad consiste en resolver problemas de química mediante la utilización de la cámara del dispositivo móvil. El juego utiliza cuatro diferentes cartas, las cuales serán reconocidas como diferentes elementos químicos y la tarea a entregar. Se deberá entregar el compuesto requerido, uniendo cartas y acercándolas a la tarea.",
     
     // Footer
-    allRightsReserved: "© 2025 Jesús Márquez Delgado. Todos los derechos reservados",
-    footerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
+    allRightsReserved: "Jesús Márquez Delgado. Todos los derechos reservados",
+    footerSubtitle: "Desarrollador Web · Drupal, PHP y React",
     footerLocationSpain: "📍 Cádiz, España",
-    availableForProjects: "🌐 Disponible para proyectos",
+    availableForProjects: "🌐 Abierto a nuevas oportunidades",
     
     // Error Boundary
     errorTitle: "Oops! Algo salió mal",
@@ -138,23 +169,25 @@ export const translations = {
     portfolioNavigationTabs: "Pestañas de navegación del portafolio",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Ingeniero Informático | CV",
-    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Ingeniero Informático especializado en React, PHP y Drupal. Experiencia laboral, tecnologías, habilidades y formación.",
+    metaTitleCv: "Jesús Márquez Delgado - Desarrollador Web | CV",
+    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Desarrollador Web especializado en Drupal, PHP y React. Experiencia laboral, tecnologías, habilidades y formación.",
     metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
     metaTitleGames: "Proyectos de videojuegos | Jesús Márquez Delgado",
-    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Ingeniero Informático.",
+    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Desarrollador Web, hechos con Unity y Godot: juegos para móvil, PC y navegador.",
     metaTitleArvr: "Proyectos de Realidad Aumentada y Virtual | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Ingeniero Informático.",
+    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Desarrollador Web.",
 
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    labLink: "Laboratorio público | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Ingeniero Informático · Drupal, PHP & React",
+    bannerSubtitle: "Desarrollador Web · Drupal, PHP y React",
     bannerDescription: "Construyendo sitios web enterprise para marcas internacionales — y desarrollando videojuegos y experiencias AR/VR en Unity por pasión",
     bannerCtaContact: "Contáctame",
+    bannerCtaGithub: "Ver GitHub",
     webDevelopmentTitle: "🌐 Desarrollo Web",
     gameDevelopmentTitle: "🎮 Desarrollo de Juegos",
     technologiesTitle: "🔧 Tecnologías",
@@ -184,70 +217,76 @@ export const translations = {
     workStartDate: "March 2022",
     currentDate: "Present",
     workItems: [
-      "Drupal site building and backend development for multilingual corporate sites of international brands such as Circor, Maggi and Thomy",
-      "Frontend development with React, Twig and Tailwind CSS integrated into Drupal themes",
-      "Translating client requests into planned, estimated technical tasks",
-      "Daily English communication with a multicultural, distributed development team",
-      "Using Claude (Claude Code) to speed up development and problem-solving",
-      "Ongoing maintenance and evolution of production sites"
+      "Drupal site building and backend development (PHP) for multilingual corporate sites of brands such as Circor, Maggi and Thomy",
+      "Front-end development with React, Twig and Tailwind CSS integrated into Drupal themes",
+      "Turning client requests into planned, estimated technical tasks",
+      "Daily communication in English with a multicultural, distributed team",
+      "Ongoing maintenance and evolution of production sites",
+      "AI-assisted development with Claude Code to speed up delivery and problem solving"
     ],
 
-    technologies: "Technologies",
-    techCoreLabel: "Core stack",
-    techHighLevel: [
-      "Drupal (backend, site building and theming)",
-      "PHP",
-      "React and JavaScript",
-      "Tailwind CSS"
+    technologies: "Technical Skills",
+    techGroups: [
+      { label: "Core", items: "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
+      { label: "Also", items: "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
+      { label: "Data & infrastructure", items: "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
+      { label: "Games & XR", items: "Godot · Unity, including VR/AR development" }
     ],
-    techOtherLabel: "Other technologies and tools",
-    techMediumLevel: [
-      "AI-assisted development: Claude Code, GitHub Copilot",
-      "Laravel, Symfony, Angular, Bootstrap and Django",
-      "Python and Java",
-      "MySQL and MongoDB",
-      "C/C++ and C#",
-      "Unity and Godot, including VR/AR development",
-      "AWS, Netlify and Apache"
-    ],
-    
-    skills: "Skills",
-    skillsList: [
-      "Teamwork",
-      "Autonomy",
-      "Leadership",
-      "Problem-solving skills",
-      "Fast learning",
-      "Self-taught"
-    ],
-    
-    academicData: "Academic Background",
+
+    skills: "Strengths",
+    strengthsLine: "Teamwork · Autonomy · Problem solving · Fast, self-taught learner",
+
+    academicData: "Education",
     education: [
       {
-        title: "Computer Engineering Degree",
-        details: "University of Cádiz | 2017 - 2022"
-      },
-      {
-        title: "English B2 First Certificate",
-        details: "Cambridge | June 2022"
-      },
-      {
-        title: "Drupal 10 Developer Certificate",
-        details: "Acquia | December 2024"
-      },
-      {
-        title: "CISCO - CCNP",
-        details: "University of Cádiz | May 2021"
-      },
-      {
-        title: "CISCO - CCNA",
-        details: "University of Cádiz | October 2019"
+        title: "BSc in Computer Engineering",
+        details: "University of Cádiz · 2017 – 2022"
       }
     ],
-    
+
     contact: "Contact",
     availability: "Employed at 1xINTERNET — open to new opportunities",
     downloadCV: "DOWNLOAD CV",
+    workCompanyDescription: "Drupal agency building enterprise websites for international brands",
+    certificationsTitle: "Certifications",
+    certifications: [
+      { title: "Acquia Certified Drupal 10 Developer", details: "Acquia · December 2024" },
+      { title: "Cambridge B2 First (English)", details: "Cambridge · June 2022" },
+      { title: "Cisco CCNP", details: "University of Cádiz · May 2021" },
+      { title: "Cisco CCNA", details: "University of Cádiz · October 2019" }
+    ],
+    languagesTitle: "Languages",
+    languagesList: [
+      { name: "Spanish", level: "Native" },
+      { name: "English", level: "B2 · daily working language" }
+    ],
+    selectedProjects: "Selected Projects",
+    projectsList: [
+      {
+        name: "Pandeconomy",
+        url: "https://github.com/Jesus-md-dev/pandeconomy",
+        description: "Personal finance Android app with recurring expenses, charts and home-screen widgets in five languages; CI with ESLint, TypeScript and Jest.",
+        stack: "React Native · TypeScript · MMKV · GitHub Actions"
+      },
+      {
+        name: "Videoclub Local",
+        url: "https://github.com/Jesus-md-dev/videoclub-local",
+        description: "Self-hosted video library for the home network with a retro video-store UI, auto-generated covers and an Android TV client.",
+        stack: "Node.js · Express · React · Vite · ffmpeg · Android"
+      },
+      {
+        name: "Bahía Lectora",
+        url: "https://github.com/Jesus-md-dev/bahia-lectora",
+        description: "Book club website whose data comes from Google Sheets and the Google Books API at build time.",
+        stack: "React · Vite · Tailwind CSS · Google APIs · Netlify"
+      },
+      {
+        name: "Project Expenses Manager",
+        url: "https://github.com/Jesus-md-dev/project-expenses-manager",
+        description: "Final degree project: full-stack app to manage shared project budgets, with e-mail notifications.",
+        stack: "Angular · TypeScript · Django REST · MySQL"
+      }
+    ],
     
     // Webs section
     websAt1xinternet: "Webs at 1xINTERNET",
@@ -257,6 +296,24 @@ export const translations = {
     personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
     projectsShowcase: "1xINTERNET projects showcase",
     personalWebsiteScreenshot: "Personal CV website screenshot",
+
+    // Projects section
+    projects: "Projects",
+    projectsTitle: "Side projects",
+    projectsIntro: "Projects I have designed and built on my own, end to end. All of them have public source code on GitHub.",
+    projectsLabLink: "More experiments in my public lab →",
+    projectsCode: "Code",
+    projectsLive: "Live",
+    projectsStack: "Tech stack",
+    projectsScreenshotOf: "Screenshot of",
+    projectPandeconomyText: "Personal finance Android app: quick add, categories, recurring expenses, monthly charts, home-screen widgets and 5 languages, with GitHub Actions CI (ESLint, tsc and Jest).",
+    projectVideoclubText: "Self-hosted LAN video library with a retro video-store UI, ffmpeg-generated covers and an Android TV client.",
+    projectBahiaLectoraText: "Book club website whose pages are built from Google Sheets and the Google Books API at build time.",
+    projectExpensesManagerText: "Final degree project (University of Cádiz, 2022): shared project budgets, incomes and expenses, charts and e-mail notifications.",
+    projectZomboidStatusText: "Live status page for a Project Zomboid server: players online via RCON from a Netlify Function, plus a mods browser.",
+    projectHeartopiaText: "Windows desktop app that converts Heartopia music sheets into the piano keys to press.",
+    metaTitleProjects: "Side projects - React, React Native, Node.js | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Side projects by Jesús Márquez Delgado with source code on GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status and Heartopia Piano Translator.",
     
     // Games section
     survivalZombieTitle: "Survival Zombie",
@@ -271,6 +328,13 @@ export const translations = {
     
     zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
     
+    alTenedorTitle: "¡Al tenedor!",
+    alTenedorText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
+    alTenedorScreenshotAlt: "¡Al tenedor! main menu with the local and online game options",
+    playInBrowser: "Play in the browser",
+    viewCode: "View code on GitHub",
+    universityProject: "University project",
+
     // VR/AR section
     monsterWarTitle: "Monster War (AR)",
     spaceSurvivalTitle: "Space Survival (VR)",
@@ -282,10 +346,10 @@ export const translations = {
     quimicefaText: "Augmented reality mobile video game, developed in Unity. The gameplay consists of solving chemistry problems using the mobile device camera. The game uses four different cards, which will be recognized as different chemical elements and the task to be delivered. The required compound must be delivered by joining cards and bringing them closer to the task.",
     
     // Footer
-    allRightsReserved: "© 2025 Jesús Márquez Delgado. All rights reserved",
-    footerSubtitle: "Computer Engineer & Full-Stack Developer",
+    allRightsReserved: "Jesús Márquez Delgado. All rights reserved",
+    footerSubtitle: "Web Developer · Drupal, PHP & React",
     footerLocationSpain: "📍 Cádiz, Spain",
-    availableForProjects: "🌐 Available for projects",
+    availableForProjects: "🌐 Open to new opportunities",
     
     // Error Boundary
     errorTitle: "Oops! Something went wrong",
@@ -302,23 +366,25 @@ export const translations = {
     portfolioNavigationTabs: "Portfolio navigation tabs",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Computer Engineer | CV",
-    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Computer Engineer specialized in React, PHP and Drupal. Work experience, technologies, skills and education.",
+    metaTitleCv: "Jesús Márquez Delgado - Web Developer | CV",
+    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Web Developer specialized in Drupal, PHP and React. Work experience, technologies, skills and education.",
     metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
     metaTitleGames: "Game development projects | Jesús Márquez Delgado",
-    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Computer Engineer.",
+    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer, made with Unity and Godot: games for mobile, PC and the browser.",
     metaTitleArvr: "Augmented and Virtual Reality projects | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Computer Engineer.",
+    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Web Developer.",
 
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    labLink: "Public lab | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Computer Engineer · Drupal, PHP & React",
+    bannerSubtitle: "Web Developer · Drupal, PHP & React",
     bannerDescription: "Building enterprise websites for international brands — and crafting games and AR/VR experiences in Unity on the side",
     bannerCtaContact: "Contact me",
+    bannerCtaGithub: "View GitHub",
     webDevelopmentTitle: "🌐 Web Development",
     gameDevelopmentTitle: "🎮 Game Development",
     technologiesTitle: "🔧 Technologies",

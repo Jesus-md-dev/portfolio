@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useCallback, useMemo } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import ArticleIcon from '@mui/icons-material/Article';
+import CodeIcon from '@mui/icons-material/Code';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import WebIcon from '@mui/icons-material/Web';
 import SvgIcon from '@mui/material/SvgIcon';
@@ -20,12 +21,14 @@ import "./Home.css";
 
 // Lazy load page components
 const CV = lazy(() => import("../pages/CV"));
+const Projects = lazy(() => import("../pages/Projects"));
 const Games = lazy(() => import("../pages/Games"));
 const Vrar = lazy(() => import("../pages/Vrar"));
 const Webs = lazy(() => import("../pages/Webs"));
 
 const SECTION_META_KEYS = {
   cv: { title: 'metaTitleCv', description: 'metaDescriptionCv' },
+  projects: { title: 'metaTitleProjects', description: 'metaDescriptionProjects' },
   webs: { title: 'metaTitleWebs', description: 'metaDescriptionWebs' },
   games: { title: 'metaTitleGames', description: 'metaDescriptionGames' },
   arvr: { title: 'metaTitleArvr', description: 'metaDescriptionArvr' },
@@ -83,6 +86,7 @@ const Home = () => {
           className='modern-tabs content-width'
         >
           <Tab className='modern-tab' icon={<ArticleIcon />} iconPosition="start" label={t('cv')} value="cv" aria-controls="cv-panel" />
+          <Tab className='modern-tab' icon={<CodeIcon />} iconPosition="start" label={t('projects')} value="projects" aria-controls="projects-panel" />
           <Tab className='modern-tab' icon={<WebIcon />} iconPosition="start" label={t('webs')} value="webs" aria-controls="webs-panel" />
           <Tab className='modern-tab' icon={<GamepadIcon />} iconPosition="start" label={t('games')} value="games" aria-controls="games-panel" />
           <Tab className='modern-tab' icon={
@@ -99,6 +103,7 @@ const Home = () => {
         <div className="content-container">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
+              <Route path="/projects" element={<Projects />} />
               <Route path="/webs" element={<Webs />} />
               <Route path="/games" element={<Games />} />
               <Route path="/arvr" element={<Vrar />} />
