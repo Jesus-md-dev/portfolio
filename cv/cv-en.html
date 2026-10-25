@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jesús Márquez Delgado — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1f2328;
+    --muted: #57606a;
+    --accent: #8a6d3b;
+    --side: #f4efe9;
+    --rule: #d8cfc4;
+  }
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.1pt;
+    line-height: 1.38;
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  aside { background: var(--side); padding: 13mm 7.5mm 10mm; }
+  main { padding: 12mm 11mm 8mm 10mm; }
+
+  .photo { display: block; width: 36mm; height: 36mm; border-radius: 50%; object-fit: cover;
+           margin: 0 auto 6mm; border: 1mm solid #fff; }
+  h1 { font-size: 23pt; font-weight: 700; letter-spacing: 0.3px; line-height: 1.1; }
+  .role { font-size: 11.5pt; color: var(--accent); font-weight: 500; margin-top: 2mm; }
+  .summary { margin-top: 4mm; color: var(--muted); }
+
+  h2 { font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+       color: var(--accent); border-bottom: 0.3mm solid var(--rule); padding-bottom: 1.2mm;
+       margin: 5.6mm 0 2.6mm; }
+  aside h2:first-of-type { margin-top: 0; }
+
+  .contact li { list-style: none; margin-bottom: 1.6mm; word-break: break-word; }
+  .contact .label { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); }
+
+  .entry { margin-bottom: 2.6mm; }
+  .entry strong { display: block; font-weight: 600; }
+  .entry span { color: var(--muted); font-size: 8.6pt; }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job-title { font-size: 10.5pt; font-weight: 600; }
+  .job-date { color: var(--muted); font-size: 8.6pt; white-space: nowrap; }
+  .job-sub { color: var(--muted); font-size: 8.6pt; margin-bottom: 1.6mm; }
+  ul.bullets { padding-left: 4.2mm; }
+  ul.bullets li { margin-bottom: 1.1mm; }
+
+  .skills p { margin-bottom: 1.7mm; }
+  .skills b { font-weight: 600; }
+
+  .project { margin-bottom: 2.2mm; }
+  .project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .project .name { font-weight: 600; }
+  .project .link { color: var(--accent); font-size: 8.2pt; white-space: nowrap; }
+  .project .stack { color: var(--muted); font-size: 8.4pt; }
+</style>
+</head>
+<body>
+<aside>
+  <img class="photo" src="foto.webp" alt="Jesús Márquez Delgado">
+
+  <h2>Contact</h2>
+  <ul class="contact">
+    <li><span class="label">Email</span><a href="mailto:jesusmarquezdelgado@gmail.com">jesusmarquezdelgado@gmail.com</a></li>
+    <li><span class="label">Phone</span><a href="tel:+34697394198">+34 697 39 41 98</a></li>
+    <li><span class="label">Location</span>Cádiz, Spain</li>
+    <li><span class="label">Portfolio</span><a href="https://jzmarquez.com/">jzmarquez.com</a></li>
+    <li><span class="label">GitHub</span><a href="https://github.com/Jesus-md-dev">github.com/Jesus-md-dev</a></li>
+    <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/">linkedin.com/in/jesús-márquez-delgado-1334531b9</a></li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="entry"><strong>BSc in Computer Engineering</strong><span>University of Cádiz · 2017 – 2022</span></div>
+
+  <h2>Certifications</h2>
+  <div class="entry"><strong>Acquia Certified Drupal 10 Developer</strong><span>Acquia · December 2024</span></div>
+  <div class="entry"><strong>Cambridge B2 First (English)</strong><span>Cambridge · June 2022</span></div>
+  <div class="entry"><strong>Cisco CCNP</strong><span>University of Cádiz · May 2021</span></div>
+  <div class="entry"><strong>Cisco CCNA</strong><span>University of Cádiz · October 2019</span></div>
+
+  <h2>Languages</h2>
+  <div class="entry"><strong>Spanish</strong><span>Native</span></div>
+  <div class="entry"><strong>English</strong><span>B2 · daily working language</span></div>
+
+  <h2>Strengths</h2>
+  <p>Teamwork · Autonomy · Problem solving · Fast, self-taught learner</p>
+</aside>
+
+<main>
+  <h1>Jesús Márquez Delgado</h1>
+  <div class="role">Web Developer · Drupal, PHP &amp; React</div>
+  <p class="summary">Computer engineer specialised in enterprise web development with Drupal, PHP and React. At 1xINTERNET I build and maintain multilingual corporate sites for international brands such as Circor, Maggi and Thomy, working in English with a distributed team. Outside work I build full-stack and mobile side projects and games.</p>
+
+  <h2>Experience</h2>
+  <div class="job-head">
+    <div class="job-title">Web Developer — 1xINTERNET</div>
+    <div class="job-date">March 2022 – Present</div>
+  </div>
+  <div class="job-sub">Drupal agency building enterprise websites for international brands</div>
+  <ul class="bullets">
+    <li>Drupal site building and backend development (PHP) for multilingual corporate sites of brands such as Circor, Maggi and Thomy.</li>
+    <li>Front-end development with React, Twig and Tailwind CSS integrated into Drupal themes.</li>
+    <li>Turning client requests into planned, estimated technical tasks.</li>
+    <li>Daily communication in English with a multicultural, distributed team.</li>
+    <li>Ongoing maintenance and evolution of production sites.</li>
+    <li>AI-assisted development with Claude Code to speed up delivery and problem solving.</li>
+  </ul>
+
+  <h2>Technical skills</h2>
+  <div class="skills">
+    <p><b>Core:</b> Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig</p>
+    <p><b>Also:</b> Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#</p>
+    <p><b>Data &amp; infrastructure:</b> MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions</p>
+    <p><b>Games &amp; XR:</b> Godot · Unity, including VR/AR development</p>
+  </div>
+
+  <h2>Selected projects</h2>
+  <div class="project">
+    <div class="project-head"><span class="name">Pandeconomy</span><a class="link" href="https://github.com/Jesus-md-dev/pandeconomy">github.com/Jesus-md-dev/pandeconomy</a></div>
+    <div>Personal finance Android app with recurring expenses, charts and home-screen widgets in five languages; CI with ESLint, TypeScript and Jest. <span class="stack">React Native · TypeScript · MMKV · GitHub Actions</span></div>
+  </div>
+  <div class="project">
+    <div class="project-head"><span class="name">Videoclub Local</span><a class="link" href="https://github.com/Jesus-md-dev/videoclub-local">github.com/Jesus-md-dev/videoclub-local</a></div>
+    <div>Self-hosted video library for the home network with a retro video-store UI, auto-generated covers and an Android TV client. <span class="stack">Node.js · Express · React · Vite · ffmpeg · Android</span></div>
+  </div>
+  <div class="project">
+    <div class="project-head"><span class="name">Bahía Lectora</span><a class="link" href="https://github.com/Jesus-md-dev/bahia-lectora">github.com/Jesus-md-dev/bahia-lectora</a></div>
+    <div>Book club website whose data comes from Google Sheets and the Google Books API at build time. <span class="stack">React · Vite · Tailwind CSS · Google APIs · Netlify</span></div>
+  </div>
+  <div class="project">
+    <div class="project-head"><span class="name">Project Expenses Manager</span><a class="link" href="https://github.com/Jesus-md-dev/project-expenses-manager">github.com/Jesus-md-dev/project-expenses-manager</a></div>
+    <div>Final degree project: full-stack app to manage shared project budgets, with e-mail notifications. <span class="stack">Angular · TypeScript · Django REST · MySQL</span></div>
+  </div>
+</main>
+</body>
+</html>
