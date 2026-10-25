@@ -23,7 +23,7 @@ My personal CV and portfolio site, live at **[jzmarquez.com](https://jzmarquez.c
 
 ## Tech stack
 
-React 18 · Vite · Material UI · Tailwind CSS · React Router 7 · ESLint 9 + Prettier · Netlify
+React 18 · Vite · Material UI · Tailwind CSS 4 · React Router 7 · ESLint 9 + Prettier · Netlify
 
 ## Getting started
 

@@ -1,6 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 /* CSS Variables for theming */
 :root {
@@ -46,7 +62,9 @@
 }
 
 html {
-  @apply lg:text-lg text-base;
+  /* Tailwind 4's text-* line heights are ratios; the explicit leading-* keep
+     Tailwind 3's fixed rem line heights, which every element inherits. */
+  @apply text-base leading-6 lg:text-lg lg:leading-7;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -55,27 +73,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @apply text-2xl;
+  @apply text-2xl leading-8;
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-xl leading-7;
 }
 
 h3 {
-  @apply text-lg;
+  @apply text-lg leading-7;
 }
 
 h4 {
-  @apply text-base;
+  @apply text-base leading-6;
 }
 
 h5 {
-  @apply text-sm;
+  @apply text-sm leading-5;
 }
 
 h6 {
-  @apply text-xs;
+  @apply text-xs leading-4;
 }
 
 button {
@@ -85,22 +103,6 @@ button {
 
 img {
   @apply shadow-lg;
-}
-
-.flex-col {
-  flex-flow: column;
-}
-
-.flex-col-rev {
-  flex-flow: column-reverse;
-}
-
-.flex-row {
-  flex-flow: row;
-}
-
-.flex-row-rev {
-  flex-flow: row-reverse;
 }
 
 .content-width {

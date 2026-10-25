@@ -47,7 +47,7 @@ class ErrorBoundary extends React.Component {
             </p>
             <button
               onClick={this.handleReload}
-              className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition-colors"
+              className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-sm transition-colors"
             >
               {isSpanish ? 'Recargar página' : 'Reload page'}
             </button>
@@ -56,7 +56,7 @@ class ErrorBoundary extends React.Component {
                 <summary className="cursor-pointer text-red-400">
                   {isSpanish ? 'Detalles del error (desarrollo)' : 'Error details (development)'}
                 </summary>
-                <pre className="mt-2 text-xs bg-black p-2 rounded overflow-auto">
+                <pre className="mt-2 text-xs bg-black p-2 rounded-sm overflow-auto">
                   {this.state.error && this.state.error.toString()}
                   <br />
                   {this.state.errorInfo.componentStack}
