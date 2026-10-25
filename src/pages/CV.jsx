@@ -155,7 +155,7 @@ function CV() {
       <div className="flex items-center justify-center lg:flex-row">
         <button
           onClick={handleDownloadCV}
-          className="my-5 rounded px-3 py-1 download-cv-button"
+          className="my-5 rounded-sm px-3 py-1 download-cv-button"
           aria-label={t('downloadCV')}
         >
           {t('downloadCV')}

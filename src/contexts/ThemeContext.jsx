@@ -14,13 +14,14 @@ const themeReducer = (state, action) => {
         currentTheme: action.payload,
         colors: THEMES[action.payload].colors
       };
-    case 'TOGGLE_THEME':
+    case 'TOGGLE_THEME': {
       const newTheme = state.currentTheme === 'dark' ? 'light' : 'dark';
       return {
         ...state,
         currentTheme: newTheme,
         colors: THEMES[newTheme].colors
       };
+    }
     default:
       return state;
   }
