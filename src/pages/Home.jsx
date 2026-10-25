@@ -70,7 +70,11 @@ const Home = () => {
 
   return (
     <main className="modern-portfolio">
-      <PageMeta title={t(SECTION_META_KEYS[selectedTab].title)} description={t(SECTION_META_KEYS[selectedTab].description)} />
+      <PageMeta
+        title={t(SECTION_META_KEYS[selectedTab].title)}
+        description={t(SECTION_META_KEYS[selectedTab].description)}
+        path={selectedTab === 'cv' ? '/' : `/${selectedTab}`}
+      />
 
       {/* New Banner Header - Full Width */}
       <Banner user={user} />
