@@ -6,7 +6,7 @@ import ResponsiveImg from "./ResponsiveImg.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import { getYouTubeVideoID, getYouTubeThumbnailSrcSet, getYouTubeThumbnail } from "../utils/helpers.js";
 
-const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, type, dark }) => {
+const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, type, dark, headingLevel = 2 }) => {
   const { t } = useLanguage();
   // Click-to-load facade: the YouTube player (~1 MB of scripts per embed) is
   // only requested once the visitor asks for it.
@@ -16,6 +16,8 @@ const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt,
   const twoColumns = dark ? "" : "";
 
   const videoID = getYouTubeVideoID(src);
+  // h3 when the block sits under a section h2 (Games & XR page); styled like an h2.
+  const Heading = headingLevel === 3 ? 'h3' : 'h2';
 
   return (
     <div className={twoColumns}>
@@ -23,10 +25,10 @@ const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt,
         {title &&
           <div className="w-full lg:mb-0 mb-5">
             <span className="flex items-center">
-              <h2>
+              <Heading className="two-columns-title">
                 <Line />
                 {title}
-              </h2>
+              </Heading>
             </span>
           </div>
         }
@@ -98,7 +100,8 @@ TwoColumns.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   alt: PropTypes.string,
   type: PropTypes.oneOf(['image', 'video']).isRequired,
-  dark: PropTypes.bool
+  dark: PropTypes.bool,
+  headingLevel: PropTypes.oneOf([2, 3])
 };
 
 export default TwoColumns;

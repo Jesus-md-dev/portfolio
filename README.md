@@ -14,7 +14,7 @@ My personal CV and portfolio site, live at **[jzmarquez.com](https://jzmarquez.c
 
 - **Bilingual (EN/ES)** with a language toggle and a translation layer in `src/i18n/`.
 - **Light and dark themes** through a theme context.
-- **Sections as real routes** (CV, Webs, Games, AR/VR) with React Router, so each one has its own URL, title and meta description.
+- **Sections as real routes** (CV, Projects, Webs, Games & XR) with React Router, so each one has its own URL, title and meta description.
 - **SEO**: per-page metadata, Open Graph image, sitemap and robots.txt.
 - **Performance**: lazy-loaded pages, responsive WebP images in several sizes, image preloading and an LCP monitor hook.
 - **Accessibility**: ARIA labels and keyboard-navigable tabs.
@@ -43,7 +43,7 @@ npm run cv:pdf    # rebuild the PDF CVs after editing src/data/cv.*.json
 ```
 src/
 ├── components/   # Reusable UI (banner, footer, toggles, responsive images…)
-├── pages/        # CV, Webs, Games, AR/VR
+├── pages/        # CV, Projects, Webs, Games & XR
 ├── i18n/         # Language context and EN/ES translations
 ├── contexts/     # Theme context
 ├── hooks/        # Image preloading, LCP monitoring

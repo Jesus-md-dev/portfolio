@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import TwoColumns from "./TwoColumns";
 
-function ImageText({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt }) {
+function ImageText({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, headingLevel }) {
   return (
     <TwoColumns
       src={src}
@@ -15,6 +15,7 @@ function ImageText({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt }
       text={text}
       alt={alt}
       type="image"
+      headingLevel={headingLevel}
     />
   );
 }
@@ -28,7 +29,8 @@ ImageText.propTypes = {
   invert: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
+  headingLevel: PropTypes.oneOf([2, 3])
 };
 
 export default ImageText;
