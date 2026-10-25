@@ -1821,3 +1821,16 @@ img {
   outline: 3px solid var(--primary-color);
   outline-offset: 3px;
 }
+
+/* Keyboard focus: the skill chips reset their outline and MUI's ButtonBase
+   removes it from the tabs, so neither showed where the focus was. */
+.banner-skill-items .banner-skill-tag:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Drawn inside the tab: the MUI tab scroller clips anything outside it. */
+.navigation-section .modern-tab.Mui-focusVisible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: -5px;
+}
