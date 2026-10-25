@@ -160,7 +160,7 @@ function Projects() {
           </button>
         ))}
       </div>
-      <p className="sr-only" aria-live="polite">{`${visible.length} ${t('projectsShown')}`}</p>
+      <p className="sr-only" aria-live="polite">{`${visible.length} ${t(visible.length === 1 ? 'projectsShownOne' : 'projectsShown')}`}</p>
 
       <ul className="projects-grid">
         {visible.map((project) => (

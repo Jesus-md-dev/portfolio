@@ -16,11 +16,11 @@ export const translations = {
 
     // Project cards that come from the old Webs page
     websAt1xinternet: "Webs en 1xINTERNET",
-    websAt1xinternetText: "Actualmente, en mi trabajo como desarrollador web en 1xINTERNET, he tenido la oportunidad de trabajar en diferentes proyectos, tanto en la parte del front-end como en el back-end. Principalmente, he trabajado con Drupal dedicándome al back-end y al site building, pero también he tenido la oportunidad de trabajar como front-end utilizando React y Tailwind CSS. Las webs en las que he trabajado son Circor, Pumps, Maggi y Thomy.",
+    websAt1xinternetText: "Como desarrollador web en 1xINTERNET trabajo tanto en el back-end como en el front-end. Sobre todo desarrollo con Drupal (back-end y site building), y también he hecho front-end con React y Tailwind CSS. He trabajado en las webs de Circor, Pumps, Maggi y Thomy.",
     
-    personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
+    personalCVWebText: "Mi web personal, con mi currículum y algunos de los proyectos en los que he trabajado. Está hecha con React, Tailwind CSS y la librería de componentes MUI.",
     projectsShowcase: "Muestra de proyectos de 1xINTERNET",
-    personalWebsiteScreenshot: "Captura de pantalla del sitio web CV personal",
+    personalWebsiteScreenshot: "Captura de pantalla de mi web personal",
 
     // Projects section
     projects: "Proyectos",
@@ -34,6 +34,7 @@ export const translations = {
     filterGames: "Videojuegos",
     filterXr: "XR",
     projectsShown: "proyectos mostrados",
+    projectsShownOne: "proyecto mostrado",
     professionalWork: "Trabajo profesional",
     projectsCoauthor: "En equipo con",
     projectsLabLink: "Más experimentos en mi laboratorio público →",
@@ -55,13 +56,13 @@ export const translations = {
     waveShooterTitle: "Shooter de oleadas",
     spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "Cubo ZigZag",
-    survivalZombieText: "Videojuego de disparos en primera persona, desarrollado en equipo junto con Jesús Periñán Dávila. Este proyecto se desarrolló en Unity, durante el proceso, se modeló el mapa, se programó la IA de los zombis y las diferentes mecánicas del juego (botiquines, oleadas, diferentes zombis).",
+    survivalZombieText: "Shooter en primera persona desarrollado en Unity. Modelamos el mapa, programamos la IA de los zombis y las mecánicas del juego: botiquines, oleadas y distintos tipos de zombi.",
     
-    waveShooterText: "Proyecto de disparos con vista cenital, desarrollado para aprender sobre juegos de oleadas en Unity. La idea era crear un juego en el que el jugador tuviera que sobrevivir a oleadas de enemigos de forma infinita, con lo cual se pondría a prueba la generación de enemigos constante y la dificultad progresiva.",
+    waveShooterText: "Shooter con vista cenital, hecho para aprender cómo funcionan los juegos de oleadas en Unity. El jugador debe sobrevivir a oleadas infinitas de enemigos, lo que pone a prueba la generación continua de enemigos y la dificultad progresiva.",
     
-    spaceBallText: "Videojuego de plataformas en 3D para móviles, desarrollado en Unity. En este proyecto se modeló el mapa, se programó la mecánica de salto mediante plataformas, se crearon los diferentes niveles y se implementó un sistema de puntuación.",
+    spaceBallText: "Juego de plataformas en 3D para móviles, desarrollado en Unity. Modelé el mapa, programé el salto entre plataformas, creé los distintos niveles e implementé un sistema de puntuación.",
     
-    zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
+    zigzagCubeText: "Juego para móviles desarrollado en Unity en el que el jugador controla un cubo que avanza solo y cambia de dirección con cada toque en la pantalla. El mapa se genera al azar a partir de piezas prefabricadas, así que la partida no tiene fin.",
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en Godot 4.",
@@ -73,11 +74,11 @@ export const translations = {
     monsterWarTitle: "Monster War (RA)",
     spaceSurvivalTitle: "Space Survival (RV)",
     quimicefaTitle: "Quimicefa (RA)",
-    monsterWarText: "Videojuego móvil de realidad aumentada, desarrollado en Unity junto con Jesús Periñán Dávila. La jugabilidad consiste en enfrentarse a enemigos que aparecen en el entorno con los diferentes personajes que se pueden seleccionar. El videojuego requiere de la utilización de una carta, la cual el juego reconoce como nuestro personaje y esta debe ser colocada junto a los enemigos para poder comenzar un combate.",
+    monsterWarText: "Juego de realidad aumentada para móviles, desarrollado en Unity. El jugador elige un personaje y se enfrenta a los enemigos que aparecen en su entorno. El personaje se representa con una carta física que el juego reconoce: al colocarla junto a los enemigos empieza el combate.",
     
-    spaceSurvivalText: "Videojuego de realidad virtual, desarrollado en Unity. La jugabilidad consiste en destruir las naves alienígenas que se van acercando hacia la nave antes de que colisionen contra el jugador. El sistema de apuntado consiste en mantener la mirada fija en la nave que se quiere destruir durante un tiempo determinado, tras lo cual se dispara automáticamente.",
+    spaceSurvivalText: "Juego de realidad virtual desarrollado en Unity. Hay que destruir las naves alienígenas que se acercan antes de que choquen contra el jugador. Para apuntar basta con mantener la mirada fija en una nave durante unos instantes, y el disparo sale automáticamente.",
     
-    quimicefaText: "Videojuego móvil de realidad aumentada, desarrollado en Unity. La jugabilidad consiste en resolver problemas de química mediante la utilización de la cámara del dispositivo móvil. El juego utiliza cuatro diferentes cartas, las cuales serán reconocidas como diferentes elementos químicos y la tarea a entregar. Se deberá entregar el compuesto requerido, uniendo cartas y acercándolas a la tarea.",
+    quimicefaText: "Juego de realidad aumentada para móviles, desarrollado en Unity, en el que se resuelven problemas de química con la cámara del móvil. Usa cuatro cartas: unas representan elementos químicos y otra la tarea. Para completarla hay que formar el compuesto pedido juntando cartas de elementos y acercándolas a la carta de la tarea.",
     
     // Footer
     allRightsReserved: "Jesús Márquez Delgado. Todos los derechos reservados",
@@ -137,12 +138,12 @@ export const translations = {
     downloadCV: "DOWNLOAD CV",
 
     // Project cards that come from the old Webs page
-    websAt1xinternet: "Webs at 1xINTERNET",
-    websAt1xinternetText: "Currently, in my job as a web developer at 1xINTERNET, I have had the opportunity to work on different projects, both on the front-end and back-end. I have mainly worked with Drupal focusing on back-end and site building, but I have also had the opportunity to work as a front-end developer using React and Tailwind CSS. The websites I have worked on are Circor, Pumps, Maggi and Thomy.",
+    websAt1xinternet: "Websites at 1xINTERNET",
+    websAt1xinternetText: "As a web developer at 1xINTERNET I work on both the back end and the front end. Most of my work is in Drupal (back end and site building), and I have also built front ends with React and Tailwind CSS. I have worked on the Circor, Pumps, Maggi and Thomy websites.",
     
-    personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
+    personalCVWebText: "My personal website, with my CV and some of the projects I have worked on. Built with React, Tailwind CSS and the MUI component library.",
     projectsShowcase: "1xINTERNET projects showcase",
-    personalWebsiteScreenshot: "Personal CV website screenshot",
+    personalWebsiteScreenshot: "Screenshot of my personal website",
 
     // Projects section
     projects: "Projects",
@@ -156,11 +157,12 @@ export const translations = {
     filterGames: "Games",
     filterXr: "XR",
     projectsShown: "projects shown",
+    projectsShownOne: "project shown",
     professionalWork: "Professional work",
     projectsCoauthor: "Team project with",
     projectsLabLink: "More experiments in my public lab →",
     projectsCode: "Code",
-    projectsLive: "Live",
+    projectsLive: "Live site",
     projectsStack: "Tech stack",
     projectsScreenshotOf: "Screenshot of",
     projectPandeconomyText: "Personal finance Android app: quick add, categories, recurring expenses, monthly charts, home-screen widgets and 5 languages, with GitHub Actions CI (ESLint, tsc and Jest).",
@@ -177,13 +179,13 @@ export const translations = {
     waveShooterTitle: "Wave Shooter",
     spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "ZigZag Cube",
-    survivalZombieText: "First-person shooter video game, developed as a team with Jesús Periñán Dávila. This project was developed in Unity, during the process, the map was modeled, zombie AI was programmed and different game mechanics (first aid kits, waves, different zombies) were implemented.",
+    survivalZombieText: "First-person shooter made in Unity. We modeled the map and programmed the zombie AI and the game mechanics: first aid kits, waves and different kinds of zombies.",
     
-    waveShooterText: "Top-down shooter project, developed to learn about wave games in Unity. The idea was to create a game where the player had to survive infinite waves of enemies, which would test constant enemy generation and progressive difficulty.",
+    waveShooterText: "Top-down shooter made to learn how wave-based games work in Unity. The player has to survive endless waves of enemies, which tests continuous enemy spawning and progressive difficulty.",
     
-    spaceBallText: "3D platform video game for mobile devices, developed in Unity. In this project the map was modeled, platform jumping mechanics were programmed, different levels were created and a scoring system was implemented.",
+    spaceBallText: "3D platformer for mobile, made in Unity. I modeled the map, programmed jumping between platforms, built the levels and added a scoring system.",
     
-    zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
+    zigzagCubeText: "Mobile game made in Unity: the player steers a cube that moves on its own, changing its direction with each tap on the screen. The map is randomly generated from prefab pieces, so the game never ends.",
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with Godot 4.",
@@ -195,11 +197,11 @@ export const translations = {
     monsterWarTitle: "Monster War (AR)",
     spaceSurvivalTitle: "Space Survival (VR)",
     quimicefaTitle: "Quimicefa (AR)",
-    monsterWarText: "Augmented reality mobile video game, developed in Unity with Jesús Periñán Dávila. The gameplay consists of facing enemies that appear in the environment with different characters that can be selected. The video game requires the use of a card, which the game recognizes as our character and must be placed next to enemies to start combat.",
+    monsterWarText: "Augmented reality mobile game made in Unity. The player picks a character and fights the enemies that appear in their surroundings. The character is a physical card the game recognizes: placing it next to the enemies starts the fight.",
     
-    spaceSurvivalText: "Virtual reality video game, developed in Unity. The gameplay consists of destroying alien ships that approach the ship before they collide with the player. The aiming system consists of keeping your gaze fixed on the ship you want to destroy for a certain time, after which it automatically fires.",
+    spaceSurvivalText: "Virtual reality game made in Unity. The player has to destroy the alien ships flying towards them before they crash into them. To aim, you keep your gaze on a ship for a moment and the gun fires automatically.",
     
-    quimicefaText: "Augmented reality mobile video game, developed in Unity. The gameplay consists of solving chemistry problems using the mobile device camera. The game uses four different cards, which will be recognized as different chemical elements and the task to be delivered. The required compound must be delivered by joining cards and bringing them closer to the task.",
+    quimicefaText: "Augmented reality mobile game made in Unity where you solve chemistry problems with the phone's camera. It uses four cards: some stand for chemical elements and one for the task. To complete it, you build the requested compound by putting element cards together and bringing them close to the task card.",
     
     // Footer
     allRightsReserved: "Jesús Márquez Delgado. All rights reserved",
