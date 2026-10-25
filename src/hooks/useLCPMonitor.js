@@ -29,7 +29,7 @@ export const useLCPMonitor = () => {
         return () => {
           observer.disconnect();
         };
-      } catch (error) {
+      } catch {
         // eslint-disable-next-line no-console
         console.warn('LCP monitoring not supported in this browser');
       }

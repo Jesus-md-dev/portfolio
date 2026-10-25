@@ -13,15 +13,15 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.4"
+    "react-router-dom": "^7.18.4"
   },
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "format": "prettier --write src/**/*.{js,jsx,css,json}",
     "og:image": "node og/render.mjs",
     "cv:pdf": "node scripts/build-cv-pdf.mjs"
@@ -39,10 +39,14 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@vitejs/plugin-react": "^6.1.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^8.57.0",
-    "eslint-config-react-app": "^7.0.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "tailwindcss": "^3.4.17",
