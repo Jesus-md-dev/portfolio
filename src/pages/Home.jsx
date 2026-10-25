@@ -14,6 +14,8 @@ import useLCPMonitor from '../hooks/useLCPMonitor';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import Logo from "../files/images/fotocvfondo.webp";
 import LogoSm from "../files/images/fotocvfondo-sm.webp";
+import Logo400 from "../files/images/fotocvfondo-400.webp";
+import Logo600 from "../files/images/fotocvfondo-600.webp";
 import LogoMd from "../files/images/fotocvfondo-md.webp";
 import LogoLg from "../files/images/fotocvfondo-lg.webp";
 import VrIcon from "../files/svg/vr.svg?react";
@@ -62,7 +64,7 @@ const Home = () => {
   const user = useMemo(() => new User(
     t('name').split(' ')[0], // 'Jesús'
     t('name').split(' ').slice(1).join(' '), // 'Márquez Delgado'
-    { Logo, LogoSm, LogoMd, LogoLg },
+    { Logo, LogoSm, Logo400, Logo600, LogoMd, LogoLg },
     t('title') // 'Ingeniero Informático' / 'Computer Engineer'
   ), [t]);
 
