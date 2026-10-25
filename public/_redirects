@@ -1,4 +1,6 @@
-# AR/VR was merged into the Games & XR page (#30).
-/arvr  /games  301
+# Webs and Games & XR (which had absorbed AR/VR in #30) are filters of the Projects page now.
+/webs   /projects?type=web    301
+/games  /projects?type=games  301
+/arvr   /projects?type=xr     301
 
 /*  /index.html  200
