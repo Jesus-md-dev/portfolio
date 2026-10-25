@@ -1,10 +1,9 @@
 import React, { lazy, Suspense, useCallback, useMemo } from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import ArticleIcon from '@mui/icons-material/Article';
 import CodeIcon from '@mui/icons-material/Code';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import WebIcon from '@mui/icons-material/Web';
-import SvgIcon from '@mui/material/SvgIcon';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Banner from '../components/Banner';
@@ -18,14 +17,12 @@ import Logo400 from "../files/images/fotocvfondo-400.webp";
 import Logo600 from "../files/images/fotocvfondo-600.webp";
 import LogoMd from "../files/images/fotocvfondo-md.webp";
 import LogoLg from "../files/images/fotocvfondo-lg.webp";
-import VrIcon from "../files/svg/vr.svg?react";
 import "./Home.css";
 
 // Lazy load page components
 const CV = lazy(() => import("../pages/CV"));
 const Projects = lazy(() => import("../pages/Projects"));
 const Games = lazy(() => import("../pages/Games"));
-const Vrar = lazy(() => import("../pages/Vrar"));
 const Webs = lazy(() => import("../pages/Webs"));
 
 const SECTION_META_KEYS = {
@@ -33,7 +30,6 @@ const SECTION_META_KEYS = {
   projects: { title: 'metaTitleProjects', description: 'metaDescriptionProjects' },
   webs: { title: 'metaTitleWebs', description: 'metaDescriptionWebs' },
   games: { title: 'metaTitleGames', description: 'metaDescriptionGames' },
-  arvr: { title: 'metaTitleArvr', description: 'metaDescriptionArvr' },
 };
 
 const sectionFromPath = (pathname) => {
@@ -95,11 +91,6 @@ const Home = () => {
           <Tab className='modern-tab' icon={<CodeIcon />} iconPosition="start" label={t('projects')} value="projects" aria-controls="projects-panel" />
           <Tab className='modern-tab' icon={<WebIcon />} iconPosition="start" label={t('webs')} value="webs" aria-controls="webs-panel" />
           <Tab className='modern-tab' icon={<GamepadIcon />} iconPosition="start" label={t('games')} value="games" aria-controls="games-panel" />
-          <Tab className='modern-tab' icon={
-            <SvgIcon>
-              <VrIcon />
-            </SvgIcon>
-          } iconPosition="start" label={t('arvr')} value="arvr" aria-controls="arvr-panel" />
         </Tabs>
       </nav>
 
@@ -112,7 +103,8 @@ const Home = () => {
               <Route path="/projects" element={<Projects />} />
               <Route path="/webs" element={<Webs />} />
               <Route path="/games" element={<Games />} />
-              <Route path="/arvr" element={<Vrar />} />
+              {/* AR/VR was merged into Games & XR (#30); public/_redirects sends /arvr there with a 301. */}
+              <Route path="/arvr" element={<Navigate to="/games" replace />} />
               <Route path="*" element={<CV />} />
             </Routes>
           </Suspense>

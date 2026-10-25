@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import PianoIcon from '@mui/icons-material/Piano';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import Line from "../components/Line";
 import ResponsiveImg from "../components/ResponsiveImg";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
@@ -18,12 +14,29 @@ import pzServerStatus from "../files/images/pz-server-status.webp";
 import pzServerStatusSm from "../files/images/pz-server-status-sm.webp";
 import pzServerStatusMd from "../files/images/pz-server-status-md.webp";
 import pzServerStatusLg from "../files/images/pz-server-status-lg.webp";
+import pandeconomy from "../files/images/pandeconomy.webp";
+import pandeconomySm from "../files/images/pandeconomy-sm.webp";
+import pandeconomyMd from "../files/images/pandeconomy-md.webp";
+import pandeconomyLg from "../files/images/pandeconomy-lg.webp";
+import videoclub from "../files/images/videoclub-local.webp";
+import videoclubSm from "../files/images/videoclub-local-sm.webp";
+import videoclubMd from "../files/images/videoclub-local-md.webp";
+import videoclubLg from "../files/images/videoclub-local-lg.webp";
+import expensesManager from "../files/images/project-expenses-manager.webp";
+import expensesManagerSm from "../files/images/project-expenses-manager-sm.webp";
+import expensesManagerMd from "../files/images/project-expenses-manager-md.webp";
+import expensesManagerLg from "../files/images/project-expenses-manager-lg.webp";
+import heartopia from "../files/images/heartopia-piano-translator.webp";
+import heartopiaSm from "../files/images/heartopia-piano-translator-sm.webp";
+import heartopiaMd from "../files/images/heartopia-piano-translator-md.webp";
+import heartopiaLg from "../files/images/heartopia-piano-translator-lg.webp";
 import "./Projects.css";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
 
-// Projects without a screenshot get a placeholder: a gradient themed after
-// their stack, with an icon and the project name.
+// Each project shows a screenshot (`image`). A project without one can set
+// `placeholder` instead: a gradient themed after its stack, with an icon and
+// the project name.
 const PROJECTS = [
   {
     id: 'pandeconomy',
@@ -31,7 +44,7 @@ const PROJECTS = [
     textKey: 'projectPandeconomyText',
     stack: ['React Native', 'TypeScript', 'MMKV', 'GitHub Actions'],
     repo: `${GITHUB}/pandeconomy`,
-    placeholder: { Icon: PhoneAndroidIcon, gradient: 'linear-gradient(135deg, #0b3954 0%, #1f6f8b 55%, #61dafb 100%)' },
+    image: { src: pandeconomy, srcSm: pandeconomySm, srcMd: pandeconomyMd, srcLg: pandeconomyLg },
   },
   {
     id: 'videoclub-local',
@@ -39,7 +52,7 @@ const PROJECTS = [
     textKey: 'projectVideoclubText',
     stack: ['Node.js', 'Express', 'React', 'Vite', 'ffmpeg', 'Android TV'],
     repo: `${GITHUB}/videoclub-local`,
-    placeholder: { Icon: LocalMoviesIcon, gradient: 'linear-gradient(135deg, #2b0a3d 0%, #7b1e5a 55%, #e0533d 100%)' },
+    image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
   },
   {
     id: 'bahia-lectora',
@@ -56,7 +69,7 @@ const PROJECTS = [
     textKey: 'projectExpensesManagerText',
     stack: ['Angular', 'TypeScript', 'Django REST', 'MySQL'],
     repo: `${GITHUB}/project-expenses-manager`,
-    placeholder: { Icon: AccountBalanceWalletIcon, gradient: 'linear-gradient(135deg, #0c2e22 0%, #1f5c45 50%, #c3002f 100%)' },
+    image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
   },
   {
     id: 'project-zomboid-server-status',
@@ -73,7 +86,7 @@ const PROJECTS = [
     textKey: 'projectHeartopiaText',
     stack: ['Python', 'Tkinter', 'PyInstaller'],
     repo: `${GITHUB}/heartopia-piano-translator`,
-    placeholder: { Icon: PianoIcon, gradient: 'linear-gradient(135deg, #1b3a5c 0%, #3776ab 55%, #e8c547 100%)' },
+    image: { src: heartopia, srcSm: heartopiaSm, srcMd: heartopiaMd, srcLg: heartopiaLg },
   },
 ];
 

@@ -1054,7 +1054,6 @@ img {
   
   /* Improved content spacing */
   .games-page,
-  .vrar-page,
   .webs-page {
     padding: 1rem;
     margin: 0;
@@ -1250,13 +1249,27 @@ img {
 }
 
 .games-page a,
-.vrar-page a,
 .webs-page a {
   font-weight: bold;
   text-decoration: none;
 }
 
-/* Project call-to-action links (repo, playable build) on the Games and AR/VR pages */
+/* Games & XR: one section per engine (Godot, Unity) plus AR/VR */
+.games-section + .games-section {
+  margin-top: 3rem;
+}
+
+.games-section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Project titles under a section title are h3s but keep the h2 look */
+.games-page h3.two-columns-title {
+  @apply text-xl;
+}
+
+/* Project call-to-action links (repo, playable build) on the Games & XR page */
 .project-links {
   display: flex;
   flex-wrap: wrap;
@@ -1264,8 +1277,7 @@ img {
   margin-top: 1.25rem;
 }
 
-.games-page .project-links a.project-link,
-.vrar-page .project-links a.project-link {
+.games-page .project-links a.project-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -1280,22 +1292,19 @@ img {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.games-page .project-links a.project-link:hover,
-.vrar-page .project-links a.project-link:hover {
+.games-page .project-links a.project-link:hover {
   background: var(--primary-hover);
   border-color: var(--primary-hover);
   color: var(--text-white);
   transform: translateY(-2px);
 }
 
-.games-page .project-links a.project-link-secondary,
-.vrar-page .project-links a.project-link-secondary {
+.games-page .project-links a.project-link-secondary {
   background: transparent;
   color: var(--primary-color);
 }
 
-.games-page .project-links a.project-link-secondary:hover,
-.vrar-page .project-links a.project-link-secondary:hover {
+.games-page .project-links a.project-link-secondary:hover {
   background: var(--primary-bg-light);
   color: var(--primary-color);
 }
@@ -1395,8 +1404,7 @@ img {
    background colour on gold is 5:1 (WCAG AA). */
 .dark-mode .banner-cta-button:not(.banner-cta-secondary),
 .dark-mode .projects-page .project-actions a.project-button:not(.project-button-outline),
-.dark-mode .games-page .project-links a.project-link:not(.project-link-secondary),
-.dark-mode .vrar-page .project-links a.project-link:not(.project-link-secondary) {
+.dark-mode .games-page .project-links a.project-link:not(.project-link-secondary) {
   color: var(--background) !important;
 }
 
@@ -1616,14 +1624,12 @@ img {
 }
 
 .light-mode .games-page a,
-.light-mode .vrar-page a,
 .light-mode .webs-page a {
   color: var(--primary-color);
   text-decoration-color: var(--primary-color);
 }
 
 .light-mode .games-page a:hover,
-.light-mode .vrar-page a:hover,
 .light-mode .webs-page a:hover {
   color: var(--primary-hover);
   text-decoration-color: var(--primary-hover);
@@ -1698,9 +1704,14 @@ img {
     line-height: 1.2;
   }
   
-  h2 {
+  h2,
+  .games-page h3.two-columns-title {
     font-size: 1.5rem; /* 24px */
     line-height: 1.3;
+  }
+
+  .games-section-title {
+    font-size: 1.6rem;
   }
   
   /* Mobile banner improvements */

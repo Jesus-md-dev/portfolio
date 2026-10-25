@@ -12,7 +12,7 @@
     margin: 1rem auto !important;
 }
 
-/* Five section tabs: stack icon above label on narrow phones so they fit */
+/* Section tabs: stack icon above label on narrow phones so they fit */
 @media (max-width: 480px) {
   .navigation-section .modern-tab {
     flex-direction: column !important;
@@ -20,6 +20,10 @@
     padding: 0.4rem 0.1rem !important;
     font-size: 0.65rem !important;
     min-height: 54px !important;
+    /* "VIDEOJUEGOS Y XR" is wider than a quarter of a 360 px screen: let it wrap */
+    white-space: normal !important;
+    line-height: 1.15 !important;
+    text-align: center;
   }
 
   .navigation-section .modern-tab .MuiTab-icon {

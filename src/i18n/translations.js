@@ -7,8 +7,7 @@ export const translations = {
     // Navigation
     cv: "CV",
     webs: "Webs",
-    games: "Games",
-    arvr: "AR/VR",
+    games: "Videojuegos y XR",
     
     // About section
     aboutMe: "SOBRE MÍ",
@@ -44,7 +43,10 @@ export const translations = {
     metaTitleProjects: "Proyectos personales - React, React Native, Node.js | Jesús Márquez Delgado",
     metaDescriptionProjects: "Proyectos personales de Jesús Márquez Delgado con código en GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status y Heartopia Piano Translator.",
     
-    // Games section
+    // Games & XR section
+    gamesSectionGodot: "Godot",
+    gamesSectionUnity: "Unity",
+    gamesSectionArvr: "AR/VR",
     survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Shooter de oleadas",
     spaceBallTitle: "Space Ball",
@@ -57,9 +59,9 @@ export const translations = {
     
     zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
     
-    alTenedorTitle: "¡Al tenedor!",
-    alTenedorText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
-    alTenedorScreenshotAlt: "Menú principal de ¡Al tenedor! con las opciones de partida local y online",
+    queTePinchoTitle: "¡Que te pincho!",
+    queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
+    queTePinchoScreenshotAlt: "Menú principal de ¡Que te pincho! con las opciones de partida local y online",
     playInBrowser: "Jugar en el navegador",
     playVideo: "Reproducir vídeo",
     viewCode: "Ver código en GitHub",
@@ -100,10 +102,8 @@ export const translations = {
     metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Desarrollador Web especializado en Drupal, PHP y React. Experiencia laboral, tecnologías, habilidades y formación.",
     metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
-    metaTitleGames: "Proyectos de videojuegos | Jesús Márquez Delgado",
-    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Desarrollador Web, hechos con Unity y Godot: juegos para móvil, PC y navegador.",
-    metaTitleArvr: "Proyectos de Realidad Aumentada y Virtual | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Desarrollador Web.",
+    metaTitleGames: "Videojuegos y Realidad Aumentada y Virtual | Jesús Márquez Delgado",
+    metaDescriptionGames: "Proyectos de videojuegos de Jesús Márquez Delgado, Desarrollador Web, hechos con Godot y Unity: juegos para móvil, PC y navegador, y proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR).",
 
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
@@ -131,8 +131,7 @@ export const translations = {
     // Navigation
     cv: "CV",
     webs: "Webs",
-    games: "Games",
-    arvr: "AR/VR",
+    games: "Games & XR",
     
     // About section
     aboutMe: "ABOUT ME",
@@ -168,7 +167,10 @@ export const translations = {
     metaTitleProjects: "Side projects - React, React Native, Node.js | Jesús Márquez Delgado",
     metaDescriptionProjects: "Side projects by Jesús Márquez Delgado with source code on GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status and Heartopia Piano Translator.",
     
-    // Games section
+    // Games & XR section
+    gamesSectionGodot: "Godot",
+    gamesSectionUnity: "Unity",
+    gamesSectionArvr: "AR/VR",
     survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Wave Shooter",
     spaceBallTitle: "Space Ball",
@@ -181,9 +183,9 @@ export const translations = {
     
     zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
     
-    alTenedorTitle: "¡Al tenedor!",
-    alTenedorText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
-    alTenedorScreenshotAlt: "¡Al tenedor! main menu with the local and online game options",
+    queTePinchoTitle: "¡Que te pincho!",
+    queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
+    queTePinchoScreenshotAlt: "¡Que te pincho! main menu with the local and online game options",
     playInBrowser: "Play in the browser",
     playVideo: "Play video",
     viewCode: "View code on GitHub",
@@ -224,10 +226,8 @@ export const translations = {
     metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Web Developer specialized in Drupal, PHP and React. Work experience, technologies, skills and education.",
     metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
-    metaTitleGames: "Game development projects | Jesús Márquez Delgado",
-    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer, made with Unity and Godot: games for mobile, PC and the browser.",
-    metaTitleArvr: "Augmented and Virtual Reality projects | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Web Developer.",
+    metaTitleGames: "Games and Augmented & Virtual Reality projects | Jesús Márquez Delgado",
+    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer, made with Godot and Unity: games for mobile, PC and the browser, plus Augmented Reality (AR) and Virtual Reality (VR) projects.",
 
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
