@@ -118,10 +118,10 @@ export const translations = {
     quimicefaText: "Videojuego móvil de realidad aumentada, desarrollado en Unity. La jugabilidad consiste en resolver problemas de química mediante la utilización de la cámara del dispositivo móvil. El juego utiliza cuatro diferentes cartas, las cuales serán reconocidas como diferentes elementos químicos y la tarea a entregar. Se deberá entregar el compuesto requerido, uniendo cartas y acercándolas a la tarea.",
     
     // Footer
-    allRightsReserved: "© 2025 Jesús Márquez Delgado. Todos los derechos reservados",
-    footerSubtitle: "Ingeniero Informático y Desarrollador Full-Stack",
+    allRightsReserved: "Jesús Márquez Delgado. Todos los derechos reservados",
+    footerSubtitle: "Desarrollador Web · Drupal, PHP y React",
     footerLocationSpain: "📍 Cádiz, España",
-    availableForProjects: "🌐 Disponible para proyectos",
+    availableForProjects: "🌐 Abierto a nuevas oportunidades",
     
     // Error Boundary
     errorTitle: "Oops! Algo salió mal",
@@ -138,23 +138,25 @@ export const translations = {
     portfolioNavigationTabs: "Pestañas de navegación del portafolio",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Ingeniero Informático | CV",
-    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Ingeniero Informático especializado en React, PHP y Drupal. Experiencia laboral, tecnologías, habilidades y formación.",
+    metaTitleCv: "Jesús Márquez Delgado - Desarrollador Web | CV",
+    metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Desarrollador Web especializado en Drupal, PHP y React. Experiencia laboral, tecnologías, habilidades y formación.",
     metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
     metaTitleGames: "Proyectos de videojuegos | Jesús Márquez Delgado",
-    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Ingeniero Informático.",
+    metaDescriptionGames: "Proyectos de desarrollo de videojuegos de Jesús Márquez Delgado, Desarrollador Web.",
     metaTitleArvr: "Proyectos de Realidad Aumentada y Virtual | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Ingeniero Informático.",
+    metaDescriptionArvr: "Proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR) desarrollados por Jesús Márquez Delgado, Desarrollador Web.",
 
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    labLink: "Laboratorio público | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Ingeniero Informático · Drupal, PHP & React",
+    bannerSubtitle: "Desarrollador Web · Drupal, PHP y React",
     bannerDescription: "Construyendo sitios web enterprise para marcas internacionales — y desarrollando videojuegos y experiencias AR/VR en Unity por pasión",
     bannerCtaContact: "Contáctame",
+    bannerCtaGithub: "Ver GitHub",
     webDevelopmentTitle: "🌐 Desarrollo Web",
     gameDevelopmentTitle: "🎮 Desarrollo de Juegos",
     technologiesTitle: "🔧 Tecnologías",
@@ -282,10 +284,10 @@ export const translations = {
     quimicefaText: "Augmented reality mobile video game, developed in Unity. The gameplay consists of solving chemistry problems using the mobile device camera. The game uses four different cards, which will be recognized as different chemical elements and the task to be delivered. The required compound must be delivered by joining cards and bringing them closer to the task.",
     
     // Footer
-    allRightsReserved: "© 2025 Jesús Márquez Delgado. All rights reserved",
-    footerSubtitle: "Computer Engineer & Full-Stack Developer",
+    allRightsReserved: "Jesús Márquez Delgado. All rights reserved",
+    footerSubtitle: "Web Developer · Drupal, PHP & React",
     footerLocationSpain: "📍 Cádiz, Spain",
-    availableForProjects: "🌐 Available for projects",
+    availableForProjects: "🌐 Open to new opportunities",
     
     // Error Boundary
     errorTitle: "Oops! Something went wrong",
@@ -302,23 +304,25 @@ export const translations = {
     portfolioNavigationTabs: "Portfolio navigation tabs",
 
     // SEO - Page titles and meta descriptions per section
-    metaTitleCv: "Jesús Márquez Delgado - Computer Engineer | CV",
-    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Computer Engineer specialized in React, PHP and Drupal. Work experience, technologies, skills and education.",
+    metaTitleCv: "Jesús Márquez Delgado - Web Developer | CV",
+    metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Web Developer specialized in Drupal, PHP and React. Work experience, technologies, skills and education.",
     metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
     metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
     metaTitleGames: "Game development projects | Jesús Márquez Delgado",
-    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Computer Engineer.",
+    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer.",
     metaTitleArvr: "Augmented and Virtual Reality projects | Jesús Márquez Delgado",
-    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Computer Engineer.",
+    metaDescriptionArvr: "Augmented Reality (AR) and Virtual Reality (VR) projects developed by Jesús Márquez Delgado, Web Developer.",
 
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
     linkedinLink: "Jesús Márquez Delgado | LinkedIn",
+    labLink: "Public lab | lab.jzmarquez.com",
     
     // Banner
-    bannerSubtitle: "Computer Engineer · Drupal, PHP & React",
+    bannerSubtitle: "Web Developer · Drupal, PHP & React",
     bannerDescription: "Building enterprise websites for international brands — and crafting games and AR/VR experiences in Unity on the side",
     bannerCtaContact: "Contact me",
+    bannerCtaGithub: "View GitHub",
     webDevelopmentTitle: "🌐 Web Development",
     gameDevelopmentTitle: "🎮 Game Development",
     technologiesTitle: "🔧 Technologies",
