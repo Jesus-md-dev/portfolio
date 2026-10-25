@@ -8,7 +8,18 @@ const setMetaContent = (selector, content) => {
   }
 };
 
-const PageMeta = ({ title, description }) => {
+const SITE_URL = 'https://jzmarquez.com';
+
+const PageMeta = ({ title, description, path = '/' }) => {
+  useEffect(() => {
+    const url = `${SITE_URL}${path}`;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', url);
+    }
+    setMetaContent('meta[property="og:url"]', url);
+  }, [path]);
+
   useEffect(() => {
     if (!title) return;
 
@@ -26,6 +37,8 @@ const PageMeta = ({ title, description }) => {
 PageMeta.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  // Canonical path of the section, e.g. '/projects'. The CV is canonical at '/'.
+  path: PropTypes.string,
 };
 
 export default PageMeta;

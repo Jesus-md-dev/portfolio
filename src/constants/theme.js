@@ -2,7 +2,7 @@ export const THEMES = {
   dark: {
     name: 'dark',
     colors: {
-      primary: '#a18a66', // Gold/Bronze
+      primary: '#ab9470', // Gold/Bronze (4.5:1 or more on the dark background and cards)
       primaryHover: '#96794b', // Darker gold
       secondary: '#ffffff',
       background: '#1f2937', // bg-gray-800 (Blue-grey)

@@ -4,7 +4,7 @@
 
 /* CSS Variables for theming */
 :root {
-  --primary-color: #a18a66;
+  --primary-color: #ab9470;
   --primary-hover: #96794b;
   --secondary-color: #ffffff;
   --background: #1f2937;
@@ -499,6 +499,13 @@ img {
   border-color: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px var(--primary-bg-medium);
+}
+
+/* Icons follow the button text; the global "svg" theme rule painted the
+   primary button's icon in the same gold as its background. */
+.banner-cta-row .banner-cta-button svg {
+  fill: currentColor;
+  color: inherit;
 }
 
 .banner-cta-secondary {
@@ -1322,7 +1329,7 @@ img {
 
 /* DARK THEME */
 .dark-mode {
-  --primary-color: #a18a66;
+  --primary-color: #ab9470;
   --primary-hover: #96794b;
   --secondary-color: #ffffff;
   --background: #1f2937;
@@ -1364,8 +1371,8 @@ img {
 }
 
 .dark-mode .download-cv-button {
-  background-color: var(--primary-hover);
-  border: 1px solid var(--primary-hover) !important;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
 }
 
 .dark-mode button:hover {
@@ -1380,8 +1387,17 @@ img {
 
 .dark-mode .Mui-selected,
 .dark-mode .Mui-selected svg {
-  color: var(--text) !important;
-  fill: var(--text) !important;
+  color: var(--background) !important;
+  fill: var(--background) !important;
+}
+
+/* Gold-filled buttons in the dark theme: white on gold is 3.3:1, the dark
+   background colour on gold is 5:1 (WCAG AA). */
+.dark-mode .banner-cta-button:not(.banner-cta-secondary),
+.dark-mode .projects-page .project-actions a.project-button:not(.project-button-outline),
+.dark-mode .games-page .project-links a.project-link:not(.project-link-secondary),
+.dark-mode .vrar-page .project-links a.project-link:not(.project-link-secondary) {
+  color: var(--background) !important;
 }
 
 .dark-mode .MuiTabs-root button {
@@ -1757,4 +1773,64 @@ img {
   .MuiIconButton-root:hover {
     transform: none !important;
   }
+}
+/* YouTube click-to-load facade (TwoColumns): thumbnail + play button until clicked */
+.video-facade {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.dark-mode .video-facade:hover,
+.light-mode .video-facade:hover {
+  background: #000;
+}
+
+.video-facade-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(17, 24, 39, 0.75);
+  color: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.video-facade .video-facade-play svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.video-facade:hover .video-facade-play {
+  background: var(--primary-color);
+}
+
+.video-facade:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Keyboard focus: the skill chips reset their outline and MUI's ButtonBase
+   removes it from the tabs, so neither showed where the focus was. */
+.banner-skill-items .banner-skill-tag:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Drawn inside the tab: the MUI tab scroller clips anything outside it. */
+.navigation-section .modern-tab.Mui-focusVisible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: -5px;
 }
