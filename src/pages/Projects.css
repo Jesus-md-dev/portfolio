@@ -44,29 +44,53 @@
   box-shadow: none;
 }
 
-.project-placeholder {
+/* Type filters: toggle buttons, the pressed one filled in gold */
+.projects-filters {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem;
+  margin: 0 0 1.5rem;
 }
 
-.projects-page .project-placeholder .project-placeholder-icon {
-  font-size: 3rem;
-  fill: #ffffff;
-  color: #ffffff;
-  opacity: 0.9;
+.projects-page button.projects-filter {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.project-placeholder-name {
-  font-size: 1.25rem;
+.projects-page button.projects-filter:hover {
+  background: var(--primary-bg-light);
+}
+
+.projects-page button.projects-filter[aria-pressed="true"] {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.dark-mode .projects-page button.projects-filter[aria-pressed="true"] {
+  color: var(--background);
+}
+
+.projects-page button.projects-filter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* University / professional work */
+.project-badge {
+  align-self: flex-start;
+  margin-top: -0.25rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .project-body {
@@ -154,4 +178,10 @@
 .projects-page .project-actions a.project-button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.project-text a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

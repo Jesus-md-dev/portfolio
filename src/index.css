@@ -1052,13 +1052,6 @@ img {
     display: none;
   }
   
-  /* Improved content spacing */
-  .games-page,
-  .webs-page {
-    padding: 1rem;
-    margin: 0;
-  }
-  
   .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -1248,84 +1241,6 @@ img {
   }
 }
 
-.games-page a,
-.webs-page a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Games & XR: one section per engine (Godot, Unity) plus AR/VR */
-.games-section + .games-section {
-  margin-top: 3rem;
-}
-
-.games-section-title {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Project titles under a section title are h3s but keep the h2 look */
-.games-page h3.two-columns-title {
-  @apply text-xl;
-}
-
-/* Project call-to-action links (repo, playable build) on the Games & XR page */
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-}
-
-.games-page .project-links a.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid var(--primary-color);
-  background: var(--primary-color);
-  color: var(--text-white);
-  font-size: 0.95rem;
-  white-space: nowrap;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.games-page .project-links a.project-link:hover {
-  background: var(--primary-hover);
-  border-color: var(--primary-hover);
-  color: var(--text-white);
-  transform: translateY(-2px);
-}
-
-.games-page .project-links a.project-link-secondary {
-  background: transparent;
-  color: var(--primary-color);
-}
-
-.games-page .project-links a.project-link-secondary:hover {
-  background: var(--primary-bg-light);
-  color: var(--primary-color);
-}
-
-.project-links .project-link svg {
-  fill: currentColor;
-  color: inherit;
-}
-
-.project-badge {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 0.1rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  font-size: 0.8rem;
-  font-weight: 700;
-  vertical-align: middle;
-}
-
 .footer svg {
   margin: 0 1rem;
   width: 2.5rem;
@@ -1403,8 +1318,7 @@ img {
 /* Gold-filled buttons in the dark theme: white on gold is 3.3:1, the dark
    background colour on gold is 5:1 (WCAG AA). */
 .dark-mode .banner-cta-button:not(.banner-cta-secondary),
-.dark-mode .projects-page .project-actions a.project-button:not(.project-button-outline),
-.dark-mode .games-page .project-links a.project-link:not(.project-link-secondary) {
+.dark-mode .projects-page .project-actions a.project-button:not(.project-button-outline) {
   color: var(--background) !important;
 }
 
@@ -1623,18 +1537,6 @@ img {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.light-mode .games-page a,
-.light-mode .webs-page a {
-  color: var(--primary-color);
-  text-decoration-color: var(--primary-color);
-}
-
-.light-mode .games-page a:hover,
-.light-mode .webs-page a:hover {
-  color: var(--primary-hover);
-  text-decoration-color: var(--primary-hover);
-}
-
 /* Smooth transitions for theme switching */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -1704,16 +1606,11 @@ img {
     line-height: 1.2;
   }
   
-  h2,
-  .games-page h3.two-columns-title {
+  h2 {
     font-size: 1.5rem; /* 24px */
     line-height: 1.3;
   }
 
-  .games-section-title {
-    font-size: 1.6rem;
-  }
-  
   /* Mobile banner improvements */
   header {
     padding-top: 2rem !important;
@@ -1785,7 +1682,7 @@ img {
     transform: none !important;
   }
 }
-/* YouTube click-to-load facade (TwoColumns): thumbnail + play button until clicked */
+/* YouTube click-to-load facade (YouTubeFacade): thumbnail + play button until clicked */
 .video-facade {
   position: relative;
   display: block;

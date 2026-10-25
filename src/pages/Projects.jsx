@@ -1,124 +1,140 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSearchParams } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Line from "../components/Line";
 import ResponsiveImg from "../components/ResponsiveImg";
+import YouTubeFacade from "../components/YouTubeFacade";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import config from "../config/index.js";
-import bahiaLectora from "../files/images/bahia-lectora.webp";
-import bahiaLectoraSm from "../files/images/bahia-lectora-sm.webp";
-import bahiaLectoraMd from "../files/images/bahia-lectora-md.webp";
-import bahiaLectoraLg from "../files/images/bahia-lectora-lg.webp";
-import pzServerStatus from "../files/images/pz-server-status.webp";
-import pzServerStatusSm from "../files/images/pz-server-status-sm.webp";
-import pzServerStatusMd from "../files/images/pz-server-status-md.webp";
-import pzServerStatusLg from "../files/images/pz-server-status-lg.webp";
-import pandeconomy from "../files/images/pandeconomy.webp";
-import pandeconomySm from "../files/images/pandeconomy-sm.webp";
-import pandeconomyMd from "../files/images/pandeconomy-md.webp";
-import pandeconomyLg from "../files/images/pandeconomy-lg.webp";
-import videoclub from "../files/images/videoclub-local.webp";
-import videoclubSm from "../files/images/videoclub-local-sm.webp";
-import videoclubMd from "../files/images/videoclub-local-md.webp";
-import videoclubLg from "../files/images/videoclub-local-lg.webp";
-import expensesManager from "../files/images/project-expenses-manager.webp";
-import expensesManagerSm from "../files/images/project-expenses-manager-sm.webp";
-import expensesManagerMd from "../files/images/project-expenses-manager-md.webp";
-import expensesManagerLg from "../files/images/project-expenses-manager-lg.webp";
-import heartopia from "../files/images/heartopia-piano-translator.webp";
-import heartopiaSm from "../files/images/heartopia-piano-translator-sm.webp";
-import heartopiaMd from "../files/images/heartopia-piano-translator-md.webp";
-import heartopiaLg from "../files/images/heartopia-piano-translator-lg.webp";
+import { PROJECTS, PROJECT_TYPES } from "../data/projects.js";
 import "./Projects.css";
 
-const GITHUB = 'https://github.com/Jesus-md-dev';
+const FILTER_LABEL_KEYS = {
+  all: 'filterAll',
+  web: 'filterWeb',
+  mobile: 'filterMobile',
+  desktop: 'filterDesktop',
+  games: 'filterGames',
+  xr: 'filterXr',
+};
 
-// Each project shows a screenshot (`image`). A project without one can set
-// `placeholder` instead: a gradient themed after its stack, with an icon and
-// the project name.
-const PROJECTS = [
-  {
-    id: 'pandeconomy',
-    name: 'Pandeconomy',
-    textKey: 'projectPandeconomyText',
-    stack: ['React Native', 'TypeScript', 'MMKV', 'GitHub Actions'],
-    repo: `${GITHUB}/pandeconomy`,
-    image: { src: pandeconomy, srcSm: pandeconomySm, srcMd: pandeconomyMd, srcLg: pandeconomyLg },
-  },
-  {
-    id: 'videoclub-local',
-    name: 'Videoclub Local',
-    textKey: 'projectVideoclubText',
-    stack: ['Node.js', 'Express', 'React', 'Vite', 'ffmpeg', 'Android TV'],
-    repo: `${GITHUB}/videoclub-local`,
-    image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
-  },
-  {
-    id: 'bahia-lectora',
-    name: 'Bahía Lectora',
-    textKey: 'projectBahiaLectoraText',
-    stack: ['React', 'Vite', 'Tailwind CSS', 'Google APIs', 'Netlify'],
-    repo: `${GITHUB}/bahia-lectora`,
-    live: 'https://bahia-lectora.jzmarquez.com/',
-    image: { src: bahiaLectora, srcSm: bahiaLectoraSm, srcMd: bahiaLectoraMd, srcLg: bahiaLectoraLg },
-  },
-  {
-    id: 'project-expenses-manager',
-    name: 'Project Expenses Manager',
-    textKey: 'projectExpensesManagerText',
-    stack: ['Angular', 'TypeScript', 'Django REST', 'MySQL'],
-    repo: `${GITHUB}/project-expenses-manager`,
-    image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
-  },
-  {
-    id: 'project-zomboid-server-status',
-    name: 'Project Zomboid Server Status',
-    textKey: 'projectZomboidStatusText',
-    stack: ['Netlify Functions', 'RCON', 'JavaScript'],
-    repo: `${GITHUB}/project-zomboid-server-status`,
-    live: 'https://pz-server-status.netlify.app/',
-    image: { src: pzServerStatus, srcSm: pzServerStatusSm, srcMd: pzServerStatusMd, srcLg: pzServerStatusLg },
-  },
-  {
-    id: 'heartopia-piano-translator',
-    name: 'Heartopia Piano Translator',
-    textKey: 'projectHeartopiaText',
-    stack: ['Python', 'Tkinter', 'PyInstaller'],
-    repo: `${GITHUB}/heartopia-piano-translator`,
-    image: { src: heartopia, srcSm: heartopiaSm, srcMd: heartopiaMd, srcLg: heartopiaLg },
-  },
-];
+const ORIGIN_BADGE_KEYS = {
+  university: 'universityProject',
+  work: 'professionalWork',
+};
 
-function ProjectMedia({ project, alt }) {
-  if (project.image) {
-    return (
-      <ResponsiveImg
-        className="project-media w-full aspect-video object-cover object-top"
-        {...project.image}
-        alt={alt}
-        sizes="(max-width: 1024px) 92vw, 400px"
-        loading="lazy"
-      />
-    );
+function ProjectMedia({ project, name, alt }) {
+  if (project.video) {
+    return <YouTubeFacade className="project-media" videoId={project.video} title={name} />;
   }
-
-  const { Icon, gradient } = project.placeholder;
   return (
-    <div className="project-media project-placeholder w-full aspect-video" style={{ background: gradient }} aria-hidden="true">
-      <Icon className="project-placeholder-icon" />
-      <span className="project-placeholder-name">{project.name}</span>
-    </div>
+    <ResponsiveImg
+      className="project-media w-full aspect-video object-cover object-top"
+      {...project.image}
+      alt={alt}
+      sizes="(max-width: 1024px) 92vw, 400px"
+      loading="lazy"
+    />
   );
 }
 
 ProjectMedia.propTypes = {
   project: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+};
+
+function ProjectLink({ href, label, ariaLabel, Icon, outline }) {
+  return (
+    <a
+      className={`project-button${outline ? ' project-button-outline' : ''}`}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+    >
+      {Icon && <Icon fontSize="small" />}
+      {label}
+    </a>
+  );
+}
+
+ProjectLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string,
+  Icon: PropTypes.elementType,
+  outline: PropTypes.bool,
+};
+
+function ProjectCard({ project }) {
+  const { t } = useLanguage();
+  const name = project.nameKey ? t(project.nameKey) : project.name;
+  const alt = project.altKey ? t(project.altKey) : `${t('projectsScreenshotOf')} ${name}`;
+  const badgeKey = ORIGIN_BADGE_KEYS[project.origin];
+
+  return (
+    <li className="project-card">
+      <ProjectMedia project={project} name={name} alt={alt} />
+      <div className="project-body">
+        <h3 className="project-name">{name}</h3>
+        {badgeKey && <span className="project-badge">{t(badgeKey)}</span>}
+        <p className="project-text">{t(project.textKey)}</p>
+        {project.coauthor && (
+          <p className="project-text">
+            {t('projectsCoauthor')}{' '}
+            <a href={project.coauthor.href} target="_blank" rel="noopener noreferrer">{project.coauthor.name}</a>
+          </p>
+        )}
+        <ul className="project-stack" aria-label={t('projectsStack')}>
+          {project.stack.map((tech) => (
+            <li key={tech} className="project-chip">{tech}</li>
+          ))}
+        </ul>
+        <div className="project-actions">
+          {project.play && (
+            <ProjectLink href={project.play} label={t('playInBrowser')} ariaLabel={`${t('playInBrowser')}: ${name}`} Icon={PlayArrowIcon} />
+          )}
+          {project.repo && (
+            <ProjectLink
+              href={project.repo}
+              label={t('projectsCode')}
+              ariaLabel={`${t('projectsCode')}: ${name} (GitHub)`}
+              Icon={GitHubIcon}
+              outline={Boolean(project.play)}
+            />
+          )}
+          {project.live && (
+            <ProjectLink href={project.live} label={t('projectsLive')} ariaLabel={`${t('projectsLive')}: ${name}`} Icon={OpenInNewIcon} outline />
+          )}
+          {project.sites?.map((site) => (
+            <ProjectLink key={site.href} href={site.href} label={site.name} Icon={OpenInNewIcon} outline />
+          ))}
+        </div>
+      </div>
+    </li>
+  );
+}
+
+ProjectCard.propTypes = {
+  project: PropTypes.object.isRequired,
 };
 
 function Projects() {
   const { t } = useLanguage();
+  // The filter lives in the URL (/projects?type=games) so it can be linked;
+  // /webs, /games and /arvr redirect to their filtered views.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requested = searchParams.get('type');
+  const filter = PROJECT_TYPES.includes(requested) ? requested : 'all';
+  const visible = filter === 'all' ? PROJECTS : PROJECTS.filter((project) => project.types.includes(filter));
+
+  const selectFilter = (type) => {
+    setSearchParams(type === 'all' ? {} : { type }, { replace: true });
+  };
 
   return (
     <div className="projects-page content-width">
@@ -131,44 +147,24 @@ function Projects() {
         <a href={config.social.labProjects} target="_blank" rel="noopener noreferrer">{t('projectsLabLink')}</a>
       </p>
 
+      <div className="projects-filters" role="group" aria-label={t('filterLabel')}>
+        {['all', ...PROJECT_TYPES].map((type) => (
+          <button
+            key={type}
+            type="button"
+            className="projects-filter"
+            aria-pressed={filter === type}
+            onClick={() => selectFilter(type)}
+          >
+            {t(FILTER_LABEL_KEYS[type])}
+          </button>
+        ))}
+      </div>
+      <p className="sr-only" aria-live="polite">{`${visible.length} ${t('projectsShown')}`}</p>
+
       <ul className="projects-grid">
-        {PROJECTS.map((project) => (
-          <li key={project.id} className="project-card">
-            <ProjectMedia project={project} alt={`${t('projectsScreenshotOf')} ${project.name}`} />
-            <div className="project-body">
-              <h3 className="project-name">{project.name}</h3>
-              <p className="project-text">{t(project.textKey)}</p>
-              <ul className="project-stack" aria-label={t('projectsStack')}>
-                {project.stack.map((tech) => (
-                  <li key={tech} className="project-chip">{tech}</li>
-                ))}
-              </ul>
-              <div className="project-actions">
-                <a
-                  className="project-button"
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${t('projectsCode')}: ${project.name} (GitHub)`}
-                >
-                  <GitHubIcon fontSize="small" />
-                  {t('projectsCode')}
-                </a>
-                {project.live && (
-                  <a
-                    className="project-button project-button-outline"
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${t('projectsLive')}: ${project.name}`}
-                  >
-                    <OpenInNewIcon fontSize="small" />
-                    {t('projectsLive')}
-                  </a>
-                )}
-              </div>
-            </div>
-          </li>
+        {visible.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </ul>
     </div>

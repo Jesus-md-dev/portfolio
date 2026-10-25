@@ -6,8 +6,6 @@ export const translations = {
     
     // Navigation
     cv: "CV",
-    webs: "Webs",
-    games: "Videojuegos y XR",
     
     // About section
     aboutMe: "SOBRE MÍ",
@@ -16,19 +14,28 @@ export const translations = {
     // CV content lives in src/data/cv.{en,es}.json (shared with the PDF CV).
     downloadCV: "DESCARGAR CV",
 
-    // Webs section
+    // Project cards that come from the old Webs page
     websAt1xinternet: "Webs en 1xINTERNET",
     websAt1xinternetText: "Actualmente, en mi trabajo como desarrollador web en 1xINTERNET, he tenido la oportunidad de trabajar en diferentes proyectos, tanto en la parte del front-end como en el back-end. Principalmente, he trabajado con Drupal dedicándome al back-end y al site building, pero también he tenido la oportunidad de trabajar como front-end utilizando React y Tailwind CSS. Las webs en las que he trabajado son Circor, Pumps, Maggi y Thomy.",
     
-    personalCVWeb: "Mi CV web",
     personalCVWebText: "Web personal en la que muestro mi Currículum Vitae y algunos de los proyectos en los que he trabajado. La web está hecha con React como librería utilizada para el front-end, Tailwind CSS y la librería de componentes MUI.",
     projectsShowcase: "Muestra de proyectos de 1xINTERNET",
     personalWebsiteScreenshot: "Captura de pantalla del sitio web CV personal",
 
     // Projects section
     projects: "Proyectos",
-    projectsTitle: "Proyectos personales",
-    projectsIntro: "Proyectos que he diseñado y desarrollado por mi cuenta, de principio a fin. Todos tienen el código público en GitHub.",
+    projectsTitle: "Proyectos",
+    projectsIntro: "Apps, webs, videojuegos y realidad aumentada y virtual: proyectos personales, de la universidad y de mi trabajo en 1xINTERNET.",
+    filterLabel: "Filtrar por tipo",
+    filterAll: "Todos",
+    filterWeb: "Web",
+    filterMobile: "Móvil",
+    filterDesktop: "Escritorio",
+    filterGames: "Videojuegos",
+    filterXr: "XR",
+    projectsShown: "proyectos mostrados",
+    professionalWork: "Trabajo profesional",
+    projectsCoauthor: "En equipo con",
     projectsLabLink: "Más experimentos en mi laboratorio público →",
     projectsCode: "Código",
     projectsLive: "Ver web",
@@ -40,13 +47,10 @@ export const translations = {
     projectExpensesManagerText: "Trabajo Fin de Grado (Universidad de Cádiz, 2022): presupuestos de proyecto compartidos, ingresos y gastos, gráficas y notificaciones por e-mail.",
     projectZomboidStatusText: "Página de estado en directo de un servidor de Project Zomboid: jugadores conectados vía RCON desde una Netlify Function y explorador de mods.",
     projectHeartopiaText: "Aplicación de escritorio para Windows que convierte partituras de Heartopia en las teclas de piano que hay que pulsar.",
-    metaTitleProjects: "Proyectos personales - React, React Native, Node.js | Jesús Márquez Delgado",
-    metaDescriptionProjects: "Proyectos personales de Jesús Márquez Delgado con código en GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status y Heartopia Piano Translator.",
+    metaTitleProjects: "Proyectos - Webs, apps, videojuegos y XR | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Proyectos de Jesús Márquez Delgado: webs y apps con React, React Native, Node.js y Angular, webs con Drupal para 1xINTERNET, y videojuegos y proyectos de realidad aumentada y virtual con Godot y Unity.",
     
-    // Games & XR section
-    gamesSectionGodot: "Godot",
-    gamesSectionUnity: "Unity",
-    gamesSectionArvr: "AR/VR",
+    // Game and XR project cards
     survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Shooter de oleadas",
     spaceBallTitle: "Space Ball",
@@ -60,14 +64,12 @@ export const translations = {
     zigzagCubeText: "Videojuego móvil desarrollado en Unity, en el que el jugador controla un cubo que se mueve automáticamente, variando la dirección de movimiento con un toque en la pantalla. El mapa se genera de forma aleatoria a partir de un conjunto de piezas prefabricadas, lo que permite que el jugador pueda jugar de forma infinita.",
     
     queTePinchoTitle: "¡Que te pincho!",
-    queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
+    queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en Godot 4.",
     queTePinchoScreenshotAlt: "Menú principal de ¡Que te pincho! con las opciones de partida local y online",
     playInBrowser: "Jugar en el navegador",
     playVideo: "Reproducir vídeo",
-    viewCode: "Ver código en GitHub",
     universityProject: "Proyecto universitario",
 
-    // VR/AR section
     monsterWarTitle: "Monster War (RA)",
     spaceSurvivalTitle: "Space Survival (RV)",
     quimicefaTitle: "Quimicefa (RA)",
@@ -100,10 +102,6 @@ export const translations = {
     // SEO - Page titles and meta descriptions per section
     metaTitleCv: "Jesús Márquez Delgado - Desarrollador Web | CV",
     metaDescriptionCv: "Curriculum Vitae de Jesús Márquez Delgado, Desarrollador Web especializado en Drupal, PHP y React. Experiencia laboral, tecnologías, habilidades y formación.",
-    metaTitleWebs: "Proyectos web - React, Drupal, PHP | Jesús Márquez Delgado",
-    metaDescriptionWebs: "Proyectos web desarrollados por Jesús Márquez Delgado con React, Drupal, PHP y Tailwind CSS, incluyendo trabajo para 1xINTERNET, Circor, Maggi y Thomy.",
-    metaTitleGames: "Videojuegos y Realidad Aumentada y Virtual | Jesús Márquez Delgado",
-    metaDescriptionGames: "Proyectos de videojuegos de Jesús Márquez Delgado, Desarrollador Web, hechos con Godot y Unity: juegos para móvil, PC y navegador, y proyectos de Realidad Aumentada (AR) y Realidad Virtual (VR).",
 
     // Enlaces sociales
     githubLink: "Jesus-md-dev | GitHub", 
@@ -130,8 +128,6 @@ export const translations = {
     
     // Navigation
     cv: "CV",
-    webs: "Webs",
-    games: "Games & XR",
     
     // About section
     aboutMe: "ABOUT ME",
@@ -140,19 +136,28 @@ export const translations = {
     // CV content lives in src/data/cv.{en,es}.json (shared with the PDF CV).
     downloadCV: "DOWNLOAD CV",
 
-    // Webs section
+    // Project cards that come from the old Webs page
     websAt1xinternet: "Webs at 1xINTERNET",
     websAt1xinternetText: "Currently, in my job as a web developer at 1xINTERNET, I have had the opportunity to work on different projects, both on the front-end and back-end. I have mainly worked with Drupal focusing on back-end and site building, but I have also had the opportunity to work as a front-end developer using React and Tailwind CSS. The websites I have worked on are Circor, Pumps, Maggi and Thomy.",
     
-    personalCVWeb: "My CV website",
     personalCVWebText: "Personal website where I showcase my Curriculum Vitae and some of the projects I have worked on. The website is built with React as the front-end library, Tailwind CSS and the MUI component library.",
     projectsShowcase: "1xINTERNET projects showcase",
     personalWebsiteScreenshot: "Personal CV website screenshot",
 
     // Projects section
     projects: "Projects",
-    projectsTitle: "Side projects",
-    projectsIntro: "Projects I have designed and built on my own, end to end. All of them have public source code on GitHub.",
+    projectsTitle: "Projects",
+    projectsIntro: "Apps, websites, games and augmented and virtual reality: side projects, university projects and my work at 1xINTERNET.",
+    filterLabel: "Filter by type",
+    filterAll: "All",
+    filterWeb: "Web",
+    filterMobile: "Mobile",
+    filterDesktop: "Desktop",
+    filterGames: "Games",
+    filterXr: "XR",
+    projectsShown: "projects shown",
+    professionalWork: "Professional work",
+    projectsCoauthor: "Team project with",
     projectsLabLink: "More experiments in my public lab →",
     projectsCode: "Code",
     projectsLive: "Live",
@@ -164,13 +169,10 @@ export const translations = {
     projectExpensesManagerText: "Final degree project (University of Cádiz, 2022): shared project budgets, incomes and expenses, charts and e-mail notifications.",
     projectZomboidStatusText: "Live status page for a Project Zomboid server: players online via RCON from a Netlify Function, plus a mods browser.",
     projectHeartopiaText: "Windows desktop app that converts Heartopia music sheets into the piano keys to press.",
-    metaTitleProjects: "Side projects - React, React Native, Node.js | Jesús Márquez Delgado",
-    metaDescriptionProjects: "Side projects by Jesús Márquez Delgado with source code on GitHub: Pandeconomy, Videoclub Local, Bahía Lectora, Project Expenses Manager, Project Zomboid Server Status and Heartopia Piano Translator.",
+    metaTitleProjects: "Projects - Websites, apps, games and XR | Jesús Márquez Delgado",
+    metaDescriptionProjects: "Projects by Jesús Márquez Delgado: websites and apps built with React, React Native, Node.js and Angular, Drupal websites for 1xINTERNET, and games and augmented and virtual reality projects made with Godot and Unity.",
     
-    // Games & XR section
-    gamesSectionGodot: "Godot",
-    gamesSectionUnity: "Unity",
-    gamesSectionArvr: "AR/VR",
+    // Game and XR project cards
     survivalZombieTitle: "Survival Zombie",
     waveShooterTitle: "Wave Shooter",
     spaceBallTitle: "Space Ball",
@@ -184,14 +186,12 @@ export const translations = {
     zigzagCubeText: "Mobile video game developed in Unity, where the player controls a cube that moves automatically, changing the direction of movement with a screen tap. The map is randomly generated from a set of prefab pieces, allowing the player to play infinitely.",
     
     queTePinchoTitle: "¡Que te pincho!",
-    queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
+    queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with Godot 4.",
     queTePinchoScreenshotAlt: "¡Que te pincho! main menu with the local and online game options",
     playInBrowser: "Play in the browser",
     playVideo: "Play video",
-    viewCode: "View code on GitHub",
     universityProject: "University project",
 
-    // VR/AR section
     monsterWarTitle: "Monster War (AR)",
     spaceSurvivalTitle: "Space Survival (VR)",
     quimicefaTitle: "Quimicefa (AR)",
@@ -224,10 +224,6 @@ export const translations = {
     // SEO - Page titles and meta descriptions per section
     metaTitleCv: "Jesús Márquez Delgado - Web Developer | CV",
     metaDescriptionCv: "Curriculum Vitae of Jesús Márquez Delgado, Web Developer specialized in Drupal, PHP and React. Work experience, technologies, skills and education.",
-    metaTitleWebs: "Web projects - React, Drupal, PHP | Jesús Márquez Delgado",
-    metaDescriptionWebs: "Web projects built by Jesús Márquez Delgado with React, Drupal, PHP and Tailwind CSS, including work for 1xINTERNET, Circor, Maggi and Thomy.",
-    metaTitleGames: "Games and Augmented & Virtual Reality projects | Jesús Márquez Delgado",
-    metaDescriptionGames: "Game development projects by Jesús Márquez Delgado, Web Developer, made with Godot and Unity: games for mobile, PC and the browser, plus Augmented Reality (AR) and Virtual Reality (VR) projects.",
 
     // Social Links
     githubLink: "Jesus-md-dev | GitHub",
