@@ -1,3 +1,18 @@
 .contact-info svg {
     margin-right: .5rem;
 }
+
+.cv-muted {
+    opacity: .75;
+    font-size: .95em;
+}
+
+.cv-skill-group,
+.cv-project {
+    margin-bottom: .75rem;
+}
+
+.cv-project h3 a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
