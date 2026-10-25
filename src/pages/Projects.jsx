@@ -9,6 +9,7 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import Line from "../components/Line";
 import ResponsiveImg from "../components/ResponsiveImg";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
+import config from "../config/index.js";
 import bahiaLectora from "../files/images/bahia-lectora.webp";
 import bahiaLectoraSm from "../files/images/bahia-lectora-sm.webp";
 import bahiaLectoraMd from "../files/images/bahia-lectora-md.webp";
@@ -112,7 +113,10 @@ function Projects() {
         <Line />
         {t('projectsTitle')}
       </h2>
-      <p className="projects-intro">{t('projectsIntro')}</p>
+      <p className="projects-intro">
+        {t('projectsIntro')}{' '}
+        <a href={config.social.labProjects} target="_blank" rel="noopener noreferrer">{t('projectsLabLink')}</a>
+      </p>
 
       <ul className="projects-grid">
         {PROJECTS.map((project) => (

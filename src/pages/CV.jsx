@@ -127,7 +127,7 @@ function CV() {
             <EmailIcon /> <a href={`mailto:${config.contact.email}`} target="_blank" rel="noopener noreferrer">{config.contact.email}</a>
           </div>
           <div>
-            <MapIcon /> <a href="https://www.google.es/maps/place/Chiclana+de+la+Frontera,+C%C3%A1diz" target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
+            <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
           </div>
           <div>
             <WorkIcon /> {t('availability')}
