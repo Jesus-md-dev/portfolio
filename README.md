@@ -8,6 +8,8 @@ My personal CV and portfolio site, live at **[jzmarquez.com](https://jzmarquez.c
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)
 
+![Screenshot of jzmarquez.com](docs/screenshot.png)
+
 ## Features
 
 - **Bilingual (EN/ES)** with a language toggle and a translation layer in `src/i18n/`.
