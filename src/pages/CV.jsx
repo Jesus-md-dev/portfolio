@@ -141,7 +141,7 @@ function CV() {
             <EmailIcon /> <a href={`mailto:${config.contact.email}`} target="_blank" rel="noopener noreferrer">{config.contact.email}</a>
           </div>
           <div>
-            <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
+            <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{cv.contact.location}</a>
           </div>
           <div>
             <WorkIcon /> {cv.contact.availability}

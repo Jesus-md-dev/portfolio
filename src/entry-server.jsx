@@ -1,6 +1,6 @@
 // Server entry for scripts/prerender.mjs, which renders each page to static
 // HTML at build time so crawlers and AI tools that don't run JavaScript see the
-// content. The browser then renders the app over it (src/index.jsx).
+// content. The browser then hydrates it or renders over it (src/index.jsx).
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import App from './App.jsx';

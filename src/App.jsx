@@ -43,10 +43,10 @@ function AppContent() {
   );
 }
 
-function App({ Router, routerProps = {} }) {
+function App({ Router, routerProps = {}, hydrating = false }) {
   return (
     <ErrorBoundary>
-      <CustomThemeProvider>
+      <CustomThemeProvider hydrating={hydrating}>
         <Router {...routerProps}>
           <LanguageProvider>
             <AppContent />
@@ -60,6 +60,7 @@ function App({ Router, routerProps = {} }) {
 App.propTypes = {
   Router: PropTypes.elementType.isRequired,
   routerProps: PropTypes.object,
+  hydrating: PropTypes.bool,
 };
 
 export default App;

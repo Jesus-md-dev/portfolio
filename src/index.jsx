@@ -31,12 +31,26 @@ if (redirect) {
   window.history.replaceState(null, '', redirect);
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Hydrate the prerendered HTML when it is exactly what the app renders first:
+// the page it was made for (not the index.html fallback of another path), and
+// no ?type= filter. Keeping its DOM means the LCP image is painted only once.
+// Anything else is rendered from scratch over it.
+const container = document.getElementById('root');
+const canHydrate = !redirect
+  && !window.location.search
+  && container.dataset.prerenderedPath === window.location.pathname;
+
 preloadSection(window.location.pathname)
   .catch(() => {
     // The lazy page loads on render instead.
   })
-  .then(() => root.render(<App Router={BrowserRouter} />));
+  .then(() => {
+    if (canHydrate) {
+      ReactDOM.hydrateRoot(container, <App Router={BrowserRouter} hydrating />);
+    } else {
+      ReactDOM.createRoot(container).render(<App Router={BrowserRouter} />);
+    }
+  });
 
 
 // Register service worker for PWA functionality

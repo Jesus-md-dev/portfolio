@@ -112,7 +112,7 @@ function pageHtml(template, page, markup) {
     .replace(/<title>[^<]*<\/title>/, () => `<title>${escapeAttr(head.title)}</title>`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, () => `<link rel="canonical" href="${head.url}" />\n    ${head.hreflang}`)
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => `<script type="application/ld+json">\n${head.jsonLd}\n    </script>`)
-    .replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
+    .replace('<div id="root"></div>', () => `<div id="root" data-prerendered-path="${page.url}">${markup}</div>`);
   for (const [attr, name, content] of [
     ['name', 'description', head.description],
     ['property', 'og:title', head.title],
