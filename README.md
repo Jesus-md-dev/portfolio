@@ -18,7 +18,7 @@ My personal CV and portfolio site, live at **[jzmarquez.com](https://jzmarquez.c
 - **SEO**: per-page metadata, Open Graph image, sitemap and robots.txt.
 - **Performance**: lazy-loaded pages, responsive WebP images in several sizes, image preloading and an LCP monitor hook.
 - **Accessibility**: ARIA labels and keyboard-navigable tabs.
-- **Downloadable CV** in PDF, in both languages.
+- **Downloadable CV** in PDF, in both languages. The /cv page and the PDFs share one source, `src/data/cv.{en,es}.json`; `npm run cv:pdf` fills `cv/cv.template.html` with it and prints both PDFs with headless Chrome.
 - **Error boundary** so a failing section doesn't take the whole page down.
 
 ## Tech stack
@@ -35,6 +35,7 @@ npm run dev       # development server
 npm run build     # production build
 npm run preview   # serve the production build locally
 npm run lint      # ESLint
+npm run cv:pdf    # rebuild the PDF CVs after editing src/data/cv.*.json
 ```
 
 ## Project structure
@@ -46,6 +47,7 @@ src/
 ├── i18n/         # Language context and EN/ES translations
 ├── contexts/     # Theme context
 ├── hooks/        # Image preloading, LCP monitoring
+├── data/         # CV content (EN/ES) and contact details, shared with the PDF CV
 └── config/       # Site and contact configuration
 ```
 

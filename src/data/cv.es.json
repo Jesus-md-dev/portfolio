@@ -1,0 +1,100 @@
+{
+  "role": "Desarrollador Web · Drupal, PHP y React",
+  "summary": "Ingeniero informático especializado en desarrollo web enterprise con Drupal, PHP y React. En 1xINTERNET construyo y mantengo sitios corporativos multiidioma para marcas internacionales como Circor, Maggi y Thomy, coordinándome en inglés con un equipo distribuido. Fuera del trabajo desarrollo proyectos full-stack, apps móviles y videojuegos.",
+  "headings": {
+    "experience": "Experiencia Laboral",
+    "skills": "Conocimientos técnicos",
+    "projects": "Proyectos destacados",
+    "education": "Formación",
+    "certifications": "Certificaciones",
+    "languages": "Idiomas",
+    "strengths": "Habilidades",
+    "contact": "Contacto"
+  },
+  "pdfHeadings": {
+    "experience": "Experiencia",
+    "skills": "Conocimientos técnicos",
+    "projects": "Proyectos destacados",
+    "education": "Formación",
+    "certifications": "Certificaciones",
+    "languages": "Idiomas",
+    "strengths": "Habilidades",
+    "contact": "Contacto"
+  },
+  "contact": {
+    "labels": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "portfolio": "Portfolio",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "location": "Cádiz, España",
+    "availability": "Empleado en 1xINTERNET — abierto a nuevas oportunidades"
+  },
+  "experience": [
+    {
+      "role": "Desarrollador Web",
+      "company": "1xINTERNET",
+      "url": "https://www.1xinternet.de/",
+      "start": "Marzo 2022",
+      "end": "Actualidad",
+      "description": "Agencia Drupal que desarrolla webs enterprise para marcas internacionales",
+      "highlights": [
+        "Site building y desarrollo backend en Drupal (PHP) para sitios corporativos multiidioma de marcas como Circor, Maggi y Thomy",
+        "Desarrollo frontend con React, Twig y Tailwind CSS integrado en temas Drupal",
+        "Traducción de peticiones de cliente en tareas técnicas planificadas y estimadas",
+        "Comunicación diaria en inglés con un equipo multicultural y distribuido",
+        "Mantenimiento y evolución continua de sitios en producción",
+        "Desarrollo asistido por IA con Claude Code para acelerar la entrega y la resolución de problemas"
+      ]
+    }
+  ],
+  "skillGroups": [
+    { "label": "Principal", "items": "Drupal (backend, site building, theming) · PHP · React · JavaScript · TypeScript · Tailwind CSS · Twig" },
+    { "label": "También", "items": "Symfony · Laravel · Angular · Node.js · Express · Django · React Native · Python · Java · C/C++ · C#" },
+    { "label": "Datos e infraestructura", "items": "MySQL · MongoDB · AWS · Netlify (Functions, Edge Functions) · Apache · Docker · DDEV · Git · GitHub Actions" },
+    { "label": "Videojuegos y XR", "items": "Godot · Unity, incluido desarrollo RV/RA" }
+  ],
+  "projects": [
+    {
+      "name": "Pandeconomy",
+      "url": "https://github.com/Jesus-md-dev/pandeconomy",
+      "description": "App Android de finanzas personales con gastos recurrentes, gráficas y widgets de pantalla de inicio en cinco idiomas; CI con ESLint, TypeScript y Jest.",
+      "stack": "React Native · TypeScript · MMKV · GitHub Actions"
+    },
+    {
+      "name": "Videoclub Local",
+      "url": "https://github.com/Jesus-md-dev/videoclub-local",
+      "description": "Videoteca autoalojada para la red doméstica con interfaz de videoclub retro, carátulas generadas automáticamente y cliente para Android TV.",
+      "stack": "Node.js · Express · React · Vite · ffmpeg · Android"
+    },
+    {
+      "name": "Bahía Lectora",
+      "url": "https://github.com/Jesus-md-dev/bahia-lectora",
+      "description": "Web de un club de lectura cuyos datos salen de Google Sheets y la API de Google Books al compilar.",
+      "stack": "React · Vite · Tailwind CSS · Google APIs · Netlify"
+    },
+    {
+      "name": "Gestor de Gastos (TFG)",
+      "url": "https://github.com/Jesus-md-dev/project-expenses-manager",
+      "description": "Trabajo de fin de grado: app full-stack para gestionar presupuestos de proyectos compartidos, con notificaciones por e-mail.",
+      "stack": "Angular · TypeScript · Django REST · MySQL"
+    }
+  ],
+  "education": [
+    { "title": "Grado en Ingeniería Informática", "details": "Universidad de Cádiz · 2017 – 2022" }
+  ],
+  "certifications": [
+    { "title": "Acquia Certified Drupal 10 Developer", "details": "Acquia · Diciembre 2024" },
+    { "title": "Cambridge B2 First (inglés)", "details": "Cambridge · Junio 2022" },
+    { "title": "Cisco CCNP", "details": "Universidad de Cádiz · Mayo 2021" },
+    { "title": "Cisco CCNA", "details": "Universidad de Cádiz · Octubre 2019" }
+  ],
+  "languages": [
+    { "name": "Español", "level": "Nativo" },
+    { "name": "Inglés", "level": "B2 · idioma de trabajo diario" }
+  ],
+  "strengths": "Trabajo en equipo · Autonomía · Resolución de problemas · Aprendizaje rápido y autodidacta"
+}

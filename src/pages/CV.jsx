@@ -5,12 +5,18 @@ import MapIcon from '@mui/icons-material/Map';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WorkIcon from '@mui/icons-material/Work';
 import PropTypes from 'prop-types';
+import { Fragment } from 'react';
 import config from "../config/index.js";
 import Line from "../components/Line.jsx";
+import cvEn from "../data/cv.en.json";
+import cvEs from "../data/cv.es.json";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import "./CV.css";
 
-// Content mirrors the PDF CV sources in cv/cv-{en,es}.html; keep both in sync.
+// The CV content lives in src/data/cv.{en,es}.json, which also fills the PDF
+// template (cv/cv.template.html, npm run cv:pdf).
+const cvData = { en: cvEn, es: cvEs };
+
 function Section({ title, children }) {
   return (
     <div className="flex items-center justify-center lg:flex-row">
@@ -54,6 +60,7 @@ EntryList.propTypes = {
 
 function CV() {
   const { t, currentLanguage } = useLanguage();
+  const cv = cvData[currentLanguage] || cvData.es;
 
   const handleDownloadCV = () => {
     const url = config.cv.downloadUrl[currentLanguage] || config.cv.downloadUrl.es;
@@ -62,32 +69,36 @@ function CV() {
 
   return (
     <div className='cv-container'>
-      <Section title={t('workExperience')}>
-        <h3 className='flex'>
-          <a className='flex items-center' href='https://www.1xinternet.de/' target="_blank" rel="noopener noreferrer">
-            1xINTERNET
-          </a>
-          , {t('webDeveloper')}
-        </h3>
-        <h4>{t('workStartDate')} - {t('currentDate')}</h4>
-        <p className="cv-muted">{t('workCompanyDescription')}</p>
-        <ul className="list-disc list-inside">
-          {t('workItems').map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+      <Section title={cv.headings.experience}>
+        {cv.experience.map((job) => (
+          <Fragment key={job.company}>
+            <h3 className='flex'>
+              <a className='flex items-center' href={job.url} target="_blank" rel="noopener noreferrer">
+                {job.company}
+              </a>
+              , {job.role}
+            </h3>
+            <h4>{job.start} - {job.end}</h4>
+            <p className="cv-muted">{job.description}</p>
+            <ul className="list-disc list-inside">
+              {job.highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Fragment>
+        ))}
       </Section>
 
-      <Section title={t('technologies')}>
-        {t('techGroups').map((group) => (
+      <Section title={cv.headings.skills}>
+        {cv.skillGroups.map((group) => (
           <p key={group.label} className="cv-skill-group">
             <strong>{group.label}:</strong> {group.items}
           </p>
         ))}
       </Section>
 
-      <Section title={t('selectedProjects')}>
-        {t('projectsList').map((project) => (
+      <Section title={cv.headings.projects}>
+        {cv.projects.map((project) => (
           <div key={project.url} className="cv-project">
             <h3>
               <a href={project.url} target="_blank" rel="noopener noreferrer">{project.name}</a>
@@ -98,30 +109,30 @@ function CV() {
         ))}
       </Section>
 
-      <Section title={t('academicData')}>
-        <EntryList entries={t('education')} />
+      <Section title={cv.headings.education}>
+        <EntryList entries={cv.education} />
       </Section>
 
-      <Section title={t('certificationsTitle')}>
-        <EntryList entries={t('certifications')} />
+      <Section title={cv.headings.certifications}>
+        <EntryList entries={cv.certifications} />
       </Section>
 
-      <Section title={t('languagesTitle')}>
+      <Section title={cv.headings.languages}>
         <ul className="list-disc list-inside">
-          {t('languagesList').map((language) => (
+          {cv.languages.map((language) => (
             <li key={language.name}><strong>{language.name}</strong>: {language.level}</li>
           ))}
         </ul>
       </Section>
 
-      <Section title={t('skills')}>
-        <p>{t('strengthsLine')}</p>
+      <Section title={cv.headings.strengths}>
+        <p>{cv.strengths}</p>
       </Section>
 
-      <Section title={t('contact')}>
+      <Section title={cv.headings.contact}>
         <div className='contact-info'>
           <div>
-            <PhoneIcon /> <a href={`tel:${config.contact.phone}`} target="_blank" rel="noopener noreferrer">{config.contact.phone}</a>
+            <PhoneIcon /> <a href={`tel:${config.contact.phone}`} target="_blank" rel="noopener noreferrer">{config.contact.phoneDisplay}</a>
           </div>
           <div>
             <EmailIcon /> <a href={`mailto:${config.contact.email}`} target="_blank" rel="noopener noreferrer">{config.contact.email}</a>
@@ -130,7 +141,7 @@ function CV() {
             <MapIcon /> <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(config.contact.location)}`} target="_blank" rel="noopener noreferrer">{config.contact.location}</a>
           </div>
           <div>
-            <WorkIcon /> {t('availability')}
+            <WorkIcon /> {cv.contact.availability}
           </div>
           <div>
             <GitHubIcon /> <a href={config.social.github} target="_blank" rel="noopener noreferrer">{t('githubLink')}</a>

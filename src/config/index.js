@@ -3,6 +3,7 @@
  * Public, non-sensitive display values — hardcoded since they're shown
  * directly on the page and don't vary by environment.
  */
+import contact from '../data/contact.json';
 
 const config = {
   app: {
@@ -10,14 +11,16 @@ const config = {
     description: 'Portfolio and CV of Jesús Márquez Delgado, Web Developer · Drupal, PHP & React',
     url: 'https://jzmarquez.com',
   },
+  // Shared with the PDF CV (scripts/build-cv-pdf.mjs).
   contact: {
-    email: 'jesusmarquezdelgado@gmail.com',
-    phone: '+34697394198',
-    location: 'Cádiz, Spain',
+    email: contact.email,
+    phone: contact.phone,
+    phoneDisplay: contact.phoneDisplay,
+    location: contact.location,
   },
   social: {
-    github: 'https://github.com/Jesus-md-dev',
-    linkedin: 'https://www.linkedin.com/in/jes%C3%BAs-m%C3%A1rquez-delgado-1334531b9/',
+    github: contact.github,
+    linkedin: contact.linkedin,
     // Public lab only: never link /proyectos/ or other password-protected pages.
     lab: 'https://lab.jzmarquez.com/',
     labProjects: 'https://lab.jzmarquez.com/proyectos-publicos/',
