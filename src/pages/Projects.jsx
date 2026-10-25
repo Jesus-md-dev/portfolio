@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import DownloadIcon from '@mui/icons-material/Download';
 import Line from "../components/Line";
 import ResponsiveImg from "../components/ResponsiveImg";
 import YouTubeFacade from "../components/YouTubeFacade";
@@ -109,6 +110,12 @@ function ProjectCard({ project }) {
           )}
           {project.live && (
             <ProjectLink href={project.live} label={t('projectsLive')} ariaLabel={`${t('projectsLive')}: ${name}`} Icon={OpenInNewIcon} outline />
+          )}
+          {project.demo && (
+            <ProjectLink href={project.demo} label={t('projectsDemo')} ariaLabel={`${t('projectsDemo')}: ${name}`} Icon={OpenInNewIcon} outline />
+          )}
+          {project.download && (
+            <ProjectLink href={project.download} label={t('projectsDownload')} ariaLabel={`${t('projectsDownload')}: ${name}`} Icon={DownloadIcon} outline />
           )}
           {project.sites?.map((site) => (
             <ProjectLink key={site.href} href={site.href} label={site.name} Icon={OpenInNewIcon} outline />

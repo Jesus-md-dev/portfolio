@@ -47,8 +47,9 @@ export const PROJECT_TYPES = ['web', 'mobile', 'desktop', 'games', 'xr'];
 // - `origin`: 'personal', 'university' or 'work'; the last two get a badge.
 // - `name` is a proper noun; `nameKey` is used instead when it is translated.
 // - Media is either `image` (a screenshot) or `video` (a YouTube id).
-// - Links: `repo` (GitHub), `live` (website), `play` (playable build) and
-//   `sites` (client websites, by name).
+// - Links: `repo` (GitHub), `live` (website), `play` (playable build),
+//   `demo` (demo with fake data), `download` (latest release) and `sites`
+//   (client websites, by name).
 export const PROJECTS = [
   {
     id: 'pandeconomy',
@@ -58,6 +59,7 @@ export const PROJECTS = [
     origin: 'personal',
     stack: ['React Native', 'TypeScript', 'MMKV', 'GitHub Actions'],
     repo: `${GITHUB}/pandeconomy`,
+    download: `${GITHUB}/pandeconomy/releases/latest`,
     image: { src: pandeconomy, srcSm: pandeconomySm, srcMd: pandeconomyMd, srcLg: pandeconomyLg },
   },
   {
@@ -68,6 +70,7 @@ export const PROJECTS = [
     origin: 'personal',
     stack: ['Node.js', 'Express', 'React', 'Vite', 'ffmpeg', 'Android TV'],
     repo: `${GITHUB}/videoclub-local`,
+    demo: 'https://videoclub-demo.netlify.app/',
     image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
   },
   {
@@ -111,6 +114,8 @@ export const PROJECTS = [
     origin: 'personal',
     stack: ['Python', 'Tkinter', 'PyInstaller'],
     repo: `${GITHUB}/heartopia-piano-translator`,
+    live: 'https://lab.jzmarquez.com/heartopia/',
+    download: `${GITHUB}/heartopia-piano-translator/releases/latest`,
     image: { src: heartopia, srcSm: heartopiaSm, srcMd: heartopiaMd, srcLg: heartopiaLg },
   },
   {
@@ -148,6 +153,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Angular', 'TypeScript', 'Django REST', 'MySQL'],
     repo: `${GITHUB}/project-expenses-manager`,
+    demo: 'https://project-expenses-manager-demo.netlify.app/',
     image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
   },
   {
@@ -178,6 +184,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Unity', 'C#'],
     repo: `${GITHUB}/Juego-Plataformas-Simple-Unity`,
+    play: 'https://lab.jzmarquez.com/space-ball/',
     video: '7Ij2qMfMZoE',
   },
   {
