@@ -52,7 +52,6 @@ const Banner = React.memo(({ className, user }) => {
                             <a
                                 href={`mailto:${config.contact.email}`}
                                 className="banner-cta-button"
-                                aria-label={t('contactEmail')}
                             >
                                 <EmailIcon fontSize="small" />
                                 {t('bannerCtaContact')}
@@ -71,7 +70,6 @@ const Banner = React.memo(({ className, user }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="banner-cta-button banner-cta-secondary"
-                                aria-label={t('githubProfile')}
                             >
                                 <GitHubIcon fontSize="small" />
                                 {t('bannerCtaGithub')}
