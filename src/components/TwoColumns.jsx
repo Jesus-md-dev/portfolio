@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import React, { useState } from "react";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Line from "./Line.jsx";
 import ResponsiveImg from "./ResponsiveImg.jsx";
-import { getYouTubeVideoID, getYouTubeThumbnail } from "../utils/helpers.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import { getYouTubeVideoID, getYouTubeThumbnailSrcSet, getYouTubeThumbnail } from "../utils/helpers.js";
 
 const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt, type, dark }) => {
-  const [loading, setLoading] = useState(true);
+  const { t } = useLanguage();
+  // Click-to-load facade: the YouTube player (~1 MB of scripts per embed) is
+  // only requested once the visitor asks for it.
+  const [playing, setPlaying] = useState(false);
 
   const twoColumnsContent = invert ? "lg:flex-row-reverse" : "lg:flex-row";
   const twoColumns = dark ? "" : "";
-
-  const hideThumbnail = () => {
-    setLoading(false);
-  };
 
   const videoID = getYouTubeVideoID(src);
 
@@ -44,29 +45,38 @@ const TwoColumns = ({ src, srcSm, srcMd, srcLg, srcXl, invert, title, text, alt,
                 loading="lazy"
               />
             }
-            {type === "video" &&
-              <span className="aspect-video w-auto relative">
-                {loading && (
-                  <div className="fit-content absolute">
-                    <img
-                      className="object-cover rounded-xl h-full"
-                      alt={alt ?? "Youtube Video Thumbnail"}
-                      src={getYouTubeThumbnail(videoID)}
-                      loading="lazy"
-                    />
-                  </div>
-                )}
-                <iframe
-                  className={`w-full aspect-video rounded-xl ${loading ? 'invisible' : ''}`}
-                  src={"https://www.youtube.com/embed/" + videoID}
-                  title={alt ?? "Youtube Video"}
-                  onLoad={hideThumbnail}
+            {type === "video" && (playing ? (
+              <iframe
+                className="w-full aspect-video rounded-xl"
+                src={`https://www.youtube.com/embed/${videoID}?autoplay=1`}
+                title={alt ?? "Youtube Video"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                className="video-facade w-full aspect-video rounded-xl"
+                onClick={() => setPlaying(true)}
+                aria-label={`${t('playVideo')}: ${typeof title === 'string' ? title : (alt ?? 'YouTube')}`}
+              >
+                <img
+                  className="w-full h-full object-cover rounded-xl"
+                  alt=""
+                  src={getYouTubeThumbnail(videoID)}
+                  srcSet={getYouTubeThumbnailSrcSet(videoID)}
+                  // The video column is about 65% of a phone's width and at most ~430 px.
+                  sizes="(max-width: 1024px) 65vw, 430px"
+                  width="1280"
+                  height="720"
                   loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  decoding="async"
                 />
-              </span>
-            }
+                <span className="video-facade-play" aria-hidden="true">
+                  <PlayArrowIcon />
+                </span>
+              </button>
+            ))}
           </div>
           <div className="lg:w-1/2 mx-5 lg:mt-0 mt-5">
             <p>{text}</p>

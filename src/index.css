@@ -1758,3 +1758,50 @@ img {
     transform: none !important;
   }
 }
+/* YouTube click-to-load facade (TwoColumns): thumbnail + play button until clicked */
+.video-facade {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.dark-mode .video-facade:hover,
+.light-mode .video-facade:hover {
+  background: #000;
+}
+
+.video-facade-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(17, 24, 39, 0.75);
+  color: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.video-facade .video-facade-play svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.video-facade:hover .video-facade-play {
+  background: var(--primary-color);
+}
+
+.video-facade:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}

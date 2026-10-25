@@ -61,6 +61,7 @@ export const translations = {
     alTenedorText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en",
     alTenedorScreenshotAlt: "Menú principal de ¡Al tenedor! con las opciones de partida local y online",
     playInBrowser: "Jugar en el navegador",
+    playVideo: "Reproducir vídeo",
     viewCode: "Ver código en GitHub",
     universityProject: "Proyecto universitario",
 
@@ -184,6 +185,7 @@ export const translations = {
     alTenedorText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with",
     alTenedorScreenshotAlt: "¡Al tenedor! main menu with the local and online game options",
     playInBrowser: "Play in the browser",
+    playVideo: "Play video",
     viewCode: "View code on GitHub",
     universityProject: "University project",
 

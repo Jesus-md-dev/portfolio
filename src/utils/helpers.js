@@ -19,7 +19,18 @@ export const getYouTubeVideoID = (url) => {
  * @returns {string} - Thumbnail URL
  */
 export const getYouTubeThumbnail = (videoId) => {
-  return `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+  return `https://i.ytimg.com/vi_webp/${videoId}/sddefault.webp`;
+};
+
+/**
+ * Responsive srcset of YouTube's WebP thumbnails. The 480 and 640 px ones are
+ * 4:3 with letterbox bars, which object-cover crops away in a 16:9 box.
+ * @param {string} videoId - YouTube video ID
+ * @returns {string} - srcset value
+ */
+export const getYouTubeThumbnailSrcSet = (videoId) => {
+  const base = `https://i.ytimg.com/vi_webp/${videoId}`;
+  return `${base}/mqdefault.webp 320w, ${base}/hqdefault.webp 480w, ${base}/sddefault.webp 640w, ${base}/maxresdefault.webp 1280w`;
 };
 
 /**
