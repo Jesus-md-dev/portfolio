@@ -29,6 +29,12 @@ import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
 import xprojectsSm from "../files/images/1xprojects-with-logo-transformed-sm.webp";
 import xprojectsMd from "../files/images/1xprojects-with-logo-transformed-md.webp";
 import xprojectsLg from "../files/images/1xprojects-with-logo-transformed-lg.webp";
+import ballBasics from "../files/images/ball-basics.webp";
+import ballBasicsSm from "../files/images/ball-basics-sm.webp";
+import ballBasicsMd from "../files/images/ball-basics-md.webp";
+import zigzagBasics from "../files/images/zigzag-basics.webp";
+import zigzagBasicsSm from "../files/images/zigzag-basics-sm.webp";
+import zigzagBasicsMd from "../files/images/zigzag-basics-md.webp";
 import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
 import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
@@ -165,6 +171,7 @@ export const PROJECTS = [
     stack: ['Unity', 'C#'],
     coauthor: PERINAN,
     repo: `${GITHUB}/Trabajo-FPS-Unity`,
+    play: 'https://lab.jzmarquez.com/survival-zombie/',
     video: 'NsuEjiRypPo',
   },
   {
@@ -174,6 +181,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    play: 'https://lab.jzmarquez.com/wave-shooter/',
     video: 'wG-2kG7awZo',
   },
   {
@@ -194,7 +202,28 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    play: 'https://lab.jzmarquez.com/zigzag-cube/',
     video: 'CpbWe8kSolI',
+  },
+  {
+    id: 'zigzag-basics',
+    nameKey: 'zigzagBasicsTitle',
+    textKey: 'zigzagBasicsText',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Unity', 'C#'],
+    play: 'https://lab.jzmarquez.com/zigzag-basics/',
+    image: { src: zigzagBasics, srcSm: zigzagBasicsSm, srcMd: zigzagBasicsMd },
+  },
+  {
+    id: 'ball-basics',
+    nameKey: 'ballBasicsTitle',
+    textKey: 'ballBasicsText',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Unity', 'C#'],
+    play: 'https://lab.jzmarquez.com/ball-basics/',
+    image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
   },
   {
     id: 'monster-war',
