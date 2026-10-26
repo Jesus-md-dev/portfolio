@@ -138,16 +138,6 @@ export const PROJECTS = [
     image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
   },
   {
-    id: 'php-cms',
-    nameKey: 'phpCmsTitle',
-    textKey: 'phpCmsText',
-    altKey: 'phpCmsAlt',
-    types: ['web'],
-    origin: 'university',
-    stack: ['PHP', 'MariaDB', 'PHPUnit', 'DDEV', 'AdminLTE'],
-    image: { src: phpcms, srcSm: phpcmsSm, srcMd: phpcmsMd, srcLg: phpcmsLg },
-  },
-  {
     id: 'que-te-pincho',
     nameKey: 'queTePinchoTitle',
     textKey: 'queTePinchoText',
@@ -247,6 +237,16 @@ export const PROJECTS = [
     stack: ['React', 'Vite', 'Tailwind CSS', 'MUI', 'Netlify'],
     repo: `${GITHUB}/portfolio`,
     image: { src: jmcvweb, srcSm: jmcvwebSm, srcMd: jmcvwebMd, srcLg: jmcvwebLg },
+  },
+  {
+    id: 'php-cms',
+    nameKey: 'phpCmsTitle',
+    textKey: 'phpCmsText',
+    altKey: 'phpCmsAlt',
+    types: ['web'],
+    origin: 'university',
+    stack: ['PHP', 'MariaDB', 'PHPUnit', 'DDEV', 'AdminLTE'],
+    image: { src: phpcms, srcSm: phpcmsSm, srcMd: phpcmsMd, srcLg: phpcmsLg },
   },
   {
     id: 'project-expenses-manager',
