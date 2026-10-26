@@ -389,6 +389,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'personal',
     stack: ['Godot 3', 'GDScript'],
+    play: 'https://lab.jzmarquez.com/dodge-remake/',
     image: { src: hardestGame, srcSm: hardestGameSm, srcMd: hardestGameMd },
   },
   {
