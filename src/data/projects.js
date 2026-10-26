@@ -67,6 +67,10 @@ import imageEditorSm from "../files/images/modificar-imagen-sm.webp";
 import imageEditorMd from "../files/images/modificar-imagen-md.webp";
 import esinait from "../files/images/esinait.webp";
 import esinaitSm from "../files/images/esinait-sm.webp";
+import dockerKubernetes from "../files/images/docker-kubernetes.webp";
+import dockerKubernetesSm from "../files/images/docker-kubernetes-sm.webp";
+import dockerKubernetesMd from "../files/images/docker-kubernetes-md.webp";
+import dockerKubernetesLg from "../files/images/docker-kubernetes-lg.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
 // Unity games in the lab have a page in each language.
@@ -202,6 +206,16 @@ export const PROJECTS = [
     repo: `${GITHUB}/project-expenses-manager`,
     demo: 'https://project-expenses-manager-demo.netlify.app/',
     image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
+  },
+  {
+    id: 'docker-kubernetes',
+    nameKey: 'dockerKubernetesTitle',
+    textKey: 'dockerKubernetesText',
+    altKey: 'dockerKubernetesAlt',
+    types: ['web'],
+    origin: 'university',
+    stack: ['Docker', 'Kubernetes', 'Minikube', 'MariaDB'],
+    image: { src: dockerKubernetes, srcSm: dockerKubernetesSm, srcMd: dockerKubernetesMd, srcLg: dockerKubernetesLg },
   },
   {
     id: 'information-retrieval',
