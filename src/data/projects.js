@@ -71,6 +71,16 @@ import dockerKubernetes from "../files/images/docker-kubernetes.webp";
 import dockerKubernetesSm from "../files/images/docker-kubernetes-sm.webp";
 import dockerKubernetesMd from "../files/images/docker-kubernetes-md.webp";
 import dockerKubernetesLg from "../files/images/docker-kubernetes-lg.webp";
+import phpcms from "../files/images/phpcms.webp";
+import phpcmsSm from "../files/images/phpcms-sm.webp";
+import phpcmsMd from "../files/images/phpcms-md.webp";
+import phpcmsLg from "../files/images/phpcms-lg.webp";
+import codeigniterBlog from "../files/images/codeigniter-blog.webp";
+import codeigniterBlogSm from "../files/images/codeigniter-blog-sm.webp";
+import codeigniterBlogMd from "../files/images/codeigniter-blog-md.webp";
+import hardestGame from "../files/images/hardest-game-remake.webp";
+import hardestGameSm from "../files/images/hardest-game-remake-sm.webp";
+import hardestGameMd from "../files/images/hardest-game-remake-md.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
 // Unity games in the lab have a page in each language.
@@ -113,6 +123,16 @@ export const PROJECTS = [
     repo: `${GITHUB}/videoclub-local`,
     demo: 'https://videoclub-demo.netlify.app/',
     image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
+  },
+  {
+    id: 'php-cms',
+    nameKey: 'phpCmsTitle',
+    textKey: 'phpCmsText',
+    altKey: 'phpCmsAlt',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['PHP', 'MariaDB', 'PHPUnit', 'DDEV', 'AdminLTE'],
+    image: { src: phpcms, srcSm: phpcmsSm, srcMd: phpcmsMd, srcLg: phpcmsLg },
   },
   {
     id: 'que-te-pincho',
@@ -216,6 +236,16 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Docker', 'Kubernetes', 'Minikube', 'MariaDB'],
     image: { src: dockerKubernetes, srcSm: dockerKubernetesSm, srcMd: dockerKubernetesMd, srcLg: dockerKubernetesLg },
+  },
+  {
+    id: 'codeigniter-blog',
+    nameKey: 'codeigniterBlogTitle',
+    textKey: 'codeigniterBlogText',
+    altKey: 'codeigniterBlogAlt',
+    types: ['web'],
+    origin: 'university',
+    stack: ['PHP', 'CodeIgniter 3', 'MySQL'],
+    image: { src: codeigniterBlog, srcSm: codeigniterBlogSm, srcMd: codeigniterBlogMd },
   },
   {
     id: 'information-retrieval',
@@ -350,6 +380,16 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['C'],
     image: { src: esinait, srcSm: esinaitSm },
+  },
+  {
+    id: 'hardest-game-remake',
+    nameKey: 'hardestGameTitle',
+    textKey: 'hardestGameText',
+    altKey: 'hardestGameAlt',
+    types: ['games'],
+    origin: 'personal',
+    stack: ['Godot 3', 'GDScript'],
+    image: { src: hardestGame, srcSm: hardestGameSm, srcMd: hardestGameMd },
   },
   {
     id: 'pool-scene',
