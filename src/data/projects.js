@@ -225,6 +225,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Unity', 'C#'],
     repo: `${GITHUB}/Trabajo-Realidad-Virtual`,
+    play: 'https://lab.jzmarquez.com/space-survival/',
     video: 'CMsBWdokYGc',
   },
 ];
