@@ -51,6 +51,22 @@ import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
 import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
 import jmcvwebLg from "../files/images/jm-cv-web-transformed-lg.webp";
+import pokedex from "../files/images/pokedex-angular.webp";
+import pokedexSm from "../files/images/pokedex-angular-sm.webp";
+import pokedexMd from "../files/images/pokedex-angular-md.webp";
+import pokedexLg from "../files/images/pokedex-angular-lg.webp";
+import informationRetrieval from "../files/images/information-retrieval.webp";
+import informationRetrievalSm from "../files/images/information-retrieval-sm.webp";
+import informationRetrievalMd from "../files/images/information-retrieval-md.webp";
+import algorithmDesign from "../files/images/algorithm-design.webp";
+import algorithmDesignSm from "../files/images/algorithm-design-sm.webp";
+import algorithmDesignMd from "../files/images/algorithm-design-md.webp";
+import algorithmDesignLg from "../files/images/algorithm-design-lg.webp";
+import imageEditor from "../files/images/modificar-imagen.webp";
+import imageEditorSm from "../files/images/modificar-imagen-sm.webp";
+import imageEditorMd from "../files/images/modificar-imagen-md.webp";
+import esinait from "../files/images/esinait.webp";
+import esinaitSm from "../files/images/esinait-sm.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
 // Unity games in the lab have a page in each language.
@@ -140,6 +156,16 @@ export const PROJECTS = [
     image: { src: heartopia, srcSm: heartopiaSm, srcMd: heartopiaMd, srcLg: heartopiaLg },
   },
   {
+    id: 'pokedex-tracker',
+    nameKey: 'pokedexTitle',
+    textKey: 'pokedexText',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['Angular', 'TypeScript', 'Tailwind CSS'],
+    live: 'https://pokedex.jzmarquez.com/',
+    image: { src: pokedex, srcSm: pokedexSm, srcMd: pokedexMd, srcLg: pokedexLg },
+  },
+  {
     id: '1xinternet',
     nameKey: 'websAt1xinternet',
     textKey: 'websAt1xinternetText',
@@ -176,6 +202,36 @@ export const PROJECTS = [
     repo: `${GITHUB}/project-expenses-manager`,
     demo: 'https://project-expenses-manager-demo.netlify.app/',
     image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
+  },
+  {
+    id: 'information-retrieval',
+    nameKey: 'informationRetrievalTitle',
+    textKey: 'informationRetrievalText',
+    altKey: 'informationRetrievalAlt',
+    types: ['desktop'],
+    origin: 'university',
+    stack: ['Python', 'NLTK'],
+    image: { src: informationRetrieval, srcSm: informationRetrievalSm, srcMd: informationRetrievalMd },
+  },
+  {
+    id: 'algorithm-design',
+    nameKey: 'algorithmDesignTitle',
+    textKey: 'algorithmDesignText',
+    altKey: 'algorithmDesignAlt',
+    types: ['desktop'],
+    origin: 'university',
+    stack: ['C++', 'Gnuplot', 'LaTeX'],
+    image: { src: algorithmDesign, srcSm: algorithmDesignSm, srcMd: algorithmDesignMd, srcLg: algorithmDesignLg },
+  },
+  {
+    id: 'image-editor',
+    nameKey: 'imageEditorTitle',
+    textKey: 'imageEditorText',
+    altKey: 'imageEditorAlt',
+    types: ['desktop'],
+    origin: 'personal',
+    stack: ['Java', 'Swing'],
+    image: { src: imageEditor, srcSm: imageEditorSm, srcMd: imageEditorMd },
   },
   {
     id: 'survival-zombie',
@@ -270,7 +326,18 @@ export const PROJECTS = [
     stack: ['Unity', 'C#'],
     play: labGame('ball-basics'),
     image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
-  },  {
+  },
+  {
+    id: 'esinait',
+    name: 'Esinait',
+    textKey: 'esinaitText',
+    altKey: 'esinaitAlt',
+    types: ['games', 'desktop'],
+    origin: 'university',
+    stack: ['C'],
+    image: { src: esinait, srcSm: esinaitSm },
+  },
+  {
     id: 'pool-scene',
     nameKey: 'poolSceneTitle',
     textKey: 'poolSceneText',
