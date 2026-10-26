@@ -35,12 +35,26 @@ import ballBasicsMd from "../files/images/ball-basics-md.webp";
 import zigzagBasics from "../files/images/zigzag-basics.webp";
 import zigzagBasicsSm from "../files/images/zigzag-basics-sm.webp";
 import zigzagBasicsMd from "../files/images/zigzag-basics-md.webp";
+import poolScene from "../files/images/pool-scene.webp";
+import poolSceneSm from "../files/images/pool-scene-sm.webp";
+import poolSceneMd from "../files/images/pool-scene-md.webp";
+import rampsScene from "../files/images/ramps-scene.webp";
+import rampsSceneSm from "../files/images/ramps-scene-sm.webp";
+import rampsSceneMd from "../files/images/ramps-scene-md.webp";
+import swordModel from "../files/images/sword-model.webp";
+import swordModelSm from "../files/images/sword-model-sm.webp";
+import swordModelMd from "../files/images/sword-model-md.webp";
+import carModel from "../files/images/car-model.webp";
+import carModelSm from "../files/images/car-model-sm.webp";
+import carModelMd from "../files/images/car-model-md.webp";
 import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
 import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
 import jmcvwebLg from "../files/images/jm-cv-web-transformed-lg.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
+// Unity games in the lab have a page in each language.
+const labGame = (slug) => ({ es: `https://lab.jzmarquez.com/${slug}/`, en: `https://lab.jzmarquez.com/en/${slug}/` });
 const PERINAN = { name: 'Jesús Periñán Dávila', href: 'https://www.linkedin.com/in/jesus-perinan-davila/' };
 
 // Filters shown above the grid, in order. `all` is implicit.
@@ -53,7 +67,8 @@ export const PROJECT_TYPES = ['web', 'mobile', 'desktop', 'games', 'xr'];
 // - `origin`: 'personal', 'university' or 'work'; the last two get a badge.
 // - `name` is a proper noun; `nameKey` is used instead when it is translated.
 // - Media is either `image` (a screenshot) or `video` (a YouTube id).
-// - Links: `repo` (GitHub), `live` (website), `play` (playable build),
+// - Links: `repo` (GitHub), `live` (website), `play` (playable build: a URL,
+//   or { es, en } when it has a page in each language),
 //   `demo` (demo with fake data), `download` (latest release) and `sites`
 //   (client websites, by name).
 export const PROJECTS = [
@@ -87,7 +102,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'personal',
     stack: ['Godot 4', 'GDScript', 'WebRTC', 'Android'],
-    play: 'https://lab.jzmarquez.com/p-e934da6fe540/',
+    play: 'https://lab.jzmarquez.com/que-te-pincho/',
     image: { src: queTePincho, srcSm: queTePinchoSm, srcMd: queTePinchoMd },
   },
   {
@@ -109,7 +124,7 @@ export const PROJECTS = [
     origin: 'personal',
     stack: ['Netlify Functions', 'RCON', 'JavaScript'],
     repo: `${GITHUB}/project-zomboid-server-status`,
-    live: 'https://pz-server-status.netlify.app/',
+    live: 'https://pz.jzmarquez.com/',
     image: { src: pzServerStatus, srcSm: pzServerStatusSm, srcMd: pzServerStatusMd, srcLg: pzServerStatusLg },
   },
   {
@@ -171,7 +186,7 @@ export const PROJECTS = [
     stack: ['Unity', 'C#'],
     coauthor: PERINAN,
     repo: `${GITHUB}/Trabajo-FPS-Unity`,
-    play: 'https://lab.jzmarquez.com/survival-zombie/',
+    play: labGame('survival-zombie'),
     video: 'NsuEjiRypPo',
   },
   {
@@ -193,7 +208,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Unity', 'C#'],
     repo: `${GITHUB}/Juego-Plataformas-Simple-Unity`,
-    play: 'https://lab.jzmarquez.com/space-ball/',
+    play: labGame('space-ball'),
     video: '7Ij2qMfMZoE',
   },
   {
@@ -203,7 +218,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
-    play: 'https://lab.jzmarquez.com/zigzag-cube/',
+    play: labGame('zigzag-cube'),
     video: 'CpbWe8kSolI',
   },
   {
@@ -213,7 +228,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
-    play: 'https://lab.jzmarquez.com/wave-shooter/',
+    play: labGame('wave-shooter'),
     video: 'wG-2kG7awZo',
   },
   {
@@ -243,7 +258,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
-    play: 'https://lab.jzmarquez.com/zigzag-basics/',
+    play: labGame('zigzag-basics'),
     image: { src: zigzagBasics, srcSm: zigzagBasicsSm, srcMd: zigzagBasicsMd },
   },
   {
@@ -253,7 +268,44 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
-    play: 'https://lab.jzmarquez.com/ball-basics/',
+    play: labGame('ball-basics'),
     image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
+  },  {
+    id: 'pool-scene',
+    nameKey: 'poolSceneTitle',
+    textKey: 'poolSceneText',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Unity', 'ProBuilder'],
+    image: { src: poolScene, srcSm: poolSceneSm, srcMd: poolSceneMd },
+  },
+  {
+    id: 'car-model',
+    nameKey: 'carModelTitle',
+    textKey: 'carModelText',
+    altKey: 'carModelAlt',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Blender'],
+    image: { src: carModel, srcSm: carModelSm, srcMd: carModelMd },
+  },
+  {
+    id: 'sword-model',
+    nameKey: 'swordModelTitle',
+    textKey: 'swordModelText',
+    altKey: 'swordModelAlt',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Blender', 'Unity'],
+    image: { src: swordModel, srcSm: swordModelSm, srcMd: swordModelMd },
+  },
+  {
+    id: 'ramps-scene',
+    nameKey: 'rampsSceneTitle',
+    textKey: 'rampsSceneText',
+    types: ['games'],
+    origin: 'university',
+    stack: ['Unity'],
+    image: { src: rampsScene, srcSm: rampsSceneSm, srcMd: rampsSceneMd },
   },
 ];
