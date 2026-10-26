@@ -68,7 +68,7 @@ export const translations = {
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en Godot 4.",
-    queTePinchoScreenshotAlt: "Menú principal de ¡Que te pincho! con las opciones de partida local y online",
+    queTePinchoScreenshotAlt: "Partida de ¡Que te pincho!: platos con albóndigas en una cinta transportadora que sale de un túnel, y una carta de acción seleccionada",
     playInBrowser: "Jugar en el navegador",
     playVideo: "Reproducir vídeo",
     universityProject: "Proyecto universitario",
@@ -193,7 +193,7 @@ export const translations = {
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with Godot 4.",
-    queTePinchoScreenshotAlt: "¡Que te pincho! main menu with the local and online game options",
+    queTePinchoScreenshotAlt: "A game of ¡Que te pincho!: plates of meatballs on a conveyor belt coming out of a tunnel, and a selected action card",
     playInBrowser: "Play in the browser",
     playVideo: "Play video",
     universityProject: "University project",
