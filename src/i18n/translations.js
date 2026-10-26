@@ -58,13 +58,17 @@ export const translations = {
     waveShooterTitle: "Shooter de oleadas",
     spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "Cubo ZigZag",
+    zigzagBasicsTitle: "Zig Zag (práctica)",
+    zigzagBasicsText: "La práctica de clase con la que empezó el Cubo ZigZag: una bola avanza sola por un camino que se genera al azar y la barra espaciadora cambia su dirección. Hecha en Unity.",
+    ballBasicsTitle: "Bolas",
+    ballBasicsText: "Primera práctica de Unity en clase: mueve la bola por el tablero con las flechas o WASD y recoge los seis puntos usando la física del motor.",
     survivalZombieText: "Shooter en primera persona desarrollado en Unity. Modelamos el mapa, programamos la IA de los zombis y las mecánicas del juego: botiquines, oleadas y distintos tipos de zombi.",
     
-    waveShooterText: "Shooter con vista cenital, hecho para aprender cómo funcionan los juegos de oleadas en Unity. El jugador debe sobrevivir a oleadas infinitas de enemigos, lo que pone a prueba la generación continua de enemigos y la dificultad progresiva.",
+    waveShooterText: "Shooter con vista cenital, hecho para aprender cómo funcionan los juegos de oleadas en Unity. El jugador tiene que sobrevivir a dos oleadas de enemigos que lo persiguen por el mapa; se mueve con el teclado y apunta y dispara con el ratón.",
     
     spaceBallText: "Juego de plataformas en 3D para móviles, desarrollado en Unity. Modelé el mapa, programé el salto entre plataformas, creé los distintos niveles e implementé un sistema de puntuación.",
     
-    zigzagCubeText: "Juego para móviles desarrollado en Unity en el que el jugador controla un cubo que avanza solo y cambia de dirección con cada toque en la pantalla. El mapa se genera al azar a partir de piezas prefabricadas, así que la partida no tiene fin.",
+    zigzagCubeText: "Juego para móviles desarrollado en Unity en el que el jugador controla un cubo que avanza solo y cambia de dirección con la barra espaciadora, recogiendo diamantes antes de que el suelo se caiga. El mapa se genera al azar a partir de piezas prefabricadas, así que la partida no tiene fin. La versión web es una reconstrucción: el paquete original no conservaba la escena de juego.",
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Juego de cartas para 2 a 6 jugadores. Se puede jugar contra bots con tres niveles de dificultad o en línea con amigos, mediante conexión entre pares (WebRTC) y códigos de sala, desde el navegador o con la versión para Android. Desarrollado en Godot 4.",
@@ -183,13 +187,17 @@ export const translations = {
     waveShooterTitle: "Wave Shooter",
     spaceBallTitle: "Space Ball",
     zigzagCubeTitle: "ZigZag Cube",
+    zigzagBasicsTitle: "Zig Zag (exercise)",
+    zigzagBasicsText: "The class exercise that ZigZag Cube grew out of: a ball moves on its own along a randomly generated path and the space bar changes its direction. Made in Unity.",
+    ballBasicsTitle: "Ball basics",
+    ballBasicsText: "First Unity exercise in class: roll the ball around the board with the arrow keys or WASD and collect the six points, using the engine's physics.",
     survivalZombieText: "First-person shooter made in Unity. We modeled the map and programmed the zombie AI and the game mechanics: first aid kits, waves and different kinds of zombies.",
     
-    waveShooterText: "Top-down shooter made to learn how wave-based games work in Unity. The player has to survive endless waves of enemies, which tests continuous enemy spawning and progressive difficulty.",
+    waveShooterText: "Top-down shooter made to learn how wave-based games work in Unity. The player has to survive two waves of enemies that chase them around the map, moving with the keyboard and aiming and shooting with the mouse.",
     
     spaceBallText: "3D platformer for mobile, made in Unity. I modeled the map, programmed jumping between platforms, built the levels and added a scoring system.",
     
-    zigzagCubeText: "Mobile game made in Unity: the player steers a cube that moves on its own, changing its direction with each tap on the screen. The map is randomly generated from prefab pieces, so the game never ends.",
+    zigzagCubeText: "Mobile game made in Unity: the player steers a cube that moves on its own, changing its direction with the space bar and picking up diamonds before the floor falls away. The map is randomly generated from prefab pieces, so the game never ends. The web version is a reconstruction: the original package didn't keep the game scene.",
     
     queTePinchoTitle: "¡Que te pincho!",
     queTePinchoText: "Card game for 2 to 6 players. You can play against bots with three difficulty levels or online with friends, over a peer-to-peer connection (WebRTC) with room codes, in the browser or with the Android build. Made with Godot 4.",
