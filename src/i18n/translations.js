@@ -50,6 +50,10 @@ export const translations = {
     projectExpensesManagerText: "Trabajo Fin de Grado (Universidad de Cádiz, 2022): presupuestos de proyecto compartidos, ingresos y gastos, gráficas y notificaciones por e-mail.",
     projectZomboidStatusText: "Página de estado en directo de un servidor de Project Zomboid: jugadores conectados vía RCON desde una Netlify Function y explorador de mods.",
     projectHeartopiaText: "Aplicación de escritorio para Windows que convierte partituras de Heartopia en las teclas de piano que hay que pulsar.",
+    projectVideoDurationText: "Herramienta de escritorio en Java Swing que calcula cuánto dura de verdad un vídeo a 1.25x, 1.5x o 2x, con cuenta atrás mientras lo ves.",
+    projectEspacioMetronomoText: "Sistema de reservas de una sala de ensayo en cuatro entregas: prototipo web responsive, API REST con Node.js y MongoDB, cliente web y app Android con widget.",
+    laravelShopTitle: "Tienda online en Laravel",
+    laravelShopText: "Tienda online con Laravel 8 y Jetstream: catálogo con ofertas, ficha y edición de productos, carrito por usuario y cuentas con equipos y doble factor.",
     metaTitleProjects: "Proyectos - Webs, apps, videojuegos y XR | Jesús Márquez Delgado",
     metaDescriptionProjects: "Proyectos de Jesús Márquez Delgado: webs Drupal para 1xINTERNET, apps con React, React Native, Node.js y Angular, y videojuegos y realidad aumentada y virtual con Godot y Unity.",
     
@@ -189,6 +193,10 @@ export const translations = {
     projectExpensesManagerText: "Final degree project (University of Cádiz, 2022): shared project budgets, incomes and expenses, charts and e-mail notifications.",
     projectZomboidStatusText: "Live status page for a Project Zomboid server: players online via RCON from a Netlify Function, plus a mods browser.",
     projectHeartopiaText: "Windows desktop app that converts Heartopia music sheets into the piano keys to press.",
+    projectVideoDurationText: "Java Swing desktop tool that works out how long a video really takes at 1.25x, 1.5x or 2x, with a countdown while you watch.",
+    projectEspacioMetronomoText: "Booking system for a music rehearsal space in four milestones: responsive web prototype, Node.js and MongoDB REST API, web client and an Android app with a widget.",
+    laravelShopTitle: "Laravel online shop",
+    laravelShopText: "Online shop built with Laravel 8 and Jetstream: catalogue with deals, product pages and editing, a cart per user and accounts with teams and two-factor auth.",
     metaTitleProjects: "Projects - Websites, apps, games and XR | Jesús Márquez Delgado",
     metaDescriptionProjects: "Projects by Jesús Márquez Delgado: Drupal websites for 1xINTERNET, apps built with React, React Native, Node.js and Angular, and games and AR/VR made with Godot and Unity.",
     
