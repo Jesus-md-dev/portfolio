@@ -31,6 +31,12 @@ import espacioMetronomoMd from "../files/images/espacio-metronomo-md.webp";
 import laravelShop from "../files/images/laravel-shop.webp";
 import laravelShopSm from "../files/images/laravel-shop-sm.webp";
 import laravelShopMd from "../files/images/laravel-shop-md.webp";
+import retroTv from "../files/images/ibericaretrotv.webp";
+import retroTvSm from "../files/images/ibericaretrotv-sm.webp";
+import retroTvMd from "../files/images/ibericaretrotv-md.webp";
+import millonario from "../files/images/ernarvi-millonario.webp";
+import millonarioSm from "../files/images/ernarvi-millonario-sm.webp";
+import millonarioMd from "../files/images/ernarvi-millonario-md.webp";
 import queTePincho from "../files/images/que-te-pincho.webp";
 import queTePinchoSm from "../files/images/que-te-pincho-sm.webp";
 import queTePinchoMd from "../files/images/que-te-pincho-md.webp";
@@ -198,6 +204,24 @@ export const PROJECTS = [
     stack: ['Angular', 'TypeScript', 'Tailwind CSS'],
     live: 'https://pokedex.jzmarquez.com/',
     image: { src: pokedex, srcSm: pokedexSm, srcMd: pokedexMd, srcLg: pokedexLg },
+  },
+  {
+    id: 'ibericaretrotv',
+    name: 'Ibérica Retro TV',
+    textKey: 'retroTvText',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['React', 'Vite', 'react-player'],
+    image: { src: retroTv, srcSm: retroTvSm, srcMd: retroTvMd },
+  },
+  {
+    id: 'ernarvi-millonario',
+    name: 'Ernarvi Millonario',
+    textKey: 'millonarioText',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['React', 'TypeScript', 'Google Sheets'],
+    image: { src: millonario, srcSm: millonarioSm, srcMd: millonarioMd },
   },
   {
     id: 'video-duration-calculator',
