@@ -339,7 +339,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Unity', 'C#'],
     coauthor: PERINAN,
-    repo: `${GITHUB}/Trabajo-Realidad-Aumentada`,
+    repo: `${GITHUB}/Monster-WAR-DSH2021`,
     video: 'jIragOxu9tA',
   },
   {
@@ -360,6 +360,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    repo: `${GITHUB}/zigzag-cube`,
     play: labGame('zigzag-cube'),
     video: 'CpbWe8kSolI',
   },
@@ -370,6 +371,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    repo: `${GITHUB}/wave-shooter`,
     play: labGame('wave-shooter'),
     video: 'wG-2kG7awZo',
   },
@@ -380,7 +382,7 @@ export const PROJECTS = [
     types: ['games', 'xr'],
     origin: 'university',
     stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/Trabajo-Realidad-Aumentada`,
+    repo: `${GITHUB}/quimicefa-ar`,
     video: 'Jvo3VOHDayM',
   },
   {
@@ -400,6 +402,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    repo: `${GITHUB}/zigzag-cube/tree/zigzag-exercise`,
     play: labGame('zigzag-basics'),
     image: { src: zigzagBasics, srcSm: zigzagBasicsSm, srcMd: zigzagBasicsMd },
   },
@@ -410,6 +413,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'C#'],
+    repo: `${GITHUB}/ball-basics`,
     play: labGame('ball-basics'),
     image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
   },
@@ -441,6 +445,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity', 'ProBuilder'],
+    repo: `${GITHUB}/unity-course-exercises`,
     image: { src: poolScene, srcSm: poolSceneSm, srcMd: poolSceneMd },
   },
   {
@@ -451,6 +456,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Blender'],
+    repo: `${GITHUB}/blender-models`,
     image: { src: carModel, srcSm: carModelSm, srcMd: carModelMd },
   },
   {
@@ -461,6 +467,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Blender', 'Unity'],
+    repo: `${GITHUB}/blender-models`,
     image: { src: swordModel, srcSm: swordModelSm, srcMd: swordModelMd },
   },
   {
@@ -470,6 +477,7 @@ export const PROJECTS = [
     types: ['games'],
     origin: 'university',
     stack: ['Unity'],
+    repo: `${GITHUB}/unity-course-exercises`,
     image: { src: rampsScene, srcSm: rampsSceneSm, srcMd: rampsSceneMd },
   },
 ];
