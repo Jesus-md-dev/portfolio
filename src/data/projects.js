@@ -143,7 +143,7 @@ export const PROJECTS = [
     textKey: 'phpCmsText',
     altKey: 'phpCmsAlt',
     types: ['web'],
-    origin: 'personal',
+    origin: 'university',
     stack: ['PHP', 'MariaDB', 'PHPUnit', 'DDEV', 'AdminLTE'],
     image: { src: phpcms, srcSm: phpcmsSm, srcMd: phpcmsMd, srcLg: phpcmsLg },
   },
