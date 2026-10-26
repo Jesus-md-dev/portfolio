@@ -395,6 +395,7 @@ export const PROJECTS = [
     origin: 'university',
     stack: ['Unity', 'C#'],
     repo: `${GITHUB}/quimicefa-ar`,
+    download: `${GITHUB}/quimicefa-ar/releases/latest`,
     video: 'Jvo3VOHDayM',
   },
   {
