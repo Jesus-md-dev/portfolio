@@ -202,16 +202,6 @@ export const PROJECTS = [
     image: { src: retroTv, srcSm: retroTvSm, srcMd: retroTvMd },
   },
   {
-    id: 'video-duration-calculator',
-    name: 'Video Duration Calculator',
-    textKey: 'projectVideoDurationText',
-    types: ['desktop'],
-    origin: 'personal',
-    stack: ['Java', 'Swing'],
-    repo: `${GITHUB}/video-duration-calculator`,
-    image: { src: videoDuration, srcSm: videoDurationSm, srcMd: videoDurationMd },
-  },
-  {
     id: '1xinternet',
     nameKey: 'websAt1xinternet',
     textKey: 'websAt1xinternetText',
@@ -237,6 +227,16 @@ export const PROJECTS = [
     stack: ['React', 'Vite', 'Tailwind CSS', 'MUI', 'Netlify'],
     repo: `${GITHUB}/portfolio`,
     image: { src: jmcvweb, srcSm: jmcvwebSm, srcMd: jmcvwebMd, srcLg: jmcvwebLg },
+  },
+  {
+    id: 'video-duration-calculator',
+    name: 'Video Duration Calculator',
+    textKey: 'projectVideoDurationText',
+    types: ['desktop'],
+    origin: 'personal',
+    stack: ['Java', 'Swing'],
+    repo: `${GITHUB}/video-duration-calculator`,
+    image: { src: videoDuration, srcSm: videoDurationSm, srcMd: videoDurationMd },
   },
   {
     id: 'php-cms',
