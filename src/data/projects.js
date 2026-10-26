@@ -22,6 +22,15 @@ import heartopia from "../files/images/heartopia-piano-translator.webp";
 import heartopiaSm from "../files/images/heartopia-piano-translator-sm.webp";
 import heartopiaMd from "../files/images/heartopia-piano-translator-md.webp";
 import heartopiaLg from "../files/images/heartopia-piano-translator-lg.webp";
+import videoDuration from "../files/images/video-duration-calculator.webp";
+import videoDurationSm from "../files/images/video-duration-calculator-sm.webp";
+import videoDurationMd from "../files/images/video-duration-calculator-md.webp";
+import espacioMetronomo from "../files/images/espacio-metronomo.webp";
+import espacioMetronomoSm from "../files/images/espacio-metronomo-sm.webp";
+import espacioMetronomoMd from "../files/images/espacio-metronomo-md.webp";
+import laravelShop from "../files/images/laravel-shop.webp";
+import laravelShopSm from "../files/images/laravel-shop-sm.webp";
+import laravelShopMd from "../files/images/laravel-shop-md.webp";
 import queTePincho from "../files/images/que-te-pincho.webp";
 import queTePinchoSm from "../files/images/que-te-pincho-sm.webp";
 import queTePinchoMd from "../files/images/que-te-pincho-md.webp";
@@ -101,6 +110,7 @@ export const PROJECT_TYPES = ['web', 'mobile', 'desktop', 'games', 'xr'];
 //   or { es, en } when it has a page in each language),
 //   `demo` (demo with fake data), `download` (latest release) and `sites`
 //   (client websites, by name).
+// - `coauthor`: { name, href }; href is optional.
 export const PROJECTS = [
   {
     id: 'pandeconomy',
@@ -190,6 +200,16 @@ export const PROJECTS = [
     image: { src: pokedex, srcSm: pokedexSm, srcMd: pokedexMd, srcLg: pokedexLg },
   },
   {
+    id: 'video-duration-calculator',
+    name: 'Video Duration Calculator',
+    textKey: 'projectVideoDurationText',
+    types: ['desktop'],
+    origin: 'personal',
+    stack: ['Java', 'Swing'],
+    repo: `${GITHUB}/video-duration-calculator`,
+    image: { src: videoDuration, srcSm: videoDurationSm, srcMd: videoDurationMd },
+  },
+  {
     id: '1xinternet',
     nameKey: 'websAt1xinternet',
     textKey: 'websAt1xinternetText',
@@ -226,6 +246,28 @@ export const PROJECTS = [
     repo: `${GITHUB}/project-expenses-manager`,
     demo: 'https://project-expenses-manager-demo.netlify.app/',
     image: { src: expensesManager, srcSm: expensesManagerSm, srcMd: expensesManagerMd, srcLg: expensesManagerLg },
+  },
+  {
+    id: 'espacio-metronomo',
+    name: 'Espacio Metrónomo',
+    textKey: 'projectEspacioMetronomoText',
+    types: ['web', 'mobile'],
+    origin: 'university',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Android', 'Java'],
+    coauthor: { name: 'Claudia Silvestre' },
+    repo: `${GITHUB}/PNET-Project`,
+    demo: 'https://lab.jzmarquez.com/espacio-metronomo/',
+    image: { src: espacioMetronomo, srcSm: espacioMetronomoSm, srcMd: espacioMetronomoMd },
+  },
+  {
+    id: 'laravel-shop',
+    nameKey: 'laravelShopTitle',
+    textKey: 'laravelShopText',
+    types: ['web'],
+    origin: 'university',
+    stack: ['Laravel 8', 'PHP', 'Jetstream', 'Bootstrap', 'MySQL'],
+    repo: `${GITHUB}/ine20jmd`,
+    image: { src: laravelShop, srcSm: laravelShopSm, srcMd: laravelShopMd },
   },
   {
     id: 'docker-kubernetes',

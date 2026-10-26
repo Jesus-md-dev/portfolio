@@ -88,7 +88,9 @@ function ProjectCard({ project }) {
         {project.coauthor && (
           <p className="project-text">
             {t('projectsCoauthor')}{' '}
-            <a href={project.coauthor.href} target="_blank" rel="noopener noreferrer">{project.coauthor.name}</a>
+            {project.coauthor.href
+              ? <a href={project.coauthor.href} target="_blank" rel="noopener noreferrer">{project.coauthor.name}</a>
+              : project.coauthor.name}
           </p>
         )}
         <ul className="project-stack" aria-label={t('projectsStack')}>
