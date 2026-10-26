@@ -352,6 +352,7 @@ export const PROJECTS = [
     stack: ['Unity', 'C#'],
     coauthor: PERINAN,
     repo: `${GITHUB}/Monster-WAR-DSH2021`,
+    download: `${GITHUB}/Monster-WAR-DSH2021/releases/latest`,
     video: 'jIragOxu9tA',
   },
   {
