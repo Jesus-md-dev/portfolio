@@ -60,6 +60,36 @@ import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
 import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
 import jmcvwebLg from "../files/images/jm-cv-web-transformed-lg.webp";
+import pokedex from "../files/images/pokedex-angular.webp";
+import pokedexSm from "../files/images/pokedex-angular-sm.webp";
+import pokedexMd from "../files/images/pokedex-angular-md.webp";
+import pokedexLg from "../files/images/pokedex-angular-lg.webp";
+import informationRetrieval from "../files/images/information-retrieval.webp";
+import informationRetrievalSm from "../files/images/information-retrieval-sm.webp";
+import informationRetrievalMd from "../files/images/information-retrieval-md.webp";
+import algorithmDesign from "../files/images/algorithm-design.webp";
+import algorithmDesignSm from "../files/images/algorithm-design-sm.webp";
+import algorithmDesignMd from "../files/images/algorithm-design-md.webp";
+import algorithmDesignLg from "../files/images/algorithm-design-lg.webp";
+import imageEditor from "../files/images/modificar-imagen.webp";
+import imageEditorSm from "../files/images/modificar-imagen-sm.webp";
+import imageEditorMd from "../files/images/modificar-imagen-md.webp";
+import esinait from "../files/images/esinait.webp";
+import esinaitSm from "../files/images/esinait-sm.webp";
+import dockerKubernetes from "../files/images/docker-kubernetes.webp";
+import dockerKubernetesSm from "../files/images/docker-kubernetes-sm.webp";
+import dockerKubernetesMd from "../files/images/docker-kubernetes-md.webp";
+import dockerKubernetesLg from "../files/images/docker-kubernetes-lg.webp";
+import phpcms from "../files/images/phpcms.webp";
+import phpcmsSm from "../files/images/phpcms-sm.webp";
+import phpcmsMd from "../files/images/phpcms-md.webp";
+import phpcmsLg from "../files/images/phpcms-lg.webp";
+import codeigniterBlog from "../files/images/codeigniter-blog.webp";
+import codeigniterBlogSm from "../files/images/codeigniter-blog-sm.webp";
+import codeigniterBlogMd from "../files/images/codeigniter-blog-md.webp";
+import hardestGame from "../files/images/hardest-game-remake.webp";
+import hardestGameSm from "../files/images/hardest-game-remake-sm.webp";
+import hardestGameMd from "../files/images/hardest-game-remake-md.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
 // Unity games in the lab have a page in each language.
@@ -105,6 +135,16 @@ export const PROJECTS = [
     image: { src: videoclub, srcSm: videoclubSm, srcMd: videoclubMd, srcLg: videoclubLg },
   },
   {
+    id: 'php-cms',
+    nameKey: 'phpCmsTitle',
+    textKey: 'phpCmsText',
+    altKey: 'phpCmsAlt',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['PHP', 'MariaDB', 'PHPUnit', 'DDEV', 'AdminLTE'],
+    image: { src: phpcms, srcSm: phpcmsSm, srcMd: phpcmsMd, srcLg: phpcmsLg },
+  },
+  {
     id: 'que-te-pincho',
     nameKey: 'queTePinchoTitle',
     textKey: 'queTePinchoText',
@@ -148,6 +188,16 @@ export const PROJECTS = [
     live: 'https://lab.jzmarquez.com/heartopia/',
     download: `${GITHUB}/heartopia-piano-translator/releases/latest`,
     image: { src: heartopia, srcSm: heartopiaSm, srcMd: heartopiaMd, srcLg: heartopiaLg },
+  },
+  {
+    id: 'pokedex-tracker',
+    nameKey: 'pokedexTitle',
+    textKey: 'pokedexText',
+    types: ['web'],
+    origin: 'personal',
+    stack: ['Angular', 'TypeScript', 'Tailwind CSS'],
+    live: 'https://pokedex.jzmarquez.com/',
+    image: { src: pokedex, srcSm: pokedexSm, srcMd: pokedexMd, srcLg: pokedexLg },
   },
   {
     id: 'video-duration-calculator',
@@ -218,6 +268,56 @@ export const PROJECTS = [
     stack: ['Laravel 8', 'PHP', 'Jetstream', 'Bootstrap', 'MySQL'],
     repo: `${GITHUB}/ine20jmd`,
     image: { src: laravelShop, srcSm: laravelShopSm, srcMd: laravelShopMd },
+  },
+  {
+    id: 'docker-kubernetes',
+    nameKey: 'dockerKubernetesTitle',
+    textKey: 'dockerKubernetesText',
+    altKey: 'dockerKubernetesAlt',
+    types: ['web'],
+    origin: 'university',
+    stack: ['Docker', 'Kubernetes', 'Minikube', 'MariaDB'],
+    image: { src: dockerKubernetes, srcSm: dockerKubernetesSm, srcMd: dockerKubernetesMd, srcLg: dockerKubernetesLg },
+  },
+  {
+    id: 'codeigniter-blog',
+    nameKey: 'codeigniterBlogTitle',
+    textKey: 'codeigniterBlogText',
+    altKey: 'codeigniterBlogAlt',
+    types: ['web'],
+    origin: 'university',
+    stack: ['PHP', 'CodeIgniter 3', 'MySQL'],
+    image: { src: codeigniterBlog, srcSm: codeigniterBlogSm, srcMd: codeigniterBlogMd },
+  },
+  {
+    id: 'information-retrieval',
+    nameKey: 'informationRetrievalTitle',
+    textKey: 'informationRetrievalText',
+    altKey: 'informationRetrievalAlt',
+    types: ['desktop'],
+    origin: 'university',
+    stack: ['Python', 'NLTK'],
+    image: { src: informationRetrieval, srcSm: informationRetrievalSm, srcMd: informationRetrievalMd },
+  },
+  {
+    id: 'algorithm-design',
+    nameKey: 'algorithmDesignTitle',
+    textKey: 'algorithmDesignText',
+    altKey: 'algorithmDesignAlt',
+    types: ['desktop'],
+    origin: 'university',
+    stack: ['C++', 'Gnuplot', 'LaTeX'],
+    image: { src: algorithmDesign, srcSm: algorithmDesignSm, srcMd: algorithmDesignMd, srcLg: algorithmDesignLg },
+  },
+  {
+    id: 'image-editor',
+    nameKey: 'imageEditorTitle',
+    textKey: 'imageEditorText',
+    altKey: 'imageEditorAlt',
+    types: ['desktop'],
+    origin: 'personal',
+    stack: ['Java', 'Swing'],
+    image: { src: imageEditor, srcSm: imageEditorSm, srcMd: imageEditorMd },
   },
   {
     id: 'survival-zombie',
@@ -312,6 +412,26 @@ export const PROJECTS = [
     stack: ['Unity', 'C#'],
     play: labGame('ball-basics'),
     image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
+  },
+  {
+    id: 'esinait',
+    name: 'Esinait',
+    textKey: 'esinaitText',
+    altKey: 'esinaitAlt',
+    types: ['games', 'desktop'],
+    origin: 'university',
+    stack: ['C'],
+    image: { src: esinait, srcSm: esinaitSm },
+  },
+  {
+    id: 'hardest-game-remake',
+    nameKey: 'hardestGameTitle',
+    textKey: 'hardestGameText',
+    altKey: 'hardestGameAlt',
+    types: ['games'],
+    origin: 'personal',
+    stack: ['Godot 3', 'GDScript'],
+    image: { src: hardestGame, srcSm: hardestGameSm, srcMd: hardestGameMd },
   },
   {
     id: 'pool-scene',
