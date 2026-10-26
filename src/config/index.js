@@ -22,8 +22,9 @@ const config = {
     github: contact.github,
     linkedin: contact.linkedin,
     // Public lab only: never link /proyectos/ or other password-protected pages.
-    lab: 'https://lab.jzmarquez.com/',
-    labProjects: 'https://lab.jzmarquez.com/proyectos-publicos/',
+    // By language, like the lab's own pages.
+    lab: { es: 'https://lab.jzmarquez.com/', en: 'https://lab.jzmarquez.com/en/' },
+    labProjects: { es: 'https://lab.jzmarquez.com/proyectos-publicos/', en: 'https://lab.jzmarquez.com/en/projects/' },
   },
   cv: {
     downloadUrl: {

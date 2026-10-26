@@ -72,8 +72,9 @@ ProjectLink.propTypes = {
 };
 
 function ProjectCard({ project }) {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const name = project.nameKey ? t(project.nameKey) : project.name;
+  const play = typeof project.play === 'object' ? project.play[currentLanguage] || project.play.es : project.play;
   const alt = project.altKey ? t(project.altKey) : `${t('projectsScreenshotOf')} ${name}`;
   const badgeKey = ORIGIN_BADGE_KEYS[project.origin];
 
@@ -96,8 +97,8 @@ function ProjectCard({ project }) {
           ))}
         </ul>
         <div className="project-actions">
-          {project.play && (
-            <ProjectLink href={project.play} label={t('playInBrowser')} ariaLabel={`${t('playInBrowser')}: ${name}`} Icon={PlayArrowIcon} />
+          {play && (
+            <ProjectLink href={play} label={t('playInBrowser')} ariaLabel={`${t('playInBrowser')}: ${name}`} Icon={PlayArrowIcon} />
           )}
           {project.repo && (
             <ProjectLink
@@ -131,7 +132,7 @@ ProjectCard.propTypes = {
 };
 
 function Projects() {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   // The filter lives in the URL (/projects?type=games) so it can be linked;
   // /webs, /games and /arvr redirect to their filtered views.
   const [searchParams, setSearchParams] = useSearchParams();
@@ -151,7 +152,7 @@ function Projects() {
       </h2>
       <p className="projects-intro">
         {t('projectsIntro')}{' '}
-        <a href={config.social.labProjects} target="_blank" rel="noopener noreferrer">{t('projectsLabLink')}</a>
+        <a href={config.social.labProjects[currentLanguage] || config.social.labProjects.es} target="_blank" rel="noopener noreferrer">{t('projectsLabLink')}</a>
       </p>
 
       <div className="projects-filters" role="group" aria-label={t('filterLabel')}>

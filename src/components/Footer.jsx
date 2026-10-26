@@ -7,7 +7,7 @@ import GitHubLogo from "../files/svg/github.svg?react";
 import LinkedinLogo from "../files/svg/linkledin.svg?react";
 
 const Footer = React.memo(() => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -42,7 +42,7 @@ const Footer = React.memo(() => {
               />
               <Iconlink
                 svg={<ScienceIcon />}
-                href={config.social.lab}
+                href={config.social.lab[currentLanguage] || config.social.lab.es}
                 label={t('labLink')}
                 target="_blank"
                 rel="noopener noreferrer"
