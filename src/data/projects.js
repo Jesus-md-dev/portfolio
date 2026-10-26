@@ -410,17 +410,6 @@ export const PROJECTS = [
     video: 'CMsBWdokYGc',
   },
   {
-    id: 'zigzag-basics',
-    nameKey: 'zigzagBasicsTitle',
-    textKey: 'zigzagBasicsText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/zigzag-cube/tree/zigzag-exercise`,
-    play: labGame('zigzag-basics'),
-    image: { src: zigzagBasics, srcSm: zigzagBasicsSm, srcMd: zigzagBasicsMd },
-  },
-  {
     id: 'ball-basics',
     nameKey: 'ballBasicsTitle',
     textKey: 'ballBasicsText',
