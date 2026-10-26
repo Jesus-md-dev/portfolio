@@ -34,9 +34,6 @@ import laravelShopMd from "../files/images/laravel-shop-md.webp";
 import retroTv from "../files/images/ibericaretrotv.webp";
 import retroTvSm from "../files/images/ibericaretrotv-sm.webp";
 import retroTvMd from "../files/images/ibericaretrotv-md.webp";
-import millonario from "../files/images/ernarvi-millonario.webp";
-import millonarioSm from "../files/images/ernarvi-millonario-sm.webp";
-import millonarioMd from "../files/images/ernarvi-millonario-md.webp";
 import queTePincho from "../files/images/que-te-pincho.webp";
 import queTePinchoSm from "../files/images/que-te-pincho-sm.webp";
 import queTePinchoMd from "../files/images/que-te-pincho-md.webp";
@@ -213,15 +210,6 @@ export const PROJECTS = [
     origin: 'personal',
     stack: ['React', 'Vite', 'react-player'],
     image: { src: retroTv, srcSm: retroTvSm, srcMd: retroTvMd },
-  },
-  {
-    id: 'ernarvi-millonario',
-    name: 'Ernarvi Millonario',
-    textKey: 'millonarioText',
-    types: ['web'],
-    origin: 'personal',
-    stack: ['React', 'TypeScript', 'Google Sheets'],
-    image: { src: millonario, srcSm: millonarioSm, srcMd: millonarioMd },
   },
   {
     id: 'video-duration-calculator',
