@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSearchParams } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -10,7 +10,7 @@ import ResponsiveImg from "../components/ResponsiveImg";
 import YouTubeFacade from "../components/YouTubeFacade";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import config from "../config/index.js";
-import { PROJECTS, PROJECT_TYPES } from "../data/projects.js";
+import { PROJECTS, PROJECT_TYPES, FEATURED_COUNT } from "../data/projects.js";
 import "./Projects.css";
 
 const FILTER_LABEL_KEYS = {
@@ -140,7 +140,11 @@ function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
   const requested = searchParams.get('type');
   const filter = PROJECT_TYPES.includes(requested) ? requested : 'all';
-  const visible = filter === 'all' ? PROJECTS : PROJECTS.filter((project) => project.types.includes(filter));
+  const matching = filter === 'all' ? PROJECTS : PROJECTS.filter((project) => project.types.includes(filter));
+  // Only the unfiltered view is cut short; a filter already narrows the list.
+  const [showAll, setShowAll] = useState(false);
+  const collapsed = filter === 'all' && !showAll && matching.length > FEATURED_COUNT;
+  const visible = collapsed ? matching.slice(0, FEATURED_COUNT) : matching;
 
   const selectFilter = (type) => {
     setSearchParams(type === 'all' ? {} : { type }, { replace: true });
@@ -177,6 +181,13 @@ function Projects() {
           <ProjectCard key={project.id} project={project} />
         ))}
       </ul>
+      {collapsed && (
+        <div className="projects-more">
+          <button type="button" className="projects-filter" onClick={() => setShowAll(true)}>
+            {`${t('projectsShowAll')} (${matching.length})`}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

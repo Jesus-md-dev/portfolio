@@ -81,6 +81,13 @@
   outline-offset: 2px;
 }
 
+/* "Show all" under the shortened unfiltered grid */
+.projects-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 /* University / professional work */
 .project-badge {
   align-self: flex-start;

@@ -22,18 +22,12 @@ import heartopia from "../files/images/heartopia-piano-translator.webp";
 import heartopiaSm from "../files/images/heartopia-piano-translator-sm.webp";
 import heartopiaMd from "../files/images/heartopia-piano-translator-md.webp";
 import heartopiaLg from "../files/images/heartopia-piano-translator-lg.webp";
-import videoDuration from "../files/images/video-duration-calculator.webp";
-import videoDurationSm from "../files/images/video-duration-calculator-sm.webp";
-import videoDurationMd from "../files/images/video-duration-calculator-md.webp";
 import espacioMetronomo from "../files/images/espacio-metronomo.webp";
 import espacioMetronomoSm from "../files/images/espacio-metronomo-sm.webp";
 import espacioMetronomoMd from "../files/images/espacio-metronomo-md.webp";
 import laravelShop from "../files/images/laravel-shop.webp";
 import laravelShopSm from "../files/images/laravel-shop-sm.webp";
 import laravelShopMd from "../files/images/laravel-shop-md.webp";
-import retroTv from "../files/images/ibericaretrotv.webp";
-import retroTvSm from "../files/images/ibericaretrotv-sm.webp";
-import retroTvMd from "../files/images/ibericaretrotv-md.webp";
 import queTePincho from "../files/images/que-te-pincho.webp";
 import queTePinchoSm from "../files/images/que-te-pincho-sm.webp";
 import queTePinchoMd from "../files/images/que-te-pincho-md.webp";
@@ -41,21 +35,6 @@ import xprojects from "../files/images/1xprojects-with-logo-transformed.webp";
 import xprojectsSm from "../files/images/1xprojects-with-logo-transformed-sm.webp";
 import xprojectsMd from "../files/images/1xprojects-with-logo-transformed-md.webp";
 import xprojectsLg from "../files/images/1xprojects-with-logo-transformed-lg.webp";
-import ballBasics from "../files/images/ball-basics.webp";
-import ballBasicsSm from "../files/images/ball-basics-sm.webp";
-import ballBasicsMd from "../files/images/ball-basics-md.webp";
-import poolScene from "../files/images/pool-scene.webp";
-import poolSceneSm from "../files/images/pool-scene-sm.webp";
-import poolSceneMd from "../files/images/pool-scene-md.webp";
-import rampsScene from "../files/images/ramps-scene.webp";
-import rampsSceneSm from "../files/images/ramps-scene-sm.webp";
-import rampsSceneMd from "../files/images/ramps-scene-md.webp";
-import swordModel from "../files/images/sword-model.webp";
-import swordModelSm from "../files/images/sword-model-sm.webp";
-import swordModelMd from "../files/images/sword-model-md.webp";
-import carModel from "../files/images/car-model.webp";
-import carModelSm from "../files/images/car-model-sm.webp";
-import carModelMd from "../files/images/car-model-md.webp";
 import jmcvweb from "../files/images/jm-cv-web-transformed.webp";
 import jmcvwebSm from "../files/images/jm-cv-web-transformed-sm.webp";
 import jmcvwebMd from "../files/images/jm-cv-web-transformed-md.webp";
@@ -64,45 +43,34 @@ import pokedex from "../files/images/pokedex-angular.webp";
 import pokedexSm from "../files/images/pokedex-angular-sm.webp";
 import pokedexMd from "../files/images/pokedex-angular-md.webp";
 import pokedexLg from "../files/images/pokedex-angular-lg.webp";
-import informationRetrieval from "../files/images/information-retrieval.webp";
-import informationRetrievalSm from "../files/images/information-retrieval-sm.webp";
-import informationRetrievalMd from "../files/images/information-retrieval-md.webp";
-import algorithmDesign from "../files/images/algorithm-design.webp";
-import algorithmDesignSm from "../files/images/algorithm-design-sm.webp";
-import algorithmDesignMd from "../files/images/algorithm-design-md.webp";
-import algorithmDesignLg from "../files/images/algorithm-design-lg.webp";
-import imageEditor from "../files/images/modificar-imagen.webp";
-import imageEditorSm from "../files/images/modificar-imagen-sm.webp";
-import imageEditorMd from "../files/images/modificar-imagen-md.webp";
-import esinait from "../files/images/esinait.webp";
-import esinaitSm from "../files/images/esinait-sm.webp";
 import dockerKubernetes from "../files/images/docker-kubernetes.webp";
 import dockerKubernetesSm from "../files/images/docker-kubernetes-sm.webp";
 import dockerKubernetesMd from "../files/images/docker-kubernetes-md.webp";
 import dockerKubernetesLg from "../files/images/docker-kubernetes-lg.webp";
+import millonario from "../files/images/millonario.webp";
+import millonarioSm from "../files/images/millonario-sm.webp";
+import millonarioMd from "../files/images/millonario-md.webp";
+import millonarioLg from "../files/images/millonario-lg.webp";
 import phpcms from "../files/images/phpcms.webp";
 import phpcmsSm from "../files/images/phpcms-sm.webp";
 import phpcmsMd from "../files/images/phpcms-md.webp";
 import phpcmsLg from "../files/images/phpcms-lg.webp";
-import codeigniterBlog from "../files/images/codeigniter-blog.webp";
-import codeigniterBlogSm from "../files/images/codeigniter-blog-sm.webp";
-import codeigniterBlogMd from "../files/images/codeigniter-blog-md.webp";
-import hardestGame from "../files/images/hardest-game-remake.webp";
-import hardestGameSm from "../files/images/hardest-game-remake-sm.webp";
-import hardestGameMd from "../files/images/hardest-game-remake-md.webp";
 
 const GITHUB = 'https://github.com/Jesus-md-dev';
-// Unity games in the lab have a page in each language.
-const labGame = (slug) => ({ es: `https://lab.jzmarquez.com/${slug}/`, en: `https://lab.jzmarquez.com/en/${slug}/` });
 const PERINAN = { name: 'Jesús Periñán Dávila', href: 'https://www.linkedin.com/in/jesus-perinan-davila/' };
 
 // Filters shown above the grid, in order. `all` is implicit.
 export const PROJECT_TYPES = ['web', 'mobile', 'desktop', 'games', 'xr'];
 
+// Cards shown before "show all" when no filter is picked.
+export const FEATURED_COUNT = 10;
+
 // Every card of the Projects page, in display order, by relevance to a
 // recruiter: professional work, then personal apps (live or shipped first),
-// personal games, university web and desktop work, university games and XR,
-// and course exercises last. The type filters keep this order.
+// personal games, university web work and university XR. The type filters
+// keep this order; the unfiltered view shows the first FEATURED_COUNT until
+// "show all" is pressed. Older work that left this page lives in the lab's
+// archive (lab repo, public/projects-data.js, `archive: true`).
 //
 // - `types`: one or more of PROJECT_TYPES; a card shows under each of them.
 // - `origin`: 'personal', 'university' or 'work'; the last two get a badge.
@@ -208,33 +176,15 @@ export const PROJECTS = [
     image: { src: jmcvweb, srcSm: jmcvwebSm, srcMd: jmcvwebMd, srcLg: jmcvwebLg },
   },
   {
-    id: 'ibericaretrotv',
-    name: 'Ibérica Retro TV',
-    textKey: 'retroTvText',
-    types: ['web'],
+    id: 'millonario',
+    nameKey: 'millonarioTitle',
+    textKey: 'millonarioText',
+    altKey: 'millonarioAlt',
+    types: ['web', 'games'],
     origin: 'personal',
-    stack: ['React', 'Vite', 'react-player'],
-    image: { src: retroTv, srcSm: retroTvSm, srcMd: retroTvMd },
-  },
-  {
-    id: 'video-duration-calculator',
-    name: 'Video Duration Calculator',
-    textKey: 'projectVideoDurationText',
-    types: ['desktop'],
-    origin: 'personal',
-    stack: ['Java', 'Swing'],
-    repo: `${GITHUB}/video-duration-calculator`,
-    image: { src: videoDuration, srcSm: videoDurationSm, srcMd: videoDurationMd },
-  },
-  {
-    id: 'image-editor',
-    nameKey: 'imageEditorTitle',
-    textKey: 'imageEditorText',
-    altKey: 'imageEditorAlt',
-    types: ['desktop'],
-    origin: 'personal',
-    stack: ['Java', 'Swing'],
-    image: { src: imageEditor, srcSm: imageEditorSm, srcMd: imageEditorMd },
+    stack: ['React', 'TypeScript', 'Google Sheets API'],
+    live: 'https://ernarvi-millonario.jzmarquez.com',
+    image: { src: millonario, srcSm: millonarioSm, srcMd: millonarioMd, srcLg: millonarioLg },
   },
   {
     id: 'que-te-pincho',
@@ -246,17 +196,6 @@ export const PROJECTS = [
     stack: ['Godot 4', 'GDScript', 'WebRTC', 'Android'],
     play: 'https://lab.jzmarquez.com/que-te-pincho/',
     image: { src: queTePincho, srcSm: queTePinchoSm, srcMd: queTePinchoMd },
-  },
-  {
-    id: 'hardest-game-remake',
-    nameKey: 'hardestGameTitle',
-    textKey: 'hardestGameText',
-    altKey: 'hardestGameAlt',
-    types: ['games'],
-    origin: 'personal',
-    stack: ['Godot 3', 'GDScript'],
-    play: 'https://lab.jzmarquez.com/dodge-remake/',
-    image: { src: hardestGame, srcSm: hardestGameSm, srcMd: hardestGameMd },
   },
   {
     id: 'project-expenses-manager',
@@ -312,48 +251,6 @@ export const PROJECTS = [
     image: { src: dockerKubernetes, srcSm: dockerKubernetesSm, srcMd: dockerKubernetesMd, srcLg: dockerKubernetesLg },
   },
   {
-    id: 'codeigniter-blog',
-    nameKey: 'codeigniterBlogTitle',
-    textKey: 'codeigniterBlogText',
-    altKey: 'codeigniterBlogAlt',
-    types: ['web'],
-    origin: 'university',
-    stack: ['PHP', 'CodeIgniter 3', 'MySQL'],
-    image: { src: codeigniterBlog, srcSm: codeigniterBlogSm, srcMd: codeigniterBlogMd },
-  },
-  {
-    id: 'information-retrieval',
-    nameKey: 'informationRetrievalTitle',
-    textKey: 'informationRetrievalText',
-    altKey: 'informationRetrievalAlt',
-    types: ['desktop'],
-    origin: 'university',
-    stack: ['Python', 'NLTK'],
-    image: { src: informationRetrieval, srcSm: informationRetrievalSm, srcMd: informationRetrievalMd },
-  },
-  {
-    id: 'algorithm-design',
-    nameKey: 'algorithmDesignTitle',
-    textKey: 'algorithmDesignText',
-    altKey: 'algorithmDesignAlt',
-    types: ['desktop'],
-    origin: 'university',
-    stack: ['C++', 'Gnuplot', 'LaTeX'],
-    image: { src: algorithmDesign, srcSm: algorithmDesignSm, srcMd: algorithmDesignMd, srcLg: algorithmDesignLg },
-  },
-  {
-    id: 'survival-zombie',
-    nameKey: 'survivalZombieTitle',
-    textKey: 'survivalZombieText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    coauthor: PERINAN,
-    repo: `${GITHUB}/Trabajo-FPS-Unity`,
-    play: labGame('survival-zombie'),
-    video: 'NsuEjiRypPo',
-  },
-  {
     id: 'monster-war',
     nameKey: 'monsterWarTitle',
     textKey: 'monsterWarText',
@@ -375,111 +272,5 @@ export const PROJECTS = [
     repo: `${GITHUB}/quimicefa-ar`,
     download: `${GITHUB}/quimicefa-ar/releases/latest`,
     video: 'Jvo3VOHDayM',
-  },
-  {
-    id: 'space-survival',
-    nameKey: 'spaceSurvivalTitle',
-    textKey: 'spaceSurvivalText',
-    types: ['games', 'xr'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/Trabajo-Realidad-Virtual`,
-    video: 'CMsBWdokYGc',
-  },
-  {
-    id: 'wave-shooter',
-    nameKey: 'waveShooterTitle',
-    textKey: 'waveShooterText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/wave-shooter`,
-    play: labGame('wave-shooter'),
-    video: 'wG-2kG7awZo',
-  },
-  {
-    id: 'zigzag-cube',
-    nameKey: 'zigzagCubeTitle',
-    textKey: 'zigzagCubeText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/zigzag-cube`,
-    play: labGame('zigzag-cube'),
-    video: 'CpbWe8kSolI',
-  },
-  {
-    id: 'space-ball',
-    nameKey: 'spaceBallTitle',
-    textKey: 'spaceBallText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/Juego-Plataformas-Simple-Unity`,
-    play: labGame('space-ball'),
-    video: '7Ij2qMfMZoE',
-  },
-  {
-    id: 'ball-basics',
-    nameKey: 'ballBasicsTitle',
-    textKey: 'ballBasicsText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'C#'],
-    repo: `${GITHUB}/ball-basics`,
-    play: labGame('ball-basics'),
-    image: { src: ballBasics, srcSm: ballBasicsSm, srcMd: ballBasicsMd },
-  },
-  {
-    id: 'esinait',
-    name: 'Esinait',
-    textKey: 'esinaitText',
-    altKey: 'esinaitAlt',
-    types: ['games', 'desktop'],
-    origin: 'university',
-    stack: ['C'],
-    image: { src: esinait, srcSm: esinaitSm },
-  },
-  {
-    id: 'pool-scene',
-    nameKey: 'poolSceneTitle',
-    textKey: 'poolSceneText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity', 'ProBuilder'],
-    repo: `${GITHUB}/unity-course-exercises`,
-    image: { src: poolScene, srcSm: poolSceneSm, srcMd: poolSceneMd },
-  },
-  {
-    id: 'ramps-scene',
-    nameKey: 'rampsSceneTitle',
-    textKey: 'rampsSceneText',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Unity'],
-    repo: `${GITHUB}/unity-course-exercises`,
-    image: { src: rampsScene, srcSm: rampsSceneSm, srcMd: rampsSceneMd },
-  },
-  {
-    id: 'car-model',
-    nameKey: 'carModelTitle',
-    textKey: 'carModelText',
-    altKey: 'carModelAlt',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Blender'],
-    repo: `${GITHUB}/blender-models`,
-    image: { src: carModel, srcSm: carModelSm, srcMd: carModelMd },
-  },
-  {
-    id: 'sword-model',
-    nameKey: 'swordModelTitle',
-    textKey: 'swordModelText',
-    altKey: 'swordModelAlt',
-    types: ['games'],
-    origin: 'university',
-    stack: ['Blender', 'Unity'],
-    repo: `${GITHUB}/blender-models`,
-    image: { src: swordModel, srcSm: swordModelSm, srcMd: swordModelMd },
   },
 ];
