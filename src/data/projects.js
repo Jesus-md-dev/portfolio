@@ -276,7 +276,7 @@ export const PROJECTS = [
     types: ['web', 'mobile'],
     origin: 'university',
     stack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Android', 'Java'],
-    coauthor: { name: 'Claudia Silvestre' },
+    coauthor: { name: 'Claudia Silvestre', href: 'https://github.com/claudiasilvestre' },
     repo: `${GITHUB}/PNET-Project`,
     demo: 'https://lab.jzmarquez.com/espacio-metronomo/',
     image: { src: espacioMetronomo, srcSm: espacioMetronomoSm, srcMd: espacioMetronomoMd },
