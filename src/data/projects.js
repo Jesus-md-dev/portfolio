@@ -44,9 +44,6 @@ import xprojectsLg from "../files/images/1xprojects-with-logo-transformed-lg.web
 import ballBasics from "../files/images/ball-basics.webp";
 import ballBasicsSm from "../files/images/ball-basics-sm.webp";
 import ballBasicsMd from "../files/images/ball-basics-md.webp";
-import zigzagBasics from "../files/images/zigzag-basics.webp";
-import zigzagBasicsSm from "../files/images/zigzag-basics-sm.webp";
-import zigzagBasicsMd from "../files/images/zigzag-basics-md.webp";
 import poolScene from "../files/images/pool-scene.webp";
 import poolSceneSm from "../files/images/pool-scene-sm.webp";
 import poolSceneMd from "../files/images/pool-scene-md.webp";
